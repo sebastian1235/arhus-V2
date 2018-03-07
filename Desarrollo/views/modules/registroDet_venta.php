@@ -70,14 +70,12 @@
           
         </div>
     </div>
-      
-      </form> 
- <div class="row table-responsive">
+      <div class="row table-responsive">
          <?php
 
       
           
-  $mysqli = new mysqli('localhost', 'root', '', 'arhus');
+  $mysqli = new mysqli('localhost', 'root', 'mysql', 'arhus');
   
   if($mysqli->connect_error){
     
@@ -121,6 +119,8 @@
           </tbody>
           <?php  } ?>
         </table>
+      </form> 
+ 
       </div>
     </div>
     </section>

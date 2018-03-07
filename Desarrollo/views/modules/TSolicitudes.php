@@ -19,7 +19,7 @@ include "views/modules/header.php";
       <div >
          <?php
           
-  $mysqli = new mysqli('localhost', 'root', '', 'arhus');
+  $mysqli = new mysqli('localhost', 'root', 'mysql', 'arhus');
   
   if($mysqli->connect_error){
     

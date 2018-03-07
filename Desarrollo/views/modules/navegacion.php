@@ -40,7 +40,7 @@
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="registro_asignacion">Asigancion  </a></li>
-                        <li><a href="FregistroSol">Registrar solicitud</a></li>
+                        <li><a href="registro_ciudad">Registrar solicitud</a></li>
                         
                     </ul>
                 </li>

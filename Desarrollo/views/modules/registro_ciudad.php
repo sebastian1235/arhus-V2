@@ -1,5 +1,69 @@
     <?php include"views/modules/header.php";
  include"views/modules/navegacion.php"; ?>
+
+
+<div class="row">
+    <div class="col-md-6">
+
+        <div class="box box-primary">
+            <div class="box-header with-border">
+                <h3 class="box-title">Agregar Ciudades</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form role="form">
+                <div class="box-body">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Ciudad</label>
+                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ciudad">
+                    </div>
+                </div>
+                <!-- /.box-body -->
+
+                <div class="box-footer">
+                    <button type="submit" class="btn btn-primary">registrar</button>
+                </div>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="col-md-6">
+        <div class="box">
+        <div class="box-header">
+            <h3 class="box-title">Ciudades</h3>
+
+            <div class="box-tools">
+                <ul class="pagination pagination-sm no-margin pull-right">
+                    <li><a href="#">&laquo;</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">&raquo;</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="box-body no-padding">
+            <table class="table">
+                <tr>
+                    <th style="width: 10px">Asignación</th>
+                    <th>Ciudad</th>
+                </tr>
+                <tr>
+                    <td>1.</td>
+                    <td>Bogotá</td>
+                </tr>
+            </table>
+        </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
  <section class="content container-fluid">
  <form class="form-horizontal" method="POST" action="registrar.php" autocomplete="off">
      

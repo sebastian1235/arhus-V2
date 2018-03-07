@@ -72,7 +72,16 @@
       </form> 
  <div class="row table-responsive">
          <?php
-          include"conexion.php";
+
+      
+          
+  $mysqli = new mysqli('localhost', 'root', '', 'arhus');
+  
+  if($mysqli->connect_error){
+    
+    die('Error en la conexion' . $mysqli->connect_error);
+    
+  }
           $_pagi_sql=("SELECT * FROM `ap_detalle_venta`"); 
 
         $query=mysqli_query($mysqli,$_pagi_sql);?>

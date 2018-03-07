@@ -1,3 +1,6 @@
+<div class="wrapper">
+    <!-- Content Wrapper. Contains page content -->
+
     <header class="main-header">
 
         <!-- Logo -->
@@ -144,4 +147,10 @@
                 </ul>
             </div>
         </nav>
-    </header><body class="hold-transition skin-yellow fixed">
+    </header>
+
+        <!--Div para el objecto content-->
+    <div class="content-wrapper">
+        <section class="content container-fluid">
+
+

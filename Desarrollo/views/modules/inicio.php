@@ -1,3 +1,10 @@
+<?php
+include "views/modules/navegacion.php";
+include "views/modules/header.php";
+?>
+
+
+
 <div>
 
     <div class="jumbotron">
@@ -25,3 +32,9 @@
     </ul>
 
 </div>
+
+<?php
+
+include "views/modules/footer.php";
+
+?>

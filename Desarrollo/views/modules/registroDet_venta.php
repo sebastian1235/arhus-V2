@@ -1,5 +1,7 @@
-  <?php include"views/modules/header.php";
- include"views/modules/navegacion.php" ?>
+  <?php
+  include "views/modules/navegacion.php";
+  include "views/modules/header.php";
+  ?>
     <section class="content-header">
       <h1>
         Detalle de venta
@@ -75,7 +77,7 @@
 
       
           
-  $mysqli = new mysqli('localhost', 'root', '', 'arhus');
+  $mysqli = new mysqli('localhost', 'root', 'mysql', 'arhus');
   
   if($mysqli->connect_error){
     
@@ -122,3 +124,9 @@
       </div>
     </div>
     </section>
+
+    <?php
+
+    include "views/modules/footer.php";
+
+    ?>

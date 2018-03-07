@@ -1,7 +1,10 @@
-  <?php include"views/modules/header.php";
- include"views/modules/navegacion.php" ?>
+<?php
+include "views/modules/navegacion.php";
+include "views/modules/header.php";
+?>
 
-    <section class="content container-fluid">
+
+<section class="content container-fluid">
 
       <div class="row">
       
@@ -101,4 +104,10 @@
     </script>
 
     </section>
+
+<?php
+
+include "views/modules/footer.php";
+
+?>
     

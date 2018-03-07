@@ -1,6 +1,8 @@
-<?php include"views/modules/header.php";
- include"views/modules/navegacion.php" ?>
 
+<?php
+include "views/modules/navegacion.php";
+include "views/modules/header.php";
+?>
 <form class="form-horizontal" method="POST" action="registrar.php" autocomplete="off">
      
         <fieldset>
@@ -181,5 +183,11 @@
     </div>
      
       </div>  
-      </form> 
+      </form>
+
+<?php
+
+include "views/modules/footer.php";
+
+?>
       

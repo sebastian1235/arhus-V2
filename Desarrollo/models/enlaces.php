@@ -15,7 +15,7 @@ class EnlacesModels{
             $enlaces == "crud" ||
             $enlaces == "FregistroSol" ||
             $enlaces == "TSolicitudes" ||
-            $enlaces == "" ||
+            $enlaces == "registroDet_venta" ||
             $enlaces == "" ||
             $enlaces == "" ||
             $enlaces == "" ||

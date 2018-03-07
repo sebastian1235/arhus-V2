@@ -77,7 +77,7 @@
 
       
           
-  $mysqli = new mysqli('localhost', 'root', 'mysql', 'arhus');
+  $mysqli = new mysqli('localhost', 'root', '', 'arhus');
   
   if($mysqli->connect_error){
     

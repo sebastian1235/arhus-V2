@@ -18,7 +18,7 @@ class EnlacesModels{
             $enlaces == "registroDet_venta" ||
             $enlaces == "registro_asignacion" ||
             $enlaces == "registro_ciudad" ||
-            $enlaces == "" ||
+            $enlaces == "registro_campana" ||
             $enlaces == ""){
 
             $module = "views/modules/".$enlaces.".php";

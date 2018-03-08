@@ -39,9 +39,11 @@
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="registro_asignacion">Asigancion  </a></li>
+                        <li><a href="Tasignacion">Asigancion  </a></li>
                         <li><a href="registro_ciudad">Registrar solicitud</a></li>
-                        <li><a href="registro_campana">Registrar campañas</a></li>
+                        <li><a href="Tcampanas">Campañas</a></li>
+                        <li><a href="Titems">Items</a></li>
+                        <li><a href="Tterceros">Items</a></li>
                         
                     </ul>
                 </li>

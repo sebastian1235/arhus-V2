@@ -19,6 +19,13 @@ class EnlacesModels{
             $enlaces == "registro_asignacion" ||
             $enlaces == "registro_ciudad" ||
             $enlaces == "registro_campana" ||
+            $enlaces == "Tasignacion" ||
+            $enlaces == "registro_items" ||
+            $enlaces == "Titems" ||
+            $enlaces == "registro_tercero" ||
+            $enlaces == "Tterceros" ||
+            $enlaces == "" ||
+            $enlaces == "" ||
             $enlaces == ""){
 
             $module = "views/modules/".$enlaces.".php";

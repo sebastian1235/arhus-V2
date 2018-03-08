@@ -70,7 +70,9 @@
           
         </div>
     </div>
-      <div class="row table-responsive">
+      
+      </form> 
+ <div class="row table-responsive">
          <?php
 
       
@@ -119,8 +121,6 @@
           </tbody>
           <?php  } ?>
         </table>
-      </form> 
- 
       </div>
     </div>
     </section>

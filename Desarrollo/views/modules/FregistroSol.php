@@ -2,8 +2,17 @@
 <?php
 include "views/modules/navegacion.php";
 include "views/modules/header.php";
-?>
-<form class="form-horizontal" method="POST" action="registrar.php" autocomplete="off">
+?><div class="row">
+    <div class="col-md-12">
+<h2  class="box-title">Registrar solicitud</h2>
+        <div class="box box-primary">
+            <div class="box-header with-border">
+                
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <div class="container">
+           <form class="form-horizontal" method="POST" action="registrar.php" autocomplete="off">
      
         <fieldset>
 <legend>Datos de contacto:</legend>
@@ -13,11 +22,11 @@ include "views/modules/header.php";
 
          <div class=" col-md-4">
           <label for="">Nombre:</label>
-            <input  type="text" class="form-control" name="nombre_sol"  id="nombre_sol">
+            <input  type="text" class="form-control" name="nombre_sol" required="" id="nombre_sol">
         </div>
          <div class=" col-md-4">
           <label for="">Cedula:</label>
-            <input type="text" class="form-control" name="cedula_sol" id="cedula_sol">
+            <input type="text" class="form-control" name="cedula_sol" required=""  id="cedula_sol">
         </div>
       </div>
    
@@ -25,13 +34,13 @@ include "views/modules/header.php";
     <div class="form-group">   
         <div class="col-md-4"> 
         <label for="">Barrio:</label>         
-            <select class="form-control" id="barrio_sol" name="barrio_sol">
+            <select class="form-control" id="barrio_sol" required="" name="barrio_sol">
             <option value="">seleccionar barrio</option>
             </select>
         </div> 
         <div class="col-md-4"> 
         <label for="">Localidad:</label>         
-            <select class="form-control" id="localidad_sol" name="localidad_sol">
+            <select class="form-control" id="localidad_sol" required="" name="localidad_sol">
             <option value="">seleccionar barrio</option>
             </select>
         </div> 
@@ -39,7 +48,7 @@ include "views/modules/header.php";
       <div class="form-group"  >
         <div class=" col-md-4">
           <label for="">Direccion:</label>
-            <input type="text" class="form-control" name="direccion_pol_sol"  id="direccion_pol_sol">
+            <input type="text" class="form-control" name="direccion_pol_sol" required="" id="direccion_pol_sol">
         </div>
  
         <div class=" col-md-4">
@@ -53,7 +62,7 @@ include "views/modules/header.php";
     <div class="form-group">
         <div class=" col-md-4"> 
         <label for="">Telefono:</label>      
-          <input type="text" class="form-control" name="telefono1_sol"  id="telefono1_sol" >
+          <input type="text" class="form-control" name="telefono1_sol" required="" id="telefono1_sol" >
         </div>
 
         <div class=" col-md-4">
@@ -69,7 +78,7 @@ include "views/modules/header.php";
         <div class=" col-md-4">
           <br>
           <label for="">Correo electronico:</label>
-          <input type="text" class="form-control" name="email_sol"  id="email_sol" >
+          <input type="text" class="form-control" name="email_sol"  required="" id="email_sol" >
         </div>
         
      </div>
@@ -182,8 +191,13 @@ include "views/modules/header.php";
         </div>
     </div>
      
-      </div>  
+      </div> 
+
       </form>
+        </div>
+</div>
+    </div>
+
 
 <?php
 

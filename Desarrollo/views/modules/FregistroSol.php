@@ -2,7 +2,9 @@
 <?php
 include "views/modules/navegacion.php";
 include "views/modules/header.php";
-?><div class="row">
+?>
+
+<div class="row">
     <div class="col-md-12">
 <h2  class="box-title">Registrar solicitud</h2>
         <div class="box box-primary">

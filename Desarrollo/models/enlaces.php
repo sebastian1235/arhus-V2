@@ -24,7 +24,7 @@ class EnlacesModels{
             $enlaces == "Titems" ||
             $enlaces == "registro_tercero" ||
             $enlaces == "Tterceros" ||
-            $enlaces == "" ||
+            $enlaces == "salir" ||
             $enlaces == "" ||
             $enlaces == ""){
 

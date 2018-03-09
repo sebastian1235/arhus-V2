@@ -131,7 +131,7 @@
                                 <img src="views/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                                 <p>
-                                    ADMINISTRADOS - TEST
+                                    <?php echo $_SESSION["usuario"];?>
                                     <small>Fecha de miembro</small>
                                 </p>
                             </li>
@@ -139,7 +139,7 @@
                             <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-right">
-                                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                    <a href="salir" class="btn btn-default btn-flat">Sign out</a>
                                 </div>
                             </li>
                         </ul>

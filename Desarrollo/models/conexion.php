@@ -1,10 +1,11 @@
 <?php
-	
-	$mysqli = new mysqli('localhost', 'root', '', 'arhus');
-	
-	if($mysqli->connect_error){
-		
-		die('Error en la conexion' . $mysqli->connect_error);
-		
-	}
-?>
+class Conexion{
+
+    public function conectar(){
+
+        $link = new PDO("mysql:host=localhost;dbname=arhus","root","mysql");
+        return $link;
+
+    }
+
+}

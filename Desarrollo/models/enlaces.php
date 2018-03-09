@@ -32,7 +32,7 @@ class EnlacesModels{
         }
 
         else if($enlaces == "index"){
-            $module = "views/modules/ingreso>.php";
+            $module = "views/modules/ingreso.php";
         }
 
         else{

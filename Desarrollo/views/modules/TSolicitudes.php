@@ -3,6 +3,42 @@ include "views/modules/navegacion.php";
 include "views/modules/header.php";
 ?>
 
+<script type="text/javascript">
+    $("document").ready(function(){
+        $("#localidad_sol").load("include/localidad.php");
+    })
+</script>
+<script type="text/javascript">
+    $("document").ready(function(){
+        $("#barrio_sol").load("include/getbarrio.php");
+    })
+</script>
+<script type="text/javascript">
+    $("document").ready(function(){
+        $("#asesor_sol").load("include/tercero.php");
+    })
+</script>
+<script type="text/javascript">
+    $("document").ready(function(){
+        $("#forma_pagogn_sol").load("include/forma_pago.php");
+    })
+</script>
+<script type="text/javascript">
+    $("document").ready(function(){
+        $("#estado_sol").load("include/estado.php");
+    })
+</script>
+<script type="text/javascript">
+    $("document").ready(function(){
+        $("#pais_empresamodal").load("include/sel_pais.php");
+    })
+</script>
+<script type="text/javascript">
+    $("document").ready(function(){
+        $("#ciudad_empresa").load("include/sel_ciudad.php");
+    })
+</script>
+
 
 <section class="content container-fluid">
 

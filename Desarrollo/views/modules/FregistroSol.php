@@ -2,6 +2,15 @@
 <?php
 include "views/modules/navegacion.php";
 include "views/modules/header.php";
+
+$user="root";
+$pass="mysql";
+$server="localhost";
+$bd="arhus";
+
+$con = mysqli_connect($server,$user,$pass,$bd);
+
+$result = mysqli_query($con,"SELECT * FROM siax_sectores");
 ?>
 
 <div class="row">
@@ -37,7 +46,11 @@ include "views/modules/header.php";
         <div class="col-md-4"> 
         <label for="">Barrio:</label>         
             <select class="form-control" id="barrio_sol" required="" name="barrio_sol">
-            <option value="">seleccionar barrio</option>
+            <option value=""><?php while ($row = mysqli_fetch_array($result)){
+
+                    echo '<option value="'.$row['cod_sec'].'">'.$row['nombre_sec'].'</option>';
+
+                } ?></option>
             </select>
         </div> 
         <div class="col-md-4"> 
@@ -72,7 +85,7 @@ include "views/modules/header.php";
           <input type="text" class="form-control" name="telefono2_sol"  id="telefono2_sol" >
         </div>
 
-        <div class=" col-md-4"> 
+        <div class=" col-md-3">
           <label for="">Celular:</label>
           <input type="text" class="form-control" name="celular_sol"  id="celular_sol" >
         </div>

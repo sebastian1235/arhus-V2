@@ -11,7 +11,16 @@ $bd="arhus";
 $con = mysqli_connect($server,$user,$pass,$bd);
 
 $result = mysqli_query($con,"SELECT * FROM siax_sectores");
+
+$resul_localidad = mysqli_query($con,"SELECT * FROM siax_localidad");
+$resul_asesor = mysqli_query($con,"SELECT * FROM ap_terceros");
+$resul_estado = mysqli_query($con,"SELECT * FROM ap_estado_preventa");
+$resul_fp = mysqli_query($con,"SELECT * FROM ap_forma_pago");
 ?>
+
+
+
+
 
 <div class="row">
     <div class="col-md-12">
@@ -46,6 +55,7 @@ $result = mysqli_query($con,"SELECT * FROM siax_sectores");
         <div class="col-md-4"> 
         <label for="">Barrio:</label>         
             <select class="form-control" id="barrio_sol" required="" name="barrio_sol">
+              <option value="">seleccionar barrio</option>
             <option value=""><?php while ($row = mysqli_fetch_array($result)){
 
                     echo '<option value="'.$row['cod_sec'].'">'.$row['nombre_sec'].'</option>';
@@ -57,6 +67,10 @@ $result = mysqli_query($con,"SELECT * FROM siax_sectores");
         <label for="">Localidad:</label>         
             <select class="form-control" id="localidad_sol" required="" name="localidad_sol">
             <option value="">seleccionar barrio</option>
+              <option value=""><?php while ($row = mysqli_fetch_array($resul_localidad)){
+                    echo '<option value="'.$row['id_loc'].'">'.$row['nombre_loc'].'</option>';
+
+                } ?></option>
             </select>
         </div> 
       </div>
@@ -127,7 +141,11 @@ $result = mysqli_query($con,"SELECT * FROM siax_sectores");
         <div class="col-md-5">
         <label for="">Nombre asesor</label>
           <select class="form-control" id="asesor_sol" name="asesor_sol">
-             
+            <option value="">Asesor</option>
+             <option value=""><?php while ($row = mysqli_fetch_array($resul_asesor)){
+                    echo '<option value="'.$row['Id_tercero'].'">'.$row['nombre_tercero'].'</option>';
+
+                } ?></option>
           </select>
         </div>
         <div class=" col-md-5">
@@ -150,8 +168,12 @@ $result = mysqli_query($con,"SELECT * FROM siax_sectores");
         </div>
          <div class="col-md-5">
         <label for="">Estado de solicitud</label>
-        <select class="form-control" id="estado_sol" name="estado_sol">
-             
+        <select class="form-control" id="estado_sol" name="estado_sol" >
+          <option value="">Estado</option>
+              <option value=""><?php while ($row = mysqli_fetch_array($resul_estado)){
+                    echo '<option value="'.$row['id_estado_preventa'].'">'.$row['nombre_estado_preventa'].'</option>';
+
+                } ?></option>
         </select>
         </div>
         <div class=" col-md-5">
@@ -173,7 +195,11 @@ $result = mysqli_query($con,"SELECT * FROM siax_sectores");
            <div class="col-md-4"> 
             <label for="">Forma de pago:</label>         
             <select class="form-control" id="forma_pagogn_sol" name="forma_pagogn_sol">
-            <option value="">seleccionar barrio</option>
+            <option value="">seleccionar forma de pago</option>
+             <option value=""><?php while ($row = mysqli_fetch_array($resul_fp)){
+                    echo '<option value="'.$row['Id_forma_ap'].'">'.$row['nombre_forma_ap'].'</option>';
+
+                } ?></option>
             </select>
         </div> 
 

@@ -26,7 +26,7 @@ class EnlacesModels{
             $enlaces == "Tterceros" ||
             $enlaces == "salir" ||
             $enlaces == "perfil" ||
-            $enlaces == "" ||
+            $enlaces == "RegistroSol1" ||
             $enlaces == "" ||
             $enlaces == "" ||
             $enlaces == "" ||

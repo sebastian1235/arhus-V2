@@ -25,7 +25,11 @@ class EnlacesModels{
             $enlaces == "registro_tercero" ||
             $enlaces == "Tterceros" ||
             $enlaces == "salir" ||
-            $enlaces == "Tcampanas" ||
+            $enlaces == "perfil" ||
+            $enlaces == "" ||
+            $enlaces == "" ||
+            $enlaces == "" ||
+            $enlaces == "" ||
             $enlaces == ""){
 
             $module = "views/modules/".$enlaces.".php";

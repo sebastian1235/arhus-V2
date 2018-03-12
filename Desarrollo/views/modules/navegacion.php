@@ -46,6 +46,7 @@
                         <li><a href="Tterceros">Items</a></li>
                         
                     </ul>
+                <li><a href="perfil"><i class="fa fa-link"></i> <span>Perfiles</span></a></li>
                 </li>
             </ul>
             <!-- /.sidebar-menu -->

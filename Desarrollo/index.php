@@ -15,14 +15,5 @@ require_once "models/enlaces.php";
 require_once "models/ingreso.php";
 
 
-//require_once "models/include/estado.php";
-//require_once "models/include/forma_pago.php";
-//require_once "models/include/getbarrio.php";
-//require_once "models/include/items.php";
-//require_once "models/include/localidad.php";
-//require_once "models/include/tercero.php";
-//require_once "models/include/tipo_inv.php";
-
-
 $template = new TemplateController();
 $template -> template();

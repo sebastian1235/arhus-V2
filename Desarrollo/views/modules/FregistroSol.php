@@ -32,7 +32,7 @@ $resul_fp = mysqli_query($con,"SELECT * FROM ap_forma_pago");
             <!-- /.box-header -->
             <!-- form start -->
             <div class="container">
-           <form class="form-horizontal" method="POST" action="registrar.php" autocomplete="off">
+           <form class="form-horizontal" method="POST" action="registroSol1" autocomplete="off">
      
         <fieldset>
 <legend>Datos de contacto:</legend>
@@ -227,7 +227,7 @@ $resul_fp = mysqli_query($con,"SELECT * FROM ap_forma_pago");
           <div class="col-sm-offset-5 col-sm-10">
             <br>
             <a href="TSolicitudes" class="btn btn-default">Regresar</a>
-      <button type="submit" align="center" class="btn btn-primary" name="submit" value="Agregar" action="registroSol.php" >Registrar</button>
+      <button type="submit" align="center" class="btn btn-primary" name="submit" value="Agregar" action="FregistroSol.php" >Registrar</button>
           
         </div>
     </div>

@@ -29,7 +29,7 @@ class EnlacesModels{
             $enlaces == "registroSol1" ||
             $enlaces == "insertAsignacion" ||
             $enlaces == "insertCiudad" ||
-            $enlaces == "" ||
+            $enlaces == "insert_terceros" ||
             $enlaces == ""){
 
             $module = "views/modules/".$enlaces.".php";

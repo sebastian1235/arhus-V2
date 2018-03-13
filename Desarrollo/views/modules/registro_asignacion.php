@@ -10,7 +10,7 @@
             </div>
             <!-- /.box-header -->
             <!-- form start --><div class="container">
-          <form class="form-horizontal" method="POST" action="nombre_ciu" autocomplete="off">
+          <form class="form-horizontal" method="POST" action="insertAsignacion" autocomplete="off">
      
     
 

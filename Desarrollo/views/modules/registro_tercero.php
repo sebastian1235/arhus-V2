@@ -12,7 +12,7 @@ include "views/modules/header.php";
             <!-- /.box-header -->
             <!-- form start -->
             <div class="container">
-           <form class="form-horizontal" method="POST" action="registrar.php" autocomplete="off">
+           <form class="form-horizontal" method="POST" action="insert_terceros" autocomplete="off">
      
         <fieldset>
 <legend>Datos de contacto:</legend>
@@ -21,29 +21,29 @@ include "views/modules/header.php";
       <div class="form-group">
      <div class="col-md-4"> 
         <label for="">Tipo tercero:</label>         
-            <select class="form-control" id="localidad_sol" required="" name="localidad_sol">
+            <select class="form-control" id="tipo_tercero"  name="tipo_tercero">
             <option value="">seleccionar tercero</option>
             </select>
         </div> </div>
         <div class="form-group">
          <div class=" col-md-4">
           <label for="">Nombre:</label>
-            <input  type="text" class="form-control" name="nombre_sol" required="" id="nombre_sol">
+            <input  type="text" class="form-control" name="nombre_tercero"  id="nombre_tercero">
           </div>
           <div class=" col-md-3">
           <label for="">Nit:</label>
-            <input  type="text" class="form-control" name="nombre_sol" required="" id="nombre_sol">
+            <input  type="text" class="form-control" name="nit_tercero"  id="nit_tercero">
           </div>
         </div>
         <div class="form-group">
          <div class=" col-md-4">
           <label for="">Direccion:</label>
-            <input type="text" class="form-control" name="cedula_sol" required=""  id="cedula_sol">
+            <input type="text" class="form-control" name="direccion_tercero"   id="direccion_tercero">
         </div>
            <div class=" col-md-3">
         
           <label for="">Correo electronico:</label>
-          <input type="text" class="form-control" name="email_sol"  required="" id="email_sol" >
+          <input type="text" class="form-control" name="e_mail_tercero"   id="e_mail_tercero" >
         </div>
     
       </div>
@@ -53,17 +53,17 @@ include "views/modules/header.php";
     <div class="form-group">
         <div class=" col-md-3"> 
         <label for="">Telefono:</label>      
-          <input type="text" class="form-control" name="telefono1_sol" required="" id="telefono1_sol" >
+          <input type="text" class="form-control" name="telefono1_tercero"  id="telefono1_tercero" >
         </div>
 
         <div class=" col-md-3">
           <label for="">Telefono opcional:</label>
-          <input type="text" class="form-control" name="telefono2_sol"  id="telefono2_sol" >
+          <input type="text" class="form-control" name="telefono2_tercero"  id="telefono2_tercero" >
         </div>
 
         <div class=" col-md-3"> 
           <label for="">Fax:</label>
-          <input type="text" class="form-control" name="celular_sol"  id="celular_sol" >
+          <input type="text" class="form-control" name="fax_tercero"  id="fax_tercero" >
         </div>
         </div>
        
@@ -72,18 +72,18 @@ include "views/modules/header.php";
 
         <div class=" col-md-4">
           <label for="">contacto:</label>
-            <input type="text" class="form-control" name="direccion_pol_sol" required="" id="direccion_pol_sol">
+            <input type="text" class="form-control" name="Contacto_tercero" required="" id="Contacto_tercero">
         </div>
   <div class="col-md-2"> 
         <label for="">Gran contribuyente:</label>         
-            <select class="form-control" id="localidad_sol" required="" name="localidad_sol">
+            <select class="form-control" id="gran_contrib_tercero"  name="gran_contrib_tercero">
             <option value="1">Si</option>
             <option value="0">No</option>
             </select>
         </div>
          <div class="col-md-2"> 
         <label for="">Auto retenedor:</label>         
-            <select class="form-control" id="localidad_sol" required="" name="localidad_sol">
+            <select class="form-control" id="autoretenedor_tercero"  name="autoretenedor_tercero">
             <option value="1">Si</option>
             <option value="0">No</option>
             </select>
@@ -95,28 +95,28 @@ include "views/modules/header.php";
         
  <div class="col-md-3"> 
         <label for="">Regimen comun :</label>         
-            <select class="form-control" id="localidad_sol" required="" name="localidad_sol">
+            <select class="form-control" id="reg_comun_tercero"  name="reg_comun_tercero">
             <option value="1">Si</option>
             <option value="0">No</option>
             </select>
         </div>
        <div class="col-md-3"> 
         <label for="">Responsable de materiales :</label>         
-            <select class="form-control" id="localidad_sol" required="" name="localidad_sol">
+            <select class="form-control" id="responsable_materiales_tercero"  name="responsable_materiales_tercero">
             <option value="1">Si</option>
             <option value="0">No</option>
             </select>
         </div>
           <div class="col-md-3"> 
         <label for="">Grupo nomina</label>         
-            <select class="form-control" id="localidad_sol" required="" name="localidad_sol">
+            <select class="form-control" id="grupo_nomina_tercero"  name="grupo_nomina_tercero">
             <option value="1">tipo nomina</option>
         
             </select>
         </div>
         <div class="col-md-2"> 
         <label for="">Activar :</label>         
-            <select class="form-control" id="localidad_sol" required="" name="localidad_sol">
+            <select class="form-control" id="localidad_sol" "" name="localidad_sol">
             <option value="1">Si</option>
             <option value="0">No</option>
             </select>
@@ -136,7 +136,7 @@ include "views/modules/header.php";
           <div class="col-sm-offset-5 col-sm-10">
             <br>
             <a href="Tterceros" class="btn btn-default">Regresar</a>
-      <button type="submit" align="center" class="btn btn-primary" name="submit" value="Agregar" action="registroSol.php" >Registrar</button>
+      <button type="submit" align="center" class="btn btn-primary" name="submit" value="Agregar" action="registro_tercero.php" >Registrar</button>
           
         </div>
     </div>

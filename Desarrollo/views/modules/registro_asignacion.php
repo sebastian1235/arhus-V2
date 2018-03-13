@@ -10,7 +10,7 @@
             </div>
             <!-- /.box-header -->
             <!-- form start --><div class="container">
-          <form class="form-horizontal" method="POST" action="registrar.php" autocomplete="off">
+          <form class="form-horizontal" method="POST" action="nombre_ciu" autocomplete="off">
      
     
 
@@ -18,25 +18,23 @@
 <div class="form-group">
          <div class=" col-md-3">
           <label for="">Tipo de asignacion:</label>
-            <input  type="text" class="form-control" name="nombre_sol"  id="nombre_sol">
+            <input  type="text" class="form-control" name="tipo_asignacion"  id="tipo_asignacion">
         </div>
 </div>
 <div class="form-group">
          <div class=" col-md-3">
           <label for="">Comision por obra:</label>
-            <input type="text" class="form-control" name="cedula_sol" id="cedula_sol">
+            <input type="text" class="form-control" name="comision_obra_asignacion" id="comision_obra_asignacion">
         </div>
          <div class=" col-md-3">
           <label for="">Comision por gasodomestico:</label>
-            <input type="text" class="form-control" name="cedula_sol" id="cedula_sol">
+            <input type="text" class="form-control" name="comision_gasod_asignacion" id="comision_gasod_asignacion">
         </div>
          <div class=" col-md-3">
           <label for="">Comision fija:</label>
-            <input type="text" class="form-control" name="cedula_sol" id="cedula_sol">
+            <input type="text" class="form-control" name="comision_fija_asignacion" id="comision_fija_asignacion">
         </div>
-        <div class=" col-md-6">
-         <input type="text" class="form-control" id="id_sol" name="id_sol" placeholder="id" style="visibility: hidden;" >
-      </div>
+        
 </div>
    
 
@@ -45,7 +43,7 @@
           <div class="col-sm-offset-5 col-sm-10">
             <br>
             <a href="Tasignacion" class="btn btn-default">Regresar</a>
-      <button type="submit" align="center" class="btn btn-primary" name="submit" value="Agregar" action="registroSol.php" >Registrar</button>
+      <button type="submit" align="center" class="btn btn-primary" name="submit" value="Agregar" action="registro_asignacion" >Registrar</button>
           
         </div>
     </div>

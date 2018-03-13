@@ -27,8 +27,8 @@ class EnlacesModels{
             $enlaces == "salir" ||
             $enlaces == "perfil" ||
             $enlaces == "registroSol1" ||
-            $enlaces == "" ||
-            $enlaces == "" ||
+            $enlaces == "insertAsignacion" ||
+            $enlaces == "insertCiudad" ||
             $enlaces == "" ||
             $enlaces == ""){
 

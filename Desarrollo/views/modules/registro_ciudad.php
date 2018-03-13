@@ -11,17 +11,17 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form role="form">
+            <form role="form"  action="insertCiudad">
                 <div class="box-body">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Ciudad</label>
-                        <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ciudad">
+                        <label>Ciudad</label>
+                        <input type="text" class="form-control" id="nombre_ciu" name="nombre_ciu" placeholder="Ciudad">
                     </div>
                 </div>
                 <!-- /.box-body -->
 
                 <div class="box-footer">
-                    <button type="submit" class="btn btn-primary">registrar</button>
+                    <button type="submit" class="btn btn-primary"  name="submit" value="Agregar" action="registro_asignacion">registrar</button>
                 </div>
             </form>
         </div>
@@ -90,7 +90,7 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form role="form">
+            <form role="form" method="POST" action="insertCiudad">
                 <div class="box-body">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Nombre localidad</label>
@@ -110,7 +110,7 @@
                 <!-- /.box-body -->
 
                 <div class="box-footer">
-                    <button type="submit" class="btn btn-primary">registrar</button>
+                    <button type="submit" class="btn btn-primary"  name="submit" value="Agregar" action="registro_ciudad">registrar</button>
                 </div>
             </form>
         </div>
@@ -142,22 +142,22 @@
     
   }
 
-          $_pagi_sql=("SELECT * FROM `siax_ciudad`"); 
+          $_pagi_sql=("SELECT * FROM `siax_localidad`"); 
 
         $query=mysqli_query($mysqli,$_pagi_sql);?>
         <div class="box-body no-padding">
             <table class="table">
                 <tr>
                     <th style="width: 10px">Asignación</th>
-                    <th>Ciudad</th>
-                    <th>Ciudad</th>
+                    <th>localidad</th>
+                    <th>Codigo</th>
                     <th>Ciudad</th>
                 </tr>
                 <tr>
       <?php   $numero=mysqli_num_rows($query);
       while($arreglo=mysqli_fetch_array($query)){ ?>
-                     <td><?php echo $arreglo['id_ciu'];?> </td>
-            <td><?php echo $arreglo['nombre_ciu'];?></td>
+                     <td><?php echo $arreglo['nombre_loc'];?> </td>
+            <td><?php echo $arreglo['cod_loc'];?></td>
 
             <td><a href="modificar.php?id=<?php echo $arreglo['id'];?>"><span class="glyphicon glyphicon-pencil"></span></a></td>
             <td><a href="modificar.php?id=<?php echo $arreglo['id'];?>"><span class="glyphicon glyphicon-pencil"></span></a></td>

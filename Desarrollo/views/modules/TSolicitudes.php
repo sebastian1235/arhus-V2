@@ -100,8 +100,8 @@ include "views/modules/header.php";
             <td><?php echo $arreglo['fecha_visita_comerc_sol'];?></td>
             <td><?php echo $arreglo['nombre_Sec'];?></td>
             <td><?php echo $arreglo['nombre_loc'];?></td>
-            <td><a href="modificar.php?id=<?php echo $arreglo['id'];?>"><span class="glyphicon glyphicon-pencil"></span></a></td>
-            <td><a href="modificar.php?id=<?php echo $arreglo['id'];?>"><span class="glyphicon glyphicon-pencil"></span></a></td>
+            <td><a href="modificar.php?id=<?php echo $arreglo['id_sol'];?>"><span class="glyphicon glyphicon-pencil"></span></a></td>
+            <td><a href="confirm-delete?id=<?php echo $arreglo['id_sol'];?>"><span class="glyphicon glyphicon-pencil"></span></a></td>
         </tr>
           </tbody>
           <?php  } ?>

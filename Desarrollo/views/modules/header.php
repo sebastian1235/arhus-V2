@@ -58,18 +58,17 @@
                         <!-- Menu Toggle Button -->
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <!-- The user image in the navbar-->
-                            <img src="views/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                            <img src="<?php echo $_SESSION["photo"];?>" class="user-image" alt="User Image">
                             <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                            <span class="hidden-xs">ADMINISTRADOR</span>
+                            <span class="hidden-xs"><?php echo $_SESSION["usuario"];?></span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- The user image in the menu -->
                             <li class="user-header">
-                                <img src="views/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                <img src="<?php echo $_SESSION["photo"];?>" class="img-circle" alt="User Image">
 
                                 <p>
                                     <?php echo $_SESSION["usuario"];?>
-                                    <small>Fecha de miembro</small>
                                 </p>
                             </li>
 

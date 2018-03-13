@@ -15,9 +15,11 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="views/dist/css/AdminLTE.min.css">
     <link rel="stylesheet" href="views/dist/css/skins/skin-yellow.min.css">
+    <link rel="stylesheet" href="views/css/sweetalert.css">
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="views/js/sweetalert.min.js"></script>
     <!--favicon-->
     <link rel="apple-touch-icon" sizes="57x57" href="views/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="views/favicon/apple-icon-60x60.png">
@@ -55,10 +57,9 @@
 <script src="views/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
 <script src="views/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 <script>
-    
   //Script para las tablas//  
   $(function () {
-   
+    $('#example1').DataTable()
     $('#example2').DataTable({
       'paging'      : true,
       'lengthChange': false,
@@ -68,7 +69,8 @@
       'autoWidth'   : false
     })
   })
-    
 </script>
+<script src="views/js/perfiles.js"></script>
+
 </body>
 </html>

@@ -10,9 +10,9 @@
                     <img src="views/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
-                    <p>ADMINISTRADOR</p>
+                    <p><?php echo $_SESSION["usuario"];?></p>
                     <!-- Status -->
-                    <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                    <p><i class="fa fa-circle text-success"></i> Online</p>
                 </div>
             </div>
             <!-- Sidebar Menu -->
@@ -27,7 +27,7 @@
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="TSolicitudes">Todos los registros  </a></li>
+                        <li><a href="TSolicitudes">Todos los registros</a></li>
                         <li><a href="FregistroSol">Registrar solicitud</a></li>
                         
                     </ul>
@@ -39,7 +39,7 @@
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="Tasignacion">Asigancion  </a></li>
+                        <li><a href="Tasignacion">Asigancion</a></li>
                         <li><a href="registro_ciudad">Registrar solicitud</a></li>
                         <li><a href="Tcampanas">Campañas</a></li>
                         <li><a href="Titems">Items</a></li>

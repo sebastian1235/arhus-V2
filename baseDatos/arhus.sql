@@ -914,24 +914,6 @@ INSERT INTO `ap_tipo_tercero` (`id_tipo_tercero`, `nombre_tipo_ter`, `descripcio
 	(8, 'Gestor Comercial', NULL, 'PERSONA', 0, NULL);
 /*!40000 ALTER TABLE `ap_tipo_tercero` ENABLE KEYS */;
 
--- Volcando estructura para tabla arhus.ingreso_usuarios
-CREATE TABLE IF NOT EXISTS `ingreso_usuarios` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `contraseña` varchar(15) DEFAULT '0',
-  `email` text,
-  `foto` text,
-  `rol` int(11) DEFAULT '0',
-  `usuario` varchar(15) DEFAULT '0',
-  `intento` int(11) DEFAULT '0',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1 COMMENT='ingreso de los usuarios.';
-
--- Volcando datos para la tabla arhus.ingreso_usuarios: ~1 rows (aproximadamente)
-/*!40000 ALTER TABLE `ingreso_usuarios` DISABLE KEYS */;
-INSERT INTO `ingreso_usuarios` (`id`, `contraseña`, `email`, `foto`, `rol`, `usuario`, `intento`) VALUES
-	(1, 'admin123', 'admin@correo.com', NULL, 0, 'admin', 0);
-/*!40000 ALTER TABLE `ingreso_usuarios` ENABLE KEYS */;
-
 -- Volcando estructura para tabla arhus.siax_campana
 CREATE TABLE IF NOT EXISTS `siax_campana` (
   `id_campana` int(11) NOT NULL,
@@ -992,12 +974,14 @@ CREATE TABLE IF NOT EXISTS `siax_ciudad` (
   `nombre_ciu` varchar(50) NOT NULL,
   PRIMARY KEY (`id_ciu`),
   KEY `id_ciu` (`id_ciu`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
--- Volcando datos para la tabla arhus.siax_ciudad: ~1 rows (aproximadamente)
+-- Volcando datos para la tabla arhus.siax_ciudad: ~3 rows (aproximadamente)
 /*!40000 ALTER TABLE `siax_ciudad` DISABLE KEYS */;
 INSERT INTO `siax_ciudad` (`id_ciu`, `nombre_ciu`) VALUES
-	(1, 'Bogota');
+	(1, 'Bogota'),
+	(2, ''),
+	(3, '');
 /*!40000 ALTER TABLE `siax_ciudad` ENABLE KEYS */;
 
 -- Volcando estructura para tabla arhus.siax_estado_giv
@@ -1341,12 +1325,16 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `rol` int(11) NOT NULL,
   `intentos` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
--- Volcando datos para la tabla arhus.usuarios: ~0 rows (aproximadamente)
+-- Volcando datos para la tabla arhus.usuarios: ~5 rows (aproximadamente)
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
 INSERT INTO `usuarios` (`id`, `usuario`, `password`, `email`, `photo`, `rol`, `intentos`) VALUES
-	(1, 'admin', '$2a$07$asxx54ahjppf45sd87a5aunxs9bkpyGmGE/.vekdjFg83yRec789S', 'admin@admin.com', '', 0, 0);
+	(1, 'admin', '$2a$07$asxx54ahjppf45sd87a5aunxs9bkpyGmGE/.vekdjFg83yRec789S', 'admin@admin.com', '', 0, 0),
+	(8, 'GioTest', '$2a$07$asxx54ahjppf45sd87a5auhqpCc/iROa9LyLsEYdiDfgjoMxMuEkG', 'govaw22@gmail.com', 'views/images/photo.jpg', 0, 0),
+	(9, 'GioTest1', '$2a$07$asxx54ahjppf45sd87a5auhqpCc/iROa9LyLsEYdiDfgjoMxMuEkG', 'govaw22@gmail.com', 'views/images/photo.jpg', 1, 0),
+	(10, 'giotest', '$2a$07$asxx54ahjppf45sd87a5auGZEtGHuyZwm.Ur.FJvWLCql3nmsMbXy', 'govaw22@gmail.com', 'views/images/photo.jpg', 0, 0),
+	(11, 'giotest1', '$2a$07$asxx54ahjppf45sd87a5auJRR6foEJ7ynpjisKtbiKJbvJsoQ8VPS', 'govaw22@gmail.com', 'views/images/photo.jpg', 0, 0);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

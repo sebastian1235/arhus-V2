@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e71b5988-19e2-4ede-adcb-7a772a6c7e3a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Desarrollo/index.php" afterPath="$PROJECT_DIR$/Desarrollo/index.php" />
-      <change beforePath="$PROJECT_DIR$/Desarrollo/views/modules/header.php" afterPath="$PROJECT_DIR$/Desarrollo/views/modules/header.php" />
-      <change beforePath="$PROJECT_DIR$/Desarrollo/views/modules/perfil.php" afterPath="$PROJECT_DIR$/Desarrollo/views/modules/perfil.php" />
-      <change beforePath="$PROJECT_DIR$/Desarrollo/views/template.php" afterPath="$PROJECT_DIR$/Desarrollo/views/template.php" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,8 +30,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Tcampanas.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/Tcampanas.php">
       <file leaf-file-name="FregistroSol.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/FregistroSol.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -335,12 +330,12 @@
       <workItem from="1520710940788" duration="125000" />
       <workItem from="1520873311102" duration="4398000" />
       <workItem from="1520903410250" duration="3432000" />
-      <workItem from="1520956548633" duration="12482000" />
+      <workItem from="1520956548633" duration="12763000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64594000" />
+    <option name="totallyTimeSpent" value="64875000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />

@@ -7,7 +7,7 @@
             <!-- Sidebar user panel (optional) -->
             <div class="user-panel">
                 <div class="pull-left image">
-                    <img src="views/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                    <img src="<?php echo $_SESSION["photo"];?>" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
                     <p><?php echo $_SESSION["usuario"];?></p>
@@ -40,10 +40,10 @@
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="Tasignacion">Asigancion</a></li>
-                        <li><a href="registro_ciudad">Registrar solicitud</a></li>
+                        <li><a href="registro_ciudad">Ciudad</a></li>
                         <li><a href="Tcampanas">Campañas</a></li>
                         <li><a href="Titems">Items</a></li>
-                        <li><a href="Tterceros">Items</a></li>
+                        <li><a href="Tterceros">Terceros</a></li>
                         
                     </ul>
                 <li><a href="perfil"><i class="fa fa-link"></i> <span>Perfiles</span></a></li>

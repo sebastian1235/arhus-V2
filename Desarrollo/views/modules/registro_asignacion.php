@@ -1,4 +1,14 @@
-   <?php include"views/modules/header.php";
+   <?php
+session_start();
+
+if(!$_SESSION["validar"]){
+
+    header("location:ingreso");
+
+    exit();
+
+}
+    include"views/modules/header.php";
  include"views/modules/navegacion.php"; ?>
 
   <section class="content container-fluid">

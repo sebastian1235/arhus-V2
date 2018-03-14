@@ -5,7 +5,6 @@
  * Date: 8/03/2018
  * Time: 5:51 PM
  */
-
 require_once "conexion.php";
 class IngresoModels{
 

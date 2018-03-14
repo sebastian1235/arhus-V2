@@ -5,6 +5,7 @@
  * Date: 8/03/2018
  * Time: 5:51 PM
  */
+session_start();
 
 class Ingreso{
 
@@ -25,19 +26,11 @@ class Ingreso{
                 $intentos = $respuesta["intentos"];
                 $usuarioActual = $_POST["usuarioIngreso"];
                 $maximoIntentos = 2;
-
                 if($intentos < $maximoIntentos){
-
                     if($respuesta["usuario"] == $_POST["usuarioIngreso"] && $respuesta["password"] == $encriptar){
-
                         $intentos = 0;
-
                         $datosController = array("usuarioActual"=>$usuarioActual, "actualizarIntentos"=>$intentos);
-
                         $respuestaActualizarIntentos = IngresoModels::intentosModel($datosController, "usuarios");
-
-                        session_start();
-
                         $_SESSION["validar"] = true;
                         $_SESSION["usuario"] = $respuesta["usuario"];
                         $_SESSION["id"] = $respuesta["id"];
@@ -45,9 +38,7 @@ class Ingreso{
                         $_SESSION["email"] = $respuesta["email"];
                         $_SESSION["photo"] = $respuesta["photo"];
                         $_SESSION["rol"] = $respuesta["rol"];
-
-                        header("location:inicio");
-
+                        echo '<script> window.location = "inicio"</script>';
                     }
 
                     else{

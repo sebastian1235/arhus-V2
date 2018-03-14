@@ -1,4 +1,18 @@
+<<<<<<< HEAD
+<?php
+session_start();
+=======
   <?php
+  session_start();
+>>>>>>> f52bc1abe767abed983793d722210ca321bb43ac
+
+if(!$_SESSION["validar"]){
+
+    header("location:ingreso");
+
+    exit();
+
+}
 include "views/modules/navegacion.php";
 include "views/modules/header.php";
 ?>

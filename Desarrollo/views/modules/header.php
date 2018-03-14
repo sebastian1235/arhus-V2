@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <div class="wrapper">
     <!-- Content Wrapper. Contains page content -->
 

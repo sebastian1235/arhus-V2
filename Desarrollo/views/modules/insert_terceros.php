@@ -34,7 +34,7 @@ $con = mysqli_connect($server,$user,$pass,$bd);
 				//echo 'Se ha registrado con exito';
 				echo ' <script language="javascript">alert("Agregado");</script> ';
 
-			echo "<script>location.href='Tterceros'</script>";
+				echo "<script>location.href='Tterceros'</script>";
 
 				
 ?>

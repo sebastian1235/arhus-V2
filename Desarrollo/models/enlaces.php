@@ -23,6 +23,7 @@ class EnlacesModels{
             $enlaces == "registro_items" ||
             $enlaces == "Titems" ||
             $enlaces == "registro_tercero" ||
+            $enlaces == "Tcampanas" ||
             $enlaces == "Tterceros" ||
             $enlaces == "salir" ||
             $enlaces == "perfil" ||

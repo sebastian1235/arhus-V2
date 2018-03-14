@@ -9,7 +9,6 @@ if(!$_SESSION["validar"]){
     exit();
 
 }
-
 include "views/modules/navegacion.php";
 include "views/modules/header.php";
 

@@ -1,5 +1,14 @@
 
 <?php
+session_start();
+
+if(!$_SESSION["validar"]){
+
+    header("location:ingreso");
+
+    exit();
+
+}
 include "views/modules/navegacion.php";
 include "views/modules/header.php";
 ?><div class="row">

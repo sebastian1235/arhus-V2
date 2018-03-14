@@ -40,10 +40,10 @@
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="Tasignacion">Asigancion</a></li>
-                        <li><a href="registro_ciudad">Registrar solicitud</a></li>
+                        <li><a href="registro_ciudad">Ciudad</a></li>
                         <li><a href="Tcampanas">Campañas</a></li>
                         <li><a href="Titems">Items</a></li>
-                        <li><a href="Tterceros">Items</a></li>
+                        <li><a href="Tterceros">Terceros</a></li>
                         
                     </ul>
                 <li><a href="perfil"><i class="fa fa-link"></i> <span>Perfiles</span></a></li>

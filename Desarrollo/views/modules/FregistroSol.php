@@ -1,15 +1,10 @@
 <?php
 session_start();
-
 if(!$_SESSION["validar"]){
-
     header("location:ingreso");
-
     exit();
 
 }
-
-
 include "views/modules/navegacion.php";
 include "views/modules/header.php";
 
@@ -17,11 +12,8 @@ $user="root";
 $pass="mysql";
 $server="localhost";
 $bd="arhus";
-
 $con = mysqli_connect($server,$user,$pass,$bd);
-
 $result = mysqli_query($con,"SELECT * FROM siax_sectores");
-
 $resul_localidad = mysqli_query($con,"SELECT * FROM siax_localidad");
 $resul_asesor = mysqli_query($con,"SELECT * FROM ap_terceros");
 $resul_estado = mysqli_query($con,"SELECT * FROM ap_estado_preventa");

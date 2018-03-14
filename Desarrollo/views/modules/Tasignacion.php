@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 <?php
-session_start();
-=======
-  <?php
+
   session_start();
->>>>>>> f52bc1abe767abed983793d722210ca321bb43ac
 
 if(!$_SESSION["validar"]){
 

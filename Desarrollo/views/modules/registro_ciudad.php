@@ -1,36 +1,24 @@
-<<<<<<< HEAD
 <?php
-=======
-    <?php
->>>>>>> f52bc1abe767abed983793d722210ca321bb43ac
 session_start();
-
 if(!$_SESSION["validar"]){
 
     header("location:ingreso");
 
     exit();
-
 }
-<<<<<<< HEAD
+
 include"views/modules/header.php";
 include"views/modules/navegacion.php";
-?>
-=======
-     include"views/modules/header.php";
- include"views/modules/navegacion.php"; 
  $user="root";
 $pass="mysql";
 $server="localhost";
 $bd="arhus";
-
 $con = mysqli_connect($server,$user,$pass,$bd);
 
 $result = mysqli_query($con,"SELECT * FROM siax_ciudad");
 
-$resul_localidad = mysqli_query($con,"SELECT * FROM siax_localidad");?>
->>>>>>> f52bc1abe767abed983793d722210ca321bb43ac
-
+$resul_localidad = mysqli_query($con,"SELECT * FROM siax_localidad");
+?>
 
 <div class="row">
     <div class="col-md-6">

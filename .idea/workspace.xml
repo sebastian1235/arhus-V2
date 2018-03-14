@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e71b5988-19e2-4ede-adcb-7a772a6c7e3a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Desarrollo/models/enlaces.php" afterPath="$PROJECT_DIR$/Desarrollo/models/enlaces.php" />
-      <change beforePath="$PROJECT_DIR$/Desarrollo/views/modules/Tcampanas.php" afterPath="$PROJECT_DIR$/Desarrollo/views/modules/Tcampanas.php" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change beforePath="$PROJECT_DIR$/Desarrollo/models/ingreso.php" afterPath="$PROJECT_DIR$/Desarrollo/models/ingreso.php" />
+      <change beforePath="$PROJECT_DIR$/Desarrollo/views/js/perfiles.js" afterPath="$PROJECT_DIR$/Desarrollo/views/js/perfiles.js" />
       <change beforePath="$PROJECT_DIR$/Desarrollo/views/modules/perfil.php" afterPath="$PROJECT_DIR$/Desarrollo/views/modules/perfil.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,102 +33,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="navegacion.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/navegacion.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="820">
-              <caret line="41" column="60" lean-forward="false" selection-start-line="41" selection-start-column="60" selection-end-line="41" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="usuarioPerfil.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Desarrollo/controllers/usuarioPerfil.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="37" column="51" lean-forward="false" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
-              <folding>
-                <marker date="1520974282987" expanded="true" signature="1723:2309" ph="..." />
-                <marker date="1520974282987" expanded="true" signature="1754:2053" ph="{&quot;title&quot;: &quot;!Ok&quot;...}" />
-                <marker date="1520974282987" expanded="true" signature="2098:2281" ph="{...}" />
-                <marker date="1520974282987" expanded="true" signature="2141:2230" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="perfil.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/perfil.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="15" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="registro_ciudad.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/registro_ciudad.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4700">
-              <caret line="235" column="35" lean-forward="false" selection-start-line="235" selection-start-column="35" selection-end-line="235" selection-end-column="35" />
+            <state relative-caret-position="220">
+              <caret line="29" column="56" lean-forward="true" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
               <folding>
-                <marker date="1520952007443" expanded="true" signature="2042:2069" ph="SELECT * FRO... siax_ciudad" />
-                <marker date="1520952007443" expanded="true" signature="5392:5422" ph="SELECT * FRO... siax_localidad" />
-                <marker date="1520952007443" expanded="true" signature="8338:8365" ph="SELECT * FRO... siax_ciudad" />
+                <element signature="n#style#0;n#form#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/header.php">
+      <file leaf-file-name="ingreso.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Desarrollo/models/ingreso.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="62" column="86" lean-forward="false" selection-start-line="62" selection-start-column="86" selection-end-line="62" selection-end-column="86" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="registro_campana.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/registro_campana.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Tcampanas.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/Tcampanas.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="20">
-              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state relative-caret-position="286">
+              <caret line="45" column="24" lean-forward="false" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
               <folding>
-                <marker date="1520996550240" expanded="true" signature="677:705" ph="SELECT * FRO... siax_campana" />
+                <marker date="1520998803849" expanded="true" signature="244:338" ph="SELECT id, u... ${$tabla}" />
+                <marker date="1520998803849" expanded="true" signature="625:688" ph="UPDATE ${$tabla}... " />
+                <marker date="1520998803849" expanded="true" signature="1121:1174" ph="SELECT id, u... ${$TABLA}" />
+                <marker date="1520998803849" expanded="true" signature="1121:1175" ph="SELECT id, u... $" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="enlaces.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Desarrollo/controllers/enlaces.php">
+      <file leaf-file-name="perfiles.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Desarrollo/views/js/perfiles.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="enlaces.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Desarrollo/models/enlaces.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="25" column="34" lean-forward="false" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+            <state relative-caret-position="100">
+              <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -168,7 +104,6 @@
         <option value="$PROJECT_DIR$/Desarrollo/models/conexion.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/ingreso.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/salir.php" />
-        <option value="$PROJECT_DIR$/Desarrollo/models/ingreso.php" />
         <option value="$PROJECT_DIR$/Desarrollo/models/ejemploSelect.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/TSolicitudes.php" />
         <option value="$PROJECT_DIR$/Desarrollo/models/include/items.php" />
@@ -176,15 +111,16 @@
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/FregistroSol.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/inicio.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/navegacion.php" />
-        <option value="$PROJECT_DIR$/Desarrollo/views/js/perfiles.js" />
         <option value="$PROJECT_DIR$/Desarrollo/models/usuarioPerfil.php" />
         <option value="$PROJECT_DIR$/Desarrollo/index.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/template.php" />
         <option value="$PROJECT_DIR$/Desarrollo/controllers/usuarioPerfil.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/header.php" />
-        <option value="$PROJECT_DIR$/Desarrollo/views/modules/perfil.php" />
         <option value="$PROJECT_DIR$/Desarrollo/models/enlaces.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/Tcampanas.php" />
+        <option value="$PROJECT_DIR$/Desarrollo/views/js/perfiles.js" />
+        <option value="$PROJECT_DIR$/Desarrollo/views/modules/perfil.php" />
+        <option value="$PROJECT_DIR$/Desarrollo/models/ingreso.php" />
       </list>
     </option>
   </component>
@@ -198,7 +134,7 @@
     <servers />
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1376" />
@@ -252,6 +188,13 @@
               <item name="arhus-V2" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Desarrollo" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="arhus-V2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="arhus-V2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Desarrollo" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="arhus-V2" type="b2602c69:ProjectViewProjectNode" />
@@ -319,16 +262,15 @@
       <workItem from="1520903410250" duration="3432000" />
       <workItem from="1520956548633" duration="12763000" />
       <workItem from="1520984777087" duration="2670000" />
-      <workItem from="1520995915473" duration="638000" />
+      <workItem from="1520995915473" duration="2693000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68183000" />
+    <option name="totallyTimeSpent" value="70238000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1376" height="744" extended-state="0" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20440729" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -399,13 +341,6 @@
     <entry file="file://$PROJECT_DIR$/Desarrollo/models/ejemploSelect.php" />
     <entry file="file://$PROJECT_DIR$/Desarrollo/models/include/forma_pago.php" />
     <entry file="file://$PROJECT_DIR$/Desarrollo/models/include/getbarrio.php" />
-    <entry file="file://$PROJECT_DIR$/Desarrollo/models/ingreso.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Desarrollo/views/js/validarIngreso.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
@@ -431,13 +366,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
           <caret line="39" column="9" lean-forward="false" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Desarrollo/views/js/perfiles.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="39" lean-forward="false" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -614,22 +542,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Desarrollo/controllers/enlaces.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Desarrollo/models/enlaces.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="25" column="34" lean-forward="false" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/insertCiudad.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -668,20 +580,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/perfil.php">
+    <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/Tcampanas.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="15" selection-end-column="1" />
+        <state relative-caret-position="-500">
+          <caret line="11" column="39" lean-forward="true" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+          <folding>
+            <marker date="1520996550240" expanded="true" signature="677:705" ph="SELECT * FRO... siax_campana" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Desarrollo/controllers/enlaces.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/Tcampanas.php">
+    <entry file="file://$PROJECT_DIR$/Desarrollo/models/enlaces.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state relative-caret-position="317">
+          <caret line="25" column="34" lean-forward="false" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Desarrollo/views/js/perfiles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/perfil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="29" column="56" lean-forward="true" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
           <folding>
-            <marker date="1520996550240" expanded="true" signature="677:705" ph="SELECT * FRO... siax_campana" />
+            <element signature="n#style#0;n#form#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Desarrollo/models/ingreso.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="45" column="24" lean-forward="false" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+          <folding>
+            <marker date="1520998803849" expanded="true" signature="244:338" ph="SELECT id, u... ${$tabla}" />
+            <marker date="1520998803849" expanded="true" signature="625:688" ph="UPDATE ${$tabla}... " />
+            <marker date="1520998803849" expanded="true" signature="1121:1174" ph="SELECT id, u... ${$TABLA}" />
+            <marker date="1520998803849" expanded="true" signature="1121:1175" ph="SELECT id, u... $" />
           </folding>
         </state>
       </provider>

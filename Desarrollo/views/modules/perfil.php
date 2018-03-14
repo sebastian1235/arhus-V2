@@ -21,14 +21,13 @@ include "views/modules/header.php";
 
 
 <div class="row">
-
     <!--registrar usuarios-->
     <div class="col-md-7">
         <div>
             <button  id="registroPerfil" class="btn btn-warning" style="margin-bottom:20px">Registrar Usuario</button>
         </div>
         <div class="box box-warning">
-            <form role="form" id="formularioPerfil" method="post" enctype="multipart/form-data">
+            <form role="form" style="display:none" id="formularioPerfil" method="post" enctype="multipart/form-data">
                 <div class="box-header with-border">
                     <h3 class="box-title">Registro de perfiles</h3>
                 </div>

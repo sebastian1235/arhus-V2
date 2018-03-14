@@ -43,4 +43,12 @@ class IngresoModels{
 
     }
 
+    #VISUALIZAR PERFILES
+    public function verPerfilesModel($tabla){
+        $stmt = Conexion::conectar()->prepare("SELECT id, usuario, password, email, rol, phote FROM $tabla");
+        $stmt -> execute();
+        return $stmt -> fetchAll();
+        $stmt -> close();
+    }
+
 }

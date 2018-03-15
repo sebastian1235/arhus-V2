@@ -40,7 +40,7 @@ class EnlacesModels{
             $enlaces == "insertSector" ||
             $enlaces == "tipoInventario" ||
             $enlaces == "tipoTercero" ||
-            $enlaces == "MedioPago" ||
+            $enlaces == "medioPago" ||
             $enlaces == "Tcampanas"){
 
             $module = "views/modules/".$enlaces.".php";

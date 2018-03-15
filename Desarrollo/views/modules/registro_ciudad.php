@@ -226,13 +226,10 @@ $resul_localidad = mysqli_query($con,"SELECT * FROM siax_localidad");?>
             <form role="form" method="POST" action="insertSector">
                 <div class="box-body">
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Ciudad</label>
+                        <label for="exampleInputEmail1">Sector</label>
                         <input type="text" class="form-control" id="nombre_sec" name="nombre_sec" placeholder="Ciudad">
                     </div>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Codigo</label>
-                        <input type="text" class="form-control" id="cod_sec" name="cod_sec" placeholder="Ciudad">
-                    </div>
+                  
                      <div class="form-group"> 
                     <label for="">Localidad:</label>         
                    <select class="form-control" id="localidad" required="" name="localidad">

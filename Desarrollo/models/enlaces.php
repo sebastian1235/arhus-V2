@@ -33,6 +33,11 @@ class EnlacesModels{
             $enlaces == "insert_terceros" ||
             $enlaces == "insertLocalidad" ||
             $enlaces == "insertSector" ||
+            $enlaces == "insertCampana" ||
+            $enlaces == "insertSector" ||
+            $enlaces == "insertSector" ||
+            $enlaces == "insertSector" ||
+            $enlaces == "insertSector" ||
             $enlaces == "Tcampanas"){
 
             $module = "views/modules/".$enlaces.".php";

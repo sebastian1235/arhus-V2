@@ -34,7 +34,7 @@ class EnlacesModels{
             $enlaces == "insertLocalidad" ||
             $enlaces == "insertSector" ||
             $enlaces == "insertCampana" ||
-            $enlaces == "insertSector" ||
+            $enlaces == "insertItems" ||
             $enlaces == "insertSector" ||
             $enlaces == "insertSector" ||
             $enlaces == "insertSector" ||

@@ -18,10 +18,11 @@ $server="localhost";
 $bd="arhus";
 
 $con = mysqli_connect($server,$user,$pass,$bd);
-
+//desplegables anidados
+$resul_localidad = mysqli_query($con,"SELECT * FROM siax_localidad");
 $result = mysqli_query($con,"SELECT * FROM siax_sectores");
 
-$resul_localidad = mysqli_query($con,"SELECT * FROM siax_localidad");
+//desplegables
 $resul_asesor = mysqli_query($con,"SELECT * FROM ap_terceros");
 $resul_estado = mysqli_query($con,"SELECT * FROM ap_estado_preventa");
 $resul_fp = mysqli_query($con,"SELECT * FROM ap_forma_pago");
@@ -60,28 +61,29 @@ $resul_fp = mysqli_query($con,"SELECT * FROM ap_forma_pago");
       </div>
    
   
-    <div class="form-group">   
+    <div class="form-group"> 
+     <div class="col-md-4"> 
+        <label for="">Localidad:</label>         
+            <select class="form-control" id="localidad_sol" required="" name="localidad_sol">
+            <option value="">seleccionar barrio</option>
+              <?php while ($row = mysqli_fetch_array($resul_localidad)){
+                    echo '<option value="'.$row['id_loc'].'">'.$row['nombre_loc'].'</option>';
+
+                } ?>
+            </select>
+        </div>   
         <div class="col-md-4"> 
         <label for="">Barrio:</label>         
             <select class="form-control" id="barrio_sol" required="" name="barrio_sol">
               <option value="">seleccionar barrio</option>
-            <option value=""><?php while ($row = mysqli_fetch_array($result)){
+           <?php while ($row = mysqli_fetch_array($result)){
 
                     echo '<option value="'.$row['cod_sec'].'">'.$row['nombre_sec'].'</option>';
 
-                } ?></option>
+                } ?>
             </select>
         </div> 
-        <div class="col-md-4"> 
-        <label for="">Localidad:</label>         
-            <select class="form-control" id="localidad_sol" required="" name="localidad_sol">
-            <option value="">seleccionar barrio</option>
-              <option value=""><?php while ($row = mysqli_fetch_array($resul_localidad)){
-                    echo '<option value="'.$row['id_loc'].'">'.$row['nombre_loc'].'</option>';
-
-                } ?></option>
-            </select>
-        </div> 
+       
       </div>
       <div class="form-group"  >
         <div class=" col-md-4">

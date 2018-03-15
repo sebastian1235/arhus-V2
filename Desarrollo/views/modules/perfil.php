@@ -99,6 +99,8 @@ include "views/modules/header.php";
                         <th>Usuarios</th>
                         <th>Perfil</th>
                         <th>Email</th>
+                        <th></th>
+
                     </tr>
                     </thead>
                     <tbody>
@@ -116,6 +118,8 @@ include "views/modules/header.php";
         </div>
     </div>
 </div>
+
+
 
 
 

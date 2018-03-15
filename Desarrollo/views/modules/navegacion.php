@@ -18,10 +18,10 @@
             <!-- Sidebar Menu -->
             <ul class="sidebar-menu" data-widget="tree">
                 <!-- Optionally, you can add icons to the links -->
-                <li class="active"><a href="inicio"><i class="fa fa-link"></i> <span>Inicio</span></a></li>
-                <li><a href="registroDet_venta"><i class="fa fa-link"></i> <span>Detalle de venta</span></a></li>
+                <li class="active"><a href="inicio"><i class="glyphicon glyphicon-chevron-right"></i> <span>Inicio</span></a></li>
+                <li><a href="registroDet_venta"><i class="glyphicon glyphicon-chevron-right"></i> <span>Detalle de venta</span></a></li>
                 <li class="treeview">
-                    <a href="FregistroSol"><i class="fa fa-link"></i> <span>Registrar solicitud</span>
+                    <a href="FregistroSol"><i class="glyphicon glyphicon-chevron-right"></i> <span>Registrar solicitud</span>
                         <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
@@ -33,7 +33,7 @@
                     </ul>
                 </li>
                  <li class="treeview">
-                    <a href="FregistroSol"><i class="fa fa-link"></i> <span>Parametros</span>
+                    <a href="FregistroSol"><i class="glyphicon glyphicon-chevron-right"></i> <span>Parametros</span>
                         <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
               </span>
@@ -46,7 +46,7 @@
                         <li><a href="Tterceros">Terceros</a></li>
                         
                     </ul>
-                <li><a href="perfil"><i class="fa fa-link"></i> <span>Perfiles</span></a></li>
+                <li><a href="perfil"><i class="glyphicon glyphicon-chevron-right"></i> <span>Perfiles</span></a></li>
                 </li>
             </ul>
             <!-- /.sidebar-menu -->

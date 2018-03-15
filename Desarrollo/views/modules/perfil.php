@@ -22,11 +22,13 @@ include "views/modules/header.php";
 
 <div class="row">
     <!--registrar usuarios-->
-    <div class="col-md-7">
+    <div class="col-md-8">
         <div>
             <button  id="registroPerfil" class="btn btn-warning" style="margin-bottom:20px">Registrar Usuario</button>
         </div>
-        <div class="box box-warning">
+
+        <div class="col-md-12">
+            <div class="box box-warning">
             <form role="form" style="display:none" id="formularioPerfil" method="post" enctype="multipart/form-data">
                 <div class="box-header with-border">
                     <h3 class="box-title">Registro de perfiles</h3>
@@ -66,21 +68,29 @@ include "views/modules/header.php";
             ?>
 
         </div>
+        </div>
     </div>
 
-    <div class="col-md-5">
+    <div class="col-md-4">
         <h1>Hola <?php echo $_SESSION["usuario"];?>
-            <span class="btn btn-info fa fa-pencil pull-left" id="btnEditarPerfil" style="font-size:10px; margin-right:10px"></span></h1>
+            <span class="btn btn-warning fa fa-pencil pull-left" id="btnEditarPerfil" style="font-size:10px; margin-right:10px"></span></h1>
+        <h4>Email: <?php echo $_SESSION["email"];?></h4>
+        <h4>Perfil: <?php
 
-        <div style="position:relative">
-            <img src="<?php echo $_SESSION["photo"];?>" class="img-circle pull-right">
-        </div>
+            if( $_SESSION["rol"] == 0){
+                echo "Administrador";
+            }
+            else{
+                echo "Editor";
+            }
+            ?>
+        </h4>
     </div>
 
 </div>
 
 <div class="row">
-    <div class="col-md-9">
+    <div class="col-md-8">
         <div class="box">
             <div class="box-body">
                 <table id="example1" class="table table-bordered table-striped">
@@ -91,6 +101,15 @@ include "views/modules/header.php";
                         <th>Email</th>
                     </tr>
                     </thead>
+                    <tbody>
+                    <?php
+
+                    $verPerfiles = new UsuarioPerfil();
+                    $verPerfiles -> verPerfilesController();
+
+                    ?>
+
+                    </tbody>
                 </table>
             </div>
             <!-- /.box-body -->

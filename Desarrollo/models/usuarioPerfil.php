@@ -28,4 +28,11 @@ class PerfilModel{
         $stmt->close();
     }
 
+    public function verPerfilesModel($tabla){
+        $stmt = Conexion::conectar()->prepare("SELECT id, usuario, password,  email, rol, photo FROM $tabla");
+        $stmt -> execute();
+        return $stmt ->fetchAll();
+        $stmt -> close();
+    }
+
 }

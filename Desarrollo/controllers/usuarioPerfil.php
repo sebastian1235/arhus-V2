@@ -61,4 +61,28 @@ class UsuarioPerfil{
             }
         }
     }
+
+    #VISUALIZAR LOS PERFILES
+    public function verPerfilesController(){
+        $respuesta = PerfilModel::verPerfilesModel("usuarios");
+        $rol = "";
+        foreach ($respuesta as $row => $item){
+            if ($item["rol" == 0]){
+                $rol = "Adminstrador";
+
+            }
+            else{
+                $rol = "Editor";
+
+            }
+            echo '
+                <tr>
+                    <td>' . $item["usuario"] . '</td>
+                    <td>' . $rol . '</td>
+                    <td>' . $item["email"] . '</td>    
+                </tr>
+               ';
+        }
+    }
+
 }

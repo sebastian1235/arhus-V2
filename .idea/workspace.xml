@@ -6,7 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e71b5988-19e2-4ede-adcb-7a772a6c7e3a" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Desarrollo/controllers/usuarioPerfil.php" afterPath="$PROJECT_DIR$/Desarrollo/controllers/usuarioPerfil.php" />
+      <change beforePath="$PROJECT_DIR$/Desarrollo/models/enlaces.php" afterPath="$PROJECT_DIR$/Desarrollo/models/enlaces.php" />
+      <change beforePath="$PROJECT_DIR$/Desarrollo/views/modules/navegacion.php" afterPath="$PROJECT_DIR$/Desarrollo/views/modules/navegacion.php" />
       <change beforePath="$PROJECT_DIR$/Desarrollo/views/modules/perfil.php" afterPath="$PROJECT_DIR$/Desarrollo/views/modules/perfil.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,14 +36,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="registroDet_venta.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/registroDet_venta.php">
+      <file leaf-file-name="perfil.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/perfil.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="95" column="59" lean-forward="true" selection-start-line="95" selection-start-column="59" selection-end-line="95" selection-end-column="59" />
-              <folding>
-                <marker date="1521061777927" expanded="true" signature="2636:2668" ph="SELECT * FRO... ap_detalle_venta" />
-              </folding>
+            <state relative-caret-position="314">
+              <caret line="81" column="37" lean-forward="true" selection-start-line="81" selection-start-column="37" selection-end-line="81" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="enlaces.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Desarrollo/models/enlaces.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="417">
+              <caret line="42" column="34" lean-forward="false" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navegacion.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/navegacion.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="451">
+              <caret line="48" column="94" lean-forward="false" selection-start-line="48" selection-start-column="94" selection-end-line="48" selection-end-column="94" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -66,6 +85,7 @@
       <find>admini</find>
       <find>fecha</find>
       <find>modal fade</find>
+      <find>hola</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -83,7 +103,6 @@
         <option value="$PROJECT_DIR$/Desarrollo/models/include/items.php" />
         <option value="$PROJECT_DIR$/Desarrollo/models/include/tipo_inv.php" />
         <option value="$PROJECT_DIR$/Desarrollo/index.php" />
-        <option value="$PROJECT_DIR$/Desarrollo/models/enlaces.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/Tcampanas.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/js/perfiles.js" />
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/header.php" />
@@ -98,12 +117,13 @@
         <option value="$PROJECT_DIR$/Desarrollo/controllers/ingreso.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/ingreso.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/css/style.css" />
-        <option value="$PROJECT_DIR$/Desarrollo/views/modules/navegacion.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/inicio.php" />
         <option value="$PROJECT_DIR$/Desarrollo/models/usuarioPerfil.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/template.php" />
-        <option value="$PROJECT_DIR$/Desarrollo/views/modules/perfil.php" />
         <option value="$PROJECT_DIR$/Desarrollo/controllers/usuarioPerfil.php" />
+        <option value="$PROJECT_DIR$/Desarrollo/views/modules/perfil.php" />
+        <option value="$PROJECT_DIR$/Desarrollo/models/enlaces.php" />
+        <option value="$PROJECT_DIR$/Desarrollo/views/modules/navegacion.php" />
       </list>
     </option>
   </component>
@@ -152,6 +172,12 @@
               <item name="arhus-V2" type="b2602c69:ProjectViewProjectNode" />
               <item name="arhus-V2" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Desarrollo" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="arhus-V2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="arhus-V2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Desarrollo" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="models" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="arhus-V2" type="b2602c69:ProjectViewProjectNode" />
@@ -231,12 +257,12 @@
       <workItem from="1521048443039" duration="6026000" />
       <workItem from="1521058808924" duration="383000" />
       <workItem from="1521072200227" duration="4410000" />
-      <workItem from="1521124242094" duration="5280000" />
+      <workItem from="1521124242094" duration="8095000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88642000" />
+    <option name="totallyTimeSpent" value="91457000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="0" width="1373" height="735" extended-state="0" />
@@ -281,13 +307,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/insertAsignacion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-134">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Desarrollo/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -396,13 +415,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Desarrollo/models/enlaces.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="25" column="34" lean-forward="false" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/Tcampanas.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -466,13 +478,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/insert_terceros.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/insertLocalidad.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -523,16 +528,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/navegacion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="21" column="91" lean-forward="false" selection-start-line="21" selection-start-column="91" selection-end-line="21" selection-end-column="91" />
-          <caret line="23" column="86" lean-forward="false" selection-start-line="23" selection-start-column="86" selection-end-line="23" selection-end-column="86" />
-          <caret line="35" column="86" lean-forward="false" selection-start-line="35" selection-start-column="86" selection-end-line="35" selection-end-column="86" />
-          <caret line="48" column="80" lean-forward="false" selection-start-line="48" selection-start-column="80" selection-end-line="48" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -567,14 +562,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="351">
           <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/perfil.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="95" column="78" lean-forward="true" selection-start-line="95" selection-start-column="78" selection-end-line="95" selection-end-column="78" />
           <folding />
         </state>
       </provider>
@@ -646,13 +633,57 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/insertAsignacion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-23">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1520952007416" expanded="true" signature="384:621" ph="INSERT INTO ap_asignacion... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/insert_terceros.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-360">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1521055630851" expanded="true" signature="824:1416" ph="INSERT INTO ap_terceros... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/registroDet_venta.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="95" column="59" lean-forward="true" selection-start-line="95" selection-start-column="59" selection-end-line="95" selection-end-column="59" />
+        <state relative-caret-position="1900">
+          <caret line="95" column="59" lean-forward="false" selection-start-line="95" selection-start-column="59" selection-end-line="95" selection-end-column="59" />
           <folding>
             <marker date="1521061777927" expanded="true" signature="2636:2668" ph="SELECT * FRO... ap_detalle_venta" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/perfil.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="81" column="37" lean-forward="true" selection-start-line="81" selection-start-column="37" selection-end-line="81" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Desarrollo/models/enlaces.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="42" column="34" lean-forward="false" selection-start-line="42" selection-start-column="25" selection-end-line="42" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/navegacion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="451">
+          <caret line="48" column="94" lean-forward="false" selection-start-line="48" selection-start-column="94" selection-end-line="48" selection-end-column="94" />
+          <folding />
         </state>
       </provider>
     </entry>

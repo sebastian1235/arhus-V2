@@ -27,8 +27,8 @@
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="TSolicitudes">Todos los registros</a></li>
-                        <li><a href="FregistroSol">Registrar solicitud</a></li>
+                        <li><a href="TSolicitudes"><i class="glyphicon glyphicon-tag"></i>Todos los registros</a></li>
+                        <li><a href="FregistroSol"><i class="glyphicon glyphicon-tag"></i>Registrar solicitud</a></li>
                         
                     </ul>
                 </li>
@@ -39,11 +39,15 @@
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="Tasignacion">Asigancion</a></li>
-                        <li><a href="registro_ciudad">Ciudad</a></li>
-                        <li><a href="Tcampanas">Campañas</a></li>
-                        <li><a href="Titems">Items</a></li>
-                        <li><a href="Tterceros">Terceros</a></li>
+                        <li><a href="Tasignacion"><i class="glyphicon glyphicon-tag"></i>Asignacion</a></li>
+                        <li><a href="registro_ciudad"><i class="glyphicon glyphicon-tag"></i>Ciudad</a></li>
+                        <li><a href="Tcampanas"><i class="glyphicon glyphicon-tag"></i>Campañas</a></li>
+                        <li><a href="Titems"><i class="glyphicon glyphicon-tag"></i>Items</a></li>
+                        <li><a href="Tterceros"><i class="glyphicon glyphicon-tag"></i>Terceros</a></li>
+                        <li><a href="tipoInventario"><i class="glyphicon glyphicon-tag"></i>Tipo inventario</a></li>
+                        <li><a href="tipoTercero"><i class="glyphicon glyphicon-tag"></i>Tipo tercero</a></li>
+                        <li><a href="MedioPago"><i class="glyphicon glyphicon-tag"></i>Medio pago</a></li>
+
                         
                     </ul>
                 <li><a href="perfil"><i class="glyphicon glyphicon-chevron-right"></i> <span>Perfiles</span></a></li>

@@ -73,7 +73,8 @@ include "views/modules/header.php";
 
     <div class="col-md-4">
         <h1>Hola <?php echo $_SESSION["usuario"];?>
-            <span class="btn btn-warning fa fa-pencil pull-left" id="btnEditarPerfil" style="font-size:10px; margin-right:10px"></span></h1>
+<!--            <span class="btn btn-warning fa fa-pencil pull-left" id="btnEditarPerfil" style="font-size:10px; margin-right:10px"></span>-->
+        </h1>
         <h4>Email: <?php echo $_SESSION["email"];?></h4>
         <h4>Perfil: <?php
 

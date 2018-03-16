@@ -17,8 +17,6 @@ if(!$_SESSION["validar"]){
 include "views/modules/navegacion.php";
 include "views/modules/header.php";
 ?>
-<button style="margin-bottom:20px" id="registroModoPago" class="btn btn-warning" >Registrar Modo de Pago</button>
-
     <div class="row">
         <div class="col-md-5">
                 <div class="col-md-12">

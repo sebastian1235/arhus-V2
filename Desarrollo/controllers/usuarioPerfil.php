@@ -84,10 +84,10 @@ class UsuarioPerfil{
 			        <td>'.$item["usuario"].'</td>
 			        <td>'.$rol.'</td>
 			        <td>'.$item["email"].'</td>
-			        <td><a href="#perfil'.$item["id"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></a>
+			        <td><a href="perfil'.$item["id"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></a>
 			      </tr>
 
-			       <div id="perfil'.$item["id"].'" class="modal fade">
+			       <div id="#perfil'.$item["id"].'" class="modal fade">
 
 				       	<div class="modal-dialog modal-content">
 

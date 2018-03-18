@@ -41,18 +41,15 @@ class TipoTercero
     }
 
     #Vista de Medio de Pago
-    public function vistaMedioPagoController(){
-        $respuesta = MedioPagoModel::vistaMedioPago("siax_medio_pago");
+    public function vistaTipoTerceroController(){
+        $respuesta = TipoTerceroModel::vistaTipoTercero("ap_tipo_tercero");
         $activo = "";
         foreach ($respuesta as $row => $item){
-            if ($item["activo_medio_pago"] == 0){
-                $activo = "SI";
-            }else{
-                $activo = "NO";
-            }
-            echo' <tr>   
-                    <td>' .$item["nombre_medio_pago"].'</td>
-                    <td>' .$activo.'</td>
+            echo' 
+                   <tr>   
+                    <td>' .$item["nombreTipoTercero"].'</td>
+                    <td>' .$item["descripcionTipoTercero"].'</td>
+                    <td>' .$item["grupoTipoTercero"].'</td>
                     <td><a href="#medioPago'.$item["Id_medio_pago"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></a></td>
                   </tr>
                   

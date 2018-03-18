@@ -74,7 +74,7 @@ include "views/modules/header.php";
                     <tbody>
                     <?php
                     $verTipoTercero = new TipoTercero();
-                    $verTipoTercero -> vistaTipoTercero();
+                    $verTipoTercero -> vistaTipoTerceroController();
                     ?>
 
                     </tbody>

@@ -15,7 +15,7 @@ include "views/modules/header.php";
 
 ?>
     <div class="jumbotron">
-        <h1>Bienvenido - <?php echo $_SESSION["usuario"];?></h1>
+        <h1 class="text-yellow">Bienvenido - <?php echo $_SESSION["usuario"];?></h1>
 
 
     <div class="row">

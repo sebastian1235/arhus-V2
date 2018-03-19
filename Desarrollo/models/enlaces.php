@@ -37,7 +37,6 @@ class EnlacesModels{
             $enlaces == "insertItems" ||
             $enlaces == "insertSector" ||
             $enlaces == "insertSector" ||
-            $enlaces == "insertSector" ||
             $enlaces == "tipoInventario" ||
             $enlaces == "tipoTercero" ||
             $enlaces == "medioPago" ||
@@ -51,7 +50,7 @@ class EnlacesModels{
         }
 
         else{
-            $module = "views/modules/ingreso.php";
+            $module = "views/modules/error.php";
         }
 
         return $module;

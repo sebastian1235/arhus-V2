@@ -20,7 +20,7 @@ if(!$_SESSION["validar"]){
             </div>
             <!-- /.box-header -->
             <!-- form start --><div class="container">
-          <form class="form-horizontal" method="POST" action="insertAsignacion" autocomplete="off">
+          <form class="form-horizontal" method="POST" id="formularioAsignacion" autocomplete="off">
      
     
 
@@ -53,8 +53,11 @@ if(!$_SESSION["validar"]){
           <div class="col-sm-offset-5 col-sm-10">
             <br>
             <a href="Tasignacion" class="btn btn-default">Regresar</a>
-      <button type="submit" align="center" class="btn btn-primary" name="submit" value="Agregar" action="registro_asignacion" >Registrar</button>
-          
+      <button type="submit" align="center" class="btn btn-primary" name="guardarAsignacion" id="guardarAsignacion">Registrar</button>
+ <?php
+                        $crearAsigancion = new asignacion();
+                        $crearAsigancion -> registroAsignacionController();
+                        ?>          
         </div>
     </div>
       </div>

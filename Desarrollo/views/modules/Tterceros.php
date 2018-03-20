@@ -24,7 +24,7 @@ include "views/modules/header.php";
       </div>
       <div class="row table-responsive">
       <br>
-      <h1>Solicitudes</h1>
+      <h1>Terceros</h1>
       <div >
          <?php
           

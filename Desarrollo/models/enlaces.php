@@ -35,7 +35,7 @@ class EnlacesModels{
             $enlaces == "insertSector" ||
             $enlaces == "insertCampana" ||
             $enlaces == "insertItems" ||
-            $enlaces == "insertSector" ||
+            $enlaces == "subirArchivo" ||
             $enlaces == "insertSector" ||
             $enlaces == "tipoInventario" ||
             $enlaces == "tipoTercero" ||

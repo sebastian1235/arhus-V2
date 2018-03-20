@@ -12,12 +12,15 @@ require_once "controllers/ingreso.php";
 require_once "controllers/usuarioPerfil.php";
 require_once "controllers/modoPago.php";
 require_once "controllers/tipoTercero.php";
+require_once "controllers/asignacion.php";
+
 
 require_once "models/enlaces.php";
 require_once "models/ingreso.php";
 require_once "models/usuarioPerfil.php";
 require_once "models/modoPago.php";
 require_once "models/tipoTercero.php";
+require_once "models/asignacion.php";
 
 $template = new TemplateController();
 $template -> template();

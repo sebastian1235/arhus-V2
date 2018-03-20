@@ -14,12 +14,13 @@ include "views/modules/header.php";
 
 <section class="content container-fluid">
       <div class="row">
-      
+     
       </div>
       
       <div class="row">
         <a href="registro_asignacion" class="btn btn-primary">Nuevo Registro</a>
       </div>
+       <h1> Asigancion </h1>
       <div class="row table-responsive">
       <br>
       
@@ -37,7 +38,7 @@ include "views/modules/header.php";
           $_pagi_sql=("SELECT * FROM `ap_asignacion`"); 
 
         $query=mysqli_query($mysqli,$_pagi_sql);?>
-        <table class="table table-striped" ">
+        <table id="example2" class="table table-striped" ">
           <thead>
             <tr>
               <th>Tipo de asignacion</th>
@@ -67,3 +68,4 @@ include "views/modules/header.php";
         </table>
       </div>
     </div>
+  

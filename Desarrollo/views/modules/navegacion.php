@@ -19,7 +19,7 @@
             <ul class="sidebar-menu" data-widget="tree">
                 <!-- Optionally, you can add icons to the links -->
                 <li class="active"><a href="inicio"><i class="glyphicon glyphicon-chevron-right"></i> <span>Inicio</span></a></li>
-                <li><a href="registroDet_venta"><i class="glyphicon glyphicon-chevron-right"></i> <span>Detalle de venta</span></a></li>
+               <!-- <li><a href="registroDet_venta"><i class="glyphicon glyphicon-chevron-right"></i> <span>Detalle de venta</span></a></li>-->
                 <li class="treeview">
                     <a href="FregistroSol"><i class="glyphicon glyphicon-chevron-right"></i> <span>Registrar solicitud</span>
                         <span class="pull-right-container">

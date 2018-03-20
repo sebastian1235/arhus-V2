@@ -23,6 +23,7 @@ include "views/modules/header.php";
       <div class="row">
         <a href="registro_campana" class="btn btn-primary">Nuevo Registro</a>
       </div>
+      <h1>  Campañas</h1>
       <div class="row table-responsive">
       <br>
       

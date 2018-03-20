@@ -53,12 +53,16 @@ include "views/modules/header.php";
 
       <div class="row">
       
-      </div>
+    
       
-      <div class="row">
+      <div class="col-md-2">
         <a href="FregistroSol" class="btn btn-primary">Nuevo Registro</a>
       </div>
+      <div class="col-md-2">
+        <a href="subirArchivo" class="btn btn-primary">Nuevo Registro</a>
+      </div>
       <div class="row table-responsive">
+      	  </div>
       <br>
       <h1>Solicitudes</h1>
       <div >

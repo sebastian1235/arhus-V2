@@ -1,0 +1,183 @@
+
+<?php
+session_start();
+
+if(!$_SESSION["validar"]){
+
+    header("location:ingreso");
+
+    exit();
+
+} 
+include "views/modules/navegacion.php";
+include "views/modules/header.php";
+?>
+<meta charset="utf-8" />
+<title>Subir Ficheros con excel</title>
+<script type="text/javascript">
+	function cargarHojaExcel()
+	{
+		if(document.frmcargararchivo1.excel.value=="")
+		{
+			alert("Suba un archivo");
+			document.frmcargararchivo1.excel.focus();
+			return false;
+		}		
+
+		document.frmcargararchivo1.action = "procesar.php";
+		document.frmcargararchivo1.submit();
+	}
+
+</script>
+<script type="text/javascript">
+  function cargarHojaExcel1()
+  {
+    if(document.frmcargararchivo2.excel.value=="")
+    {
+      alert("Suba un archivo");
+      document.frmcargararchivo2.excel.focus();
+      return false;
+    }   
+
+    document.frmcargararchivo2.action = "procesarConsumo.php";
+    document.frmcargararchivo2.submit();
+  }
+
+</script>
+<script type="text/javascript">
+  function cargarHojaExcel2()
+  {
+    if(document.frmcargararchivo3.excel.value=="")
+    {
+      alert("Suba un archivo");
+      document.frmcargararchivo3.excel.focus();
+      return false;
+    }   
+
+    document.frmcargararchivo3.action = "procesarTransito.php";
+    document.frmcargararchivo3.submit();
+  }
+
+</script>
+<script type="text/javascript">
+  function cargarHojaExcel3()
+  {
+    if(document.frmcargararchivo4.excel.value=="")
+    {
+      alert("Suba un archivo");
+      document.frmcargararchivo4.excel.focus();
+      return false;
+    }   
+
+    document.frmcargararchivo4.action = "procesoCantidad.php";
+    document.frmcargararchivo4.submit();
+  }
+
+</script>
+
+
+<body>
+
+<article>
+
+
+	<section>
+	
+      <br>
+			<div class="alert alert-primary" role="alert">
+        1.La informacion se mantiene en linea hasta que se vuelva a hacer el proceso de subir los archivos, una vez se sube el primer archivo (Inventario) se borraran automaticamente la informacion de consumo y transitos por esta razon es necesario subir los tres archivos.
+        <br>
+        <br>
+        2.Subir los archivos en orden (esto puede tardar algunos minutos).
+        <br>
+        <br>
+        3.click en calcular.
+        <br>
+        
+</div>
+		<br>	
+	<div class="col-md-3">
+		<form div style="
+
+    width: 290px;
+    /* Para ver el borde del formulario */
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em;	" name="frmcargararchivo1" method="post" enctype="multipart/form-data">
+		  <h3>1.Subir inventario</h3>
+		  <p><input type="file" name="excel"  id="excel" /></p>
+		  <p><input type="button" class="btn btn-primary" value="Subir" onclick="cargarHojaExcel();" /></p>
+
+                  </div>
+		</form>
+
+  <div class="col-md-3">
+    <form  style="width:290px;
+    /* Para ver el borde del formulario */ padding: 1em; border: 1px solid #CCC; border-radius: 1em; " name="frmcargararchivo2" method="post" enctype="multipart/form-data">
+    
+      <h3>2.Subir consumo</h3>
+      <p><input type="file" name="excel"  id="excel" /></p>
+      <p><input type="button" class="btn btn-primary" value="Subir" onclick="cargarHojaExcel1();" /></p>
+
+    </div>
+
+    </form>
+
+                                                                               
+   <div class="col-md-3">
+    <form div style="
+      width: 290px;
+    /* Para ver el borde del formulario */
+    padding: 1em;
+    border: 1px solid #CCC;
+    border-radius: 1em; " name="frmcargararchivo3" method="post" enctype="multipart/form-data">
+      <h3>3.Subir transito</h3>
+      <p><input type="file" name="excel"  id="excel" /></p>
+      <p><input type="button" class="btn btn-primary" value="Subir" onclick="cargarHojaExcel2();" /></p>
+ 
+</div>
+   
+ </form>
+ <div class="col-md-3">
+    <form  style="width:290px;
+    /* Para ver el borde del formulario */ padding: 1em; border: 1px solid #CCC; border-radius: 1em; " name="frmcargararchivo4" method="post" enctype="multipart/form-data">
+    
+      <h3>2.Subir pedidos</h3>
+      <p><input type="file" name="excel"  id="excel" /></p>
+      <p><input type="button" class="btn btn-primary" value="Subir" onclick="cargarHojaExcel3();" /></p>
+
+    </div>
+
+    </form>
+
+  <form   method="POST" align="center" action="Reg_num.php" autocomplete="off">
+
+
+
+      <div class="col-md-10" >
+      <span> <label for="inputEmail4" class="col-form-label">Meses del consumo</label></span>
+      <input type="text" class="form-control" id="nro_meses" name="nro_meses"    >
+        
+      </div>
+        <br>  
+
+      <div class="col-md-1">
+        <br>
+        <br>
+      <button type="submit2" align="center" class="btn btn-primary" name="submit" value="Agregar" action="subir_archivo.php" >SUBIR</button> 
+      </div>
+      </div>
+      </div>
+
+
+</article>
+<br>
+
+<div align="center"> 
+ <p><input  style="
+      width: 500px;
+      height: 40px;"
+      class="btn btn-primary" value="CALCULAR" onclick = "location='Pedido.php'"/>
+    </div>
+</body>
+</html>

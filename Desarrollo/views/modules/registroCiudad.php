@@ -43,28 +43,24 @@ include"views/modules/navegacion.php";
                 <table id="tablas" class="table table-striped">
                     <thead>
                     <tr>
-                        <th>Usuarios</th>
-                        <th>Perfil</th>
-                        <th>Email</th>
+                        <th>Ciudades</th>
                         <th></th>
-
                     </tr>
                     </thead>
                     <tbody>
                     <?php
-
-                    $verPerfiles = new UsuarioPerfil();
-                    $verPerfiles -> verPerfilesController();
-
+                    $verCiudades = new Ciudades();
+                    $verCiudades -> vistaCiudadController();
+                    $verCiudades -> editarCiudadController();
                     ?>
-
                     </tbody>
                 </table>
             </div>
-            <!-- /.box-body -->
         </div>
     </div>
 </div>
+
+
 <div class="row">
     <div class="col-md-6">
 

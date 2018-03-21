@@ -8,8 +8,7 @@
 
 class CiudadModel
 {
-
-    #registro de medio de pago.
+    #registro Ciudad.
     public function registroCiudad($datosModel, $tabla)
     {
         $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla (nombre_ciu) VALUES (:nombre_ciu)");
@@ -22,34 +21,28 @@ class CiudadModel
         }
         $stmt->close();
     }
-
-    #Vista de medio de pago.s
-
-    public function vistaMedioPago($tabla)
+    #Vista Ciudad
+    public function vistaCiudad($tabla)
     {
-        $stmt = Conexion::conectar()->prepare("SELECT Id_medio_pago, nombre_medio_pago, activo_medio_pago FROM $tabla");
+        $stmt = Conexion::conectar()->prepare("SELECT id_ciu, nombre_ciu FROM $tabla");
         $stmt->execute();
         return $stmt->fetchAll();
         $stmt->close();
     }
-
-    public function actualizarMedioPago($datosModel, $tabla)
+    #Actualziar ciudad
+    public function actualizarCiudad($datosModel, $tabla)
     {
-        $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET nombre_medio_pago = :nombre_medio_pago, activo_medio_pago = :activo_medio_pago WHERE Id_medio_pago = :Id_medio_pago");
-        $stmt->bindParam(":nombre_medio_pago", $datosModel["modoPago"], PDO::PARAM_STR);
-        $stmt->bindParam(":activo_medio_pago", $datosModel["activo"], PDO::PARAM_STR);
-        $stmt->bindParam(":Id_medio_pago", $datosModel["Id_medio_pago"], PDO::PARAM_STR);
-
+        $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET nombre_ciu = :nombre_ciu WHERE id_ciu = :id_ciu");
+        $stmt->bindParam(":nombre_ciu", $datosModel["editarCiudad"], PDO::PARAM_STR);
+        $stmt->bindParam(":id_ciu", $datosModel["id_ciu"], PDO::PARAM_STR);
         if($stmt->execute()){
 
             return "ok";
         }
-
         else{
 
             return "error";
         }
-
         $stmt->close();
 
 

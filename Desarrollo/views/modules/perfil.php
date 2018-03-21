@@ -27,7 +27,7 @@ include "views/modules/header.php";
             <button  id="registroPerfil" class="btn btn-warning" style="margin-bottom:20px">Registrar Usuario</button>
         </div>
 
-        <div class="col-md-12">
+        <div class="col-md-12 table-responsive">
             <div class="box box-warning">
             <form role="form" style="display:none" id="formularioPerfil" method="post" enctype="multipart/form-data">
                 <div class="box-header with-border">
@@ -90,11 +90,11 @@ include "views/modules/header.php";
 
 </div>
 
-<div class="row">
+<div class="row table-responsive">
     <div class="col-md-8">
         <div class="box">
             <div class="box-body">
-                <table id="example1" class="table table-bordered table-striped">
+                <table id="example1" class="table table-striped">
                     <thead>
                     <tr>
                         <th>Usuarios</th>

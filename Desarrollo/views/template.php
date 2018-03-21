@@ -60,14 +60,16 @@
 <script>
   //Script para las tablas//  
   $(function () {
-    $('#example1').DataTable()
-    $('#example2').DataTable({
+    $('#tablas').DataTable()
+    $('#tablas2').DataTable({
       'paging'      : true,
       'lengthChange': false,
       'searching'   : false,
       'ordering'    : true,
       'info'        : true,
-      'autoWidth'   : false
+      'autoWidth'   : false,
+      'responsive'  : true
+
     })
   })
 </script>

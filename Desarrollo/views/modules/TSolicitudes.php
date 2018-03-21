@@ -78,7 +78,7 @@ include "views/modules/header.php";
           $_pagi_sql=("SELECT id_sol, poliza_sol, nombre_tercero, tipo_asignacion, nombre_sol, servicio_sol, nombre_estado_preventa, fecha_prevista_sol, fecha_visita_comerc_sol, nombre_Sec, nombre_loc FROM `ap_solicitud` left join ap_terceros on ap_solicitud.asesor_sol=ap_terceros.Id_tercero left JOIN ap_asignacion on ap_solicitud.asignacion_sol=ap_asignacion.id_asignacion LEFT join ap_estado_preventa on ap_solicitud.estado_sol=ap_estado_preventa.id_estado_preventa left join siax_sectores on ap_solicitud.barrio_sol=siax_sectores.cod_sec left join siax_localidad on ap_solicitud.localidad_sol=siax_localidad.id_loc"); 
 
         $query=mysqli_query($mysqli,$_pagi_sql);?>
-        <table id="" class="table table-bordered table-striped">
+        <table id="example1" class="table table-bordered table-striped">
           <thead>
             <tr>
               <th>ID</th>

@@ -33,7 +33,7 @@
                     </a>
                     <ul class="treeview-menu">
                         <li><a href="Tasignacion"><i class="glyphicon glyphicon-tag"></i>Asignacion</a></li>
-                        <li><a href="registro_ciudad"><i class="glyphicon glyphicon-tag"></i>Ciudad</a></li>
+                        <li><a href="registroCiudad"><i class="glyphicon glyphicon-tag"></i>Ciudad</a></li>
                         <li><a href="Tcampanas"><i class="glyphicon glyphicon-tag"></i>Campañas</a></li>
                         <li><a href="Titems"><i class="glyphicon glyphicon-tag"></i>Items</a></li>
                         <li><a href="Tterceros"><i class="glyphicon glyphicon-tag"></i>Terceros</a></li>

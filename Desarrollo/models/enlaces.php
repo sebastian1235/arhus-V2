@@ -17,7 +17,7 @@ class EnlacesModels{
             $enlaces == "TSolicitudes" ||
             $enlaces == "registroDet_venta" ||
             $enlaces == "registro_asignacion" ||
-            $enlaces == "registro_ciudad" ||
+            $enlaces == "registroCiudad" ||
             $enlaces == "registro_campana" ||
             $enlaces == "Tasignacion" ||
             $enlaces == "registro_items" ||

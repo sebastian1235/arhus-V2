@@ -379,11 +379,6 @@ $resul_fp = mysqli_query($con,"SELECT * FROM ap_forma_pago");
                                 <label for="inputEmail3" class="control-label">Telefono 2</label>
                                 <input type="text" class="form-control" id="" name="" placeholder="" required>
                             </div>
-
-                            <div class="form-group text-center">
-                                <label for="inputEmail3" class="control-label">Ruta Evidencias</label>
-                                <input type="file" id="subirFotoUsuario" style="display:inline-block; margin:10px 0">
-                            </div>
                         </div>
                     </div>
 

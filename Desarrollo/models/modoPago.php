@@ -18,7 +18,7 @@ class MedioPagoModel
     {
         $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla (nombre_medio_pago, activo_medio_pago) VALUES (:nombre_medio_pago, :activo_medio_pago)");
         $stmt->bindParam(":nombre_medio_pago", $datosModel["modoPago"], PDO::PARAM_STR);
-        $stmt->bindParam(":activo_medio_pago", $datosModel["editarActivo"], PDO::PARAM_STR);
+        $stmt->bindParam(":activo_medio_pago", $datosModel["activo"], PDO::PARAM_STR);
 
         if ($stmt->execute()) {
             return "ok";

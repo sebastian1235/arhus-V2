@@ -1,18 +1,33 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: giova
+ * Date: 15/03/2018
+ * Time: 6:45 PM
+ */
 
-
-class asignacion
+class campanas
 {
 
-    public function registroAsignacionController()
+    public function registroCampanasController()
     {
-        if (isset($_POST["tipo_asignacion"])) {
-            $datosController = array("tipo_asignacion" => $_POST["tipo_asignacion"],
-                                "comision_obra_asignacion" => $_POST["comision_obra_asignacion"],
+        if (isset($_POST["nombre_campana"])) {
+            $datosController = array("nombre_campana" => $_POST["nombre_campana"],
+                                "detalle_campana" => $_POST["detalle_campana"],
                                 "comision_gasod_asignacion" => $_POST["comision_gasod_asignacion"],
-                                "comision_fija_asignacion" => $_POST["comision_fija_asignacion"]);
+                                "aplicacion_campana" => $_POST["aplicacion_campana"],
+                               "descuente_campana" => $_POST["descuente_campana"],
+                                "descuento_fijo_campana" => $_POST["descuento_fijo_campana"],
+                              "desc_financ_campana" => $_POST["desc_financ_campana"],
+                            "desde_campana" => $_POST["desde_campana"],
+                           "hasta_campana" => $_POST["hasta_campana"],
+                          "plazo_max_campana" => $_POST["plazo_max_campana"],
+                         "vigente_campana" => $_POST["vigente_campana"],
+                       "tasa_campana" => $_POST["tasa_campana"],
+                           "manto_max_campana" => $_POST["manto_max_campana"],
+                          "condiciones_campana" => $_POST["condiciones_campana"]);
 
-            $respuesta = AsignacionModel::registroAsignacion($datosController, "ap_asignacion");
+            $respuesta = CampanaModel::registroCampana($datosController, "siax_campana");
 
             if ($respuesta == "ok") {
                 echo '<script>
@@ -26,7 +41,7 @@ class asignacion
                        },
                        function(isConfirm) {
                            if (isConfirm){
-                               window.location = "Tasignacion";
+                               window.location = "Tcampanas";
                            }
                          
                        }); 

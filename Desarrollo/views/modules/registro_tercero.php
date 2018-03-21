@@ -11,9 +11,18 @@ if(!$_SESSION["validar"]){
 }
 include "views/modules/navegacion.php";
 include "views/modules/header.php";
+
+$user="root";
+$pass="mysql";
+$server="localhost";
+$bd="arhus";
+
+$con = mysqli_connect($server,$user,$pass,$bd);
+//desplegables anidados
+$resul_items = mysqli_query($con,"SELECT * FROM ap_tipo_tercero");
 ?><div class="row">
     <div class="col-md-12">
-<h2  class="box-title">Registrar solicitud</h2>
+<h2  class="box-title">Registrar Tercero</h2>
         <div class="box box-primary">
             <div class="box-header with-border">
                 
@@ -21,7 +30,7 @@ include "views/modules/header.php";
             <!-- /.box-header -->
             <!-- form start -->
             <div class="container">
-           <form class="form-horizontal" method="POST" action="insert_terceros" autocomplete="off">
+           <form class="form-horizontal" method="POST" id="registroTercero" autocomplete="off">
      
         <fieldset>
 <legend>Datos de contacto:</legend>
@@ -32,6 +41,10 @@ include "views/modules/header.php";
         <label for="">Tipo tercero:</label>         
             <select class="form-control" id="tipo_tercero"  name="tipo_tercero">
             <option value="">seleccionar tercero</option>
+                <?php while ($row = mysqli_fetch_array($resul_items)){
+                    echo '<option value="'.$row['id_tipo_tercero'].'">'.$row['nombre_tipo_ter'].'</option>';
+
+                } ?>
             </select>
         </div> </div>
         <div class="form-group">
@@ -116,13 +129,7 @@ include "views/modules/header.php";
             <option value="0">No</option>
             </select>
         </div>
-          <div class="col-md-3"> 
-        <label for="">Grupo nomina</label>         
-            <select class="form-control" id="grupo_nomina_tercero"  name="grupo_nomina_tercero">
-            <option value="1">tipo nomina</option>
-        
-            </select>
-        </div>
+       
         <div class="col-md-2"> 
         <label for="">Activar :</label>         
             <select class="form-control" id="localidad_sol" "" name="localidad_sol">
@@ -145,8 +152,11 @@ include "views/modules/header.php";
           <div class="col-sm-offset-5 col-sm-10">
             <br>
             <a href="Tterceros" class="btn btn-default">Regresar</a>
-      <button type="submit" align="center" class="btn btn-primary" name="submit" value="Agregar" action="registro_tercero.php" >Registrar</button>
-          
+      <button type="submit" align="center" class="btn btn-primary" name="guardarTercero" id="guardarTercero" >Registrar</button>
+           <?php
+                $crearTerceros = new terceros();
+                $crearTerceros -> registroTercerosController();
+            ?> 
         </div>
     </div>
      

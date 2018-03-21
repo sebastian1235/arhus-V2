@@ -1,26 +1,27 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: giova
- * Date: 15/03/2018
- * Time: 6:45 PM
- */
+
 
 require_once "conexion.php";
 
 
 
-class AsignacionModel
+class ItemsModel
 {
 
     #registro de medio de pago.
-    public function registroAsignacion($datosModel, $tabla)
+    public function registroItems($datosModel, $tabla)
     {
-        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla (tipo_asignacion, comision_obra_asignacion, comision_gasod_asignacion, comision_fija_asignacion) VALUES (:tipo_asignacion, :comision_obra_asignacion, :comision_gasod_asignacion, :comision_fija_asignacion)");
-        $stmt->bindParam(":tipo_asignacion", $datosModel["tipo_asignacion"], PDO::PARAM_STR);
-        $stmt->bindParam(":comision_obra_asignacion", $datosModel["comision_obra_asignacion"], PDO::PARAM_STR);
-        $stmt->bindParam(":comision_gasod_asignacion", $datosModel["comision_gasod_asignacion"], PDO::PARAM_STR);
-        $stmt->bindParam(":comision_fija_asignacion", $datosModel["comision_fija_asignacion"], PDO::PARAM_STR);
+        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla (nombre_item, codigo_item, tipo_item, und_item, precio_item, costo_item, marca_item, cod_marca_item, detalle_item) VALUES (:nombre_item, :codigo_item, :tipo_item, :und_item, :precio_item, :costo_item, :marca_item, :cod_marca_item, :detalle_item)");
+        $stmt->bindParam(":nombre_item", $datosModel["nombre_item"], PDO::PARAM_STR);
+        $stmt->bindParam(":codigo_item", $datosModel["codigo_item"], PDO::PARAM_STR);
+        $stmt->bindParam(":tipo_item", $datosModel["tipo_item"], PDO::PARAM_STR);
+        $stmt->bindParam(":und_item", $datosModel["und_item"], PDO::PARAM_STR);
+        $stmt->bindParam(":precio_item", $datosModel["precio_item"], PDO::PARAM_STR);
+        $stmt->bindParam(":costo_item", $datosModel["costo_item"], PDO::PARAM_STR);
+        $stmt->bindParam(":marca_item", $datosModel["marca_item"], PDO::PARAM_STR);
+        $stmt->bindParam(":cod_marca_item", $datosModel["cod_marca_item"], PDO::PARAM_STR);
+        $stmt->bindParam(":detalle_item", $datosModel["detalle_item"], PDO::PARAM_STR);
+
         if ($stmt->execute()) {
             return "ok";
         } else {

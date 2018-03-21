@@ -1,32 +1,37 @@
 <?php
 
-
-class asignacion
+class items
 {
 
-    public function registroAsignacionController()
+    public function registroItemsController()
     {
-        if (isset($_POST["tipo_asignacion"])) {
-            $datosController = array("tipo_asignacion" => $_POST["tipo_asignacion"],
-                                "comision_obra_asignacion" => $_POST["comision_obra_asignacion"],
-                                "comision_gasod_asignacion" => $_POST["comision_gasod_asignacion"],
-                                "comision_fija_asignacion" => $_POST["comision_fija_asignacion"]);
+        if (isset($_POST["nombre_item"])) {
+            $datosController = array("nombre_item" => $_POST["nombre_item"],
+                                "codigo_item" => $_POST["codigo_item"],
+                                "tipo_item" => $_POST["tipo_item"],
+                                "und_item" => $_POST["und_item"],
+                               "precio_item" => $_POST["precio_item"],
+                                "costo_item" => $_POST["costo_item"],
+                              "marca_item" => $_POST["marca_item"],
+                            "cod_marca_item" => $_POST["cod_marca_item"],
+                           "detalle_item" => $_POST["detalle_item"]);
+               
 
-            $respuesta = AsignacionModel::registroAsignacion($datosController, "ap_asignacion");
+            $respuesta = ItemsModel::registroItems($datosController, "ap_items_inv");
 
             if ($respuesta == "ok") {
                 echo '<script>
 
                        swal({
                             title: "!Ok",
-                            text: "¡El usuario ha sido creado correctamente!",
+                            text: "¡El item ha sido creado correctamente!",
                             type: "success",
                             confirmButtonText: "Cerrar",
                             closeOnConfirm: false
                        },
                        function(isConfirm) {
                            if (isConfirm){
-                               window.location = "Tasignacion";
+                               window.location = "Titems";
                            }
                          
                        }); 

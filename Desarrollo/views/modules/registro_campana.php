@@ -20,7 +20,7 @@ if(!$_SESSION["validar"]){
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-           <form class="form-horizontal" method="POST" action="insertCampana" autocomplete="off">
+           <form class="form-horizontal" method="POST" id="formularioCampaña" autocomplete="off">
      
         <fieldset>
      
@@ -103,18 +103,19 @@ if(!$_SESSION["validar"]){
    
 
     <div class="form-group">
-      <br>  
+
           <div class="col-sm-offset-5 col-sm-10">
             <br>
             <a href="Tcampanas" class="btn btn-default">Regresar</a>
-      <button type="submit" align="center" class="btn btn-primary" name="submit" value="Agregar" action="registro_campana" >Registrar</button>
-          
+      <button type="submit" align="center" class="btn btn-primary" name="guardarCampaña" id="guardarCampaña"  >Registrar</button>
+           <?php
+                $crearCampana = new campanas();
+                $crearCampana  -> registroCampanasController();
+            ?> 
         </div>
-    </div>
-      </div>
+
       </form> 
-        </div>
- 
+
   
     </section>
     <!-- /.content -->

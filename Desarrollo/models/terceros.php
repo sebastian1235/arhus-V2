@@ -11,7 +11,7 @@ class TercerosModel
     #registro de medio de pago.
     public function registroTerceros($datosModel, $tabla)
     {
-        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla (tipo_tercero, nombre_tercero, nit_tercero, direccion_tercero, e_mail_tercero, telefono1_tercero, telefono2_tercero, fax_tercero, Contacto_tercero, gran_contrib_tercero, autoretenedor_tercero, reg_comun_tercero, responsable_materiales_tercero, localidad_sol) VALUES (:tipo_tercero, :nombre_tercero, :nit_tercero, :direccion_tercero, :e_mail_tercero, :telefono1_tercero, :telefono2_tercero, :fax_tercero, :Contacto_tercero, :gran_contrib_tercero, :autoretenedor_tercero, :reg_comun_tercero, :responsable_materiales_tercero, :localidad_sol)");
+        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla ( nombre_tercero, direccion_tercero, telefono1_tercero, telefono2_tercero, fax_tercero, nit_tercero, tipo_tercero, e_mail_tercero, Contacto_tercero, gran_contrib_tercero, autoretenedor_tercero, activo_tercero, reg_comun_tercero, responsable_materiales_tercero ) VALUES (:nombre_tercero, :direccion_tercero, :telefono1_tercero, :telefono2_tercero, :fax_tercero, :nit_tercero, :tipo_tercero, :e_mail_tercero, :Contacto_tercero, :gran_contrib_tercero, :autoretenedor_tercero, :activo_tercero, :reg_comun_tercero, :responsable_materiales_tercero)");
         $stmt->bindParam(":tipo_tercero", $datosModel["tipo_tercero"], PDO::PARAM_STR);
         $stmt->bindParam(":nombre_tercero", $datosModel["nombre_tercero"], PDO::PARAM_STR);
         $stmt->bindParam(":nit_tercero", $datosModel["nit_tercero"], PDO::PARAM_STR);
@@ -25,7 +25,7 @@ class TercerosModel
         $stmt->bindParam(":autoretenedor_tercero", $datosModel["autoretenedor_tercero"], PDO::PARAM_STR);
         $stmt->bindParam(":reg_comun_tercero", $datosModel["reg_comun_tercero"], PDO::PARAM_STR);
         $stmt->bindParam(":responsable_materiales_tercero", $datosModel["responsable_materiales_tercero"], PDO::PARAM_STR);
-        $stmt->bindParam(":localidad_sol", $datosModel["localidad_sol"], PDO::PARAM_STR);
+        $stmt->bindParam(":activo_tercero", $datosModel["activo_tercero"], PDO::PARAM_STR);
 
         if ($stmt->execute()) {
             return "ok";

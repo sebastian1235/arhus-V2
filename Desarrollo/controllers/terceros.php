@@ -19,7 +19,7 @@ class tercero
                                 "autoretenedor_tercero" => $_POST["autoretenedor_tercero"],
                                 "reg_comun_tercero" => $_POST["reg_comun_tercero"],
                                 "responsable_materiales_tercero" => $_POST["responsable_materiales_tercero"],
-                                "localidad_sol" => $_POST["localidad_sol"]);
+                                "activo_tercero" => $_POST["activo_tercero"]);
 
                
 
@@ -30,7 +30,7 @@ class tercero
 
                        swal({
                             title: "!Ok",
-                            text: "¡El item ha sido creado correctamente!",
+                            text: "¡La persona ha sido creada correctamente!",
                             type: "success",
                             confirmButtonText: "Cerrar",
                             closeOnConfirm: false

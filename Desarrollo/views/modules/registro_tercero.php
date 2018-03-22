@@ -133,7 +133,7 @@ $resul_items = mysqli_query($con,"SELECT * FROM ap_tipo_tercero");
        
         <div class="col-md-2"> 
         <label for="">Activar :</label>         
-            <select class="form-control" id="localidad_sol" "" name="localidad_sol">
+            <select class="form-control" id="activo_tercero" "" name="activo_tercero">
             <option value="1">Si</option>
             <option value="0">No</option>
             </select>

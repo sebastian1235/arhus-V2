@@ -8,12 +8,12 @@ require_once "conexion.php";
 class TercerosModel
 {
 
-    #registro de medio de pago.
+    #registro de Terceros,
     public function registroTerceros($datosModel, $tabla)
     {
-        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla (tipo_tercero, nombre_tercero, nit_tercero, direccion_tercero, e_mail_tercero, telefono1_tercero, telefono2_tercero, fax_tercero, Contacto_tercero, gran_contrib_tercero, autoretenedor_tercero, reg_comun_tercero, responsable_materiales_tercero, localidad_sol) VALUES (:tipo_tercero, :nombre_tercero, :nit_tercero, :direccion_tercero, :e_mail_tercero, :telefono1_tercero, :telefono2_tercero, :fax_tercero, :Contacto_tercero, :gran_contrib_tercero, :autoretenedor_tercero, :reg_comun_tercero, :responsable_materiales_tercero, :localidad_sol)");
-        $stmt->bindParam(":tipo_tercero", $datosModel["tipo_tercero"], PDO::PARAM_STR);
+        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla (nombre_tercero, tipo_tercero, nit_tercero, direccion_tercero, e_mail_tercero, telefono1_tercero, telefono2_tercero, fax_tercero, Contacto_tercero, gran_contrib_tercero, autoretenedor_tercero, reg_comun_tercero, responsable_materiales_tercero, localidad_sol) VALUES (:nombre_tercero, :tipo_tercero, :nit_tercero, :direccion_tercero, :e_mail_tercero, :telefono1_tercero, :telefono2_tercero, :fax_tercero, :Contacto_tercero, :gran_contrib_tercero, :autoretenedor_tercero, :reg_comun_tercero, :responsable_materiales_tercero, :localidad_sol)");
         $stmt->bindParam(":nombre_tercero", $datosModel["nombre_tercero"], PDO::PARAM_STR);
+        $stmt->bindParam(":tipo_tercero", $datosModel["tipo_tercero"], PDO::PARAM_STR);
         $stmt->bindParam(":nit_tercero", $datosModel["nit_tercero"], PDO::PARAM_STR);
         $stmt->bindParam(":direccion_tercero", $datosModel["direccion_tercero"], PDO::PARAM_STR);
         $stmt->bindParam(":e_mail_tercero", $datosModel["e_mail_tercero"], PDO::PARAM_STR);
@@ -26,7 +26,6 @@ class TercerosModel
         $stmt->bindParam(":reg_comun_tercero", $datosModel["reg_comun_tercero"], PDO::PARAM_STR);
         $stmt->bindParam(":responsable_materiales_tercero", $datosModel["responsable_materiales_tercero"], PDO::PARAM_STR);
         $stmt->bindParam(":localidad_sol", $datosModel["localidad_sol"], PDO::PARAM_STR);
-
         if ($stmt->execute()) {
             return "ok";
         } else {

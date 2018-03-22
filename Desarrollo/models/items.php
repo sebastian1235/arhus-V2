@@ -7,8 +7,6 @@ require_once "conexion.php";
 
 class ItemsModel
 {
-
-    #registro de medio de pago.
     public function registroItems($datosModel, $tabla)
     {
         $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla (nombre_item, codigo_item, tipo_item, und_item, precio_item, costo_item, marca_item, cod_marca_item, detalle_item) VALUES (:nombre_item, :codigo_item, :tipo_item, :und_item, :precio_item, :costo_item, :marca_item, :cod_marca_item, :detalle_item)");
@@ -30,7 +28,6 @@ class ItemsModel
         $stmt->close();
     }
 
-     #Vista Asigancion
     public function vistaItems($tabla)
     {
         $stmt = Conexion::conectar()->prepare("SELECT Id_Item, codigo_item, nombre_item, precio_item, costo_item, detalle_item FROM $tabla");

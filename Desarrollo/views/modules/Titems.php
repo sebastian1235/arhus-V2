@@ -14,11 +14,6 @@ include "views/modules/header.php";
 
 
 <section class="content container-fluid">
-
-      <div class="row">
-      
-      </div>
-      
       <div class="row">
         <a href="registro_items" class="btn btn-primary">Nuevo Registro</a>
       </div>
@@ -39,17 +34,13 @@ include "views/modules/header.php";
                         <th>Costo</th>
                         <th>Detalle</th>
                         <th></th>
-
                     </tr>
                     </thead>
                     <tbody>
                     <?php
-
                     $verPerfiles = new items();
                     $verPerfiles -> vistaItemsController();
-
                     ?>
-
                     </tbody>
                 </table>
             </div>

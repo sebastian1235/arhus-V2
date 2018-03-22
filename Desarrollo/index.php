@@ -29,5 +29,8 @@ require_once "models/items.php";
 require_once "models/terceros.php";
 require_once "models/ciudades.php";
 
+
+require_once "controllers/tipoInventario.php";
+require_once "models/tipoInventario.php";
 $template = new TemplateController();
 $template -> template();

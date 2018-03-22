@@ -7,15 +7,15 @@ class items
     {
         if (isset($_POST["nombre_item"])) {
             $datosController = array("nombre_item" => $_POST["nombre_item"],
-                                "codigo_item" => $_POST["codigo_item"],
-                                "tipo_item" => $_POST["tipo_item"],
-                                "und_item" => $_POST["und_item"],
-                               "precio_item" => $_POST["precio_item"],
-                                "costo_item" => $_POST["costo_item"],
-                              "marca_item" => $_POST["marca_item"],
-                            "cod_marca_item" => $_POST["cod_marca_item"],
-                           "detalle_item" => $_POST["detalle_item"]);
-               
+                                      "codigo_item" => $_POST["codigo_item"],
+                                      "tipo_item" => $_POST["tipo_item"],
+                                      "und_item" => $_POST["und_item"],
+                                      "precio_item" => $_POST["precio_item"],
+                                      "costo_item" => $_POST["costo_item"],
+                                      "marca_item" => $_POST["marca_item"],
+                                      "cod_marca_item" => $_POST["cod_marca_item"],
+                                      "detalle_item" => $_POST["detalle_item"]);
+
 
             $respuesta = ItemsModel::registroItems($datosController, "ap_items_inv");
 

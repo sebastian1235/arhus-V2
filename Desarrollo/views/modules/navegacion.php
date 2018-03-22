@@ -40,6 +40,8 @@
                         <li><a href="tipoInventario"><i class="glyphicon glyphicon-tag"></i>Tipo inventario</a></li>
                         <li><a href="tipoTercero"><i class="glyphicon glyphicon-tag"></i>Tipo tercero</a></li>
                         <li><a href="medioPago"><i class="glyphicon glyphicon-tag"></i>Medio pago</a></li>
+
+
                     </ul>
                 <li><a href="perfil"><i class="glyphicon glyphicon-chevron-right"></i> <span>Usuarios</span></a></li>
                 </li>

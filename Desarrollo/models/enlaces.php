@@ -22,7 +22,7 @@ class EnlacesModels{
             $enlaces == "Tasignacion" ||
             $enlaces == "registro_items" ||
             $enlaces == "Titems" ||
-            $enlaces == "registroTercero" ||
+            $enlaces == "registro_tercero" ||
             $enlaces == "Tcampanas" ||
             $enlaces == "Tterceros" ||
             $enlaces == "salir" ||

@@ -38,15 +38,14 @@ class CampanaModel
         $stmt->close();
     }
 
-    #Vista de medio de pago.s
-
-    #public function vistaMedioPago($tabla)
-    #{
-     #   $stmt = Conexion::conectar()->prepare("SELECT Id_medio_pago, nombre_medio_pago, activo_medio_pago FROM $tabla");
-      #  $stmt->execute();
-       # return $stmt->fetchAll();
-       # $stmt->close();
-   # }
+   #Vista Asigancion
+    public function vistaCampana($tabla)
+    {
+        $stmt = Conexion::conectar()->prepare("SELECT id_campana ,nombre_campana, descuente_campana, desc_financ_campana, detalle_campana FROM $tabla");
+        $stmt->execute();
+        return $stmt->fetchAll();
+        $stmt->close();
+    }
 
     #public function actualizarMedioPago($datosModel, $tabla)
     #{

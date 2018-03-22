@@ -47,13 +47,13 @@ class TipoTercero
         foreach ($respuesta as $row => $item){
             echo' 
                    <tr>   
-                    <td>' .$item["nombreTipoTercero"].'</td>
-                    <td>' .$item["descripcionTipoTercero"].'</td>
-                    <td>' .$item["grupoTipoTercero"].'</td>
-                    <td><a href="#medioPago'.$item["Id_medio_pago"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></a></td>
+                    <td>' .$item["nombre_tipo_ter"].'</td>
+                    <td>' .$item["descripcion_tipo_ter"].'</td>
+                    <td>' .$item["Grupo_tipo_ter"].'</td>
+                    <td><a href="#medioPago'.$item["id_tipo_tercero"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></a></td>
                   </tr>
                   
-                  <div id="medioPago'.$item["Id_medio_pago"].'" class="modal fade">
+                  <div id="medioPago'.$item["id_tipo_tercero"].'" class="modal fade">
 
 				       	<div class="modal-dialog modal-content">
 
@@ -69,10 +69,10 @@ class TipoTercero
 							
 								<form style="padding:0px 10px" method="post" enctype="multipart/form-data">
 
-								      <input name="idMedioPago" type="hidden" value="'.$item["Id_medio_pago"].'">
+								      <input name="idMedioPago" type="hidden" value="'.$item["id_tipo_tercero"].'">
 								    
 								     <div class="form-group">  
-								      <input name="editarModoPago" type="text" class="form-control" value="'.$item["nombre_medio_pago"].'" required>
+								      <input name="editarModoPago" type="text" class="form-control" value="'.$item["nombre_tipo_ter"].'" required>
                                      </div>
 								      <div class="form-group">
 

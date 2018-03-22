@@ -26,7 +26,7 @@ require_once "models/tipoTercero.php";
 require_once "models/asignacion.php";
 require_once "models/campanas.php";
 require_once "models/items.php";
-require_once "models/tercero.php";
+require_once "models/terceros.php";
 require_once "models/ciudades.php";
 
 $template = new TemplateController();

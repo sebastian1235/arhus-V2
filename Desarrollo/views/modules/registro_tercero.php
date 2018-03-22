@@ -30,14 +30,20 @@ $resul_items = mysqli_query($con,"SELECT * FROM ap_tipo_tercero");
             <!-- /.box-header -->
             <!-- form start -->
             <div class="container">
-           <form class="form-horizontal" method="POST" id="registroTercero" autocomplete="off">
+           <form class="form-horizontal" method="POST" id="registroTerceros" autocomplete="off">
      
         <fieldset>
 <legend>Datos de contacto:</legend>
      
      
       <div class="form-group">
-     <div class="col-md-4"> 
+         <div class=" col-md-4">
+          <label for="">Nombre:</label>
+            <input  type="text" class="form-control" name="nombre_tercero"  id="nombre_tercero">
+          </div>
+     </div>
+        <div class="form-group">
+         <div class="col-md-4"> 
         <label for="">Tipo tercero:</label>         
             <select class="form-control" id="tipo_tercero"  name="tipo_tercero">
             <option value="">seleccionar tercero</option>
@@ -46,12 +52,7 @@ $resul_items = mysqli_query($con,"SELECT * FROM ap_tipo_tercero");
 
                 } ?>
             </select>
-        </div> </div>
-        <div class="form-group">
-         <div class=" col-md-4">
-          <label for="">Nombre:</label>
-            <input  type="text" class="form-control" name="nombre_tercero"  id="nombre_tercero">
-          </div>
+        </div>
           <div class=" col-md-3">
           <label for="">Nit:</label>
             <input  type="text" class="form-control" name="nit_tercero"  id="nit_tercero">
@@ -152,10 +153,10 @@ $resul_items = mysqli_query($con,"SELECT * FROM ap_tipo_tercero");
           <div class="col-sm-offset-5 col-sm-10">
             <br>
             <a href="Tterceros" class="btn btn-default">Regresar</a>
-      <button type="submit" align="center" class="btn btn-primary" name="guardarTercero" id="guardarTercero" >Registrar</button>
+     <button type="submit" align="center" class="btn btn-primary" name="guardarTerceros" id="guardarTerceros"  >Registrar</button>
            <?php
-                $crearTerceros = new terceros();
-                $crearTerceros -> registroTercerosController();
+                $crearTerceros = new tercero();
+                $crearTerceros -> registroTerceroController();
             ?> 
         </div>
     </div>

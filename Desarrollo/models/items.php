@@ -30,15 +30,14 @@ class ItemsModel
         $stmt->close();
     }
 
-    #Vista de medio de pago.s
-
-    #public function vistaMedioPago($tabla)
-    #{
-     #   $stmt = Conexion::conectar()->prepare("SELECT Id_medio_pago, nombre_medio_pago, activo_medio_pago FROM $tabla");
-      #  $stmt->execute();
-       # return $stmt->fetchAll();
-       # $stmt->close();
-   # }
+     #Vista Asigancion
+    public function vistaItems($tabla)
+    {
+        $stmt = Conexion::conectar()->prepare("SELECT Id_Item, codigo_item, nombre_item, precio_item, costo_item, detalle_item FROM $tabla");
+        $stmt->execute();
+        return $stmt->fetchAll();
+        $stmt->close();
+    }
 
     #public function actualizarMedioPago($datosModel, $tabla)
     #{

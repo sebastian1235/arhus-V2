@@ -33,7 +33,7 @@ class TipoTerceroModel
 
     public function vistaTipoTercero($tabla)
     {
-        $stmt = Conexion::conectar()->prepare("SELECT nombre_tipo_ter, descripcion_tipo_ter, Grupo_tipo_ter FROM $tabla");
+        $stmt = Conexion::conectar()->prepare("SELECT id_tipo_tercero ,nombre_tipo_ter, descripcion_tipo_ter, Grupo_tipo_ter FROM $tabla");
         $stmt->execute();
         return $stmt->fetchAll();
         $stmt->close();

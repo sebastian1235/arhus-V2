@@ -26,46 +26,35 @@ include "views/modules/header.php";
       
       <div class="container" >
  
-<div class="row table-responsive">
-         <?php
-          $mysqli = new mysqli('localhost', 'root', 'mysql', 'arhus');
-  
-  if($mysqli->connect_error){
-    
-    die('Error en la conexion' . $mysqli->connect_error);
-    
-  }
-          $_pagi_sql=("SELECT * FROM `ap_asignacion`"); 
+<div class="row">
+    <div class="col-md-12">
+        <div class="box">
+            <div class="box-body table-responsive">
+                <table id="tablas" class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Tipo de asignacion</th>
+                        <th>Comision obra</th>
+                        <th>Comision gasodomestico</th>
+                        <th>Comision fija</th>
+                        <th></th>
 
-        $query=mysqli_query($mysqli,$_pagi_sql);?>
-        <table id="example2" class="table table-striped" ">
-          <thead>
-            <tr>
-              <th>Tipo de asignacion</th>
-              <th>Comision por obra</th>
-              <th>Nombre por gasodomestico</th>
-              <th>Nombre fija</th>
-              
-              <th></th>
-              <th></th>
-            </tr>
-          </thead>
-          <?php 
-      $numero=mysqli_num_rows($query);
-      while($arreglo=mysqli_fetch_array($query)){
-      ?>
-          <tbody>
-             <tr>
-            <td><?php echo $arreglo['tipo_asignacion'];?> </td>
-            <td><?php echo $arreglo['comision_obra_asignacion'];?></td>
-            <td><?php echo $arreglo['comision_gasod_asignacion'];?></td>
-            <td><?php echo $arreglo['comision_fija_asignacion'];?></td>
-            <td><a href="modificar.php?id=<?php echo $arreglo['id'];?>"><span class="glyphicon glyphicon-pencil"></span></a></td>
-            <td><a href="modificar.php?id=<?php echo $arreglo['id'];?>"><span class="glyphicon glyphicon-pencil"></span></a></td>
-        </tr>
-          </tbody>
-          <?php  } ?>
-        </table>
-      </div>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <?php
+
+                    $verPerfiles = new asignacion();
+                    $verPerfiles -> vistaAsigancionController();
+
+                    ?>
+
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.box-body -->
+        </div>
+    </div>
+</div>
     </div>
   

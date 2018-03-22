@@ -37,70 +37,44 @@ class asignacion
     }
 
 
-    #Vista de Medio de Pago
-   # public function vistaMedioPagoController(){
-    #    $respuesta = MedioPagoModel::vistaMedioPago("siax_medio_pago");
-     #   $activo = "";
-      #  foreach ($respuesta as $row => $item){
-       #     if ($item["activo_medio_pago"] == 0){
-        #        $activo = "SI";
-         #   }else{
-          #     $activo = "NO";
-           #          }
-           # echo' <tr>   
-            #        <td>' .$item["nombre_medio_pago"].'</td>
-             #       <td>' .$activo.'</td>
-              #      <td><a href="#medioPago'.$item["Id_medio_pago"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></a></td>
-                #  </tr>
-                  
-                 # <div id="medioPago'.$item["Id_medio_pago"].'" class="modal fade">
+ public function vistaAsigancionController(){
+        $respuesta = AsignacionModel::vistaAsigancion("ap_asignacion");
+        foreach ($respuesta as $row => $item){
+            echo' <tr>   
+                    <td>' .$item["tipo_asignacion"].'</td>
+                    <td>' .$item["comision_obra_asignacion"].'</td>
+                    <td>' .$item["comision_gasod_asignacion"].'</td>
+                    <td>' .$item["comision_fija_asignacion"].'</td>
+                    <td><a href="#registroCiudad'.$item["id_asignacion"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></a></td>
+                  </tr>  
+                  <div id="registroCiudad'.$item["id_asignacion"].'" class="modal fade">
+                <div class="modal-dialog modal-content">
+              <div class="modal-header" style="border:1px solid #eee">
+                <button type="button" class="close" data-dismiss="modal">X</button>
+                <h3 class="modal-title">Editar Ciudad</h3>
+              </div>
+              <div class="modal-body" style="border:1px solid #eee">
+                <form style="padding:0px 10px" method="post" enctype="multipart/form-data">
+                      <input name="idCiudad" type="hidden" value="'.$item["id_asignacion"].'">
+                     <div class="form-group">  
+                      <input name="editarCiudad" type="text" class="form-control" value="'.$item["tipo_asignacion"].'" required>
+                                     </div>
+                        <div class="form-group text-center">
+                        <input type="submit" id="guardarCiudad" value="Actualizar" class="btn btn-warning">
+                      </div>
+                </form>
 
-                  #      <div class="modal-dialog modal-content">
+              </div>
+              <div class="modal-footer" style="border:1px solid #eee">          
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+              </div>
+                
+                </div>
 
-                   #         <div class="modal-header" style="border:1px solid #eee">
+             </div>';
 
-                    #            <button type="button" class="close" data-dismiss="modal">X</button>
-
-                     #           <h3 class="modal-title">Editar Medio pago</h3>
-
-                      #      </div>
-
-                       #     <div class="modal-body" style="border:1px solid #eee">
-                            
-                        #        <form style="padding:0px 10px" method="post" enctype="multipart/form-data">
-
-                         #             <input name="idMedioPago" type="hidden" value="'.$item["Id_medio_pago"].'">
-                                    
-                          #           <div class="form-group">  
-                           #           <input name="editarModoPago" type="text" class="form-control" value="'.$item["nombre_medio_pago"].'" required>
-                            #         </div>
-                             #         <div class="form-group">
-
-                              #          <select name="editarActivo" class="form-control" required>
-                               #             <option value="">Activo medio pago</option>
-                                #            <option value="0">SI</option>
-                                 #           <option value="1">NO</option>
-                                  #      </select>
-
-                                   #   </div>
-
-                                    #    <div class="form-group text-center">
-                                     #       <input type="submit" id="guardarMedioPago" value="Actualizar" class="btn btn-warning">
-                                      #  </div>
-
-                                #</form>
-
-                           # </div>
-                           # <div class="modal-footer" style="border:1px solid #eee">                    
-                            #    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                           # </div>
-                        
-                       # </div>
-
-                  # </div>';
-
-       # }
-   # }
+        }
+    }
 
     #public function editarModelController(){
 

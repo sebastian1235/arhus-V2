@@ -29,15 +29,14 @@ class AsignacionModel
         $stmt->close();
     }
 
-    #Vista de medio de pago.s
-
-    #public function vistaMedioPago($tabla)
-    #{
-     #   $stmt = Conexion::conectar()->prepare("SELECT Id_medio_pago, nombre_medio_pago, activo_medio_pago FROM $tabla");
-      #  $stmt->execute();
-       # return $stmt->fetchAll();
-       # $stmt->close();
-   # }
+     #Vista Asigancion
+    public function vistaAsigancion($tabla)
+    {
+        $stmt = Conexion::conectar()->prepare("SELECT id_asignacion, tipo_asignacion, comision_obra_asignacion, comision_gasod_asignacion, comision_fija_asignacion FROM $tabla");
+        $stmt->execute();
+        return $stmt->fetchAll();
+        $stmt->close();
+    }
 
     #public function actualizarMedioPago($datosModel, $tabla)
     #{

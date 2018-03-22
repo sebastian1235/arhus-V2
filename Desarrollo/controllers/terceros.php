@@ -1,9 +1,9 @@
 <?php
 
-class terceros
+class tercero
 {
 
-    public function registroTercerosController()
+    public function registroTerceroController()
     {
         if (isset($_POST["nombre_tercero"])) {
             $datosController = array("nombre_tercero" => $_POST["nombre_tercero"],
@@ -20,10 +20,10 @@ class terceros
                                 "reg_comun_tercero" => $_POST["reg_comun_tercero"],
                                 "responsable_materiales_tercero" => $_POST["responsable_materiales_tercero"],
                                 "localidad_sol" => $_POST["localidad_sol"]);
-            
+
                
 
-            $respuesta = TerceroModel::registroTercero($datosController, "ap_terceros");
+            $respuesta = TercerosModel::registroTerceros($datosController, "ap_terceros");
 
             if ($respuesta == "ok") {
                 echo '<script>

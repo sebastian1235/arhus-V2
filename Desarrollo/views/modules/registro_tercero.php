@@ -12,15 +12,8 @@ if(!$_SESSION["validar"]){
 include "views/modules/navegacion.php";
 include "views/modules/header.php";
 
-$user="root";
-$pass="mysql";
-$server="localhost";
-$bd="arhus";
-
-$con = mysqli_connect($server,$user,$pass,$bd);
-//desplegables anidados
-$resul_items = mysqli_query($con,"SELECT * FROM ap_tipo_tercero");
-?><div class="row">
+?>
+<div class="row">
     <div class="col-md-12">
 <h2  class="box-title">Registrar Tercero</h2>
         <div class="box box-primary">
@@ -40,11 +33,12 @@ $resul_items = mysqli_query($con,"SELECT * FROM ap_tipo_tercero");
            <div class="col-md-4"> 
         <label for="">Tipo tercero:</label>         
             <select class="form-control" id="tipo_tercero"  name="tipo_tercero">
-            <option value="">seleccionar tercero</option>
-                <?php while ($row = mysqli_fetch_array($resul_items)){
-                    echo '<option value="'.$row['id_tipo_tercero'].'">'.$row['nombre_tipo_ter'].'</option>';
-
-                } ?>
+              <option value="0">Seleccione Tipo tercero</option>
+              <?php 
+              $selectTipoTercero= new tercero();
+              $selectTipoTercero= selectTipoTercero();
+               ?>
+           
             </select>
         </div>
      </div>

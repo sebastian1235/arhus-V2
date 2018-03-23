@@ -28,4 +28,11 @@ class seletsController{
         }
 
     }
+     public function selectTipoTercero(){
+        $respuesta = selectsModels::vistaSelectsTipoTercero("ap_tipo_tercero");
+        foreach ($respuesta as $row => $selectTipoTercero){
+            echo '<option value="'.$SelectsBarrio["id_tipo_tercero"].'">'.$SelectsBarrio["nombre_tipo_ter"].'</option>';
+        }
+
+    }
 }

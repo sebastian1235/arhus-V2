@@ -34,6 +34,13 @@ class TercerosModel
         }
         $stmt->close();
     }
+     public function vistaSelectsTipoTercero($tabla)
+    {
+        $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
+        $stmt->execute();
+        return $stmt->fetchAll();
+        $stmt->close();
+    }
 
     #Vista de medio de pago.s
 

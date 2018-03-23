@@ -46,7 +46,13 @@ class tercero
             }
         }
     }
+public function selectTipoTercero(){
+        $respuesta = TercerosModel::vistaSelectsTipoTercero("ap_tipo_tercero");
+        foreach ($respuesta as $row => $selectTipoTercero){
+            echo '<option value="'.$selectTipoTercero["id_tipo_tercero"].'">'.$selectTipoTercero["nombre_tipo_ter"].'</option>';
+        }
 
+    }
 
     #Vista de Medio de Pago
    # public function vistaMedioPagoController(){

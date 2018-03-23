@@ -24,7 +24,7 @@ $resul_items = mysqli_query($con,"SELECT * FROM ap_tipo_inv");
 ?><div class="row">
     <div class="col-md-12">
 <h2  class="box-title">Registrar items de inventario</h2>
-        <div class="box box-primary">
+        <div class="box box-warning">
             <div class="box-header with-border">
                 
             </div>
@@ -102,7 +102,7 @@ $resul_items = mysqli_query($con,"SELECT * FROM ap_tipo_inv");
           <div class="col-sm-offset-5 col-sm-10">
             <br>
             <a href="Titems" class="btn btn-default">Regresar</a>
-      <button type="submit" align="center" class="btn btn-primary" name="guardarItems" id="guardarItems"  >Registrar</button>
+      <button type="submit" align="center" class="btn btn-warning" name="guardarItems" id="guardarItems"  >Registrar</button>
            <?php
                         $crearAsigancion = new items();
                         $crearAsigancion -> registroItemsController();

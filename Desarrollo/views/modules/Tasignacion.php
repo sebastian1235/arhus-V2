@@ -18,7 +18,7 @@ include "views/modules/header.php";
       </div>
       
       <div class="row">
-        <a href="registro_asignacion" class="btn btn-primary">Nuevo Registro</a>
+        <a href="registro_asignacion" class="btn btn-warning">Nuevo Registro</a>
       </div>
        <h1> Asigancion </h1>
       <div class="row table-responsive">

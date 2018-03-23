@@ -24,7 +24,7 @@ include "views/modules/header.php";
 			return false;
 		}		
 
-		document.frmcargararchivo1.action = "procesar.php";
+		document.frmcargararchivo1.action = "procesar";
 		document.frmcargararchivo1.submit();
 	}
 
@@ -53,7 +53,7 @@ include "views/modules/header.php";
     border-radius: 1em;	" name="frmcargararchivo1" method="post" enctype="multipart/form-data">
 		  <h3>1.Subir inventario</h3>
 		  <p><input type="file" name="excel"  id="excel" /></p>
-		  <p><input type="button" class="btn btn-primary" value="Subir" onclick="cargarHojaExcel();" /></p>
+		  <p><input type="button" class="btn btn-warning" value="Subir" onclick="cargarHojaExcel();" /></p>
 
                   </div>
 		</form>

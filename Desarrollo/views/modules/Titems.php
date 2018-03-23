@@ -20,7 +20,7 @@ include "views/modules/header.php";
       </div>
       
       <div class="row">
-        <a href="registro_items" class="btn btn-primary">Nuevo Registro</a>
+        <a href="registro_items" class="btn btn-warning">Nuevo Registro</a>
       </div>
       <div class="row table-responsive">
       <br>

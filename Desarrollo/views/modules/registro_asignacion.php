@@ -13,7 +13,7 @@ if(!$_SESSION["validar"]){
 
   <section class="content container-fluid">
         <h2 class="box-title">Registro de asignacion</h2>
-      <div class="box box-primary">
+      <div class="box box-warning">
             <div class="box-header with-border">
                 
         <small>Campañas y redescuentos</small>
@@ -53,7 +53,7 @@ if(!$_SESSION["validar"]){
           <div class="col-sm-offset-5 col-sm-10">
             <br>
             <a href="Tasignacion" class="btn btn-default">Regresar</a>
-      <button type="submit" align="center" class="btn btn-primary" name="guardarAsignacion" id="guardarAsignacion">Registrar</button>
+      <button type="submit" align="center" class="btn btn-warning" name="guardarAsignacion" id="guardarAsignacion">Registrar</button>
  <?php
                         $crearAsigancion = new asignacion();
                         $crearAsigancion -> registroAsignacionController();

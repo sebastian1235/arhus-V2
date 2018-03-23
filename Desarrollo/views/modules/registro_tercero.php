@@ -23,7 +23,7 @@ $resul_items = mysqli_query($con,"SELECT * FROM ap_tipo_tercero");
 ?><div class="row">
     <div class="col-md-12">
 <h2  class="box-title">Registrar Tercero</h2>
-        <div class="box box-primary">
+        <div class="box box-warning">
             <div class="box-header with-border">
                 
             </div>
@@ -154,7 +154,7 @@ $resul_items = mysqli_query($con,"SELECT * FROM ap_tipo_tercero");
           <div class="col-sm-offset-5 col-sm-10">
             <br>
             <a href="Tterceros" class="btn btn-default">Regresar</a>
-     <button type="submit" align="center" class="btn btn-primary" name="guardarTerceros" id="guardarTerceros"  >Registrar</button>
+     <button type="submit" align="center" class="btn btn-warning" name="guardarTerceros" id="guardarTerceros"  >Registrar</button>
            <?php
                 $crearTerceros = new tercero();
                 $crearTerceros -> registroTerceroController();

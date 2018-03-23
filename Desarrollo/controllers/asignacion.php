@@ -45,22 +45,31 @@ class asignacion
                     <td>' .$item["comision_obra_asignacion"].'</td>
                     <td>' .$item["comision_gasod_asignacion"].'</td>
                     <td>' .$item["comision_fija_asignacion"].'</td>
-                    <td><a href="#registroCiudad'.$item["id_asignacion"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></a></td>
+                    <td><a href="#registroAsigacnion'.$item["id_asignacion"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></a></td>
                   </tr>  
-                  <div id="registroCiudad'.$item["id_asignacion"].'" class="modal fade">
+                  <div id="registroAsigacnion'.$item["id_asignacion"].'" class="modal fade">
                 <div class="modal-dialog modal-content">
               <div class="modal-header" style="border:1px solid #eee">
                 <button type="button" class="close" data-dismiss="modal">X</button>
-                <h3 class="modal-title">Editar Ciudad</h3>
+                <h3 class="modal-title">Editar Asigancion</h3>
               </div>
               <div class="modal-body" style="border:1px solid #eee">
                 <form style="padding:0px 10px" method="post" enctype="multipart/form-data">
-                      <input name="idCiudad" type="hidden" value="'.$item["id_asignacion"].'">
+                      <input name="id_asignacion" type="hidden" value="'.$item["id_asignacion"].'">
                      <div class="form-group">  
-                      <input name="editarCiudad" type="text" class="form-control" value="'.$item["tipo_asignacion"].'" required>
+                      <input name="tipoAsignacion" type="text" class="form-control" value="'.$item["tipo_asignacion"].'" required>
+                                     </div>
+                                     <div class="form-group">  
+                      <input name="comisionObraAsignacion" type="text" class="form-control" value="'.$item["comision_obra_asignacion"].'" required>
+                                     </div>
+                                     <div class="form-group">  
+                      <input name="comisionGasodAsignacion" type="text" class="form-control" value="'.$item["comision_gasod_asignacion"].'" required>
+                                     </div>
+                                     <div class="form-group">  
+                      <input name="comisionFijaAsignacion" type="text" class="form-control" value="'.$item["comision_fija_asignacion"].'" required>
                                      </div>
                         <div class="form-group text-center">
-                        <input type="submit" id="guardarCiudad" value="Actualizar" class="btn btn-warning">
+                        <input type="submit" id="guardarAsigancion" value="Actualizar" class="btn btn-warning">
                       </div>
                 </form>
 
@@ -76,42 +85,47 @@ class asignacion
         }
     }
 
-    #public function editarModelController(){
+    public function editarModelController(){
 
-     #   if (isset($_POST["editarModoPago"])) {
-      #      $datosController = array("Id_medio_pago"=> $_POST["idMedioPago"],
-       #                               "modoPago" => $_POST["editarModoPago"],
-        #                              "activo" => $_POST["editarActivo"]);
-         #   $respuesta = MedioPagoModel::actualizarMedioPago($datosController, "siax_medio_pago");
-#
- #           if ($respuesta == "ok") {
-  #              if(isset($_POST["actualizarSesion"])){
-#
- #                   $_SESSION["Id_medio_pago"] = $_POST["idMedioPago"];
-  #                  $_SESSION["modoPago"] = $_POST["editarModoPago"];
-   #                 $_SESSION["activo"] = $_POST["editarActivo"];
-#                }
+       if (isset($_POST["tipoAsignacion"])) {
+           $datosController = array("id_asignacion" => $_POST["idAsignacion"],
+                                      "tipo_asignacion"=> $_POST["tipoAsignacion"],
+                                      "comision_obra_asignacion" => $_POST["comisionObraAsignacion"],
+                                      "comision_gasod_asignacion" => $_POST["comisionGasodAsignacion"],
+                                    "comision_fija_asignacion" => $_POST["comisionFijaAsignacion"]);
+           $respuesta = AsignacionModel::actualizarAsignacion($datosController, "ap_asignacion");
 
-    #            echo '<script>
+            if ($respuesta == "ok") {
+                if(isset($_POST["actualizarSesion"])){
 
-     #                  swal({
-      #                      title: "!Ok",
-       #                     text: "¡El usuario ha sido editado correctamente!",
-        #                    type: "success",
-         #                   confirmButtonText: "Cerrar",
-          #                  closeOnConfirm: false
-                      # }
-           #            function(isConfirm) {
-            #               if (isConfirm){
-             #                  window.location = "medioPago";
-              #            }
-               #          
-               #        }); 
+                   $_SESSION["id_asignacion"] = $_POST["idAsignacion"];
+                    $_SESSION["tipo_asignacion"] = $_POST["tipoAsignacion"];
+                   $_SESSION["comision_obra_asignacion"] = $_POST["comisionObraAsignacion"];
+                   $_SESSION["comision_gasod_asignacion"] = $_POST["comisionGasodAsignacion"];
+                    $_SESSION["comision_fija_asignacion"] = $_POST["comisionFijaAsignacion"];
+
+               }
+
+                echo '<script>
+
+                       swal({
+                            title: "!Ok",
+                            text: "¡El usuario ha sido editado correctamente!",
+                            type: "success",
+                            confirmButtonText: "Cerrar",
+                            closeOnConfirm: false
+                       }
+                       function(isConfirm) {
+                           if (isConfirm){
+                               window.location = "Tasignacion";
+                          }
+                         
+                       }); 
                 #</script>';
 
-            #}
-       # }
-   # }
+            }
+        }
+    }
 
 }
 

@@ -37,13 +37,13 @@ class TercerosModel
 
     #Vista de medio de pago.s
 
-    #public function vistaMedioPago($tabla)
-    #{
-     #   $stmt = Conexion::conectar()->prepare("SELECT Id_medio_pago, nombre_medio_pago, activo_medio_pago FROM $tabla");
-      #  $stmt->execute();
-       # return $stmt->fetchAll();
-       # $stmt->close();
-   # }
+    public function vistaTercero($tabla)
+    {
+       $stmt = Conexion::conectar()->prepare("SELECT Id_tercero, nombre_tercero, telefono1_tercero, e_mail_tercero, Contacto_tercero FROM $tabla");
+      $stmt->execute();
+     return $stmt->fetchAll();
+       $stmt->close();
+    }
 
     #public function actualizarMedioPago($datosModel, $tabla)
     #{

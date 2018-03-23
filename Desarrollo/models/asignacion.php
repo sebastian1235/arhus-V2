@@ -38,25 +38,27 @@ class AsignacionModel
         $stmt->close();
     }
 
-    #public function actualizarMedioPago($datosModel, $tabla)
-    #{
-     #   $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET nombre_medio_pago = :nombre_medio_pago, activo_medio_pago = :activo_medio_pago WHERE Id_medio_pago = :Id_medio_pago");
-      #  $stmt->bindParam(":nombre_medio_pago", $datosModel["modoPago"], PDO::PARAM_STR);
-       # $stmt->bindParam(":activo_medio_pago", $datosModel["activo"], PDO::PARAM_STR);
-        #$stmt->bindParam(":Id_medio_pago", $datosModel["Id_medio_pago"], PDO::PARAM_STR);
+    public function actualizarAsignacion($datosModel, $tabla)
+    {
+        $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET tipo_asignacion = :tipoAsignacion, comision_obra_asignacion = :comisionObraAsignacion, comision_gasod_asignacion = :comisionGasodAsignacion, comision_fija_asignacion = :comisionFijaAsignacion WHERE id_asignacion = :idAsignacion");
+        $stmt->bindParam(":tipoAsignacion", $datosModel["tipo_asignacion"], PDO::PARAM_STR);
+        $stmt->bindParam(":comisionObraAsignacion", $datosModel["comision_obra_asignacion"], PDO::PARAM_STR);
+        $stmt->bindParam(":comisionGasodAsignacion", $datosModel["comision_gasod_asignacion"], PDO::PARAM_STR);
+        $stmt->bindParam(":comision_fija_asignacion", $datosModel["comision_fija_asignacion"], PDO::PARAM_STR);
+        $stmt->bindParam(":idAsignacion", $datosModel["id_asignacion"], PDO::PARAM_STR);
 
-        #if($stmt->execute()){
+        if($stmt->execute()){
 
-          #  return "ok";
-        #}
+            return "ok";
+        }
 
-        #else{
+        else{
 
-         #   return "error";
-        #}
+            return "error";
+        }
 
-        #$stmt->close();
+        $stmt->close();
 
 
-    #}
+    }
 }

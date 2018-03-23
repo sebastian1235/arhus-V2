@@ -48,7 +48,6 @@ class tercero
     }
 
 
-     #   $activo = "";
     public function vistaTercerosController(){
         $respuesta = TercerosModel::vistaTercero("ap_terceros");
         foreach ($respuesta as $row => $item){

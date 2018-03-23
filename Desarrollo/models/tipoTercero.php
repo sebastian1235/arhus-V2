@@ -29,8 +29,6 @@ class TipoTerceroModel
         $stmt->close();
     }
 
-    #Vista de medio de pago.s
-
     public function vistaTipoTercero($tabla)
     {
         $stmt = Conexion::conectar()->prepare("SELECT id_tipo_tercero ,nombre_tipo_ter, descripcion_tipo_ter, Grupo_tipo_ter FROM $tabla");

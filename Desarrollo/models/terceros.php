@@ -7,8 +7,6 @@ require_once "conexion.php";
 
 class TercerosModel
 {
-
-    #registro de medio de pago.
     public function registroTerceros($datosModel, $tabla)
     {
         $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla ( nombre_tercero, direccion_tercero, telefono1_tercero, telefono2_tercero, fax_tercero, nit_tercero, tipo_tercero, e_mail_tercero, Contacto_tercero, gran_contrib_tercero, autoretenedor_tercero, activo_tercero, reg_comun_tercero, responsable_materiales_tercero ) VALUES (:nombre_tercero, :direccion_tercero, :telefono1_tercero, :telefono2_tercero, :fax_tercero, :nit_tercero, :tipo_tercero, :e_mail_tercero, :Contacto_tercero, :gran_contrib_tercero, :autoretenedor_tercero, :activo_tercero, :reg_comun_tercero, :responsable_materiales_tercero)");
@@ -34,6 +32,7 @@ class TercerosModel
         }
         $stmt->close();
     }
+
      public function vistaSelectsTipoTercero($tabla)
     {
         $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
@@ -42,35 +41,4 @@ class TercerosModel
         $stmt->close();
     }
 
-    #Vista de medio de pago.s
-
-    #public function vistaMedioPago($tabla)
-    #{
-     #   $stmt = Conexion::conectar()->prepare("SELECT Id_medio_pago, nombre_medio_pago, activo_medio_pago FROM $tabla");
-      #  $stmt->execute();
-       # return $stmt->fetchAll();
-       # $stmt->close();
-   # }
-
-    #public function actualizarMedioPago($datosModel, $tabla)
-    #{
-     #   $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET nombre_medio_pago = :nombre_medio_pago, activo_medio_pago = :activo_medio_pago WHERE Id_medio_pago = :Id_medio_pago");
-      #  $stmt->bindParam(":nombre_medio_pago", $datosModel["modoPago"], PDO::PARAM_STR);
-       # $stmt->bindParam(":activo_medio_pago", $datosModel["activo"], PDO::PARAM_STR);
-        #$stmt->bindParam(":Id_medio_pago", $datosModel["Id_medio_pago"], PDO::PARAM_STR);
-
-        #if($stmt->execute()){
-
-          #  return "ok";
-        #}
-
-        #else{
-
-         #   return "error";
-        #}
-
-        #$stmt->close();
-
-
-    #}
 }

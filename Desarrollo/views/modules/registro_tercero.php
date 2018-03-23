@@ -34,11 +34,10 @@ include "views/modules/header.php";
         <label for="">Tipo tercero:</label>         
             <select class="form-control" id="tipo_tercero"  name="tipo_tercero">
               <option value="0">Seleccione Tipo tercero</option>
-              <?php 
-              $selectTipoTercero= new tercero();
-              $selectTipoTercero= selectTipoTercero();
-               ?>
-           
+                <?php
+                $selectTipoTercero = new tercero();
+                $selectTipoTercero -> selectTipoTercero();
+                ?>
             </select>
         </div>
      </div>

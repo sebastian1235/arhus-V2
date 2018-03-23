@@ -38,25 +38,24 @@ class AsignacionModel
         $stmt->close();
     }
 
-    #public function actualizarMedioPago($datosModel, $tabla)
-    #{
-     #   $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET nombre_medio_pago = :nombre_medio_pago, activo_medio_pago = :activo_medio_pago WHERE Id_medio_pago = :Id_medio_pago");
-      #  $stmt->bindParam(":nombre_medio_pago", $datosModel["modoPago"], PDO::PARAM_STR);
-       # $stmt->bindParam(":activo_medio_pago", $datosModel["activo"], PDO::PARAM_STR);
-        #$stmt->bindParam(":Id_medio_pago", $datosModel["Id_medio_pago"], PDO::PARAM_STR);
+    public function actualizarAsignacion($datosModel, $tabla)
+    {
+        $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET tipo_asignacion = :tipo_asignacion WHERE id_asignacion = :id_asignacion");
+        $stmt->bindParam(":tipo_asignacion", $datosModel["tipo_asignacion"], PDO::PARAM_STR);
+        $stmt->bindParam(":id_asignacion", $datosModel["id_asignacion"], PDO::PARAM_STR);
 
-        #if($stmt->execute()){
+        if($stmt->execute()){
 
-          #  return "ok";
-        #}
+            return "ok";
+        }
 
-        #else{
+        else{
 
-         #   return "error";
-        #}
+            return "error";
+        }
 
-        #$stmt->close();
+        $stmt->close();
 
 
-    #}
+    }
 }

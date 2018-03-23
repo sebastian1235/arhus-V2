@@ -44,9 +44,9 @@ include "views/modules/header.php";
                     <tbody>
                     <?php
 
-                    $verPerfiles = new asignacion();
-                    $verPerfiles -> vistaAsigancionController();
-
+                    $verAsignacion = new asignacion();
+                    $verAsignacion -> vistaAsigancionController();
+                    $verAsignacion -> editarAsignacionlController();
                     ?>
 
                     </tbody>

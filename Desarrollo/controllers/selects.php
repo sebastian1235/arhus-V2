@@ -8,6 +8,7 @@
 
 class seletsController{
     public function selectCiudad(){
+
         $respuesta = selectsModels::vistaSelectsCiudad("siax_ciudad");
         foreach ($respuesta as $row => $SelectsCiudad){
             echo '<option value="'.$SelectsCiudad["id_ciu"].'">'.$SelectsCiudad["nombre_ciu"].'</option>';
@@ -28,11 +29,5 @@ class seletsController{
         }
 
     }
-     public function selectTipoTercero(){
-        $respuesta = selectsModels::vistaSelectsTipoTercero("ap_tipo_tercero");
-        foreach ($respuesta as $row => $selectTipoTercero){
-            echo '<option value="'.$SelectsBarrio["id_tipo_tercero"].'">'.$SelectsBarrio["nombre_tipo_ter"].'</option>';
-        }
 
-    }
 }

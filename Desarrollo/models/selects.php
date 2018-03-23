@@ -29,9 +29,9 @@ class selectsModels {
         $stmt->close();
     }
 
-    public function selectBycode($tabla, $codlocalidad)
+    public function programbycode($tabla, $codlocalidad)
     {
-        $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
+        $stmt = Conexion::conectar()->prepare("SELECT nombre_loc,  nombre_ciu FROM $tabla");
         $stmt->execute();
         return $stmt->fetchAll();
         $stmt->close();

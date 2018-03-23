@@ -74,6 +74,7 @@
   })
 </script>
 <script src="views/js/perfiles.js"></script>
+<script src="views/js/selectsDinamicos.js"></script>
 
 </body>
 </html>

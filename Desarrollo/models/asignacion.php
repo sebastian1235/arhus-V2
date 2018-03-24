@@ -40,8 +40,11 @@ class AsignacionModel
 
     public function actualizarAsignacion($datosModel, $tabla)
     {
-        $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET tipo_asignacion = :tipo_asignacion WHERE id_asignacion = :id_asignacion");
+        $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET tipo_asignacion = :tipo_asignacion, comision_obra_asignacion = :comision_obra_asignacion, comision_gasod_asignacion = :comision_gasod_asignacion, comision_fija_asignacion = :comision_fija_asignacion WHERE id_asignacion = :id_asignacion");
         $stmt->bindParam(":tipo_asignacion", $datosModel["tipo_asignacion"], PDO::PARAM_STR);
+        $stmt->bindParam(":comision_obra_asignacion", $datosModel["comision_obra_asignacion"], PDO::PARAM_STR);
+        $stmt->bindParam(":comision_gasod_asignacion", $datosModel["comision_gasod_asignacion"], PDO::PARAM_STR);
+        $stmt->bindParam(":comision_fija_asignacion", $datosModel["comision_fija_asignacion"], PDO::PARAM_STR);
         $stmt->bindParam(":id_asignacion", $datosModel["id_asignacion"], PDO::PARAM_STR);
 
         if($stmt->execute()){

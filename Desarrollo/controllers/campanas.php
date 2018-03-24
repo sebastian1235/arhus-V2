@@ -60,9 +60,9 @@ class campanas
                     <td>' .$item["descuente_campana"].'</td>
                     <td>' .$item["desc_financ_campana"].'</td>
                     <td>' .$item["detalle_campana"].'</td>
-                    <td><a href="#registroCiudad'.$item["id_campana"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></a></td>
+                    <td><a href="#registroCampana'.$item["id_campana"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></a></td>
                   </tr>  
-                  <div id="registroCiudad'.$item["id_campana"].'" class="modal fade">
+                  <div id="registroCampana'.$item["id_campana"].'" class="modal fade">
                 <div class="modal-dialog modal-content">
               <div class="modal-header" style="border:1px solid #eee">
                 <button type="button" class="close" data-dismiss="modal">X</button>
@@ -70,12 +70,48 @@ class campanas
               </div>
               <div class="modal-body" style="border:1px solid #eee">
                 <form style="padding:0px 10px" method="post" enctype="multipart/form-data">
-                      <input name="idCiudad" type="hidden" value="'.$item["id_campana"].'">
+                      <input name="idCampana" type="hidden" value="'.$item["id_campana"].'">
                      <div class="form-group">  
-                      <input name="editarCiudad" type="text" class="form-control" value="'.$item["nombre_campana"].'" required>
+                      <input name="nombreCampana" type="text" class="form-control" value="'.$item["nombre_campana"].'" >
+                                     </div>
+                                     <div class="form-group">  
+                      <input name="descuenteCampana" type="text" class="form-control" value="'.$item["descuente_campana"].'" >
+                                     </div>
+                                     <div class="form-group">  
+                      <input name="descFinancCampana" type="text" class="form-control" value="'.$item["desc_financ_campana"].'" >
+                                     </div>
+                                     <div class="form-group">  
+                      <input name="plazoMaxCampana" type="text" class="form-control" value="'.$item["plazo_max_campana"].'" >
+                                     </div>
+                                     <div class="form-group">  
+                      <input name="detalleCampana" type="text" class="form-control" value="'.$item["detalle_campana"].'" >
+                                     </div>
+                                     <div class="form-group">  
+                      <input name="aplicacionCampana" type="text" class="form-control" value="'.$item["aplicacion_campana"].'" >
+                                     </div>
+                                     <div class="form-group">  
+                      <input name="desdeCampana" type="text" class="form-control" value="'.$item["desde_campana"].'" >
+                                     </div>
+                                     <div class="form-group">  
+                      <input name="hastaCampana" type="text" class="form-control" value="'.$item["hasta_campana"].'" >
+                                     </div>
+                                     <div class="form-group">  
+                      <input name="vigenteCampana" type="text" class="form-control" value="'.$item["vigente_campana"].'" >
+                                     </div>
+                                     <div class="form-group">  
+                      <input name="tasaCampana" type="text" class="form-control" value="'.$item["tasa_campana"].'" >
+                                     </div>
+                                     <div class="form-group">  
+                      <input name="descuentoFijoCampana" type="text" class="form-control" value="'.$item["descuento_fijo_campana"].'" >
+                                     </div>
+                                     <div class="form-group">  
+                      <input name="mantoMaxCampana" type="text" class="form-control" value="'.$item["manto_max_campana"].'" >
+                                     </div>
+                                     <div class="form-group">  
+                      <input name="condicionesCampana" type="text" class="form-control" value="'.$item["condiciones_campana"].'" >
                                      </div>
                         <div class="form-group text-center">
-                        <input type="submit" id="guardarCiudad" value="Actualizar" class="btn btn-warning">
+                        <input type="submit" id="guardarCampana" value="Actualizar" class="btn btn-warning">
                       </div>
                 </form>
 
@@ -90,42 +126,64 @@ class campanas
 
         }
     }
-    #public function editarModelController(){
+        public function editarCampanaController(){
 
-     #   if (isset($_POST["editarModoPago"])) {
-      #      $datosController = array("Id_medio_pago"=> $_POST["idMedioPago"],
-       #                               "modoPago" => $_POST["editarModoPago"],
-        #                              "activo" => $_POST["editarActivo"]);
-         #   $respuesta = MedioPagoModel::actualizarMedioPago($datosController, "siax_medio_pago");
-#
- #           if ($respuesta == "ok") {
-  #              if(isset($_POST["actualizarSesion"])){
-#
- #                   $_SESSION["Id_medio_pago"] = $_POST["idMedioPago"];
-  #                  $_SESSION["modoPago"] = $_POST["editarModoPago"];
-   #                 $_SESSION["activo"] = $_POST["editarActivo"];
-#                }
+        if (isset($_POST["nombreCampana"])) {
+            $datosController = array("id_campana"=> $_POST["idCampana"],
+                                "nombre_campana" => $_POST["nombreCampana"],
+                                "descuente_campana" => $_POST["descuenteCampana"],
+                                "desc_financ_campana" => $_POST["descFinancCampana"],
+                                "plazo_max_campana" => $_POST["plazoMaxCampana"],
+                                "detalle_campana" => $_POST["detalleCampana"],
+                                "aplicacion_campana" => $_POST["aplicacionCampana"],
+                                "desde_campana" => $_POST["desdeCampana"],
+                                "hasta_campana" => $_POST["hastaCampana"],
+                                "vigente_campana" => $_POST["vigenteCampana"],
+                                "tasa_campana" => $_POST["tasaCampana"],
+                                "descuento_fijo_campana" => $_POST["descuentoFijoCampana"],
+                                "manto_max_campana" => $_POST["mantoMaxCampana"],
+                                "condiciones_campana" => $_POST["condicionesCampana"]);
+            $respuesta = CampanaModel::actualizarCampana($datosController, "siax_campana");
 
-    #            echo '<script>
+            if ($respuesta == "ok") {
+                if(isset($_POST["actualizarSesion"])){
+                    $_SESSION["id_campana"] = $_POST["idCampana"];
+                    $_SESSION["nombre_campana"] = $_POST["nombreCampana"];
+                    $_SESSION["descuente_campana"] = $_POST["descuenteCampana"];
+                    $_SESSION["desc_financ_campana"] = $_POST["descFinancCampana"];
+                    $_SESSION["plazo_max_campana"] = $_POST["plazoMaxCampana"];
+                    $_SESSION["detalle_campana"] = $_POST["detalleCampana"];
+                    $_SESSION["aplicacion_campana"] = $_POST["aplicacionCampana"];
+                    $_SESSION["desde_campana"] = $_POST["desdeCampana"];
+                    $_SESSION["hasta_campana"] = $_POST["hastaCampana"];
+                    $_SESSION["vigente_campana"] = $_POST["vigenteCampana"];
+                    $_SESSION["tasa_campana"] = $_POST["tasaCampana"];
+                    $_SESSION["descuento_fijo_campana"] = $_POST["descuentoFijoCampana"];
+                    $_SESSION["manto_max_campana"] = $_POST["mantoMaxCampana"];
+                    $_SESSION["condiciones_campana"] = $_POST["condicionesCampana"];
+                  
+                }
 
-     #                  swal({
-      #                      title: "!Ok",
-       #                     text: "¡El usuario ha sido editado correctamente!",
-        #                    type: "success",
-         #                   confirmButtonText: "Cerrar",
-          #                  closeOnConfirm: false
-                      # }
-           #            function(isConfirm) {
-            #               if (isConfirm){
-             #                  window.location = "medioPago";
-              #            }
-               #          
-               #        }); 
-                #</script>';
+                echo '<script>
 
-            #}
-       # }
-   # }
+                       swal({
+                            title: "!Ok",
+                            text: "¡El usuario ha sido editado correctamente!",
+                            type: "success",
+                            confirmButtonText: "Cerrar",
+                            closeOnConfirm: false
+                       },
+                       function(isConfirm) {
+                           if (isConfirm){
+                               window.location = "Tcampanas";
+                           }
+                         
+                       }); 
+                </script>';
+
+            }
+        }
+    }
 
 }
 

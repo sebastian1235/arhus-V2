@@ -59,6 +59,15 @@ class asignacion
                             <div class="form-group">  
                                 <input name="editarTipoAsignacion" type="text" class="form-control" value="'.$item["tipo_asignacion"].'" required>
                             </div>
+                            <div class="form-group">  
+                                <input name="editarComisionObraAsignacion" type="text" class="form-control" value="'.$item["comision_obra_asignacion"].'" required>
+                            </div>
+                            <div class="form-group">  
+                                <input name="editarGasAsignacion" type="text" class="form-control" value="'.$item["comision_gasod_asignacion"].'" required>
+                            </div>
+                            <div class="form-group">  
+                                <input name="editarComisionFija" type="text" class="form-control" value="'.$item["comision_fija_asignacion"].'" required>
+                            </div>
                         <div class="form-group text-center">
                         <input type="submit" id="guardarAsignacion" value="Actualizar" class="btn btn-warning">
                       </div>
@@ -79,13 +88,20 @@ class asignacion
 
         if (isset($_POST["editarTipoAsignacion"])) {
             $datosController = array("id_asignacion"=> $_POST["idAsiganacion"],
-                                     "tipo_asignacion" => $_POST["editarTipoAsignacion"]);
+                                     "tipo_asignacion" => $_POST["editarTipoAsignacion"],
+                                   "comision_obra_asignacion" => $_POST["editarComisionObraAsignacion"],
+                                 "comision_gasod_asignacion" => $_POST["editarGasAsignacion"],
+                                "comision_fija_asignacion" => $_POST["editarComisionFija"]);
             $respuesta = AsignacionModel::actualizarAsignacion($datosController, "ap_asignacion");
 
             if ($respuesta == "ok") {
                 if(isset($_POST["actualizarSesion"])){
                     $_SESSION["id_asignacion"] = $_POST["idAsiganacion"];
                     $_SESSION["tipo_asignacion"] = $_POST["editarTipoAsignacion"];
+                    $_SESSION["comision_obra_asignacion"] = $_POST["editarComisionObraAsignacion"];
+                    $_SESSION["comision_gasod_asignacion"] = $_POST["editarGasAsignacion"];
+                    $_SESSION["editarComisionFija"] = $_POST["editarComisionFija"];
+
                 }
 
                 echo '<script>

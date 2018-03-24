@@ -16,7 +16,7 @@ class CampanaModel
     #registro de medio de pago.
     public function registroCampana($datosModel, $tabla)
     {
-        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla (nombre_campana, descuente_campana, desc_financ_campana, plazo_max_campana, detalle_campana  , aplicacion_campana, desde_campana, hasta_campana, vigente_campana, tasa_campana, descuento_fijo_campana, manto_max_campana, condiciones_campana) VALUES (:nombre_campana, :descuente_campana, :desc_financ_campana, :plazo_max_campana, :detalle_campana, :aplicacion_campana, :desde_campana, :hasta_campana, :vigente_campana, :tasa_campana, :descuento_fijo_campana, :manto_max_campana, :condiciones_campana)");
+        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla (nombre_campana, descuente_campana, desc_financ_campana, plazo_max_campana, detalle_campana   , aplicacion_campana, desde_campana, hasta_campana, vigente_campana, tasa_campana, descuento_fijo_campana, manto_max_campana, condiciones_campana) VALUES (:nombre_campana, :descuente_campana, :desc_financ_campana, :plazo_max_campana, :detalle_campana, :aplicacion_campana, :desde_campana, :hasta_campana, :vigente_campana, :tasa_campana, :descuento_fijo_campana, :manto_max_campana, :condiciones_campana)");
         $stmt->bindParam(":nombre_campana", $datosModel["nombre_campana"], PDO::PARAM_STR);
         $stmt->bindParam(":descuente_campana", $datosModel["descuente_campana"], PDO::PARAM_STR);
         $stmt->bindParam(":desc_financ_campana", $datosModel["desc_financ_campana"], PDO::PARAM_STR);
@@ -41,31 +41,43 @@ class CampanaModel
    #Vista Asigancion
     public function vistaCampana($tabla)
     {
-        $stmt = Conexion::conectar()->prepare("SELECT id_campana ,nombre_campana, descuente_campana, desc_financ_campana, detalle_campana FROM $tabla");
+        $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
         $stmt->execute();
         return $stmt->fetchAll();
         $stmt->close();
     }
 
-    #public function actualizarMedioPago($datosModel, $tabla)
-    #{
-     #   $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET nombre_medio_pago = :nombre_medio_pago, activo_medio_pago = :activo_medio_pago WHERE Id_medio_pago = :Id_medio_pago");
-      #  $stmt->bindParam(":nombre_medio_pago", $datosModel["modoPago"], PDO::PARAM_STR);
-       # $stmt->bindParam(":activo_medio_pago", $datosModel["activo"], PDO::PARAM_STR);
-        #$stmt->bindParam(":Id_medio_pago", $datosModel["Id_medio_pago"], PDO::PARAM_STR);
+    public function actualizarCampana($datosModel)
+    {
+        $stmt = Conexion::conectar()->prepare("UPDATE siax_campana SET nombre_campana = :nombreCampana, descuente_campana = :descuenteCampana, desc_financ_campana = :descFinancCampana, plazo_max_campana = :plazoMaxCampana, detalle_campana = :detalleCampana, aplicacion_campana = :aplicacionCampana, desde_campana = :desdeCampana, hasta_campana = :hastaCampana, vigente_campana = :vigenteCampana, tasa_campana = :tasaCampana, descuento_fijo_campana = :descuentoFijoCampana, manto_max_campana = :mantoMaxCampana, condiciones_campana = :condicionesCampana WHERE id_campana = :idCampana");
 
-        #if($stmt->execute()){
+        $stmt->bindParam(":nombreCampana", $datosModel["nombre_campana"], PDO::PARAM_STR);
+        $stmt->bindParam(":descuenteCampana", $datosModel["descuente_campana"], PDO::PARAM_STR);
+        $stmt->bindParam(":descFinancCampana", $datosModel["desc_financ_campana"], PDO::PARAM_STR);
+        $stmt->bindParam(":plazoMaxCampana", $datosModel["plazo_max_campana"], PDO::PARAM_STR);
+        $stmt->bindParam(":detalleCampana", $datosModel["detalle_campana"], PDO::PARAM_STR);
+        $stmt->bindParam(":aplicacionCampana", $datosModel["aplicacion_campana"], PDO::PARAM_STR);
+        $stmt->bindParam(":desdeCampana", $datosModel["desde_campana"], PDO::PARAM_STR);
+        $stmt->bindParam(":hastaCampana", $datosModel["hasta_campana"], PDO::PARAM_STR);
+        $stmt->bindParam(":vigenteCampana", $datosModel["vigente_campana"], PDO::PARAM_STR);
+        $stmt->bindParam(":tasaCampana", $datosModel["tasa_campana"], PDO::PARAM_STR);
+        $stmt->bindParam(":descuentoFijoCampana", $datosModel["descuento_fijo_campana"], PDO::PARAM_STR);
+        $stmt->bindParam(":mantoMaxCampana", $datosModel["manto_max_campana"], PDO::PARAM_STR);
+        $stmt->bindParam(":condicionesCampana", $datosModel["condiciones_campana"], PDO::PARAM_STR);
+        $stmt->bindParam(":idCampana", $datosModel["id_campana"], PDO::PARAM_STR);
 
-          #  return "ok";
-        #}
+        if($stmt->execute()){
 
-        #else{
+            return "ok";
+        }
 
-         #   return "error";
-        #}
+        else{
 
-        #$stmt->close();
+            return "error";
+        }
+
+        $stmt->close();
 
 
-    #}
+    }
 }

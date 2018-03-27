@@ -24,18 +24,11 @@ class EnlacesModels{
             $enlaces == "registro_tercero" ||
             $enlaces == "Tcampanas" ||
             $enlaces == "Tterceros" ||
+            $enlaces == "procesar" ||
             $enlaces == "salir" ||
             $enlaces == "perfil" ||
             $enlaces == "registroSol1" ||
-            $enlaces == "insertAsignacion" ||
-            $enlaces == "insertCiudad" ||
-            $enlaces == "insert_terceros" ||
-            $enlaces == "insertLocalidad" ||
-            $enlaces == "insertSector" ||
-            $enlaces == "insertCampana" ||
-            $enlaces == "insertItems" ||
             $enlaces == "subirArchivo" ||
-            $enlaces == "insertSector" ||
             $enlaces == "tipoInventario" ||
             $enlaces == "tipoTercero" ||
             $enlaces == "medioPago" ||

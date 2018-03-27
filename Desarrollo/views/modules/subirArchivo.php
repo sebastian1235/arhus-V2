@@ -37,8 +37,6 @@ include "views/modules/header.php";
     
 <article>
 
-
-	<section>
 	
       <br>
 

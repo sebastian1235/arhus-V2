@@ -29,10 +29,15 @@ require_once "models/items.php";
 require_once "models/terceros.php";
 require_once "models/ciudades.php";
 
+require_once "models/solicitud.php";
+require_once "controllers/solicitud.php";
+
 
 require_once "controllers/tipoInventario.php";
 require_once "models/tipoInventario.php";
 require_once "controllers/selects.php";
 require_once "models/selects.php";
+
+
 $template = new TemplateController();
 $template -> template();

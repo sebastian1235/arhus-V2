@@ -76,10 +76,12 @@ clase_dem) VALUES ('$data[0]','$data[1]','$data[2]','$data[3]','$data[4]','$data
 		}
 
 		echo "<div class='alert alert-primary' role='alert'>
-  subio satisfactoriamente
-</div>";
+  			subio satisfactoriamente
+			</div>";
 //echo "<script>location.href='subirArchivo'</script>";
 
 	}
+
+	
 
 ?>

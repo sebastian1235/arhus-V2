@@ -47,4 +47,11 @@ class CiudadModel
 
 
     }
+     #vista Localidad    
+      public function vistaLocalidad($tabla){     
+          $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");     
+          $stmt->execute();   
+          return $stmt->fetchAll();     
+          $stmt->close();    
+        }
 }

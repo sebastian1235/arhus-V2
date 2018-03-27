@@ -135,10 +135,10 @@ include"views/modules/navegacion.php";
                     </div>
                     <div class="form-group">
                         <select class="form-control" name="idLocalidad" id="idLocalidad" required>
-                            <option value="0">Seleccione Ciudad</option>
+                            <option value="0">Seleccione Sector</option>
                             <?php
-                            $seleccionarCiudad = new Ciudades();
-                            $seleccionarCiudad -> selectCiudad();
+                            $seleccionarSector = new Ciudades();
+                            $seleccionarSector -> selectLocalidad();
                             ?>
                         </select>
                     </div>
@@ -161,15 +161,15 @@ include"views/modules/navegacion.php";
                 <table id="tablas3" class="table table-striped">
                     <thead>
                     <tr>
-                        <th>Ciudades</th>
+                        <th>Sectores</th>
+                        <th>Localidad</th>
                         <th></th>
                     </tr>
                     </thead>
                     <tbody>
                     <?php
-                    $verCiudades = new Ciudades();
-                    $verCiudades -> vistaCiudadController();
-                    $verCiudades -> editarCiudadController();
+                    $verSectores = new Ciudades();
+                    $verSectores -> vistaSectorController();
                     ?>
                     </tbody>
                 </table>

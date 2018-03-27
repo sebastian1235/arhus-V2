@@ -26,7 +26,7 @@ class asignacion
                        },
                        function(isConfirm) {
                            if (isConfirm){
-                               window.location = "Tasignacion";
+                               window.location = "tipoAsignacion";
                            }
                          
                        }); 

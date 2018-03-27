@@ -12,14 +12,13 @@ class EnlacesModels{
 
         if($enlaces == "inicio" ||
             $enlaces == "ingreso" ||
-            $enlaces == "crud" ||
             $enlaces == "FregistroSol" ||
             $enlaces == "TSolicitudes" ||
             $enlaces == "registroDet_venta" ||
             $enlaces == "registro_asignacion" ||
             $enlaces == "registroCiudad" ||
             $enlaces == "registro_campana" ||
-            $enlaces == "Tasignacion" ||
+            $enlaces == "tipoAsignacion" ||
             $enlaces == "registro_items" ||
             $enlaces == "Titems" ||
             $enlaces == "registro_tercero" ||

@@ -192,7 +192,7 @@ class Ciudades
 
     }
 
-    #Vista Localidades
+    #Vista Sector
     public function vistaSectorController(){
         $respuesta = CiudadModel::vistaSector("siax_sectores");
         foreach ($respuesta as $row => $item){
@@ -229,5 +229,36 @@ class Ciudades
 
         }
     }
+
+    public function registroSectorController()
+    {
+        if (isset($_POST["sector"])) {
+            $datosController = array( "sector" => $_POST["sector"],
+                                       "idLocalidad" => $_POST["idLocalidad"]);
+
+            $respuesta = CiudadModel::registroSector($datosController, "siax_sectores");
+
+            if ($respuesta == "ok") {
+                echo '<script>
+
+                       swal({
+                            title: "!Ok",
+                            text: "¡La localidad se  ha sido creado correctamente!",
+                            type: "success",
+                            confirmButtonText: "Cerrar",
+                            closeOnConfirm: false
+                       },
+                       function(isConfirm) {
+                           if (isConfirm){
+                               window.location = "registroCiudad";
+                           }
+                         
+                       }); 
+                </script>';
+
+            }
+        }
+    }
+
 
 }

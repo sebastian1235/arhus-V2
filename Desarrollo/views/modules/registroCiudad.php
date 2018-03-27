@@ -135,7 +135,7 @@ include"views/modules/navegacion.php";
                     </div>
                     <div class="form-group">
                         <select class="form-control" name="idLocalidad" id="idLocalidad" required>
-                            <option value="0">Seleccione Sector</option>
+                            <option value="0">Seleccione Localidad</option>
                             <?php
                             $seleccionarSector = new Ciudades();
                             $seleccionarSector -> selectLocalidad();
@@ -148,8 +148,8 @@ include"views/modules/navegacion.php";
                 </div>
             </form>
             <?php
-            $crearCiudades = new Ciudades();
-            $crearCiudades -> registroCiudadController();
+            $crearSectores = new Ciudades();
+            $crearSectores -> registroSectorController();
             ?>
 
         </div>

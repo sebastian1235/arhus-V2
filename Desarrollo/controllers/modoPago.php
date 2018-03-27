@@ -22,7 +22,7 @@ class medioPago
 
                        swal({
                             title: "!Ok",
-                            text: "¡El usuario ha sido creado correctamente!",
+                            text: "¡El Medio de pago ha sido creado correctamente!",
                             type: "success",
                             confirmButtonText: "Cerrar",
                             closeOnConfirm: false

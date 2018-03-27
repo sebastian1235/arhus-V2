@@ -63,14 +63,24 @@
     $('#tablas').DataTable()
     $('#tablas2').DataTable({
       'paging'      : true,
-      'lengthChange': false,
-      'searching'   : false,
+      'lengthChange': true,
+      'searching'   : true,
       'ordering'    : true,
       'info'        : true,
-      'autoWidth'   : false,
+      'autoWidth'   : true,
       'responsive'  : true
 
     })
+      $('#tablas3').DataTable({
+          'paging'      : true,
+          'lengthChange': true,
+          'searching'   : true,
+          'ordering'    : true,
+          'info'        : true,
+          'autoWidth'   : true,
+          'responsive'  : true
+
+      })
   })
 </script>
 <script src="views/js/perfiles.js"></script>

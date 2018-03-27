@@ -107,4 +107,82 @@ class Ciudades
         }
     }
 
+    public function selectCiudad(){
+        $respuesta = selectsModels::vistaSelectsCiudad("siax_ciudad");
+        foreach ($respuesta as $row => $SelectsCiudad){
+            echo '<option value="'.$SelectsCiudad["id_ciu"].'">'.$SelectsCiudad["nombre_ciu"].'</option>';
+        }
+
+    }
+
+    public function registroLocalidadController()
+    {
+        if (isset($_POST["localidad"])) {
+            $datosController = array( "localidad" => $_POST["localidad"],
+                                      "codigoLocalidad" => $_POST["codigoLocalidad"],
+                                      "idCiudad" => $_POST["idCiudad"]);
+
+            $respuesta = CiudadModel::registroLocalidad($datosController, "siax_localidad");
+
+            if ($respuesta == "ok") {
+                echo '<script>
+
+                       swal({
+                            title: "!Ok",
+                            text: "¡La localidad se  ha sido creado correctamente!",
+                            type: "success",
+                            confirmButtonText: "Cerrar",
+                            closeOnConfirm: false
+                       },
+                       function(isConfirm) {
+                           if (isConfirm){
+                               window.location = "registroCiudad";
+                           }
+                         
+                       }); 
+                </script>';
+
+            }
+        }
+    }
+
+    #Vista Localidades
+    public function vistaLocalidadController(){
+        $respuesta = CiudadModel::vistaLocalidad("siax_localidad");
+        foreach ($respuesta as $row => $item){
+            echo' <tr>   
+                    <td>' .$item["nombre_loc"].'</td>
+                    <td>' .$item["cod_loc"].'</td>
+                    <td>' .$item["idciudad_loc"].'</td>
+                    <td><a href="#registroCiudad'.$item["id_loc"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></a></td>
+                  </tr>  
+                  <div id="registroCiudad'.$item["id_ciu"].'" class="modal fade">
+				       	<div class="modal-dialog modal-content">
+							<div class="modal-header" style="border:1px solid #eee">
+								<button type="button" class="close" data-dismiss="modal">X</button>
+								<h3 class="modal-title">Editar Ciudad</h3>
+							</div>
+							<div class="modal-body" style="border:1px solid #eee">
+								<form style="padding:0px 10px" method="post" enctype="multipart/form-data">
+								      <input name="idCiudad" type="hidden" value="'.$item["id_ciu"].'">
+								     <div class="form-group">  
+								      <input name="editarCiudad" type="text" class="form-control" value="'.$item["nombre_ciu"].'" required>
+                                     </div>
+								        <div class="form-group text-center">
+								    		<input type="submit" id="guardarCiudad" value="Actualizar" class="btn btn-warning">
+								    	</div>
+								</form>
+
+							</div>
+							<div class="modal-footer" style="border:1px solid #eee">					
+								<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+							</div>
+				        
+				       	</div>
+
+			       </div>';
+
+        }
+    }
+
 }

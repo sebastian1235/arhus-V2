@@ -47,4 +47,28 @@ class CiudadModel
 
 
     }
+
+    #registro Ciudad.
+    public function registroLocalidad($datosModel, $tabla)
+    {
+        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla (nombre_loc, cod_loc, idciudad_loc) VALUES (:nombre_loc, :cod_loc, :idciudad_loc)");
+        $stmt->bindParam(":nombre_loc", $datosModel["localidad"], PDO::PARAM_STR);
+        $stmt->bindParam(":cod_loc", $datosModel["codigoLocalidad"], PDO::PARAM_STR);
+        $stmt->bindParam(":idciudad_loc", $datosModel["idCiudad"], PDO::PARAM_STR);
+
+        if ($stmt->execute()) {
+            return "ok";
+        } else {
+            return "error";
+        }
+        $stmt->close();
+    }
+    #vista Localidad
+    public function vistaLocalidad($tabla)
+    {
+        $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
+        $stmt->execute();
+        return $stmt->fetchAll();
+        $stmt->close();
+    }
 }

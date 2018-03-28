@@ -11,19 +11,6 @@ if(!$_SESSION["validar"]){
 }
 include "views/modules/navegacion.php";
 include "views/modules/header.php";
-$user="root";
-$pass="mysql";
-$server="localhost";
-$bd="arhus";
-
-$con = mysqli_connect($server,$user,$pass,$bd);
-//desplegables anidados
-
-$resul_localidad = mysqli_query($con,"SELECT * FROM siax_localidad");
-$resul_barrio = mysqli_query($con,"SELECT * FROM siax_sectores");
-$resul_asignacion = mysqli_query($con,"SELECT * FROM ap_asignacion");
-$resul_asesor = mysqli_query($con,"SELECT Id_tercero, nombre_tercero, tipo_tercero FROM ap_terceros where tipo_tercero='4'");
-$resul_estado = mysqli_query($con,"SELECT `id_estado_preventa`,`nombre_estado_preventa` FROM `ap_estado_preventa` WHERE `id_estado_preventa`='1'");
 
 ?>
 
@@ -59,10 +46,11 @@ $resul_estado = mysqli_query($con,"SELECT `id_estado_preventa`,`nombre_estado_pr
                             <label for="">Localidad:</label>
                             <select class="form-control" id="localidad_sol"  name="localidad_sol">
                                 <option value="">seleccionar localidad</option>
-                                <?php while ($row = mysqli_fetch_array($resul_localidad)){
-                                    echo '<option value="'.$row['id_loc'].'">'.$row['nombre_loc'].'</option>';
-
-                                } ?>
+                               
+                                  <?php
+                            $seleccionarSector = new Ciudades();
+                            $seleccionarSector -> selectLocalidad();
+                            ?>
 
                             </select>
                         </div>
@@ -70,10 +58,10 @@ $resul_estado = mysqli_query($con,"SELECT `id_estado_preventa`,`nombre_estado_pr
                             <label for="">Barrio:</label>
                             <select class="form-control" id="barrio_sol"  name="barrio_sol">
                                 <option value="">Seleccionar barrio</option>
-                                <?php while ($row = mysqli_fetch_array($resul_barrio)){
-                                    echo '<option value="'.$row['cod_sec'].'">'.$row['nombre_sec'].'</option>';
-
-                                } ?>
+                                <?php
+                            $seleccionarSector = new Ciudades();
+                            $seleccionarSector -> selectSector();
+                            ?>
                             </select>
                         </div>
                     </div>
@@ -142,21 +130,21 @@ $resul_estado = mysqli_query($con,"SELECT `id_estado_preventa`,`nombre_estado_pr
                             <div class="col-md-5">
                                 <label for="">Nombre asesor</label>
                                 <select class="form-control" id="asesor_sol" name="asesor_sol">
-                                    <option value="">Asesor</option>
-                                    <?php while ($row = mysqli_fetch_array($resul_asesor)){
-                                        echo '<option value="'.$row['Id_tercero'].'">'.$row['nombre_tercero'].'</option>';
-
-                                    } ?>
+                                    <option value="0">Asesor</option>
+                                    <?php
+                            $seleccionarSector = new solicitud();
+                            $seleccionarSector -> selectAsesor();
+                            ?>
                                 </select>
                             </div>
                             <div class="col-md-5">
                                 <label for="">Asignacion</label>
                                 <select  class="form-control" id="estado_sol" name="estado_sol" >
-
-                                    <?php while ($row = mysqli_fetch_array($resul_asignacion)){
-                                        echo '<option value="'.$row['id_asignacion'].'">'.$row['tipo_asignacion'].'</option>';
-
-                                    } ?>
+                                  <option value="0">Seleccione Asignacion</option>
+                                    <?php
+                            $seleccionarSector = new solicitud();
+                            $seleccionarSector -> selectAsigancion();
+                            ?>
                                 </select>
                             </div>
 
@@ -175,12 +163,12 @@ $resul_estado = mysqli_query($con,"SELECT `id_estado_preventa`,`nombre_estado_pr
                             </div>
                             <div class="col-md-5">
                                 <label for="">Estado</label>
-                                <select disabled class="form-control" id="estado_sol" name="estado_sol" >
-
-                                    <?php while ($row = mysqli_fetch_array($resul_estado)){
-                                        echo '<option value="'.$row['id_estado_preventa'].'">'.$row['nombre_estado_preventa'].'</option>';
-
-                                    } ?>
+                                <select  class="form-control" id="estado_sol" name="estado_sol" >
+                                    
+                                    <?php
+                            $seleccionarSector = new solicitud();
+                            $seleccionarSector -> selectEstado();
+                            ?>
                                 </select>
                             </div>
                             <!--<div class=" col-md-5">

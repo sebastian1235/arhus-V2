@@ -118,4 +118,27 @@ class SolicitudModel
 
 
     }
+
+     public function vistaAsesor($tabla)
+    {
+        $stmt = Conexion::conectar()->prepare("SELECT Id_tercero, nombre_tercero, tipo_tercero FROM $tabla where tipo_tercero='4'");
+        $stmt->execute();
+        return $stmt->fetchAll();
+        $stmt->close();
+    }
+     public function vistaAsigancion($tabla)
+    {
+        $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
+        $stmt->execute();
+        return $stmt->fetchAll();
+        $stmt->close();
+    }
+
+     public function vistaEstado($tabla)
+    {
+    $stmt = Conexion::conectar()->prepare("SELECT id_estado_preventa, nombre_estado_preventa FROM $tabla WHERE id_estado_preventa='30'");
+        $stmt->execute();
+        return $stmt->fetchAll();
+        $stmt->close();
+    }
 }

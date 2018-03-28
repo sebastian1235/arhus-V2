@@ -156,6 +156,29 @@ class solicitud
             }
         }
     }
+     public function selectAsesor(){
+        $respuesta = SolicitudModel::vistaAsesor("ap_terceros");
+        foreach ($respuesta as $row => $SelectsCiudad){
+            echo '<option value="'.$SelectsCiudad["Id_tercero"].'">'.$SelectsCiudad["nombre_tercero"].'</option>';
+        }
+
+    }
+
+    public function selectAsigancion(){
+        $respuesta = SolicitudModel::vistaAsigancion("ap_asignacion");
+        foreach ($respuesta as $row => $SelectsCiudad){
+            echo '<option value="'.$SelectsCiudad["id_asignacion"].'">'.$SelectsCiudad["tipo_asignacion"].'</option>';
+        }
+
+    }
+
+    public function selectEstado(){
+        $respuesta = SolicitudModel::vistaAsigancion("ap_estado_preventa");
+        foreach ($respuesta as $row => $SelectsCiudad){
+            echo '<option value="'.$SelectsCiudad["id_estado_preventa"].'">'.$SelectsCiudad["nombre_estado_preventa"].'</option>';
+        }
+
+    }
 
 }
 

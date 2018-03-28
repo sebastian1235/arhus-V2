@@ -192,6 +192,14 @@ class Ciudades
 
     }
 
+    public function selectSector(){
+        $respuesta = CiudadModel::vistaSector("siax_sectores");
+        foreach ($respuesta as $row => $SelectsCiudad){
+            echo '<option value="'.$SelectsCiudad["cod_sec"].'">'.$SelectsCiudad["nombre_sec"].'</option>';
+        }
+
+    }
+
     #Vista Localidades
     public function vistaSectorController(){
         $respuesta = CiudadModel::vistaSector("siax_sectores");

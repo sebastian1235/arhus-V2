@@ -86,16 +86,23 @@ class solicitud
               </div>
               <div class="modal-body" style="border:1px solid #eee">
                 <form style="padding:0px 10px" method="post" enctype="multipart/form-data">
-                      <input name="id_solicitud" type="hidden" value="'.$item["id_sol"].'">
-                     <div class="form-group">  
-                      <input name="EditarfechaPrevistaSol" type="text" class="form-control" value="'.$item["fecha_prevista_sol"].'" required>
-                                     </div>
-                                     <div class="form-group">  
-                      <input name="EditarfechaVisitaComercSol" type="text" class="form-control" value="'.$item["fecha_visita_comerc_sol"].'" required >
-                                     </div>
-                                     <div class="form-group">  
-                      <input name="EditarnombreTercero" type="text" class="form-control" value="'.$item["nombre_tercero"].'" required>
-                                     </div>
+                <input name="id_solicitud" type="hidden" value="'.$item["id_sol"].'">
+                <div class="form-group">  
+                  <input disabled name="EditarfechaPrevistaSol" type="text" class="form-control" value="'.$item["fecha_prevista_sol"].'" required>
+                </div>
+                <div class="form-group">  
+                <input name="EditarfechaVisitaComercSol" type="datetime-local" class="form-control" value="'.$item["fecha_visita_comerc_sol"].'" required >
+                </div>
+                <div class="form-group">
+                <label for="">Nombre asesor</label>
+                <select class="form-control" id="asesor_sol" name="asesor_sol">
+                <option value="0">Asesor</option>';
+                                    
+                            $seleccionarSector = new solicitud();
+                            $seleccionarSector -> selectAsesor();
+                            
+                          echo  '</select>
+                            </div>
                                       <div class="form-group">  
                       <input name="EditarnombreEstadoPreventa" type="text" class="form-control" value="'.$item["nombre_estado_preventa"].'" required>
                                      </div>
@@ -121,7 +128,7 @@ class solicitud
             $datosController = array("id_solicitud" => $_POST["id_solicitud"],
                 "EditarfechaPrevistaSol"=> $_POST["EditarfechaPrevistaSol"],
                 "EditarfechaVisitaComercSol" => $_POST["EditarfechaVisitaComercSol"],
-                "EditarnombreTercero" => $_POST["EditarnombreTercero"],
+                "asesor_sol" => $_POST["asesor_sol"],
                 "EditarnombreEstadoPreventa" => $_POST["EditarnombreEstadoPreventa"]);
             $respuesta = SolicitudModel::programarSolicitud($datosController, "ap_solicitud");
 
@@ -131,7 +138,7 @@ class solicitud
                     $_SESSION["id_sol"] = $_POST["id_solicitud"];
                     $_SESSION["fechaPrevistaSol"] = $_POST["EditarfechaPrevistaSol"];
                     $_SESSION["fechaVisitaComercSol"] = $_POST["EditarfechaVisitaComercSol"];
-                    $_SESSION["nombreTercero"] = $_POST["EditarnombreTercero"];
+                    $_SESSION["asesor_sol"] = $_POST["asesor_sol"];
                     $_SESSION["nombreEstadoPreventa"] = $_POST["EditarnombreEstadoPreventa"];
                 }
 
@@ -173,7 +180,7 @@ class solicitud
     }
 
     public function selectEstado(){
-        $respuesta = SolicitudModel::vistaAsigancion("ap_estado_preventa");
+        $respuesta = SolicitudModel::vistaEstado("ap_estado_preventa");
         foreach ($respuesta as $row => $SelectsCiudad){
             echo '<option value="'.$SelectsCiudad["id_estado_preventa"].'">'.$SelectsCiudad["nombre_estado_preventa"].'</option>';
         }

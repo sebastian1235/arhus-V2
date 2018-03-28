@@ -163,7 +163,7 @@ include "views/modules/header.php";
                             </div>
                             <div class="col-md-5">
                                 <label for="">Estado</label>
-                                <select  class="form-control" id="estado_sol" name="estado_sol" >
+                                <select disabled="" class="form-control" id="estado_sol" name="estado_sol" >
                                     
                                     <?php
                             $seleccionarSector = new solicitud();
@@ -185,7 +185,7 @@ include "views/modules/header.php";
                             </div>
                             <div class=" col-md-3">
                                 <label for="">Fecha visita comercial</label>
-                                <input type="date" class="form-control" name="fecha_visita_comerc_sol"  id="fecha_visita_comerc_sol" placeholder="fecha_visita_comerc_sol" required min=<?php $hoy=date("Y-m-d"); echo $hoy;?> >
+                                <input disabled type="date" class="form-control" name="fecha_visita_comerc_sol"  id="fecha_visita_comerc_sol" placeholder="fecha_visita_comerc_sol" required min=<?php $hoy=date("Y-m-d"); echo $hoy;?> >
                             </div>
 
 

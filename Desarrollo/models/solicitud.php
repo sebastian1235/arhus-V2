@@ -97,7 +97,7 @@ class SolicitudModel
 
     public function programarSolicitud($datosModel, $tabla)
     {
-        $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET fecha_prevista_sol = :fecha_prevista_sol, fecha_visita_comerc_sol = :fecha_visita_comerc_sol, nombre_tercero = :nombre_tercero, nombre_estado_preventa = :nombre_estado_preventa WHERE id_sol = :id_sol");
+        $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET fecha_prevista_sol = :fecha_prevista_sol, fecha_visita_comerc_sol = :fecha_visita_comerc_sol, asesor_sol = :asesor_sol, nombre_estado_preventa = :nombre_estado_preventa WHERE id_sol = :id_sol");
         $stmt->bindParam(":fecha_prevista_sol", $datosModel["EditarfechaPrevistaSol"], PDO::PARAM_STR);
         $stmt->bindParam(":fecha_visita_comerc_sol", $datosModel["EditarfechaVisitaComercSol"], PDO::PARAM_STR);
         $stmt->bindParam(":nombre_tercero", $datosModel["EditarnombreTercero"], PDO::PARAM_STR);
@@ -136,7 +136,7 @@ class SolicitudModel
 
      public function vistaEstado($tabla)
     {
-    $stmt = Conexion::conectar()->prepare("SELECT id_estado_preventa, nombre_estado_preventa FROM $tabla WHERE id_estado_preventa='30'");
+    $stmt = Conexion::conectar()->prepare("SELECT id_estado_preventa, nombre_estado_preventa FROM $tabla WHERE id_estado_preventa='1'");
         $stmt->execute();
         return $stmt->fetchAll();
         $stmt->close();

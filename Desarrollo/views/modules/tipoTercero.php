@@ -33,12 +33,12 @@ include "views/modules/header.php";
                             <input type="text" class="form-control" id="nombreTipoTercero" name="nombreTipoTerceros" placeholder="Ingrese nombre de tipo tercero" required>
                         </div>
                         <div class="form-group">
-                            <textarea type="text" class="form-control" id="descripcionTipoTercero" name="descripcionTipoTercero" placeholder="Descripción" required></textarea>
+                            <textarea type="text" class="form-control" id="descripcionTipoTercero" name="descripcionTipoTercero" placeholder="Descripción"></textarea>
                         </div>
 
                         <div class="form-group">
                             <select class="form-control" name="grupoTipoTercero" required>
-                                <option value="">Grupo tipo tercero</option>
+                                <option value="0">Grupo tipo tercero</option>
                                 <option value="PERSONA">PERSONA</option>
                                 <option value="EMPRESA">EMPRESA</option>
                             </select>

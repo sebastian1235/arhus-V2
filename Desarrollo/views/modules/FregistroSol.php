@@ -164,7 +164,7 @@ include "views/modules/header.php";
                             <div class="col-md-5">
                                 <label for="">Estado</label>
                                 <select  class="form-control" id="estado_sol" name="estado_sol" >
-                                    
+
                                     <?php
                             $seleccionarSector = new solicitud();
                             $seleccionarSector -> selectEstado();
@@ -181,7 +181,7 @@ include "views/modules/header.php";
                         <div class="form-group">
                             <div class=" col-md-3">
                                 <label for="">Fecha prevista</label>
-                                <input type="date" class="form-control" name="fecha_prevista_sol"  id="fecha_prevista_sol" placeholder="fecha_prevista_sol" required min=<?php $hoy=date("Y-m-d"); echo $hoy;?> >
+                                <input type="date" class="form-control" name="fecha_prevista_sol"  id="reservationtime" placeholder="fecha_prevista_sol" required min=<?php $hoy=date("Y-m-d"); echo $hoy;?> >
                             </div>
                             <div class=" col-md-3">
                                 <label for="">Fecha visita comercial</label>

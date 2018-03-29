@@ -88,10 +88,10 @@ class solicitud
                 <form style="padding:0px 10px" method="post" enctype="multipart/form-data">
                       <input name="id_solicitud" type="hidden" value="'.$item["id_sol"].'">
                      <div class="form-group">  
-                      <input name="EditarfechaPrevistaSol" type="text" class="form-control" value="'.$item["fecha_prevista_sol"].'" required>
+                      <input name="EditarfechaPrevistaSol" type="date" class="form-control" value="'.$item["fecha_prevista_sol"].'" required>
                                      </div>
                                      <div class="form-group">  
-                      <input name="EditarfechaVisitaComercSol" type="text" class="form-control" value="'.$item["fecha_visita_comerc_sol"].'" required >
+                      <input name="EditarfechaVisitaComercSol" type="date" class="form-control" value="'.$item["fecha_visita_comerc_sol"].'" required >
                                      </div>
                                      <div class="form-group">  
                       <input name="EditarnombreTercero" type="text" class="form-control" value="'.$item["nombre_tercero"].'" required>

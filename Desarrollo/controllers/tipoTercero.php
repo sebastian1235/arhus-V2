@@ -23,7 +23,7 @@ class TipoTercero
 
                        swal({
                             title: "!Ok",
-                            text: "¡El usuario ha sido creado correctamente!",
+                            text: "¡Se ha creado correctamente!",
                             type: "success",
                             confirmButtonText: "Cerrar",
                             closeOnConfirm: false

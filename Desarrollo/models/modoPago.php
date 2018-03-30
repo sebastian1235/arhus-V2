@@ -16,29 +16,17 @@ class MedioPagoModel
     #registro de medio de pago.
     public function registroMedioPago($datosModel, $tabla)
     {
-        $consulta = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE nombre_medio_pago = :nombre_medio_pago");
-        $consulta -> bindParam(":nombre_medio_pago", $datosModel["modoPago"], PDO::PARAM_STR);
-        $consulta -> execute();
-        $numRows = $consulta->fetchColumn();
-        if($numRows==0){
-            echo '
-                <script>
-                    alert("ERROR AL REGISTRAR");
-                </script>
-            ';
-        }else{
-
         $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla (nombre_medio_pago, activo_medio_pago) VALUES (:nombre_medio_pago, :activo_medio_pago)");
         $stmt->bindParam(":nombre_medio_pago", $datosModel["modoPago"], PDO::PARAM_STR);
         $stmt->bindParam(":activo_medio_pago", $datosModel["activo"], PDO::PARAM_STR);
         if ($stmt->execute()) {
-            print_r($consulta->execute());
+            return "ok";
         } else {
             return "error";
         }
         $stmt->close();
     }
-    }
+
 
 
     #Vista de medio de pagos

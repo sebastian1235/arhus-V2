@@ -108,6 +108,7 @@ class solicitud
                             
                           echo  '</select>
                             </div>
+
                                       <div class="form-group">  
                                       <label for="">Asigancion</label>
 

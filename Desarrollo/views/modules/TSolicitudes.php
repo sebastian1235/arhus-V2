@@ -37,10 +37,11 @@ include "views/modules/header.php";
                         <table id="tablas" class="table table-striped">
                             <thead>
                             <tr>
+                              <th>Programar</th>
+                                <th>Eliminar</th>
                                 <th>Id</th>
                                 <th>Poliza</th>
                                 <th>Asignacion</th>
-
                                 <th>asesor</th>
                                 <th>Nombre de solicitud</th>
                                 <th>Servicio</th>
@@ -49,8 +50,11 @@ include "views/modules/header.php";
                                 <th>Fecha visita</th>
                                 <th>Barrio</th>
                                 <th>Localidad</th>
-                                <th>Programar</th>
-                                <th>Eliminar</th>
+                                <th>cedula</th>
+                                <th>Direccion</th>
+                                <th>Telefonos</th>
+
+                                
 
                             </tr>
                             </thead>
@@ -105,3 +109,4 @@ include "views/modules/header.php";
 include "views/modules/footer.php";
 
 ?>
+    

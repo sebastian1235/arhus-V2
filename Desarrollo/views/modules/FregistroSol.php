@@ -113,18 +113,7 @@ include "views/modules/header.php";
                             </div>
                         </div>
 
-                        <div class="form-group">
-
-
-                            <div class=" col-md-5">
-                                <label for="">Numero de poliza</label>
-                                <input type="text" class="form-control" id="poliza_sol"  name="poliza_sol">
-                            </div>
-                            <div class=" col-md-5">
-                                <label for="">Cod Demanda</label>
-                                <input type="text" class="form-control" id="demanda_sol"  name="demanda_sol">
-                            </div>
-                        </div>
+                      
 
                         <div class="form-group">
                             <div class="col-md-5">
@@ -139,8 +128,8 @@ include "views/modules/header.php";
                             </div>
                             <div class="col-md-5">
                                 <label for="">Asignacion</label>
-                                <select  class="form-control" id="estado_sol" name="estado_sol" >
-                                  <option value="0">Seleccione Asignacion</option>
+                                <select  class="form-control" id="asignacion_sol" name="asignacion_sol" >
+                                  
                                     <?php
                             $seleccionarSector = new solicitud();
                             $seleccionarSector -> selectAsigancion();
@@ -161,16 +150,7 @@ include "views/modules/header.php";
                                 <label for="">Observacion</label>
                                 <textarea class="form-control" name="obs_sol"  id="obs_sol" ></textarea>
                             </div>
-                            <div class="col-md-5">
-                                <label for="">Estado</label>
-                                <select disabled="" class="form-control" id="estado_sol" name="estado_sol" >
-                                    
-                                    <?php
-                            $seleccionarSector = new solicitud();
-                            $seleccionarSector -> selectEstado();
-                            ?>
-                                </select>
-                            </div>
+                            
                             <!--<div class=" col-md-5">
                              <label for="">Observacion Estado de solicitud</label>
                              <textarea type="text" class="form-control" name="obs_estado_sol"  id="obs_estado_sol" placeholder="obs_estado_sol"></textarea>
@@ -179,14 +159,21 @@ include "views/modules/header.php";
 
 
                         <div class="form-group">
-                            <div class=" col-md-3">
-                                <label for="">Fecha prevista</label>
-                                <input type="date" class="form-control" name="fecha_prevista_sol"  id="fecha_prevista_sol" placeholder="fecha_prevista_sol" required min=<?php $hoy=date("Y-m-d"); echo $hoy;?> >
-                            </div>
+                           
                             <div class=" col-md-3">
                                 <label for="">Fecha visita comercial</label>
-                                <input disabled type="date" class="form-control" name="fecha_visita_comerc_sol"  id="fecha_visita_comerc_sol" placeholder="fecha_visita_comerc_sol" required min=<?php $hoy=date("Y-m-d"); echo $hoy;?> >
+                                <input  type="datetime-local" class="form-control" name="fecha_visita_comerc_sol"  id="fecha_visita_comerc_sol" placeholder="fecha_visita_comerc_sol" required min=<?php $hoy=date("Y-m-d"); echo $hoy;?> >
                             </div>
+                           <!-- <div class="col-md-5">
+                                <label for="">Estado</label>
+                                <select  class="form-control" id="estado_sol" name="estado_sol" >
+                                    
+                                    <?php
+                            #$seleccionarSector = new solicitud();
+                            #$seleccionarSector -> selectEstado();
+                            ?>
+                                </select>
+                            </div>-->
 
 
                         </div>

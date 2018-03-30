@@ -62,6 +62,8 @@ class solicitud
         $respuesta = SolicitudModel::vistaSolicitud("ap_solicitud");
         foreach ($respuesta as $row => $item){
             echo' <tr>   
+                    <td><a href="#programarSol'.$item["id_sol"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></a></td>
+                    <td><a href="#registroCiudad'.$item["id_sol"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></a></td>
                     <td>' .$item["id_sol"].'</td>
                     <td>' .$item["poliza_sol"].'</td>
                     <td>' .$item["tipo_asignacion"].'</td>
@@ -73,16 +75,18 @@ class solicitud
                     <td>' .$item["fecha_visita_comerc_sol"].'</td>
                     <td>' .$item["nombre_Sec"].'</td>
                     <td>' .$item["nombre_loc"].'</td>
+                    <td>' .$item["cedula_sol"].'</td>
+                    <td>' .$item["direccion_nueva_sol"].'</td>
+                    <td>' .$item["telefono1_sol"].'-'.$item["telefono1_sol"].'-'.$item["telefono1_sol"].'</td>
 
 
-                    <td><a href="#programarSol'.$item["id_sol"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></a></td>
-                    <td><a href="#registroCiudad'.$item["id_sol"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></a></td>
+                   
                   </tr>  
                   <div id="programarSol'.$item["id_sol"].'" class="modal fade">
                 <div class="modal-dialog modal-content">
               <div class="modal-header" style="border:1px solid #eee">
                 <button type="button" class="close" data-dismiss="modal">X</button>
-                <h3 class="modal-title">Programar</h3>
+                <h3 class="modal-title">Programar '.$item["nombre_sol"].' Direccion '.$item["direccion_nueva_sol"].'</h3>
               </div>
               <div class="modal-body" style="border:1px solid #eee">
                 <form style="padding:0px 10px" method="post" enctype="multipart/form-data">
@@ -91,6 +95,7 @@ class solicitud
                   <input disabled name="EditarfechaPrevistaSol" type="text" class="form-control" value="'.$item["fecha_prevista_sol"].'" required>
                 </div>
                 <div class="form-group">  
+                <label for="">Fecha visita</label>
                 <input name="EditarfechaVisitaComercSol" type="datetime-local" class="form-control" value="'.$item["fecha_visita_comerc_sol"].'" required >
                 </div>
                 <div class="form-group">
@@ -104,8 +109,19 @@ class solicitud
                           echo  '</select>
                             </div>
                                       <div class="form-group">  
-                      <input name="EditarnombreEstadoPreventa" type="text" class="form-control" value="'.$item["nombre_estado_preventa"].'" required>
+                                      <label for="">Asigancion</label>
+
+                      <input name="estado_sol" type="text" class="form-control" value="'.$item["nombre_estado_preventa"].'" required>
                                      </div>
+                                     <div class="form-group">  
+                                     <label for="">Fecha visit</label>
+                      <input name="estado_sol" type="text" class="form-control" value="'.$item["nombre_estado_preventa"].'" required>
+                                     </div>
+                                     <div class="form-group"> 
+                                     <label for="">Direccion nueva</label> 
+                      <input name="estado_sol" type="text" class="form-control" value="'.$item["nombre_estado_preventa"].'" required>
+                                     </div>
+                                    
                         <div class="form-group text-center">
                         <input type="submit" id="programarSol" value="Actualizar" class="btn btn-warning">
                       </div>
@@ -129,7 +145,7 @@ class solicitud
                 "EditarfechaPrevistaSol"=> $_POST["EditarfechaPrevistaSol"],
                 "EditarfechaVisitaComercSol" => $_POST["EditarfechaVisitaComercSol"],
                 "asesor_sol" => $_POST["asesor_sol"],
-                "EditarnombreEstadoPreventa" => $_POST["EditarnombreEstadoPreventa"]);
+                "nombre_estado_preventa" => $_POST["estado_sol"]);
             $respuesta = SolicitudModel::programarSolicitud($datosController, "ap_solicitud");
 
             if ($respuesta == "ok") {
@@ -139,7 +155,7 @@ class solicitud
                     $_SESSION["fechaPrevistaSol"] = $_POST["EditarfechaPrevistaSol"];
                     $_SESSION["fechaVisitaComercSol"] = $_POST["EditarfechaVisitaComercSol"];
                     $_SESSION["asesor_sol"] = $_POST["asesor_sol"];
-                    $_SESSION["nombreEstadoPreventa"] = $_POST["EditarnombreEstadoPreventa"];
+                    $_SESSION["nombre_estado_preventa"] = $_POST["estado_sol"];
                 }
 
                 echo '<script>

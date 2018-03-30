@@ -94,10 +94,7 @@ class solicitud
                 <div class="form-group">  
                   <input disabled name="EditarfechaPrevistaSol" type="text" class="form-control" value="'.$item["fecha_prevista_sol"].'" required>
                 </div>
-                <div class="form-group">  
-                <label for="">Fecha visita</label>
-                <input name="EditarfechaVisitaComercSol" type="datetime-local" class="form-control" value="'.$item["fecha_visita_comerc_sol"].'" required >
-                </div>
+                
                 <div class="form-group">
                 <label for="">Nombre asesor</label>
                 <select class="form-control" id="asesor_sol" name="asesor_sol">
@@ -112,15 +109,15 @@ class solicitud
                                       <div class="form-group">  
                                       <label for="">Asigancion</label>
 
-                      <input name="estado_sol" type="text" class="form-control" value="'.$item["nombre_estado_preventa"].'" required>
+                      <input name="estado_sol" type="text" class="form-control" value="'.$item["tipo_asignacion"].'" required>
                                      </div>
                                      <div class="form-group">  
                                      <label for="">Fecha visit</label>
-                      <input name="estado_sol" type="text" class="form-control" value="'.$item["nombre_estado_preventa"].'" required>
+                      <input name="estado_sol" type="text" class="form-control" value="'.$item["fecha_visita_comerc_sol"].'" required>
                                      </div>
                                      <div class="form-group"> 
                                      <label for="">Direccion nueva</label> 
-                      <input name="estado_sol" type="text" class="form-control" value="'.$item["nombre_estado_preventa"].'" required>
+                      <input name="estado_sol" type="text" class="form-control" value="'.$item["direccion_nueva_sol"].'" required>
                                      </div>
                                     
                         <div class="form-group text-center">

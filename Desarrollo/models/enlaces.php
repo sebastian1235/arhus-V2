@@ -33,6 +33,7 @@ class EnlacesModels{
             $enlaces == "tipoTercero" ||
             $enlaces == "medioPago" ||
             $enlaces == "selects" ||
+            $enlaces == "cotizacion" ||
             $enlaces == "Tcampanas"){
 
             $module = "views/modules/".$enlaces.".php";

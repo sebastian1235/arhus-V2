@@ -38,7 +38,7 @@ include "views/modules/header.php";
                             <thead>
                             <tr>
                               <th>Programar</th>
-                                <th>Eliminar</th>
+                               
                                 <th>Id</th>
                                 <th>Poliza</th>
                                 <th>Asignacion</th>

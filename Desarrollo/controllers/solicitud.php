@@ -63,11 +63,11 @@ class solicitud
         foreach ($respuesta as $row => $item){
             echo' <tr>   
                     <td><a href="#programarSol'.$item["id_sol"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></a></td>
-                    <td><a href="#registroCiudad'.$item["id_sol"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></a></td>
+                    
                     <td>' .$item["id_sol"].'</td>
                     <td>' .$item["poliza_sol"].'</td>
-                    <td>' .$item["tipo_asignacion"].'</td>
-                    <td>' .$item["nombre_tercero"].'</td>
+                    <td>' .$item["asignacion_sol"].'.' .$item["tipo_asignacion"].'</td>
+                    <td>' .$item["asesor_sol"].'.'.$item["nombre_tercero"].'</td>
                     <td>' .$item["nombre_sol"].'</td>
                     <td>' .$item["servicio_sol"].'</td>
                     <td>' .$item["nombre_estado_preventa"].'</td>
@@ -90,15 +90,16 @@ class solicitud
               </div>
               <div class="modal-body" style="border:1px solid #eee">
                 <form style="padding:0px 10px" method="post" enctype="multipart/form-data">
-                <input name="id_solicitud" type="hidden" value="'.$item["id_sol"].'">
+                <input name="idSolicitud" type="hidden" value="'.$item["id_sol"].'">
                 <div class="form-group">  
                   <input disabled name="EditarfechaPrevistaSol" type="text" class="form-control" value="'.$item["fecha_prevista_sol"].'" required>
                 </div>
                 
                 <div class="form-group">
                 <label for="">Nombre asesor</label>
-                <select class="form-control" id="asesor_sol" name="asesor_sol">
-                <option value="0">Asesor</option>';
+                <select class="form-control" id="EditarAsesor" name="EditarASesor">
+                <option value="'.$item["asesor_sol"].'">'.$item["nombre_tercero"].'</option>
+                <option value="0">Nuevo asesor</option>';
                                     
                             $seleccionarSector = new solicitud();
                             $seleccionarSector -> selectAsesor();
@@ -106,18 +107,24 @@ class solicitud
                           echo  '</select>
                             </div>
 
-                                      <div class="form-group">  
-                                      <label for="">Asigancion</label>
-
-                      <input name="estado_sol" type="text" class="form-control" value="'.$item["tipo_asignacion"].'" required>
-                                     </div>
+                                     <div class="form-group">
+                <label for="">Nombre asesor</label>
+                <select class="form-control" id="editarTipoAsignacion" name="editarTipoAsignacion">
+                <option value="'.$item["asignacion_sol"].'">'.$item["tipo_asignacion"].'</option>
+                <option value="0">Asigancion nueva</option>';
+                                    
+                            $seleccionarSector = new solicitud();
+                            $seleccionarSector -> selectAsigancion();
+                            
+                          echo  '</select>
+                            </div>
                                      <div class="form-group">  
                                      <label for="">Fecha visit</label>
-                      <input name="estado_sol" type="text" class="form-control" value="'.$item["fecha_visita_comerc_sol"].'" required>
+                      <input name="EditarFechaVisitaComercial" type="text" class="form-control" value="'.$item["fecha_visita_comerc_sol"].'" required>
                                      </div>
                                      <div class="form-group"> 
                                      <label for="">Direccion nueva</label> 
-                      <input name="estado_sol" type="text" class="form-control" value="'.$item["direccion_nueva_sol"].'" required>
+                      <input name="EditarDireccionNueva" type="text" class="form-control" value="'.$item["direccion_nueva_sol"].'" required>
                                      </div>
                                     
                         <div class="form-group text-center">
@@ -136,47 +143,47 @@ class solicitud
 
         }
     }
-    public function programarModelController(){
+     public function programarModelController(){
 
-        if (isset($_POST["fechaPrevistaSol"])) {
-            $datosController = array("id_solicitud" => $_POST["id_solicitud"],
-                "EditarfechaPrevistaSol"=> $_POST["EditarfechaPrevistaSol"],
-                "EditarfechaVisitaComercSol" => $_POST["EditarfechaVisitaComercSol"],
-                "asesor_sol" => $_POST["asesor_sol"],
-                "nombre_estado_preventa" => $_POST["estado_sol"]);
+        if (isset($_POST["EditarASesor"])) {
+            $datosController = array("id_sol"=> $_POST["idSolicitud"],
+                                      "asesor_sol" => $_POST["EditarASesor"],
+                                     "tipo_asignacion" => $_POST["editarTipoAsignacion"],
+                                   "fecha_visita_comerc_sol" => $_POST["EditarFechaVisitaComercial"],
+                                 "direccion_nueva_sol" => $_POST["EditarDireccionNueva"]);
             $respuesta = SolicitudModel::programarSolicitud($datosController, "ap_solicitud");
 
             if ($respuesta == "ok") {
                 if(isset($_POST["actualizarSesion"])){
+                    $_SESSION["id_sol"] = $_POST["idSolicitud"];
+                    $_SESSION["asesor_sol"] = $_POST["EditarASesor"];
+                    $_SESSION["tipo_asignacion"] = $_POST["editarTipoAsignacion"];
+                    $_SESSION["fecha_visita_comerc_sol"] = $_POST["EditarFechaVisitaComercial"];
+                    $_SESSION["direccion_nueva_sol"] = $_POST["EditarDireccionNueva"];
 
-                    $_SESSION["id_sol"] = $_POST["id_solicitud"];
-                    $_SESSION["fechaPrevistaSol"] = $_POST["EditarfechaPrevistaSol"];
-                    $_SESSION["fechaVisitaComercSol"] = $_POST["EditarfechaVisitaComercSol"];
-                    $_SESSION["asesor_sol"] = $_POST["asesor_sol"];
-                    $_SESSION["nombre_estado_preventa"] = $_POST["estado_sol"];
                 }
 
                 echo '<script>
 
                        swal({
                             title: "!Ok",
-                            text: "¡La solicitud ha sido programada correctamente!",
+                            text: "¡Programado correctamente!",
                             type: "success",
-                           confirmButtonText: "Cerrar",
+                            confirmButtonText: "Cerrar",
                             closeOnConfirm: false
-                       }
-                     function(isConfirm) {
+                       },
+                       function(isConfirm) {
                            if (isConfirm){
-                               window.location = "TSolicitudes
-                               ";
-                          }
-                       
-                      }); 
+                               window.location = "TSolicitudes";
+                           }
+                         
+                       }); 
                 </script>';
 
             }
         }
     }
+
      public function selectAsesor(){
         $respuesta = SolicitudModel::vistaAsesor("ap_terceros");
         foreach ($respuesta as $row => $SelectsCiudad){

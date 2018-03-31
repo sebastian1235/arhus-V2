@@ -88,7 +88,7 @@ class SolicitudModel
 #Vista Asigancion
     public function vistaSolicitud($tabla)
     {
-        $stmt = Conexion::conectar()->prepare("SELECT id_sol, poliza_sol, nombre_tercero, tipo_asignacion, nombre_sol, servicio_sol, nombre_estado_preventa, fecha_prevista_sol, fecha_visita_comerc_sol, nombre_Sec, nombre_loc, cedula_sol , telefono1_sol, telefono2_sol, celular_sol , direccion_nueva_sol FROM $tabla left join ap_terceros on ap_solicitud.asesor_sol=ap_terceros.Id_tercero left JOIN ap_asignacion on ap_solicitud.asignacion_sol=ap_asignacion.id_asignacion LEFT join ap_estado_preventa on ap_solicitud.estado_sol=ap_estado_preventa.id_estado_preventa left join siax_sectores on ap_solicitud.barrio_sol=siax_sectores.cod_sec left join siax_localidad on ap_solicitud.localidad_sol=siax_localidad.id_loc");
+        $stmt = Conexion::conectar()->prepare("SELECT id_sol, poliza_sol,asesor_sol, nombre_tercero, asignacion_sol, tipo_asignacion, nombre_sol, servicio_sol, nombre_estado_preventa, fecha_prevista_sol, fecha_visita_comerc_sol, nombre_Sec, nombre_loc, cedula_sol , telefono1_sol, telefono2_sol, celular_sol , direccion_nueva_sol FROM $tabla left join ap_terceros on ap_solicitud.asesor_sol=ap_terceros.Id_tercero left JOIN ap_asignacion on ap_solicitud.asignacion_sol=ap_asignacion.id_asignacion LEFT join ap_estado_preventa on ap_solicitud.estado_sol=ap_estado_preventa.id_estado_preventa left join siax_sectores on ap_solicitud.barrio_sol=siax_sectores.cod_sec left join siax_localidad on ap_solicitud.localidad_sol=siax_localidad.id_loc");
         $stmt->execute();
         return $stmt->fetchAll();
         $stmt->close();
@@ -97,12 +97,12 @@ class SolicitudModel
 
     public function programarSolicitud($datosModel, $tabla)
     {
-        $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET fecha_prevista_sol = :fecha_prevista_sol, fecha_visita_comerc_sol = :fecha_visita_comerc_sol, asesor_sol = :asesor_sol, estado_sol = :estado_sol WHERE id_sol = :id_sol");
-        $stmt->bindParam(":fecha_prevista_sol", $datosModel["EditarfechaPrevistaSol"], PDO::PARAM_STR);
-        $stmt->bindParam(":fecha_visita_comerc_sol", $datosModel["EditarfechaVisitaComercSol"], PDO::PARAM_STR);
+        $stmt = Conexion::conectar()->prepare("UPDATE $tabla  SET asesor_sol=:asesor_sol, asignacion_sol=:asignacion_sol, fecha_visita_comerc_sol= :fecha_visita_comerc_sol, direccion_nueva_sol=:direccion_nueva_sol where id_sol=:id_sol");
         $stmt->bindParam(":asesor_sol", $datosModel["asesor_sol"], PDO::PARAM_STR);
-        $stmt->bindParam(":estado_sol", $datosModel["nombre_estado_preventa"], PDO::PARAM_STR);
-        $stmt->bindParam(":id_sol", $datosModel["id_solicitud"], PDO::PARAM_STR);
+        $stmt->bindParam(":asignacion_sol", $datosModel["tipo_asignacion"], PDO::PARAM_STR);
+        $stmt->bindParam(":fecha_visita_comerc_sol", $datosModel["fecha_visita_comerc_sol"], PDO::PARAM_STR);
+        $stmt->bindParam(":direccion_nueva_sol", $datosModel["direccion_nueva_sol"], PDO::PARAM_STR);
+        $stmt->bindParam(":id_sol", $datosModel["id_sol"], PDO::PARAM_STR);
 
         if($stmt->execute()){
 

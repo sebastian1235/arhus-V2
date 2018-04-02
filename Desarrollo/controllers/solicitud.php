@@ -140,7 +140,6 @@ class solicitud
                                     
                         <div class="form-group text-center">
                         <input type="submit" id="programarSol" value="Actualizar" class="btn btn-warning">
->>>>>>> 3910d2ab2b9c8e5a7120c2d9ba40b55d507f96ae
                       </div>
                 </form>
 
@@ -156,16 +155,8 @@ class solicitud
 
         }
     }
-<<<<<<< HEAD
-    public function programarModelController(){
 
-        if (isset($_POST["editarAsesor"])) {
-            $datosController = array("id_sol" => $_POST["idSolicitud"],
-                                    "asesor_sol"=> $_POST["editarAsesor"]);
-//                                    "asignacion_sol" => $_POST["editarAsignacion"],
-//                                    "fecha_visita_comer_sol" => $_POST["editarFechaVisita"],
-//                                    "direccion_nueva_sol" => $_POST["editarDireccion"]);
-=======
+
      public function programarModelController(){
 
         if (isset($_POST["EditarASesor"])) {
@@ -174,24 +165,16 @@ class solicitud
                                      "tipo_asignacion" => $_POST["editarTipoAsignacion"],
                                    "fecha_visita_comerc_sol" => $_POST["EditarFechaVisitaComercial"],
                                  "direccion_nueva_sol" => $_POST["EditarDireccionNueva"]);
->>>>>>> 3910d2ab2b9c8e5a7120c2d9ba40b55d507f96ae
+
             $respuesta = SolicitudModel::programarSolicitud($datosController, "ap_solicitud");
             if ($respuesta == "ok") {
                 if(isset($_POST["actualizarSesion"])){
-<<<<<<< HEAD
-                    $_SESSION["id_sol"] = $_POST["id_solicitud"];
-                    $_SESSION["asesor_sol"] = $_POST["editarAsesor"];
-//                    $_SESSION["asignacion_sol"] = $_POST["editarAsignacion"];
-//                    $_SESSION["fecha_visita_comer_sol"] = $_POST["editarFechaVisita"];
-//                    $_SESSION["direccion_nueva_sol"] = $_POST["editarDireccion"];
-=======
                     $_SESSION["id_sol"] = $_POST["idSolicitud"];
                     $_SESSION["asesor_sol"] = $_POST["EditarASesor"];
                     $_SESSION["tipo_asignacion"] = $_POST["editarTipoAsignacion"];
                     $_SESSION["fecha_visita_comerc_sol"] = $_POST["EditarFechaVisitaComercial"];
                     $_SESSION["direccion_nueva_sol"] = $_POST["EditarDireccionNueva"];
 
->>>>>>> 3910d2ab2b9c8e5a7120c2d9ba40b55d507f96ae
                 }
 
                 echo '<script>

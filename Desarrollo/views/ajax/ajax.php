@@ -6,20 +6,21 @@
  * Time: 7:10 PM
  */
 
-require_once "../../controllers/modoPago.php";
-require_once "../../models/modoPago.php";
+require_once "../../controllers/tipoTercero.php";
+require_once "../../models/tipoTercero.php";
 
 class Ajax{
-    public $validarModoPago;
+    public $validarNombreTipoTercero;
 
-    public function validarModoPagoAjax(){
-        $datos = $this->validarModoPago;
-        $respuesta = medioPago::validarModoPagoController($datos);
+    public function validarNombreTipoTerceroAjax(){
+        $datos = $this->validarNombreTipoTercero;
+        $respuesta = TipoTercero::validarNombreTipoTerceroController($datos);
         echo $respuesta;
 
     }
 }
-
+if (isset($_POST["validarNombreTipoTercero"])){
 $a = new Ajax();
-$a ->validarModoPago = $_POST["validarMedioPago"];
-$a ->validarModoPagoAjax();
+$a -> validarNombreTipoTercero = $_POST["validarNombreTipoTercero"];
+$a -> validarNombreTipoTerceroAjax();
+}

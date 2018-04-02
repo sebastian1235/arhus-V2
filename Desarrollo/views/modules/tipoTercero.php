@@ -23,17 +23,19 @@ include "views/modules/header.php";
     <div class="col-md-5">
         <div class="col-md-12">
             <div class="box box-warning">
-                <form role="form" id="formularioTipoTercero" method="post" enctype="multipart/form-data">
+                <form role="form" id="formularioTipoTercero" method="post" onsubmit="return validarRegistro()">
+
                     <div class="box-header with-border">
                         <h3 class="box-title">Tipo Tercero</h3>
                     </div>
-
                     <div class="box-body">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="nombreTipoTercero" name="nombreTipoTerceros" placeholder="Ingrese nombre de tipo tercero" required>
+                            <label for="nombreTipoTercero">Nombre tipo tercero <span></span> </label>
+                            <input type="text" class="form-control" id="nombreTipoTerceros" name="nombreTipoTerceros" placeholder="" required>
                         </div>
                         <div class="form-group">
-                            <textarea type="text" class="form-control" id="descripcionTipoTercero" name="descripcionTipoTercero" placeholder="Descripción"></textarea>
+                            <label for="nombreTipoTercero">Descripción</label>
+                            <textarea type="text" class="form-control" id="descripcionTipoTercero" name="descripcionTipoTercero" placeholder=""></textarea>
                         </div>
 
                         <div class="form-group">

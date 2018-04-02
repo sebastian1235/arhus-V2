@@ -63,7 +63,7 @@ class solicitud
         foreach ($respuesta as $row => $item){
             echo' <tr>   
                     <td><a href="#programarSol'.$item["id_sol"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></a></td>
-                    <td><a href="#eliminarSol'.$item["id_sol"].'" data-toggle="modal"><span class="btn btn-warning fa fa-trash"></span></a></td>
+                    <td><a href="#eliminarSol'.$item["id_sol"].'" data-toggle="modal"><span class="btn btn-danger fa fa-trash"></span></a></td>
                     
                     <td>' .$item["id_sol"].'</td>
                     <td>' .$item["poliza_sol"].'</td>
@@ -152,7 +152,7 @@ class solicitud
                 <input name="idSolicitud" type="hidden" value="'.$item["id_sol"].'">
                 <div class="form-group">
                 <label for="">Nombre asesor</label>
-                <select class="form-control" id="EliminarSol" name="EliminarSol">
+                <select class="form-control" id="borrar" name="EliminarSol">
                 <option value="0">No</option>
                 <option value="1">Si</option>';
                                     
@@ -164,7 +164,7 @@ class solicitud
            
                                     
                         <div class="form-group text-center">
-                        <input type="submit" id="eliminarSol" value="Actualizar" class="btn btn-warning">
+                        <input type="submit" id="eliminarSol" value="Continuar" class="btn btn-danger">
                       </div>
                 </form>
 
@@ -235,16 +235,16 @@ class solicitud
                 
 
                 }
-                if ($_post["eliminarSol"] == 0) {
-                  echo '<script>
-
-                       swal({
-                            title: "!No",
-                            text: "¡ no se Elimino el registro!",
-                            type: "success",
-                            confirmButtonText: "Cerrar",
-                            closeOnConfirm: false
-                       },
+                if ($_POST["EliminarSol"] == 0) {
+                 echo '<script>
+                                swal({
+                                  title: "!No",
+                                  text: "Se elimino el registro!",
+                                  
+                                  confirmButtonText: "Cerrar",
+                                  closeOnConfirm: false
+                             },
+                    
                        function(isConfirm) {
                            if (isConfirm){
                                window.location = "TSolicitudes";

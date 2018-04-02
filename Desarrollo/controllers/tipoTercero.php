@@ -11,12 +11,12 @@ class TipoTercero
 
     public function registroTipoTerceroController()
     {
-        if (isset($_POST["nombreTipoTercero"])) {
-            $datosController = array("nombreTipoTercero" => $_POST["nombreTipoTercero"],
+        if (isset($_POST["nombreTipoTerceros"])) {
+            $datosController = array("nombreTipoTercero" => $_POST["nombreTipoTerceros"],
                                       "descripcionTipoTercero" => $_POST["descripcionTipoTercero"],
                                        "grupoTipoTercero" => $_POST["grupoTipoTercero"]);
 
-            $respuesta = TipoTerceroModel::registroTipoTercero($datosController, "ap_tipo_tercero");
+            $respuesta = TipoTerceroModel::registroTipoTerceroModel($datosController, "ap_tipo_tercero");
 
             if ($respuesta == "ok") {
                 echo '<script>
@@ -138,5 +138,18 @@ class TipoTercero
             }
         }
     }
+
+    public function validarNombreTipoTerceroController($validarNombreTercero){
+        $datosController = $validarNombreTercero;
+        $respuesta = TipoTerceroModel::validarNombreTipoTerceroModels($datosController, "ap_tipo_tercero");
+        if (count($respuesta["nombre_tipo_ter"]) > 0){
+            echo 0;
+        }else{
+            echo 1;
+        }
+
+    }
+
+
 
 }

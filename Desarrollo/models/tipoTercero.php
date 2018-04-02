@@ -12,7 +12,7 @@ require_once "conexion.php";
 
 class TipoTerceroModel
 {
-    public function registroTipoTercero($datosModel, $tabla)
+    public function registroTipoTerceroModel($datosModel, $tabla)
     {
         $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla (nombre_tipo_ter, descripcion_tipo_ter, Grupo_tipo_ter) VALUES (:nombre_tipo_ter, :descripcion_tipo_ter, :Grupo_tipo_ter)");
         $stmt->bindParam(":nombre_tipo_ter", $datosModel["nombreTipoTercero"], PDO::PARAM_STR);
@@ -56,4 +56,14 @@ class TipoTerceroModel
 
 
     }
+
+    public function validarNombreTipoTerceroModels($datosModel, $tabla){
+        $stmt = Conexion::conectar()->prepare("SELECT nombre_tipo_ter FROM $tabla WHERE nombre_tipo_ter = :nombre_tipo_ter");
+        $stmt ->bindParam(":nombre_tipo_ter", $datosModel, PDO::PARAM_STR);
+        $stmt ->execute();
+        return $stmt->fetch();
+        $stmt ->close();
+    }
+
+
 }

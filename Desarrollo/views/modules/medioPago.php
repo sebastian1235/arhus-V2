@@ -28,11 +28,12 @@ include "views/modules/header.php";
 
                             <div class="box-body">
                                 <div class="form-group">
+                                    <label for="medioPagoRegistro">Medio Pago<span></span></label>
                                     <input type="text" class="form-control" id="modoPago" name="modoPago" placeholder="Ingrese Modo de pago" required>
                                 </div>
 
                                 <div class="form-group">
-                                    <select class="form-control" name="editarActivo" required>
+                                    <select class="form-control" name="activo" required>
                                         <option value="">Activo medio de pago</option>
                                         <option value="0">SI</option>
                                         <option value="1">No</option>

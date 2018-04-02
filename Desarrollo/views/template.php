@@ -85,6 +85,7 @@
 </script>
 <script src="views/js/perfiles.js"></script>
 <script src="views/js/selectsDinamicos.js"></script>
+<script src="views/js/validarRegistros.js"></script>
 
 </body>
 </html>

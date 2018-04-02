@@ -59,4 +59,14 @@ class MedioPagoModel
 
 
     }
+    #Validar Medio Pago
+    public function validarModoPagoModel($datosModel, $tabla){
+        $stmt = Conexion::conectar()->prepare("SELECT nombre_medio_pago FROM $tabla where nombre_medio_pago = : nombre_medio_pago");
+        $stmt->bindParam(":nombre_medio_pago", $datosModel, PDO::PARAM_STR);
+        $stmt->execute();
+        return $stmt->fetch();
+        $stmt->close();
+    }
+
+
 }

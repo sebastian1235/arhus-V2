@@ -97,6 +97,7 @@ class SolicitudModel
 
     public function programarSolicitud($datosModel, $tabla)
     {
+
         $stmt = Conexion::conectar()->prepare("UPDATE $tabla  SET asesor_sol=:asesor_sol, asignacion_sol=:asignacion_sol, fecha_visita_comerc_sol= :fecha_visita_comerc_sol, direccion_nueva_sol=:direccion_nueva_sol where id_sol=:id_sol");
         $stmt->bindParam(":asesor_sol", $datosModel["asesor_sol"], PDO::PARAM_STR);
         $stmt->bindParam(":asignacion_sol", $datosModel["tipo_asignacion"], PDO::PARAM_STR);

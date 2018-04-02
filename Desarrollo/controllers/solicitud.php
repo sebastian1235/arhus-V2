@@ -79,20 +79,31 @@ class solicitud
                     <td>' .$item["cedula_sol"].'</td>
                     <td>' .$item["direccion_nueva_sol"].'</td>
                     <td>' .$item["telefono1_sol"].'-'.$item["telefono1_sol"].'-'.$item["telefono1_sol"].'</td>
-
-
-                   
                   </tr>  
-                  <div id="programarSol'.$item["id_sol"].'" class="modal fade">
-                <div class="modal-dialog modal-content">
-              <div class="modal-header" style="border:1px solid #eee">
-                <button type="button" class="close" data-dismiss="modal">X</button>
-                <h3 class="modal-title">Programar '.$item["nombre_sol"].' Direccion '.$item["direccion_nueva_sol"].'</h3>
-              </div>
-              <div class="modal-body" style="border:1px solid #eee">
+                  
+<div id="programarSol'.$item["id_sol"].'" class="modal fade">
+     <div class="modal-dialog modal-content">
+          <div class="modal-header" style="border:1px solid #eee">
+              <button type="button" class="close" data-dismiss="modal">X</button>
+               <h3 class="modal-title">Programar '.$item["nombre_sol"].' Direccion '.$item["direccion_nueva_sol"].'</h3>  
+           </div>
+           <div class="modal-body" style="border:1px solid #eee">
                 <form style="padding:0px 10px" method="post" enctype="multipart/form-data">
-                <input name="idSolicitud" type="hidden" value="'.$item["id_sol"].'">
-                <div class="form-group">  
+                <input name="idSolicitud" type="hidden" value="'.$item["id_sol"].'">                  
+                <div class="form-group">
+                <label for="">Nombre asesor</label>
+                <select class="form-control" id="" name="editarAsesor">
+                <option value="0">Asesor</option>';
+
+                            $seleccionarSector = new solicitud();
+                            $seleccionarSector -> selectAsesor();
+                          echo  '
+                </select>
+                 </div>
+
+                 <div class="form-group text-center">
+                       <input type="submit" id="programarSol" value="Actualizar" class="btn btn-warning">
+      <div class="form-group">  
                   <input disabled name="EditarfechaPrevistaSol" type="text" class="form-control" value="'.$item["fecha_prevista_sol"].'" required>
                 </div>
                 
@@ -134,10 +145,11 @@ class solicitud
                 </form>
 
               </div>
+              
               <div class="modal-footer" style="border:1px solid #eee">          
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
               </div>
-                
+              
                 </div>
 
              </div>
@@ -180,6 +192,8 @@ class solicitud
 
         }
     }
+
+
      public function programarModelController(){
 
         if (isset($_POST["EditarASesor"])) {
@@ -188,8 +202,8 @@ class solicitud
                                      "tipo_asignacion" => $_POST["editarTipoAsignacion"],
                                    "fecha_visita_comerc_sol" => $_POST["EditarFechaVisitaComercial"],
                                  "direccion_nueva_sol" => $_POST["EditarDireccionNueva"]);
-            $respuesta = SolicitudModel::programarSolicitud($datosController, "ap_solicitud");
 
+            $respuesta = SolicitudModel::programarSolicitud($datosController, "ap_solicitud");
             if ($respuesta == "ok") {
                 if(isset($_POST["actualizarSesion"])){
                     $_SESSION["id_sol"] = $_POST["idSolicitud"];

@@ -70,9 +70,7 @@ class medioPago
 							<div class="modal-body" style="border:1px solid #eee">
 							
 								<form style="padding:0px 10px" method="post" enctype="multipart/form-data">
-
-								      <input name="idMedioPago" type="hidden" value="'.$item["Id_medio_pago"].'">
-								    
+								      <input name="idMedioPago" type="hidden" value="'.$item["Id_medio_pago"].'">    
 								     <div class="form-group">  
 								      <input name="editarModoPago" type="text" class="form-control" value="'.$item["nombre_medio_pago"].'" required>
                                      </div>
@@ -140,6 +138,21 @@ class medioPago
             }
         }
     }
+
+
+    #Validar medio Pago Existente
+    public function validarModoPagoController($validarMedioPago){
+        $datosController = $validarMedioPago;
+        $respuesta = MedioPagoModel::validarModoPagoModel($datosController, "siax_medio_pago");
+        if (count($respuesta["nombre_medio_pago"]) > 0){
+            echo 0;
+        }
+        else{
+            echo 1;
+        }
+
+    }
+
 
 }
 

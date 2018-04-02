@@ -63,6 +63,7 @@ class solicitud
         foreach ($respuesta as $row => $item){
             echo' <tr>   
                     <td><a href="#programarSol'.$item["id_sol"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></a></td>
+                    <td><a href="#eliminarSol'.$item["id_sol"].'" data-toggle="modal"><span class="btn btn-warning fa fa-trash"></span></a></td>
                     
                     <td>' .$item["id_sol"].'</td>
                     <td>' .$item["poliza_sol"].'</td>
@@ -139,7 +140,43 @@ class solicitud
                 
                 </div>
 
+             </div>
+              <div id="eliminarSol'.$item["id_sol"].'" class="modal fade">
+                <div class="modal-dialog modal-content">
+              <div class="modal-header" style="border:1px solid #eee">
+                <button type="button" class="close" data-dismiss="modal">X</button>
+                <h3 class="modal-title">desea Eliminar '.$item["nombre_sol"].' Direccion '.$item["direccion_nueva_sol"].'</h3>
+              </div>
+              <div class="modal-body" style="border:1px solid #eee">
+                <form style="padding:0px 10px" method="post" enctype="multipart/form-data">
+                <input name="idSolicitud" type="hidden" value="'.$item["id_sol"].'">
+                <div class="form-group">
+                <label for="">Nombre asesor</label>
+                <select class="form-control" id="EliminarSol" name="EliminarSol">
+                <option value="0">No</option>
+                <option value="1">Si</option>';
+                                    
+                            
+                            
+                          echo  '</select>
+                            </div>
+                
+           
+                                    
+                        <div class="form-group text-center">
+                        <input type="submit" id="eliminarSol" value="Actualizar" class="btn btn-warning">
+                      </div>
+                </form>
+
+              </div>
+              <div class="modal-footer" style="border:1px solid #eee">          
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+              </div>
+                
+                </div>
+
              </div>';
+
 
         }
     }
@@ -183,6 +220,64 @@ class solicitud
             }
         }
     }
+    public function eliminarModelController(){
+
+        if (isset($_POST["EliminarSol"])) {
+            $datosController = array("id_sol"=> $_POST["idSolicitud"],
+                                      "eliminar" => $_POST["EliminarSol"]
+                                     );
+            $respuesta = SolicitudModel::EliminarSolicitud($datosController, "ap_solicitud");
+
+            if ($respuesta == "ok") {
+                if(isset($_POST["actualizarSesion"])){
+                    $_SESSION["id_sol"] = $_POST["idSolicitud"];
+                    $_SESSION["eliminar"] = $_POST["EliminarSol"];
+                
+
+                }
+                if ($_post["eliminarSol"] == 0) {
+                  echo '<script>
+
+                       swal({
+                            title: "!Ok",
+                            text: "¡ no se Eliminado correctamente!",
+                            type: "success",
+                            confirmButtonText: "Cerrar",
+                            closeOnConfirm: false
+                       },
+                       function(isConfirm) {
+                           if (isConfirm){
+                               window.location = "TSolicitudes";
+                           }
+                         
+                       }); 
+                </script>';
+                 }
+                   else{
+                    echo '<script>
+
+                             swal({
+                                  title: "!Ok",
+                                  text: "¡Eliminado correctamente!",
+                                  type: "success",
+                                  confirmButtonText: "Cerrar",
+                                  closeOnConfirm: false
+                             },
+                             function(isConfirm) {
+                                 if (isConfirm){
+                                     window.location = "TSolicitudes";
+                                 }
+                               
+                             }); 
+                      </script>';
+              }
+                  # code...
+                
+                 
+                
+            }
+        }
+    }
 
      public function selectAsesor(){
         $respuesta = SolicitudModel::vistaAsesor("ap_terceros");
@@ -207,6 +302,8 @@ class solicitud
         }
 
     }
+
+
 
 }
 

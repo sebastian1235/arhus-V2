@@ -64,6 +64,7 @@ include "views/modules/header.php";
                             $verSol = new solicitud();
                             $verSol -> vistaSolicitudController();
                             $verSol -> programarModelController();
+                            $verSol -> eliminarModelController();
 
                             ?>
 

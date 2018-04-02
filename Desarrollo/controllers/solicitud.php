@@ -78,58 +78,40 @@ class solicitud
                     <td>' .$item["cedula_sol"].'</td>
                     <td>' .$item["direccion_nueva_sol"].'</td>
                     <td>' .$item["telefono1_sol"].'-'.$item["telefono1_sol"].'-'.$item["telefono1_sol"].'</td>
-
-
-                   
                   </tr>  
-                  <div id="programarSol'.$item["id_sol"].'" class="modal fade">
-                <div class="modal-dialog modal-content">
-              <div class="modal-header" style="border:1px solid #eee">
-                <button type="button" class="close" data-dismiss="modal">X</button>
-                <h3 class="modal-title">Programar '.$item["nombre_sol"].' Direccion '.$item["direccion_nueva_sol"].'</h3>
-              </div>
-              <div class="modal-body" style="border:1px solid #eee">
+                  
+<div id="programarSol'.$item["id_sol"].'" class="modal fade">
+     <div class="modal-dialog modal-content">
+          <div class="modal-header" style="border:1px solid #eee">
+              <button type="button" class="close" data-dismiss="modal">X</button>
+               <h3 class="modal-title">Programar '.$item["nombre_sol"].' Direccion '.$item["direccion_nueva_sol"].'</h3>  
+           </div>
+           <div class="modal-body" style="border:1px solid #eee">
                 <form style="padding:0px 10px" method="post" enctype="multipart/form-data">
-                <input name="id_solicitud" type="hidden" value="'.$item["id_sol"].'">
-                <div class="form-group">  
-                  <input disabled name="EditarfechaPrevistaSol" type="text" class="form-control" value="'.$item["fecha_prevista_sol"].'" required>
-                </div>
-                
+                <input name="idSolicitud" type="hidden" value="'.$item["id_sol"].'">
+                                
                 <div class="form-group">
                 <label for="">Nombre asesor</label>
-                <select class="form-control" id="asesor_sol" name="asesor_sol">
+                <select class="form-control" id="" name="editarAsesor">
                 <option value="0">Asesor</option>';
-                                    
+
                             $seleccionarSector = new solicitud();
                             $seleccionarSector -> selectAsesor();
-                            
-                          echo  '</select>
-                            </div>
+                          echo  '
+                </select>
+                 </div>
 
-                                      <div class="form-group">  
-                                      <label for="">Asigancion</label>
-
-                      <input name="estado_sol" type="text" class="form-control" value="'.$item["tipo_asignacion"].'" required>
-                                     </div>
-                                     <div class="form-group">  
-                                     <label for="">Fecha visit</label>
-                      <input name="estado_sol" type="text" class="form-control" value="'.$item["fecha_visita_comerc_sol"].'" required>
-                                     </div>
-                                     <div class="form-group"> 
-                                     <label for="">Direccion nueva</label> 
-                      <input name="estado_sol" type="text" class="form-control" value="'.$item["direccion_nueva_sol"].'" required>
-                                     </div>
-                                    
-                        <div class="form-group text-center">
-                        <input type="submit" id="programarSol" value="Actualizar" class="btn btn-warning">
+                 <div class="form-group text-center">
+                       <input type="submit" id="programarSol" value="Actualizar" class="btn btn-warning">
                       </div>
                 </form>
 
               </div>
+              
               <div class="modal-footer" style="border:1px solid #eee">          
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
               </div>
-                
+              
                 </div>
 
              </div>';
@@ -138,22 +120,20 @@ class solicitud
     }
     public function programarModelController(){
 
-        if (isset($_POST["fechaPrevistaSol"])) {
-            $datosController = array("id_solicitud" => $_POST["id_solicitud"],
-                "EditarfechaPrevistaSol"=> $_POST["EditarfechaPrevistaSol"],
-                "EditarfechaVisitaComercSol" => $_POST["EditarfechaVisitaComercSol"],
-                "asesor_sol" => $_POST["asesor_sol"],
-                "nombre_estado_preventa" => $_POST["estado_sol"]);
+        if (isset($_POST["editarAsesor"])) {
+            $datosController = array("id_sol" => $_POST["idSolicitud"],
+                                    "asesor_sol"=> $_POST["editarAsesor"]);
+//                                    "asignacion_sol" => $_POST["editarAsignacion"],
+//                                    "fecha_visita_comer_sol" => $_POST["editarFechaVisita"],
+//                                    "direccion_nueva_sol" => $_POST["editarDireccion"]);
             $respuesta = SolicitudModel::programarSolicitud($datosController, "ap_solicitud");
-
             if ($respuesta == "ok") {
                 if(isset($_POST["actualizarSesion"])){
-
                     $_SESSION["id_sol"] = $_POST["id_solicitud"];
-                    $_SESSION["fechaPrevistaSol"] = $_POST["EditarfechaPrevistaSol"];
-                    $_SESSION["fechaVisitaComercSol"] = $_POST["EditarfechaVisitaComercSol"];
-                    $_SESSION["asesor_sol"] = $_POST["asesor_sol"];
-                    $_SESSION["nombre_estado_preventa"] = $_POST["estado_sol"];
+                    $_SESSION["asesor_sol"] = $_POST["editarAsesor"];
+//                    $_SESSION["asignacion_sol"] = $_POST["editarAsignacion"];
+//                    $_SESSION["fecha_visita_comer_sol"] = $_POST["editarFechaVisita"];
+//                    $_SESSION["direccion_nueva_sol"] = $_POST["editarDireccion"];
                 }
 
                 echo '<script>

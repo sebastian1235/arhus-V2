@@ -97,11 +97,12 @@ class SolicitudModel
 
     public function programarSolicitud($datosModel, $tabla)
     {
-        $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET fecha_prevista_sol = :fecha_prevista_sol, fecha_visita_comerc_sol = :fecha_visita_comerc_sol, asesor_sol = :asesor_sol, estado_sol = :estado_sol WHERE id_sol = :id_sol");
-        $stmt->bindParam(":fecha_prevista_sol", $datosModel["EditarfechaPrevistaSol"], PDO::PARAM_STR);
-        $stmt->bindParam(":fecha_visita_comerc_sol", $datosModel["EditarfechaVisitaComercSol"], PDO::PARAM_STR);
-        $stmt->bindParam(":asesor_sol", $datosModel["asesor_sol"], PDO::PARAM_STR);
-        $stmt->bindParam(":estado_sol", $datosModel["nombre_estado_preventa"], PDO::PARAM_STR);
+        $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET  asesor_sol = :asesor_sol WHERE id_sol = :id_sol");
+        
+        $stmt->bindParam(":asesor_sol", $datosModel["editarAsesor"], PDO::PARAM_STR);
+//        $stmt->bindParam(":asignacion_sol", $datosModel["editarAsignacion"], PDO::PARAM_STR);
+//        $stmt->bindParam(":fecha_visita_comer_sol", $datosModel["editarFechaPrevista"], PDO::PARAM_STR);
+//        $stmt->bindParam(":direccion_nueva_sol", $datosModel["editarDireccion"], PDO::PARAM_STR);
         $stmt->bindParam(":id_sol", $datosModel["id_solicitud"], PDO::PARAM_STR);
 
         if($stmt->execute()){

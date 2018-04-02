@@ -2,13 +2,17 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/Desarrollo/views/css/style.css" line="0" />
-    <bookmark url="file://$PROJECT_DIR$/Desarrollo/controllers/modoPago.php" line="95" />
+    <bookmark url="file://$PROJECT_DIR$/Desarrollo/controllers/modoPago.php" line="93" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e71b5988-19e2-4ede-adcb-7a772a6c7e3a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Desarrollo/controllers/solicitud.php" afterPath="$PROJECT_DIR$/Desarrollo/controllers/solicitud.php" />
-      <change beforePath="$PROJECT_DIR$/Desarrollo/models/solicitud.php" afterPath="$PROJECT_DIR$/Desarrollo/models/solicitud.php" />
-      <change beforePath="$PROJECT_DIR$/Desarrollo/views/modules/FregistroSol.php" afterPath="$PROJECT_DIR$/Desarrollo/views/modules/FregistroSol.php" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Desarrollo/controllers/modoPago.php" afterPath="$PROJECT_DIR$/Desarrollo/controllers/modoPago.php" />
+      <change beforePath="$PROJECT_DIR$/Desarrollo/controllers/solicitud.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Desarrollo/models/modoPago.php" afterPath="$PROJECT_DIR$/Desarrollo/models/modoPago.php" />
+      <change beforePath="$PROJECT_DIR$/Desarrollo/models/solicitud.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Desarrollo/views/modules/medioPago.php" afterPath="$PROJECT_DIR$/Desarrollo/views/modules/medioPago.php" />
+      <change beforePath="$PROJECT_DIR$/Desarrollo/views/template.php" afterPath="$PROJECT_DIR$/Desarrollo/views/template.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,30 +41,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="solicitud.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Desarrollo/controllers/solicitud.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding>
-                <element signature="e#6#89#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FregistroSol.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/FregistroSol.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="164" column="60" lean-forward="false" selection-start-line="164" selection-start-column="60" selection-end-line="164" selection-end-column="60" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -98,13 +79,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Desarrollo/views/modules/registro_ciudad.php" />
-        <option value="$PROJECT_DIR$/Desarrollo/models/ingreso.php" />
-        <option value="$PROJECT_DIR$/Desarrollo/controllers/ingreso.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/ingreso.php" />
         <option value="$PROJECT_DIR$/Desarrollo/models/usuarioPerfil.php" />
         <option value="$PROJECT_DIR$/Desarrollo/controllers/usuarioPerfil.php" />
-        <option value="$PROJECT_DIR$/Desarrollo/views/modules/medioPago.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/footer.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/css/style.css" />
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/error.php" />
@@ -131,24 +108,28 @@
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/tipoAsignacion.php" />
         <option value="$PROJECT_DIR$/Desarrollo/controllers/asignacion.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/registro_asignacion.php" />
-        <option value="$PROJECT_DIR$/Desarrollo/views/template.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/subirArchivo.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/perfil.php" />
-        <option value="$PROJECT_DIR$/Desarrollo/models/enlaces.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/procesar.php" />
         <option value="$PROJECT_DIR$/Desarrollo/index.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/TSolicitudes.php" />
         <option value="$PROJECT_DIR$/Desarrollo/controllers/ciudades.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/registroCiudad.php" />
         <option value="$PROJECT_DIR$/Desarrollo/models/ciudades.php" />
-        <option value="$PROJECT_DIR$/Desarrollo/controllers/modoPago.php" />
-        <option value="$PROJECT_DIR$/Desarrollo/models/solicitud.php" />
         <option value="$PROJECT_DIR$/Desarrollo/controllers/tipoTercero.php" />
-        <option value="$PROJECT_DIR$/Desarrollo/models/modoPago.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/tipoTercero.php" />
         <option value="$PROJECT_DIR$/Desarrollo/models/tipoTercero.php" />
-        <option value="$PROJECT_DIR$/Desarrollo/controllers/solicitud.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/FregistroSol.php" />
+        <option value="$PROJECT_DIR$/Desarrollo/views/template.php" />
+        <option value="$PROJECT_DIR$/Desarrollo/controllers/solicitud.php" />
+        <option value="$PROJECT_DIR$/Desarrollo/models/solicitud.php" />
+        <option value="$PROJECT_DIR$/Desarrollo/controllers/modoPago.php" />
+        <option value="$PROJECT_DIR$/Desarrollo/models/modoPago.php" />
+        <option value="$PROJECT_DIR$/Desarrollo/views/modules/ajax.php" />
+        <option value="$PROJECT_DIR$/Desarrollo/models/enlaces.php" />
+        <option value="$PROJECT_DIR$/Desarrollo/views/modules/medioPago.php" />
+        <option value="$PROJECT_DIR$/Desarrollo/views/ajax/ajax.php" />
+        <option value="$PROJECT_DIR$/Desarrollo/views/js/validarRegistros.js" />
       </list>
     </option>
   </component>
@@ -186,6 +167,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -221,20 +203,12 @@
               <item name="arhus-V2" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Desarrollo" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="arhus-V2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="arhus-V2" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Desarrollo" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="ajax" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -249,6 +223,10 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\Ampps\www\proyectos\misProyectos\arhus-V2\Desarrollo\views" />
+      <recent name="G:\Ampps\www\proyectos\misProyectos\arhus-V2\Desarrollo\views\modules\ajax" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\Ampps\www\proyectos\misProyectos\arhus-V2\Desarrollo\views\favicon" />
       <recent name="G:\Ampps\www\proyectos\misProyectos\arhus-V2\Desarrollo\views\css" />
@@ -323,22 +301,32 @@
       <workItem from="1522203049410" duration="1204000" />
       <workItem from="1522261037125" duration="1120000" />
       <workItem from="1522272452102" duration="3146000" />
-      <workItem from="1522356164347" duration="1147000" />
+      <workItem from="1522356164347" duration="3325000" />
+      <workItem from="1522367869136" duration="5330000" />
+      <workItem from="1522433670629" duration="7705000" />
+      <workItem from="1522455612430" duration="597000" />
+      <workItem from="1522468051372" duration="4699000" />
+      <workItem from="1522519183543" duration="599000" />
+      <workItem from="1522525420447" duration="3882000" />
+      <workItem from="1522601274837" duration="589000" />
+      <workItem from="1522612835161" duration="4151000" />
+      <workItem from="1522626715963" duration="721000" />
+      <workItem from="1522629286401" duration="360000" />
+      <workItem from="1522632612107" duration="115000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="208275000" />
+    <option name="totallyTimeSpent" value="239201000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21656536" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1861702" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18237083" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14209726" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -353,26 +341,6 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17401215" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19452888" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -393,27 +361,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/Titems.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
-          <caret line="33" column="33" lean-forward="false" selection-start-line="33" selection-start-column="33" selection-end-line="33" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/registro_items.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="10" column="26" lean-forward="false" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Desarrollo/models/tipoInventario.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="23" lean-forward="true" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/registro_tercero.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -493,20 +440,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Desarrollo/views/template.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="73" column="17" lean-forward="false" selection-start-line="73" selection-start-column="17" selection-end-line="73" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/medioPago.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-195">
-          <caret line="40" column="31" lean-forward="false" selection-start-line="40" selection-start-column="31" selection-end-line="40" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Desarrollo/controllers/usuarioPerfil.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -550,24 +483,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Desarrollo/controllers/enlaces.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Desarrollo/controllers/asignacion.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="500">
           <caret line="28" column="64" lean-forward="false" selection-start-line="28" selection-start-column="64" selection-end-line="28" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Desarrollo/models/enlaces.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="30" column="37" lean-forward="false" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -585,20 +504,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/TSolicitudes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="920">
-          <caret line="46" column="42" lean-forward="false" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Desarrollo/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="32" column="41" lean-forward="false" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Desarrollo/controllers/campanas.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -610,38 +515,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="87" column="63" lean-forward="false" selection-start-line="87" selection-start-column="63" selection-end-line="87" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Desarrollo/controllers/modoPago.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="17" column="96" lean-forward="false" selection-start-line="17" selection-start-column="96" selection-end-line="17" selection-end-column="96" />
-          <folding>
-            <marker date="1522186974855" expanded="true" signature="515:1110" ph="..." />
-            <marker date="1522186974855" expanded="true" signature="546:851" ph="{&quot;title&quot;: &quot;!Ok&quot;...}" />
-            <marker date="1522186974855" expanded="true" signature="896:1082" ph="{...}" />
-            <marker date="1522186974855" expanded="true" signature="939:1031" ph="{...}" />
-            <marker date="1522186974855" expanded="true" signature="1531:1812" ph="..." />
-            <marker date="1522186974855" expanded="true" signature="1915:3408" ph="..." />
-            <marker date="1522186974855" expanded="true" signature="1969:3390" ph="..." />
-            <marker date="1522186974855" expanded="false" signature="2012:2033" ph="..." />
-            <marker date="1522186974855" expanded="true" signature="2034:2182" ph="..." />
-            <marker date="1522186974855" expanded="false" signature="2223:2244" ph="..." />
-            <marker date="1522186974855" expanded="true" signature="2245:3184" ph="..." />
-            <marker date="1522186974855" expanded="false" signature="2276:2292" ph="..." />
-            <marker date="1522186974855" expanded="true" signature="2337:3169" ph="..." />
-            <marker date="1522186974855" expanded="true" signature="2479:2650" ph="..." />
-            <marker date="1522186974855" expanded="true" signature="2689:2977" ph="..." />
-            <marker date="1522186974855" expanded="true" signature="2765:2955" ph="..." />
-            <marker date="1522186974855" expanded="true" signature="3031:3152" ph="..." />
-            <marker date="1522186974855" expanded="false" signature="3226:3247" ph="..." />
-            <marker date="1522186974855" expanded="true" signature="3248:3358" ph="..." />
-            <marker date="1522186974855" expanded="true" signature="4204:4794" ph="..." />
-            <marker date="1522186974855" expanded="true" signature="4235:4535" ph="{&quot;title&quot;: &quot;!Ok&quot;...}" />
-            <marker date="1522186974855" expanded="true" signature="4580:4766" ph="{...}" />
-            <marker date="1522186974855" expanded="true" signature="4623:4715" ph="{...}" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -671,13 +544,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="137" column="66" lean-forward="false" selection-start-line="137" selection-start-column="66" selection-end-line="137" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Desarrollo/models/solicitud.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="138" column="4" lean-forward="false" selection-start-line="138" selection-start-column="4" selection-end-line="138" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -723,13 +589,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Desarrollo/views/js/validarIngreso.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Desarrollo/views/js/perfiles.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -737,27 +596,143 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/FregistroSol.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="164" column="60" lean-forward="false" selection-start-line="164" selection-start-column="60" selection-end-line="164" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/TSolicitudes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1620">
+          <caret line="81" column="49" lean-forward="false" selection-start-line="81" selection-start-column="49" selection-end-line="81" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/error.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Desarrollo/controllers/enlaces.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="17" column="9" lean-forward="true" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Desarrollo/views/js/validarIngreso.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Desarrollo/views/template.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="27" column="49" lean-forward="false" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Desarrollo/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="32" column="41" lean-forward="false" selection-start-line="32" selection-start-column="41" selection-end-line="32" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Desarrollo/models/enlaces.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/medioPago.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="31" column="88" lean-forward="false" selection-start-line="31" selection-start-column="88" selection-end-line="31" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Desarrollo/views/js/validarRegistros.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="15" column="42" lean-forward="false" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Desarrollo/controllers/modoPago.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="151" column="9" lean-forward="false" selection-start-line="151" selection-start-column="9" selection-end-line="151" selection-end-column="9" />
+          <folding>
+            <marker date="1522472988715" expanded="true" signature="515:1110" ph="..." />
+            <marker date="1522472988715" expanded="true" signature="546:851" ph="{&quot;title&quot;: &quot;!Ok&quot;...}" />
+            <marker date="1522472988715" expanded="true" signature="896:1082" ph="{...}" />
+            <marker date="1522472988715" expanded="true" signature="939:1031" ph="{...}" />
+            <marker date="1522472988715" expanded="true" signature="1531:1812" ph="..." />
+            <marker date="1522472988715" expanded="true" signature="1915:3398" ph="..." />
+            <marker date="1522472988715" expanded="true" signature="1969:3380" ph="..." />
+            <marker date="1522472988715" expanded="false" signature="2012:2033" ph="..." />
+            <marker date="1522472988715" expanded="true" signature="2034:2182" ph="..." />
+            <marker date="1522472988715" expanded="false" signature="2223:2244" ph="..." />
+            <marker date="1522472988715" expanded="true" signature="2245:3174" ph="..." />
+            <marker date="1522472988715" expanded="true" signature="2276:2292" ph="..." />
+            <marker date="1522472988715" expanded="true" signature="2337:3159" ph="..." />
+            <marker date="1522472988715" expanded="true" signature="2469:2640" ph="..." />
+            <marker date="1522472988715" expanded="true" signature="2679:2967" ph="..." />
+            <marker date="1522472988715" expanded="true" signature="2755:2945" ph="..." />
+            <marker date="1522472988715" expanded="true" signature="3021:3142" ph="..." />
+            <marker date="1522472988715" expanded="false" signature="3216:3237" ph="..." />
+            <marker date="1522472988715" expanded="true" signature="3238:3348" ph="..." />
+            <marker date="1522472988715" expanded="true" signature="4194:4784" ph="..." />
+            <marker date="1522472988715" expanded="true" signature="4225:4525" ph="{&quot;title&quot;: &quot;!Ok&quot;...}" />
+            <marker date="1522472988715" expanded="true" signature="4570:4756" ph="{...}" />
+            <marker date="1522472988715" expanded="true" signature="4613:4705" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Desarrollo/models/modoPago.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="22" column="24" lean-forward="true" selection-start-line="22" selection-start-column="24" selection-end-line="22" selection-end-column="24" />
+        <state relative-caret-position="266">
+          <caret line="64" column="58" lean-forward="false" selection-start-line="64" selection-start-column="58" selection-end-line="64" selection-end-column="58" />
+          <folding>
+            <marker date="1522528526496" expanded="true" signature="291:396" ph="INSERT INTO ${$tabla}... " />
+            <marker date="1522528526496" expanded="true" signature="846:910" ph="SELECT Id_me... ${$tabla}" />
+            <marker date="1522528526496" expanded="true" signature="1125:1258" ph="UPDATE ${$tabla}... " />
+            <marker date="1522528526496" expanded="true" signature="1816:1898" ph="SELECT nombr... ${$tabla}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Desarrollo/views/ajax/ajax.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="24" column="24" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="24" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Desarrollo/controllers/solicitud.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#89#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="-1100">
+          <caret line="108" column="20" lean-forward="false" selection-start-line="108" selection-start-column="20" selection-end-line="108" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/FregistroSol.php">
+    <entry file="file://$PROJECT_DIR$/Desarrollo/models/solicitud.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="164" column="60" lean-forward="false" selection-start-line="164" selection-start-column="60" selection-end-line="164" selection-end-column="60" />
+        <state relative-caret-position="1660">
+          <caret line="100" column="8" lean-forward="false" selection-start-line="100" selection-start-column="8" selection-end-line="100" selection-end-column="8" />
           <folding />
         </state>
       </provider>

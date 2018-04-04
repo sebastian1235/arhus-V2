@@ -1,6 +1,8 @@
 // validar Medio de pago existente
 
 var nombreTipoTerceroExistente = false;
+var nombreUsuariolExistente = false;
+
  $("#nombreTipoTerceros").change(function () {
         var nombreTipoTercero = $("#nombreTipoTerceros").val();
         var datos = new FormData();
@@ -14,10 +16,10 @@ var nombreTipoTerceroExistente = false;
             processData: false,
             success:function (respuesta) {
                 if (respuesta == 0){
-                    $("label[for='nombreTipoTercero'] span").html('<p>Este nombre de registro ya existe en la base de datos</p>');
+                    $("label[for='nombreTipoTerceros'] span").html('<p>Este nombre de registro ya existe en la base de datos</p>');
                     nombreTipoTerceroExistente = true;
                 }else{
-                    $("label[for='nombreTipoTercero'] span").html('');
+                    $("label[for='nombreTipoTerceros'] span").html('');
                     nombreTipoTerceroExistente = false;
                 }
 
@@ -26,24 +28,63 @@ var nombreTipoTerceroExistente = false;
         });
 
     });
+
 // fin de validar Medio de pago
 
-function validarRegistro(){
+// Validar nombreUsuario
+$("#nombreUsuario").change(function () {
+    var nombreUsuario = $("#nombreUsuario").val();
+    var datos = new FormData();
+    datos.append("validarNombreUsuario", nombreUsuario);
+    $.ajax({
+        url: "views/ajax/ajax.php",
+        method: "POST",
+        data: datos,
+        cache: false,
+        contentType: false,
+        processData: false,
+        success:function (respuesta) {
+            if (respuesta == 0){
+                $("label[for='nombreUsuario'] span").html('<p>Este nombre ya existe en la base de datos</p>');
+                nombreUsuariolExistente = true;
+            }else{
+                $("label[for='nombreUsuario'] span").html('');
+                nombreUsuariolExistente = false;
+            }
+
+
+        }
+    });
+
+});
+
+function validarRegistro() {
     var nombreTipoTerceros = document.querySelector("#nombreTipoTerceros").value;
-
-    if(nombreTipoTerceros != ""){
-
-
-        if(nombreTipoTerceroExistente){
-
-            document.querySelector("label[for='nombreTipoTercero'] span").innerHTML = "<p>Este Nombre ya existe en la base de datos</p>";
-
+    if (nombreTipoTerceros != "") {
+        if (nombreTipoTerceroExistente) {
+            document.querySelector("label[for='nombreTipoTerceros'] span").innerHTML = "<p>Este Nombre ya existe en la base de datos</p>";
             return false;
         }
     }
 
-    return true;
-
 }
+
+function validarNombreRegistro(){
+    var nombreUsuario = document.querySelector("#nombreUsuario").value;
+    if(nombreUsuario != ""){
+        if(nombreUsuariolExistente){
+            document.querySelector("label[for='nombreUsuario'] span").innerHTML = "<p>Este Nombre ya existe en la base de datos</p>";
+            return false;
+        }
+    }
+    return true;
+}
+
+
+
+//  Fin Validar nombreUsuario
+
+
+
 
 

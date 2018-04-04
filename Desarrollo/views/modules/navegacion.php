@@ -25,27 +25,43 @@
                         
                     </ul>
                 </li>
-                 <li class="treeview">
-                    <a href="FregistroSol"><i class="glyphicon glyphicon-chevron-right"></i> <span>Parametros</span>
-                        <span class="pull-right-container">
-                <i class="fa fa-angle-left pull-right"></i>
-              </span>
-                    </a>
-                    <ul class="treeview-menu">
-                        <li><a href="tipoAsignacion"><i class="glyphicon glyphicon-tag"></i>Tipo Asignación</a></li>
-                        <li><a href="registroCiudad"><i class="glyphicon glyphicon-tag"></i>Ciudad</a></li>
-                        <li><a href="Tcampanas"><i class="glyphicon glyphicon-tag"></i>Campañas</a></li>
-                        <li><a href="Titems"><i class="glyphicon glyphicon-tag"></i>Items</a></li>
-                        <li><a href="Tterceros"><i class="glyphicon glyphicon-tag"></i>Terceros</a></li>
-                        <li><a href="tipoInventario"><i class="glyphicon glyphicon-tag"></i>Tipo inventario</a></li>
-                        <li><a href="tipoTercero"><i class="glyphicon glyphicon-tag"></i>Tipo tercero</a></li>
-                        <li><a href="medioPago"><i class="glyphicon glyphicon-tag"></i>Medio pago</a></li>
 
 
-                    </ul>
-                <li><a href="perfil"><i class="glyphicon glyphicon-chevron-right"></i> <span>Usuarios</span></a></li>
+                <?php
+                if($_SESSION["rol"] == 0) {
+                    echo '
+                    <li class="treeview" >
+                    <a href = "FregistroSol" ><i class="glyphicon glyphicon-chevron-right" ></i > <span > Parametros</span >
+                        <span class="pull-right-container" ><i class="fa fa-angle-left pull-right" ></i ></span >
+                    </a >
+                    <ul class="treeview-menu" >
+                        <li ><a href = "tipoAsignacion" ><i class="glyphicon glyphicon-tag" ></i > Tipo Asignación </a ></li >
+                        <li ><a href = "registroCiudad" ><i class="glyphicon glyphicon-tag" ></i > Ciudad</a ></li >
+                        <li ><a href = "Tcampanas" ><i class="glyphicon glyphicon-tag" ></i > Campañas</a ></li >
+                        <li ><a href = "Titems" ><i class="glyphicon glyphicon-tag" ></i > Items</a ></li >
+                        <li ><a href = "Tterceros" ><i class="glyphicon glyphicon-tag" ></i > Terceros</a ></li >
+                        <li ><a href = "tipoInventario" ><i class="glyphicon glyphicon-tag" ></i > Tipo inventario </a ></li >
+                        <li ><a href = "tipoTercero" ><i class="glyphicon glyphicon-tag" ></i > Tipo tercero </a ></li >
+                        <li ><a href = "medioPago" ><i class="glyphicon glyphicon-tag" ></i > Medio pago </a ></li >
+                    </ul >
+                 </li >';
+                 }
+                ?>
+
+
+
+
+
+                <?php
+                if($_SESSION["rol"] == 0) {
+                    echo '
+                <li>
+                    <a href="perfil"><i class="glyphicon glyphicon-chevron-right"></i> <span>Usuarios</span></a></li>
                 </li>
-            </ul>
+                    </ul>';
+                }
+                ?>
+
         </section>
     </aside>
 

@@ -30,6 +30,7 @@ class UsuarioPerfil{
                 $encriptar = crypt($_POST["passwordUsuario"], '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
                 $datosController = array("usuario"=>$_POST["nombreUsuario"],
                                         "password"=>$encriptar,
+                                        "nombre"=>$_POST["nombreTercero"],
                                         "email"=>$_POST["emailUsuario"],
                                         "rol"=>$_POST["rolUsuario"],
                                         "photo"=>$ruta);
@@ -76,15 +77,15 @@ class UsuarioPerfil{
 
             else{
 
-                $rol = "Editor";
+                $rol = "Asesor";
 
             }
 
             echo ' <tr>
+                    <td>'.$item["nombre_tercero"].'</td>
 			        <td>'.$item["usuario"].'</td>
 			        <td>'.$rol.'</td>
 			        <td>'.$item["email"].'</td>
-			        <td><a href="perfil'.$item["id"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></a>
 			      </tr>
 
 			       <div id="#perfil'.$item["id"].'" class="modal fade">
@@ -171,6 +172,24 @@ class UsuarioPerfil{
 
 			       </div>';
 
+        }
+
+    }
+    public function selectNombreTercero(){
+        $respuesta = TercerosModel::vistaTercero("ap_terceros");
+        foreach ($respuesta as $row => $SelectsCiudad){
+            echo '<option value="'.$SelectsCiudad["Id_tercero"].'">'.$SelectsCiudad["nombre_tercero"].'</option>';
+        }
+
+    }
+    //Validacion de usuario
+    public function validarNombreUsuarioController($validarNombreUsuario){
+        $datosController = $validarNombreUsuario;
+        $respuesta = PerfilModel::validarNombreUsuarioModels($datosController, "usuarios");
+        if (count($respuesta["usuario"]) > 0){
+            echo 0;
+        }else{
+            echo 1;
         }
 
     }

@@ -9,8 +9,15 @@
 require_once "../../controllers/tipoTercero.php";
 require_once "../../models/tipoTercero.php";
 
+require_once "../../controllers/usuarioPerfil.php";
+require_once "../../models/usuarioPerfil.php";
+
+
+
 class Ajax{
-    public $validarNombreTipoTercero;
+    public $validarNombreTipoTercero; //Module TipoTercero.php
+    public $validarNombreUsuario; // Module usuarioPerfil.php
+
 
     public function validarNombreTipoTerceroAjax(){
         $datos = $this->validarNombreTipoTercero;
@@ -18,9 +25,23 @@ class Ajax{
         echo $respuesta;
 
     }
+
+    public function validarNombrePerfilAjax(){
+        $datos = $this->validarNombreUsuario;
+        $respuesta = UsuarioPerfil::validarNombreUsuarioController($datos);
+        echo $respuesta;
+
+    }
 }
+
 if (isset($_POST["validarNombreTipoTercero"])){
-$a = new Ajax();
-$a -> validarNombreTipoTercero = $_POST["validarNombreTipoTercero"];
-$a -> validarNombreTipoTerceroAjax();
+    $a = new Ajax();
+    $a -> validarNombreTipoTercero = $_POST["validarNombreTipoTercero"];
+    $a -> validarNombreTipoTerceroAjax();
+}
+
+if (isset($_POST["validarNombreUsuario"])){
+    $b = new Ajax();
+    $b -> validarNombreUsuario = $_POST["validarNombreUsuario"];
+    $b -> validarNombrePerfilAjax();
 }

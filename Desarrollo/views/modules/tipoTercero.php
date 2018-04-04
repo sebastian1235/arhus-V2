@@ -30,7 +30,7 @@ include "views/modules/header.php";
                     </div>
                     <div class="box-body">
                         <div class="form-group">
-                            <label for="nombreTipoTercero">Nombre tipo tercero <span></span> </label>
+                            <label for="nombreTipoTerceros">Nombre tipo tercero <span></span> </label>
                             <input type="text" class="form-control" id="nombreTipoTerceros" name="nombreTipoTerceros" placeholder="" required>
                         </div>
                         <div class="form-group">

@@ -156,7 +156,7 @@ class Ciudades
                     <td>' .$item["idciudad_loc"].'</td>
                     <td><a href="#registroCiudad'.$item["id_loc"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></a></td>
                   </tr>  
-                  <div id="registroCiudad'.$item["id_ciu"].'" class="modal fade">
+                  <div id="registroCiudad'.$item["cod_loc"].'" class="modal fade">
 				       	<div class="modal-dialog modal-content">
 							<div class="modal-header" style="border:1px solid #eee">
 								<button type="button" class="close" data-dismiss="modal">X</button>
@@ -164,9 +164,9 @@ class Ciudades
 							</div>
 							<div class="modal-body" style="border:1px solid #eee">
 								<form style="padding:0px 10px" method="post" enctype="multipart/form-data">
-								      <input name="idCiudad" type="hidden" value="'.$item["id_ciu"].'">
+								      <input name="idCiudad" type="hidden" value="'.$item["cod_loc"].'">
 								     <div class="form-group">  
-								      <input name="editarCiudad" type="text" class="form-control" value="'.$item["nombre_ciu"].'" required>
+								      <input name="editarCiudad" type="text" class="form-control" value="'.$item["nombre_loc"].'" required>
                                      </div>
 								        <div class="form-group text-center">
 								    		<input type="submit" id="guardarCiudad" value="Actualizar" class="btn btn-warning">

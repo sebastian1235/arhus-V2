@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-03-2018 a las 17:10:16
+-- Tiempo de generación: 04-04-2018 a las 02:30:42
 -- Versión del servidor: 10.1.22-MariaDB
 -- Versión de PHP: 7.1.4
 
@@ -42,8 +42,8 @@ CREATE TABLE `ap_asignacion` (
 --
 
 INSERT INTO `ap_asignacion` (`id_asignacion`, `tipo_asignacion`, `comision_obra_asignacion`, `comision_gasod_asignacion`, `comision_fija_asignacion`, `empresa_asignacion`) VALUES
-(1, 'CALL BOGOTA', '0.00000', '0.00000', '0.0000', NULL),
-(2, 'CALL TUNJA', '0.00000', '0.00000', '0.0000', NULL),
+(1, 'CALL BOGOTA1 31', '14.00000', '0.00000', '0.0000', NULL),
+(2, 'CALL TUNJA', '14.00000', '13.00000', '0.0000', NULL),
 (3, 'SERVIGAS BOGOTA', '0.00000', '0.00000', '0.0000', NULL),
 (4, 'DEMANDA GIV', '0.00000', '0.00000', '0.0000', NULL),
 (5, 'SERVIGAS CUNDI', '0.00000', '0.00000', '0.0000', NULL),
@@ -68,6 +68,31 @@ CREATE TABLE `ap_camp_cliente` (
   `tipo_cliente_camp_cliente` int(11) DEFAULT NULL,
   `empresa_camp_cliente` int(11) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `ap_cotizacion`
+--
+
+CREATE TABLE `ap_cotizacion` (
+  `id_cot` int(11) NOT NULL,
+  `sol_cot` int(11) NOT NULL,
+  `consecutivo_cot` varchar(20) NOT NULL,
+  `estrato_cot` int(11) NOT NULL,
+  `fecha_nac_cot` date NOT NULL,
+  `forma_pago_cot` int(11) NOT NULL,
+  `campaña_cot` int(11) NOT NULL,
+  `tipo_cliente_cot` int(11) NOT NULL,
+  `fecha_cot` date NOT NULL,
+  `v_total_cot` decimal(19,0) NOT NULL,
+  `v_contado_cot` decimal(19,0) NOT NULL,
+  `estado_cot` int(11) NOT NULL,
+  `obs_cot` varchar(250) NOT NULL,
+  `pagare_cot` varchar(11) NOT NULL,
+  `not_cliente_cot` tinyint(11) NOT NULL,
+  `fecha_not_cot` date NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -186,7 +211,9 @@ INSERT INTO `ap_estado_preventa` (`id_estado_preventa`, `nombre_estado_preventa`
 (69, 'SERVICIO CAIDO EN CONFIRMACION', 0, NULL, NULL),
 (74, 'Reparaciones', 0, NULL, NULL),
 (75, 'Mantenimientos', 0, NULL, NULL),
-(76, 'Incremento', 0, NULL, NULL);
+(76, 'Incremento', 0, NULL, NULL),
+(1, 'registrado', 0, NULL, NULL),
+(2, 'PROGRAMADO', 0, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -837,23 +864,19 @@ CREATE TABLE `ap_solicitud` (
   `obs_estado_sol` varchar(255) DEFAULT NULL,
   `tipo_clientegn_sol` int(11) DEFAULT NULL,
   `forma_pagogn_sol` int(11) DEFAULT NULL,
-  `localidad_sol` int(11) NOT NULL
+  `localidad_sol` int(11) NOT NULL,
+  `eliminar` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `ap_solicitud`
 --
 
-INSERT INTO `ap_solicitud` (`id_sol`, `poliza_sol`, `demanda_sol`, `asesor_sol`, `archivos_sol`, `asignacion_sol`, `comis_gas_sol`, `comis_obra_sol`, `comis_fija_sol`, `cedula_sol`, `nombre_sol`, `direccion_pol_sol`, `direccion_nueva_sol`, `barrio_sol`, `telefono1_sol`, `telefono2_sol`, `celular_sol`, `email_sol`, `servicio_sol`, `texto_sol`, `registra_sol`, `unidad_sol`, `fecha_reg_sol`, `obs_sol`, `empresa_sol`, `estado_sol`, `fecha_prevista_sol`, `user_preventa_sol`, `quincena_obra_sol`, `fecha_obra_sol`, `nombre_tecnico_sol`, `cod_tecnico_sol`, `lider_obra_sol`, `fecha_visita_comerc_sol`, `obs_estado_sol`, `tipo_clientegn_sol`, `forma_pagogn_sol`, `localidad_sol`) VALUES
-(1, 0, '0', 0, NULL, 0, '0.000000', '0.000000', NULL, 0, '', '', '', 0, '', '', '', '', '', 'Inscripcion CI', NULL, NULL, '2018-03-02 20:32:21', '', NULL, 0, '0000-00-00 00:00:00', NULL, NULL, NULL, NULL, NULL, NULL, '0000-00-00 00:00:00', '', NULL, 0, 0),
-(2, 20, '20', 0, NULL, 12, '0.000000', '0.000000', NULL, 0, 'fsdf', 'ca2', 'fsf', 0, '32335545', '3554546', '34654654', 'fsfsdfa@gamil.com', '45646', 'Inscripcion CI', NULL, NULL, '2018-03-02 20:36:23', 'fsaa', NULL, 0, '0000-00-00 00:00:00', NULL, NULL, NULL, NULL, NULL, NULL, '0000-00-00 00:00:00', '223', NULL, 0, 0),
-(12, 0, '0', 0, NULL, 0, '0.000000', '0.000000', NULL, 0, '', '', '', 0, '', '', '', '', '', 'Inscripcion CI', NULL, NULL, '2018-03-02 20:39:52', '', NULL, 0, '0000-00-00 00:00:00', NULL, NULL, NULL, NULL, NULL, NULL, '0000-00-00 00:00:00', '', NULL, 0, 0),
-(30, 0, '0', 0, NULL, 0, '0.000000', '0.000000', NULL, 0, '', '', '', 0, '', '', '', '', '', 'Inscripcion CI', NULL, NULL, '2018-03-02 20:41:30', '', NULL, 0, '0000-00-00 00:00:00', NULL, NULL, NULL, NULL, NULL, NULL, '0000-00-00 00:00:00', '', NULL, 0, 0),
-(40, 0, '0', 0, NULL, 0, '0.000000', '0.000000', NULL, 0, '', '', '', 0, '', '', '', '', '', 'Inscripcion CI', NULL, NULL, '2018-03-02 20:41:57', '', NULL, 0, '0000-00-00 00:00:00', NULL, NULL, NULL, NULL, NULL, NULL, '0000-00-00 00:00:00', '', NULL, 0, 0),
-(41, 0, '0', 0, NULL, 0, '0.000000', '0.000000', NULL, 123, 'juan', 'adsas', '', 12, '123', '', '', 'juan@j', '', 'Inscripcion CI', NULL, NULL, '2018-03-14 02:23:19', '', NULL, 0, '0000-00-00 00:00:00', NULL, NULL, NULL, NULL, NULL, NULL, '0000-00-00 00:00:00', '', NULL, 0, 1),
-(42, 0, '0', 0, NULL, 0, '0.000000', '0.000000', NULL, 12, 'jua', 'qe', '', 1, '12', '', '', 'a', '', 'Inscripcion CI', NULL, NULL, '2018-03-14 02:23:48', '', NULL, 0, '0000-00-00 00:00:00', NULL, NULL, NULL, NULL, NULL, NULL, '0000-00-00 00:00:00', '', NULL, 0, 1),
-(43, 1232, '3131', 1, NULL, 0, '0.000000', '0.000000', NULL, 123456, 'gio', 'das', '', 123, '121321', '', '', 'juseloco@ad', 'asd', 'Inscripcion CI', NULL, NULL, '2018-03-14 21:28:01', '', NULL, 30, '2018-03-01 00:00:00', NULL, NULL, NULL, NULL, NULL, NULL, '2018-03-02 00:00:00', '', NULL, 1, 1),
-(44, 0, '0', 0, NULL, 0, '0.000000', '0.000000', NULL, 3446657, 'Wilson Toledo', 'der45fvb', '', 127, '56798990', 'gyujmk', 'hh7678', 'rtttttt', '', 'Inscripcion CI', NULL, NULL, '2018-03-16 22:18:49', '', NULL, 0, '0000-00-00 00:00:00', NULL, NULL, NULL, NULL, NULL, NULL, '0000-00-00 00:00:00', '', NULL, 0, 4);
+INSERT INTO `ap_solicitud` (`id_sol`, `poliza_sol`, `demanda_sol`, `asesor_sol`, `archivos_sol`, `asignacion_sol`, `comis_gas_sol`, `comis_obra_sol`, `comis_fija_sol`, `cedula_sol`, `nombre_sol`, `direccion_pol_sol`, `direccion_nueva_sol`, `barrio_sol`, `telefono1_sol`, `telefono2_sol`, `celular_sol`, `email_sol`, `servicio_sol`, `texto_sol`, `registra_sol`, `unidad_sol`, `fecha_reg_sol`, `obs_sol`, `empresa_sol`, `estado_sol`, `fecha_prevista_sol`, `user_preventa_sol`, `quincena_obra_sol`, `fecha_obra_sol`, `nombre_tecnico_sol`, `cod_tecnico_sol`, `lider_obra_sol`, `fecha_visita_comerc_sol`, `obs_estado_sol`, `tipo_clientegn_sol`, `forma_pagogn_sol`, `localidad_sol`, `eliminar`) VALUES
+(67, NULL, NULL, 5, NULL, 1, '0.000000', '0.000000', NULL, 12314421, 'JUAN', 'CAsa blanca', 'bosa la nuevaaaaa1212', 127, '12344', '12344', '', 'juan@a', 'instalacion de calentador', 'Inscripcion CI', NULL, NULL, '2018-03-29 00:10:10', '', NULL, 2, '2018-03-28 23:12:00', NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-30 12:00:00', NULL, NULL, NULL, 4, 0),
+(66, NULL, NULL, 5, NULL, 1, '0.000000', '0.000000', NULL, 12, 'PRUEBA4', '2131', 'calle local', 1, '1', '1', '', '1@12', '123CASADAADS', 'Inscripcion CI', NULL, NULL, '2018-03-28 23:12:58', '', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-03-28 01:12:00', NULL, NULL, NULL, 1, 0),
+(65, NULL, NULL, 6, NULL, 2, '0.000000', '0.000000', NULL, 2, 'PRUEBA3', '21', 'calle l', 1, '12', '12', '21', '12@12', '12', 'Inscripcion CI', NULL, NULL, '2018-03-28 23:12:09', '', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-03-28 22:12:00', NULL, NULL, NULL, 1, 0),
+(64, 1, '1', 5, NULL, 3, '0.000000', '0.000000', NULL, 79524654, 'carlos lozano', 'calle 6a #89-47', 'casa tintala', 1, '4493762', '4493762', '3007584458', 'carlos.lozano@gmail.com', 'casa', 'Inscripcion CI', NULL, NULL, '2018-03-28 22:40:35', '', NULL, NULL, '2018-03-29 00:00:00', NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-29 00:00:00', NULL, NULL, NULL, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -891,7 +914,10 @@ CREATE TABLE `ap_terceros` (
 INSERT INTO `ap_terceros` (`Id_tercero`, `nombre_tercero`, `direccion_tercero`, `telefono1_tercero`, `telefono2_tercero`, `fax_tercero`, `nit_tercero`, `tipo_tercero`, `e_mail_tercero`, `Contacto_tercero`, `gran_contrib_tercero`, `autoretenedor_tercero`, `activo_tercero`, `tercero_ registrado_por`, `reg_comun_tercero`, `responsable_materiales_tercero`, `grupo_nomina_tercero`, `tercero_ lider_Obra`, `tercero_nombre_lider`, `empresa_tercero`) VALUES
 (1, 'juan', 'calle 6a#89-47', '123', '123', '123', '123', 0, 'juseloco@gmail.com', 'juseloco@gmail.com', 1, 1, NULL, NULL, 1, 1, 1, NULL, NULL, NULL),
 (2, 'gio', 'calla21213', '1231', '', '', '12456', 0, 'gio@gio', 'sebastian', 0, 0, NULL, NULL, 0, 0, 1, NULL, NULL, NULL),
-(3, 'juan', 'caa', '12', '12', '12', '13', 2, '', 'sad', 1, 1, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL);
+(3, 'juan', 'caa', '12', '12', '12', '13', 2, '', 'sad', 1, 1, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL),
+(4, 'carlos', 'calel', '123', '12', '13', '123', 1, 'jacal', 'as', 1, 1, 1, NULL, 1, 1, NULL, NULL, NULL, NULL),
+(5, 'sebastian', '123', '', '', '', '1234', 4, '123', 'juan', 1, 1, 1, NULL, 1, 1, NULL, NULL, NULL, NULL),
+(6, 'carlos', 'calle1', '121', '123', '12', '12321', 4, 'yenny@gmail', 'carlos', 1, 1, 1, NULL, 1, 1, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1035,6 +1061,13 @@ INSERT INTO `demanda` (`origen_dem`, `tipo_cliente_dem`, `fecha_llamada`, `cod_d
 ('CONTACT CENTER', 'NUEVO', '0000-00-00', 763438, 0, 'CT_AROZO', '346CLIENTE NUEVO INTERNA', '', 'POTENCIAL', '', 'DESCONOCIDO', '', 'JHON GONZALES ', '7545973', 'CL 70 69 16', 'BOGOTA', '3123047128', 3332968, '0000-00-00', 2, 'B4', '0000-00-00', 'CT_AROZO', '0000-00-00', 'B3', '0000-00-00', 'I00607', 'WILSON TOLEDO SAGANOME', 5, 137, 937, 'EN GESTION CONTACTADA', 3, 'CONSTRUIR INTERNA'),
 ('CONTACT CENTER', 'NUEVO', '0000-00-00', 763410, 0, 'ML_JBAENA', '346CLIENTE NUEVO INTERNA', '', 'POTENCIAL', '', 'DESCONOCIDO', '', 'MARIA ROJAS ', '518711963', 'KR 62 74A 14 1 1', 'BOGOTA', '8127045/3209775822', 3332775, '0000-00-00', 2, 'B4', '0000-00-00', 'ML_JBAENA', '0000-00-00', 'B3', '0000-00-00', 'I00607', 'WILSON TOLEDO SAGANOME', 2, 142, 942, 'EN GESTION CONTACTADA', 3, 'CONSTRUIR INTERNA'),
 ('CONTACT CENTER', 'NUEVO', '0000-00-00', 763418, 0, 'ML_JBAENA', '346CLIENTE NUEVO INTERNA', '', 'POTENCIAL', '', 'DESCONOCIDO', '', 'JENY ARDILA ', '52958582', 'CL 51 13 44 LOC 1 1', 'BOGOTA', '3046570153', 3332909, '0000-00-00', 2, 'B4', '0000-00-00', 'ML_JBAENA', '0000-00-00', 'B3', '0000-00-00', 'I00607', 'WILSON TOLEDO SAGANOME', 2, 155, 955, 'EN GESTION CONTACTADA', 2, 'CONSTRUIR INTERNA'),
+('CONTACT CENTER', 'NUEVO', '0000-00-00', 763452, 0, 'CT_GVALENZUELA', '346CLIENTE NUEVO INTERNA', '', 'POTENCIAL', '', 'DESCONOCIDO', '', 'CLAUDIA RANGEL PERILLA', '63325356', 'KR 74B 64F 96', 'BOGOTA', '3132637242', 3333011, '0000-00-00', 2, 'B4', '0000-00-00', 'CT_GVALENZUELA', '0000-00-00', 'B3', '0000-00-00', 'I00607', 'WILSON TOLEDO SAGANOME', 5, 138, 938, 'EN GESTION CONTACTADA', 3, 'CONSTRUIR INTERNA'),
+('CONTACT CENTER', 'NUEVO', '0000-00-00', 763559, 0, 'CT_AROZO', '346CLIENTE NUEVO INTERNA', '', 'POTENCIAL', '', 'DESCONOCIDO', '', 'MIRIAM BELTRAN ', '51864527', 'CL 58 BIS 5', 'BOGOTA', '2155328', 3334088, '0000-00-00', 2, 'B4', '0000-00-00', 'CT_AROZO', '0000-00-00', 'B3', '0000-00-00', 'I00607', 'WILSON TOLEDO SAGANOME', 2, 155, 955, 'EN GESTION CONTACTADA', 4, 'CONSTRUIR INTERNA'),
+('CONTACT CENTER', 'NUEVO', '0000-00-00', 763434, 0, 'ML_IRODRIGUEZ', '346CLIENTE NUEVO INTERNA', '', 'POTENCIAL', '', 'DESCONOCIDO', '', 'CAROLINA ROMERO ', '52352190', 'DG  72 1 ESTE 52 EDI  402', 'BOGOTA', '3015382051', 3332956, '0000-00-00', 2, 'B4', '0000-00-00', 'ML_IRODRIGUEZ', '0000-00-00', 'B3', '0000-00-00', 'I00607', 'WILSON TOLEDO SAGANOME', 2, 144, 944, 'EN GESTION CONTACTADA', 6, 'HABILITAR INTERNA'),
+('CONTACT CENTER', 'NUEVO', '0000-00-00', 763440, 0, 'ML_IRODRIGUEZ', '346CLIENTE NUEVO INTERNA', '', 'POTENCIAL', '', 'DESCONOCIDO', '', 'JUAN BENDALLO ', '79878362', 'KR 11 61 45', 'BOGOTA', '3102643555', 3332980, '0000-00-00', 2, 'B4', '0000-00-00', 'ML_IRODRIGUEZ', '0000-00-00', 'B3', '0000-00-00', 'I00607', 'WILSON TOLEDO SAGANOME', 2, 155, 955, 'EN GESTION CONTACTADA', 3, 'CONSTRUIR INTERNA'),
+('CONTACT CENTER', 'NUEVO', '0000-00-00', 763438, 0, 'CT_AROZO', '346CLIENTE NUEVO INTERNA', '', 'POTENCIAL', '', 'DESCONOCIDO', '', 'JHON GONZALES ', '7545973', 'CL 70 69 16', 'BOGOTA', '3123047128', 3332968, '0000-00-00', 2, 'B4', '0000-00-00', 'CT_AROZO', '0000-00-00', 'B3', '0000-00-00', 'I00607', 'WILSON TOLEDO SAGANOME', 5, 137, 937, 'EN GESTION CONTACTADA', 3, 'CONSTRUIR INTERNA'),
+('CONTACT CENTER', 'NUEVO', '0000-00-00', 763410, 0, 'ML_JBAENA', '346CLIENTE NUEVO INTERNA', '', 'POTENCIAL', '', 'DESCONOCIDO', '', 'MARIA ROJAS ', '518711963', 'KR 62 74A 14 1 1', 'BOGOTA', '8127045/3209775822', 3332775, '0000-00-00', 2, 'B4', '0000-00-00', 'ML_JBAENA', '0000-00-00', 'B3', '0000-00-00', 'I00607', 'WILSON TOLEDO SAGANOME', 2, 142, 942, 'EN GESTION CONTACTADA', 3, 'CONSTRUIR INTERNA'),
+('CONTACT CENTER', 'NUEVO', '0000-00-00', 763418, 0, 'ML_JBAENA', '346CLIENTE NUEVO INTERNA', '', 'POTENCIAL', '', 'DESCONOCIDO', '', 'JENY ARDILA ', '52958582', 'CL 51 13 44 LOC 1 1', 'BOGOTA', '3046570153', 3332909, '0000-00-00', 2, 'B4', '0000-00-00', 'ML_JBAENA', '0000-00-00', 'B3', '0000-00-00', 'I00607', 'WILSON TOLEDO SAGANOME', 2, 155, 955, 'EN GESTION CONTACTADA', 2, 'CONSTRUIR INTERNA'),
 ('CONTACT CENTER', 'NUEVO', '0000-00-00', 763452, 0, 'CT_GVALENZUELA', '346CLIENTE NUEVO INTERNA', '', 'POTENCIAL', '', 'DESCONOCIDO', '', 'CLAUDIA RANGEL PERILLA', '63325356', 'KR 74B 64F 96', 'BOGOTA', '3132637242', 3333011, '0000-00-00', 2, 'B4', '0000-00-00', 'CT_GVALENZUELA', '0000-00-00', 'B3', '0000-00-00', 'I00607', 'WILSON TOLEDO SAGANOME', 5, 138, 938, 'EN GESTION CONTACTADA', 3, 'CONSTRUIR INTERNA');
 
 -- --------------------------------------------------------
@@ -1096,7 +1129,8 @@ INSERT INTO `siax_campana` (`id_campana`, `nombre_campana`, `descuente_campana`,
 (60, 'CALENTADORES SS CUNDI', '0.080000', '0.030000', 36, 'PREAPROBADO ESTRATO 1,2,3 $931500                              PREAPROBADO ESTRATO 4,5,6 $1269000', 'TODOS LOS CALENTADORES', '2014-04-02 05:00:00', '2015-02-28 00:00:00', 1, '0.015260', '0.0000', NULL, NULL),
 (65, 'preuba2', '21.000000', '12.000000', 1, 'prueba2', 'prueba2', '2018-03-20 05:00:00', '2018-03-21 00:00:00', 1, '0.000000', '12.0000', '0.0000', ''),
 (66, 'preuba3', '12.000000', '21.000000', 1, 'prureba3', 'preuba4', '2018-12-31 05:00:00', '2018-12-31 00:00:00', 0, '1.000000', '21.0000', '0.0000', ''),
-(67, 'hola123412', '123.000000', '1.000000', 1, 'hola', 'hoal1312231', '2018-03-21 05:00:00', '2018-03-21 00:00:00', 1, '0.000000', '12.0000', '0.0000', '');
+(67, 'hola123412', '123.000000', '1.000000', 1, 'hola', 'hoal1312231', '2018-03-21 05:00:00', '2018-03-21 00:00:00', 1, '0.000000', '12.0000', '0.0000', ''),
+(68, '123', '1.000000', '0.000000', 0, 'asd', 'asd', '0000-00-00 00:00:00', '0000-00-00 00:00:00', 1, '0.000000', '0.0000', '0.0000', '');
 
 -- --------------------------------------------------------
 
@@ -1276,6 +1310,12 @@ ALTER TABLE `ap_camp_cliente`
   ADD KEY `id_camp_cliente` (`id_camp_cliente`);
 
 --
+-- Indices de la tabla `ap_cotizacion`
+--
+ALTER TABLE `ap_cotizacion`
+  ADD PRIMARY KEY (`id_cot`);
+
+--
 -- Indices de la tabla `ap_detalle_venta`
 --
 ALTER TABLE `ap_detalle_venta`
@@ -1429,6 +1469,11 @@ ALTER TABLE `usuarios`
 ALTER TABLE `ap_asignacion`
   MODIFY `id_asignacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
+-- AUTO_INCREMENT de la tabla `ap_cotizacion`
+--
+ALTER TABLE `ap_cotizacion`
+  MODIFY `id_cot` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- AUTO_INCREMENT de la tabla `ap_detalle_venta`
 --
 ALTER TABLE `ap_detalle_venta`
@@ -1457,12 +1502,12 @@ ALTER TABLE `ap_roles_usuarios`
 -- AUTO_INCREMENT de la tabla `ap_solicitud`
 --
 ALTER TABLE `ap_solicitud`
-  MODIFY `id_sol` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id_sol` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
 --
 -- AUTO_INCREMENT de la tabla `ap_terceros`
 --
 ALTER TABLE `ap_terceros`
-  MODIFY `Id_tercero` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `Id_tercero` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT de la tabla `ap_tipo_tercero`
 --
@@ -1472,7 +1517,7 @@ ALTER TABLE `ap_tipo_tercero`
 -- AUTO_INCREMENT de la tabla `siax_campana`
 --
 ALTER TABLE `siax_campana`
-  MODIFY `id_campana` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `id_campana` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
 --
 -- AUTO_INCREMENT de la tabla `siax_ciudad`
 --

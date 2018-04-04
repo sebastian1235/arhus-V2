@@ -140,8 +140,8 @@ include"views/modules/navegacion.php";
                         <select class="form-control" name="localidad_sector" id="localidad_sector" required>
                             <option value="0">Seleccione Localidad</option>
                             <?php
-                            $seleccionarSector = new Ciudades();
-                            $seleccionarSector -> selectLocalidad();
+                            $seleccionarSector = new UsuarioPerfil();
+                            $seleccionarSector -> selectNombreTercero();
                             ?>
                         </select>
                     </div>

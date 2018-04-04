@@ -19,36 +19,50 @@ include "views/modules/header.php";
 ?>
 
 
-
+<!--registrar usuarios-->
 <div class="row">
-    <!--registrar usuarios-->
     <div class="col-md-8">
         <div>
             <button  id="registroPerfil" class="btn btn-warning" style="margin-bottom:20px">Registrar Usuario</button>
         </div>
-
         <div class="col-md-12 table-responsive">
             <div class="box box-warning">
-            <form role="form" style="display:none" id="formularioPerfil" method="post" enctype="multipart/form-data">
+            <form role="form" style="display:none" id="formularioPerfil" method="post" onsubmit="return validarNombreRegistro()">
                 <div class="box-header with-border">
-                    <h3 class="box-title">Registro de perfiles</h3>
+                    <h3 class="box-title">Registro de Usuarios</h3>
                 </div>
 
                 <div class="box-body">
                     <div class="form-group">
+                        <label for="nombreUsuario">Usuario<span></span></label>
                         <input type="text" class="form-control" id="nombreUsuario" name="nombreUsuario" placeholder="Ingrese el nombre de Usuario hasta 10 caracteres" required>
                     </div>
                     <div class="form-group">
+                        <label for="passwordUsuario">Contraseña</label>
                         <input type="password" class="form-control" id="passwordUsuario" name="passwordUsuario" placeholder="Ingrese la contraseña hasta 10 caracteres" required>
                     </div>
                     <div class="form-group">
+                        <label for="nombreTercero">Nombre</label>
+                        <select class="form-control" name="nombreTercero" id="nombreTercero" required>
+                            <option value="0">Seleccione Nombre</option>
+                            <?php
+                            $seleccionarNombreTercero = new UsuarioPerfil();
+                            $seleccionarNombreTercero -> selectNombreTercero();
+                            ?>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="nombreTercero">Email Tercero</label>
                         <input type="text" class="form-control" id="emailUsuario" name="emailUsuario" placeholder="Ingrese el Correo Electrónico" required>
                     </div>
                     <div class="form-group">
+                        <label for="rolUsuario">Grupo</label>
                         <select class="form-control" name="rolUsuario" required>
-                            <option value="">Seleccione el rol</option>
+                            <option value="0">Seleccione grupo</option>
                             <option value="0">Administrador</option>
-                            <option value="1">Asesor</option>
+                            <option value="1">Analista</option>
+                            <option value="2">Asesor</option>
+                            <option value="3">Tecnico</option>
                         </select>
                     </div>
                     <div class="form-group text-center">
@@ -58,7 +72,7 @@ include "views/modules/header.php";
                 </div>
 
                 <div class="box-footer">
-                    <button type="submit" class="btn btn-warning" name="guardarUsuario" id="guardarUsuario">Guardar Perfil</button>
+                    <button type="submit" class="btn btn-warning" name="guardarUsuario" id="guardarUsuario">Guardar</button>
                 </div>
             </form>
 
@@ -70,6 +84,7 @@ include "views/modules/header.php";
         </div>
         </div>
     </div>
+<!--Fin registrar usuarios-->
 
     <div class="col-md-4">
         <h1>Hola <?php echo $_SESSION["usuario"];?>
@@ -82,7 +97,7 @@ include "views/modules/header.php";
                 echo "Administrador";
             }
             else{
-                echo "Editor";
+                echo "Asesor";
             }
             ?>
         </h4>
@@ -97,10 +112,10 @@ include "views/modules/header.php";
                 <table id="tablas" class="table table-striped">
                     <thead>
                     <tr>
-                        <th>Usuarios</th>
-                        <th>Perfil</th>
-                        <th>Email</th>
-                        <th></th>
+                        <th>Nombre</th>
+                        <th>Usuario</th>
+                        <th>grupo</th>
+                        <th>email</th>
 
                     </tr>
                     </thead>

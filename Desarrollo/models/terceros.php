@@ -32,4 +32,11 @@ class TercerosModel
         }
         $stmt->close();
     }
+    public function vistaTercero($tabla)
+    {
+        $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
+        $stmt->execute();
+        return $stmt->fetchAll();
+        $stmt->close();
+    }
 }

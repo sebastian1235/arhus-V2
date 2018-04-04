@@ -66,7 +66,7 @@ class CiudadModel
     #vista Localidad
     public function vistaLocalidad($tabla)
     {
-        $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
+        $stmt = Conexion::conectar()->prepare("SELECT `nombre_loc`,`cod_loc`, nombre_ciu FROM $tabla inner join siax_ciudad on siax_localidad.idciudad_loc=siax_ciudad.id_ciu");
         $stmt->execute();
         return $stmt->fetchAll();
         $stmt->close();
@@ -74,7 +74,7 @@ class CiudadModel
     #Vista Sector
     public function vistaSector($tabla)
     {
-        $stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla");
+        $stmt = Conexion::conectar()->prepare("SELECT `cod_sec`,`nombre_sec`,nombre_loc FROM $tabla inner join siax_localidad on siax_sectores.localidad=siax_localidad.id_loc");
         $stmt->execute();
         return $stmt->fetchAll();
         $stmt->close();
@@ -83,9 +83,10 @@ class CiudadModel
     #registro Localidad
     public function registroSector($datosModel, $tabla)
     {
-        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla (nombre_sec, localidad) VALUES (:nombre_sec, :localidad)");
-        $stmt->bindParam(":nombre_sec", $datosModel["sector"], PDO::PARAM_STR);
-        $stmt->bindParam(":localidad", $datosModel["idLocalidad"], PDO::PARAM_STR);
+        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla (nombre_sec, localidad, cod_sec) VALUES (:nombre_sec, :localidad, :cod_sec)");
+        $stmt->bindParam(":nombre_sec", $datosModel["nombre_sec"], PDO::PARAM_STR);
+        $stmt->bindParam(":localidad", $datosModel["localidad"], PDO::PARAM_STR);
+        $stmt->bindParam(":cod_sec", $datosModel["cod_sec"], PDO::PARAM_STR);
         if ($stmt->execute()) {
             return "ok";
         } else {

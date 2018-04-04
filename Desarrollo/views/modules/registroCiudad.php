@@ -131,10 +131,13 @@ include"views/modules/navegacion.php";
             <form role="form" method="post" enctype="multipart/form-data">
                 <div class="box-body">
                     <div class="form-group">
-                        <input type="text" class="form-control" id="sector" name="sector" placeholder="Sectores">
+                        <input type="text" class="form-control" id="nombre_sec" name="nombre_sec" placeholder="Sectores">
                     </div>
                     <div class="form-group">
-                        <select class="form-control" name="idLocalidad" id="idLocalidad" required>
+                        <input type="text" class="form-control" id="cod_sec" name="cod_sec" placeholder="codigo">
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control" name="localidad_sector" id="localidad_sector" required>
                             <option value="0">Seleccione Localidad</option>
                             <?php
                             $seleccionarSector = new Ciudades();
@@ -161,6 +164,7 @@ include"views/modules/navegacion.php";
                 <table id="tablas3" class="table table-striped">
                     <thead>
                     <tr>
+                        <th>Codigo</th>
                         <th>Sectores</th>
                         <th>Localidad</th>
                         <th></th>

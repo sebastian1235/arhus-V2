@@ -78,7 +78,7 @@ class solicitud
                     <td>' .$item["nombre_loc"].'</td>
                     <td>' .$item["cedula_sol"].'</td>
                     <td>' .$item["direccion_nueva_sol"].'</td>
-                    <td>' .$item["telefono1_sol"].'-'.$item["telefono1_sol"].'-'.$item["telefono1_sol"].'</td>
+                    <td>' .$item["telefono1_sol"].'-'.$item["telefono2_sol"].'-'.$item["celular_sol"].'</td>
 
 
                    

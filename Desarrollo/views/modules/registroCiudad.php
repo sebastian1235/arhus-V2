@@ -137,11 +137,11 @@ include"views/modules/navegacion.php";
                         <input type="text" class="form-control" id="cod_sec" name="cod_sec" placeholder="codigo">
                     </div>
                     <div class="form-group">
-                        <select class="form-control" name="localidad_sector" id="localidad_sector" required>
+                        <select class="form-control" name="localidad" id="localidad" required>
                             <option value="0">Seleccione Localidad</option>
                             <?php
-                            $seleccionarSector = new UsuarioPerfil();
-                            $seleccionarSector -> selectNombreTercero();
+                            $seleccionarSector = new Ciudades();
+                            $seleccionarSector -> selectLocalidad();
                             ?>
                         </select>
                     </div>

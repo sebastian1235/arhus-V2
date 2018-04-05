@@ -149,8 +149,8 @@ class Ciudades
     {
         if (isset($_POST["nombre_sec"])) {
             $datosController = array( "nombre_sec" => $_POST["nombre_sec"],
-                                      "localidad_sector" => $_POST["localidad_sector"],
-                                     "cod_sec" => $_POST["cod_sec"]);
+                                      "cod_sec" => $_POST["cod_sec"],
+                                      "localidad" => $_POST["localidad"]);
 
             $respuesta = CiudadModel::registroSector($datosController, "siax_sectores");
 
@@ -159,7 +159,7 @@ class Ciudades
 
                        swal({
                             title: "!Ok",
-                            text: "¡El sector se  ha creado correctamente!",
+                            text: "¡La localidad se  ha sido creado correctamente!",
                             type: "success",
                             confirmButtonText: "Cerrar",
                             closeOnConfirm: false
@@ -175,6 +175,7 @@ class Ciudades
             }
         }
     }
+   
 
     #Vista Localidades
     public function vistaLocalidadController(){

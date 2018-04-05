@@ -47,6 +47,7 @@ include "views/modules/header.php";
 
                     $verPerfiles = new campanas();
                     $verPerfiles -> vistaCampanaController();
+                    $verPerfiles -> editarCampanaController();
 
                     ?>
 

@@ -24,7 +24,7 @@ include "views/modules/header.php";
 			return false;
 		}		
 
-		document.frmcargararchivo1.action = "procesar.php";
+		document.frmcargararchivo1.action = "procesar";
 		document.frmcargararchivo1.submit();
 	}
 

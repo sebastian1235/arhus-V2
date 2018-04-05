@@ -27,7 +27,7 @@ if (substr($_FILES['excel']['name'],-3)=="csv")
 
     //fgetcsv. obtiene los valores que estan en el csv y los extrae.
 
-    //mysqli_query($mysqli,"DELETE FROM transitos");
+    mysqli_query($mysqli,"DELETE FROM demanda");
 
     while ($data = fgetcsv ($fp, 1000, ";"))
     {
@@ -70,7 +70,7 @@ if (substr($_FILES['excel']['name'],-3)=="csv")
 									 sector, 
 									 descr_estado_dem, 
 									 estrato, 
-clase_dem) VALUES ('$data[0]','$data[1]','$data[2]','$data[3]','$data[4]','$data[5]','$data[6]','$data[7]','$data[8]','$data[9]','$data[10]','$data[11]','$data[12]','$data[13]','$data[14]','$data[15]','$data[16]','$data[17]','$data[18]','$data[19]','$data[20]','$data[21]','$data[22]','$data[23]','$data[24]','$data[25]','$data[26]','$data[27]','$data[28]','$data[29]','$data[30]','$data[31]','$data[32]','$data[33]')");
+clase_dem ) VALUES ('$data[0]','$data[1]','$data[2]','$data[3]','$data[4]','$data[5]','$data[6]','$data[7]','$data[8]','$data[9]','$data[10]','$data[11]','$data[12]','$data[13]','$data[14]','$data[15]','$data[16]','$data[17]','$data[18]','$data[19]','$data[20]','$data[21]','$data[22]','$data[23]','$data[24]','$data[25]','$data[26]','$data[27]','$data[28]','$data[29]','$data[30]','$data[31]','$data[32]','$data[33]')");
 
 
 
@@ -81,7 +81,10 @@ clase_dem) VALUES ('$data[0]','$data[1]','$data[2]','$data[3]','$data[4]','$data
     echo "<div class='alert alert-primary' role='alert'>
   subio satisfactoriamente
 </div>";
-    echo "<script>location.href='subirArchivo'</script>";
+   echo "<script>location.href='subirArchivo'</script>";
+
+ mysqli_query($mysqli,"INSERT INTO `ap_solicitud`(`demanda_sol`,`poliza_sol`,`cedula_sol`,`nombre_sol`,`direccion_pol_sol`,`direccion_nueva_sol`,`telefono1_sol`,`barrio_sol`,`obs_estado_sol`, `fecha_prevista_sol`)SELECT cod_dem, poliza_dem, num_doc, nombre_cliente, direccion, direccion, telefono, sector, observacion, fecha_llamada FROM demanda_sin_sol");
+
 
 }
 

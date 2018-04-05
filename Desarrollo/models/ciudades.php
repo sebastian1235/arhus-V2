@@ -80,13 +80,13 @@ class CiudadModel
         $stmt->close();
     }
 
-    #registro Localidad
     public function registroSector($datosModel, $tabla)
     {
-        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla (nombre_sec, localidad, cod_sec) VALUES (:nombre_sec, :localidad, :cod_sec)");
+        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla (nombre_sec, cod_sec, localidad) VALUES (:nombre_sec, :cod_sec, localidad)");
         $stmt->bindParam(":nombre_sec", $datosModel["nombre_sec"], PDO::PARAM_STR);
-        $stmt->bindParam(":localidad", $datosModel["localidad"], PDO::PARAM_STR);
         $stmt->bindParam(":cod_sec", $datosModel["cod_sec"], PDO::PARAM_STR);
+        $stmt->bindParam(":localidad", $datosModel["localidad"], PDO::PARAM_STR);
+
         if ($stmt->execute()) {
             return "ok";
         } else {

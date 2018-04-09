@@ -11,7 +11,7 @@ class IngresoModels{
 
     public function ingresoModel($datosModel, $tabla){
 
-        $stmt = Conexion::conectar()->prepare("SELECT id, usuario, password, email, photo, rol, intentos FROM $tabla WHERE usuario = :usuario");
+        $stmt = Conexion::conectar()->prepare("SELECT Id_tercero, usuario, password, e_mail_tercero, photo, tipo_tercero, intentos, nombre_tercero FROM $tabla WHERE usuario = :usuario");
 
         $stmt -> bindParam(":usuario", $datosModel["usuario"], PDO::PARAM_STR);
 
@@ -45,7 +45,7 @@ class IngresoModels{
 
     #VISUALIZAR PERFILES
     public function verPerfilesModel($tabla){
-        $stmt = Conexion::conectar()->prepare("SELECT id, usuario, password, email, rol, phote FROM $tabla");
+        $stmt = Conexion::conectar()->prepare("SELECT Id_tercero, usuario, password, e_mail_tercero, tipo_tercero, photo, nombre_tercero FROM $tabla");
         $stmt -> execute();
         return $stmt -> fetchAll();
         $stmt -> close();

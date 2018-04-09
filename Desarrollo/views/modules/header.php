@@ -60,7 +60,7 @@
                             <!-- The user image in the navbar-->
                             <img src="<?php echo $_SESSION["photo"];?>" class="user-image" alt="User Image">
                             <!-- hidden-xs hides the username on small devices so only the image appears. -->
-                            <span class="hidden-xs"><?php echo $_SESSION["usuario"];?></span>
+                            <span class="hidden-xs"><?php echo $_SESSION["nombre_tercero"];?></span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- The user image in the menu -->
@@ -68,7 +68,7 @@
                                 <img src="<?php echo $_SESSION["photo"];?>" class="img-circle" alt="User Image">
 
                                 <p>
-                                    <?php echo $_SESSION["usuario"];?>
+                                    <?php echo $_SESSION["nombre_tercero"];?>
                                 </p>
                             </li>
 

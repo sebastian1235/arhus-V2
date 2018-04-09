@@ -18,9 +18,9 @@ class Ingreso{
                 $encriptar = crypt($_POST["passwordIngreso"], '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
 
                 $datosController = array("usuario"=>$_POST["usuarioIngreso"],
-                    "password"=>$encriptar);
+                                        "password"=>$encriptar);
 
-                $respuesta = IngresoModels::ingresoModel($datosController, "usuarios");
+                $respuesta = IngresoModels::ingresoModel($datosController, "ap_terceros");
 
                 $intentos = $respuesta["intentos"];
                 $usuarioActual = $_POST["usuarioIngreso"];
@@ -34,14 +34,15 @@ class Ingreso{
 
                         $datosController = array("usuarioActual"=>$usuarioActual, "actualizarIntentos"=>$intentos);
 
-                        $respuestaActualizarIntentos = IngresoModels::intentosModel($datosController, "usuarios");
+                        $respuestaActualizarIntentos = IngresoModels::intentosModel($datosController, "ap_terceros");
                         $_SESSION["validar"] = true;
                         $_SESSION["usuario"] = $respuesta["usuario"];
-                        $_SESSION["id"] = $respuesta["id"];
+                        $_SESSION["Id_tercero"] = $respuesta["Id_tercero"];
                         $_SESSION["password"] = $respuesta["password"];
-                        $_SESSION["email"] = $respuesta["email"];
+                        $_SESSION["e_mail_tercero"] = $respuesta["e_mail_tercero"];
                         $_SESSION["photo"] = $respuesta["photo"];
-                        $_SESSION["rol"] = $respuesta["rol"];
+                        $_SESSION["tipo_tercero"] = $respuesta["tipo_tercero"];
+                        $_SESSION["nombre_tercero"] = $respuesta["nombre_tercero"];
                         echo '<script> window.location = "inicio"</script>';
                     }
 
@@ -51,7 +52,7 @@ class Ingreso{
 
                         $datosController = array("usuarioActual"=>$usuarioActual, "actualizarIntentos"=>$intentos);
 
-                        $respuestaActualizarIntentos = IngresoModels::intentosModel($datosController, "usuarios");
+                        $respuestaActualizarIntentos = IngresoModels::intentosModel($datosController, "ap_terceros");
 
                         echo '<div class="alert alert-danger">Error al ingresar</div>';
 

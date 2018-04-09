@@ -23,10 +23,9 @@ class EnlacesModels{
             $enlaces == "Titems" ||
             $enlaces == "registro_tercero" ||
             $enlaces == "Tcampanas" ||
-            $enlaces == "Tterceros" ||
             $enlaces == "procesar" ||
             $enlaces == "salir" ||
-            $enlaces == "perfil" ||
+            $enlaces == "usuarioTercero" ||
             $enlaces == "registroSol1" ||
             $enlaces == "subirArchivo" ||
             $enlaces == "tipoInventario" ||

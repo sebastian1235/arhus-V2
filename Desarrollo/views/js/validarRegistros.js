@@ -32,8 +32,8 @@ var nombreUsuariolExistente = false;
 // fin de validar Medio de pago
 
 // Validar nombreUsuario
-$("#nombreUsuario").change(function () {
-    var nombreUsuario = $("#nombreUsuario").val();
+$("#usuarioTercero").change(function () {
+    var nombreUsuario = $("#usuarioTercero").val();
     var datos = new FormData();
     datos.append("validarNombreUsuario", nombreUsuario);
     $.ajax({
@@ -45,10 +45,10 @@ $("#nombreUsuario").change(function () {
         processData: false,
         success:function (respuesta) {
             if (respuesta == 0){
-                $("label[for='nombreUsuario'] span").html('<p>Este nombre ya existe en la base de datos</p>');
+                $("label[for='usuarioTercero'] span").html('<p>Este nombre ya existe en la base de datos</p>');
                 nombreUsuariolExistente = true;
             }else{
-                $("label[for='nombreUsuario'] span").html('');
+                $("label[for='usuarioTercero'] span").html('');
                 nombreUsuariolExistente = false;
             }
 
@@ -70,10 +70,10 @@ function validarRegistro() {
 }
 
 function validarNombreRegistro(){
-    var nombreUsuario = document.querySelector("#nombreUsuario").value;
+    var nombreUsuario = document.querySelector("#usuarioTercero").value;
     if(nombreUsuario != ""){
         if(nombreUsuariolExistente){
-            document.querySelector("label[for='nombreUsuario'] span").innerHTML = "<p>Este Nombre ya existe en la base de datos</p>";
+            document.querySelector("label[for='usuarioTercero'] span").innerHTML = "<p>Este Nombre ya existe en la base de datos</p>";
             return false;
         }
     }

@@ -5,7 +5,7 @@
                     <img src="<?php echo $_SESSION["photo"];?>" class="img-circle" alt="User Image">
                 </div>
                 <div class="pull-left info">
-                    <p><?php echo $_SESSION["usuario"];?></p>
+                    <p><?php echo $_SESSION["nombre_tercero"];?></p>
                     <p><i class="fa fa-circle text-success"></i> Online</p>
                 </div>
             </div>
@@ -28,7 +28,7 @@
 
 
                 <?php
-                if($_SESSION["rol"] == 0) {
+                if($_SESSION["tipo_tercero"] == 1) {
                     echo '
                     <li class="treeview" >
                     <a href = "FregistroSol" ><i class="glyphicon glyphicon-chevron-right" ></i > <span > Parametros</span >
@@ -39,7 +39,6 @@
                         <li ><a href = "registroCiudad" ><i class="glyphicon glyphicon-tag" ></i > Ciudad</a ></li >
                         <li ><a href = "Tcampanas" ><i class="glyphicon glyphicon-tag" ></i > Campañas</a ></li >
                         <li ><a href = "Titems" ><i class="glyphicon glyphicon-tag" ></i > Items</a ></li >
-                        <li ><a href = "Tterceros" ><i class="glyphicon glyphicon-tag" ></i > Terceros</a ></li >
                         <li ><a href = "tipoInventario" ><i class="glyphicon glyphicon-tag" ></i > Tipo inventario </a ></li >
                         <li ><a href = "tipoTercero" ><i class="glyphicon glyphicon-tag" ></i > Tipo tercero </a ></li >
                         <li ><a href = "medioPago" ><i class="glyphicon glyphicon-tag" ></i > Medio pago </a ></li >
@@ -53,10 +52,10 @@
 
 
                 <?php
-                if($_SESSION["rol"] == 0) {
+                if($_SESSION["tipo_tercero"] == 1) {
                     echo '
                 <li>
-                    <a href="perfil"><i class="glyphicon glyphicon-chevron-right"></i> <span>Usuarios</span></a></li>
+                    <a href="usuarioTercero"><i class="glyphicon glyphicon-chevron-right"></i> <span>Usuario Terceros</span></a></li>
                 </li>
                     </ul>';
                 }

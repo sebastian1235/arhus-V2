@@ -81,7 +81,7 @@ clase_dem ) VALUES ('$data[0]','$data[1]','$data[2]','$data[3]','$data[4]','$dat
     echo "<div class='alert alert-primary' role='alert'>
   subio satisfactoriamente
 </div>";
-   echo "<script>location.href='subirArchivo'</script>";
+   echo "<script>location.href='TSolicitudes'</script>";
 
  mysqli_query($mysqli,"INSERT INTO `ap_solicitud`(`demanda_sol`,`poliza_sol`,`cedula_sol`,`nombre_sol`,`direccion_pol_sol`,`direccion_nueva_sol`,`telefono1_sol`,`barrio_sol`,`obs_estado_sol`, `fecha_prevista_sol`)SELECT cod_dem, poliza_dem, num_doc, nombre_cliente, direccion, direccion, telefono, sector, observacion, fecha_llamada FROM demanda_sin_sol");
 

@@ -41,7 +41,7 @@ include "views/modules/header.php";
       <br>
 
 		<br>	
-	<div class="col-md-3">
+	<div align="center" class="col-md-12">
 		<form div  style="
 
     width: 400px;
@@ -49,16 +49,19 @@ include "views/modules/header.php";
     padding: 3em;
     border: 1px solid #CCC;
     border-radius: 1em;	" name="frmcargararchivo1" method="post" enctype="multipart/form-data">
-		  <h3>1.Subir inventario</h3>
+		  <h3>1.Subir demanda</h3>
 		  <p><input type="file" name="excel"  id="excel" /></p>
-		  <p><input type="button" class="btn btn-primary" value="Subir" onclick="cargarHojaExcel();" /></p>
+
+		  <p>
+		  	 <a href="TSolicitudes" class="btn btn-default">Regresar</a>
+		  	 <input type="button" class="btn btn-warning" value="Subir" onclick="cargarHojaExcel();" /></p>
+		
 
                   </div>
 		</form>
 
   
 
- 
  
 
 

@@ -12,6 +12,8 @@ if(!$_SESSION["validar"]){
 include "views/modules/navegacion.php";
 include "views/modules/header.php";
 
+                            $verSol = new solicitud();
+                            $verSol -> vistacotizacionController();
 ?>
 
 <div class="row">
@@ -23,7 +25,7 @@ include "views/modules/header.php";
                 <div class="container">
                     <br>
                
-
+                 <input name="idSolicitud" type="text" value= <?php echo $item['id_sol'];?> >
 
 
                     <div class="form-group">
@@ -65,6 +67,7 @@ include "views/modules/header.php";
                             <div class="col-md-4">
                                 <label for="">Nombre asesor</label>
                                 <select class="form-control" id="asesor_sol" name="asesor_sol">
+                                    <option value=<?php $item["asesor_sol"]?> > <?php$item["nombre_tercero"]?> </option>
                                     <option value="0">Asesor</option>
                                     <?php
                             $seleccionarSector = new solicitud();

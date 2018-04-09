@@ -38,9 +38,10 @@ include "views/modules/header.php";
                             <thead>
                             <tr>
                               <th>Programar</th>
+                              <th>Modificar</th>
                                 <th>Eliminar</th>
+                                <th>cotizar</th>
                                 <th>Id</th>
-                                <th>Poliza</th>
                                 <th>Asignacion</th>
                                 <th>asesor</th>
                                 <th>Nombre de solicitud</th>
@@ -53,6 +54,7 @@ include "views/modules/header.php";
                                 <th>cedula</th>
                                 <th>Direccion</th>
                                 <th>Telefonos</th>
+                                <th>Observacion</th>
 
                                 
 
@@ -65,6 +67,7 @@ include "views/modules/header.php";
                             $verSol -> vistaSolicitudController();
                             $verSol -> programarModelController();
                             $verSol -> eliminarModelController();
+                            $verSol ->modificarModelController();
 
                             ?>
 

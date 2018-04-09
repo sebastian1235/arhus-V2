@@ -64,7 +64,7 @@ class solicitud
             echo' <tr>   
                     <td><a href="#programarSol'.$item["id_sol"].'" data-toggle="modal"><span class="btn btn-warning fa fa-check"></span></a></td>
                     <td><a href="#modificarSol'.$item["id_sol"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></a></td>
-                    <td><a href="#eliminarSol'.$item["id_sol"].'" data-toggle="modal"><span class="btn btn-danger fa fa-trash"></span></a></td>
+                    <td><a href="#eliminarSol'.$item["id_sol"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></a></td>
                     <td><a href="cotizacion?'.$item["id_sol"].' "><span class="btn btn-warnig fa fa-trash"></span></a></td>
                     
                     <td>' .$item["id_sol"].'</td>
@@ -147,6 +147,41 @@ class solicitud
                 </div>
 
              </div>
+             <div id="eliminarSol'.$item["id_sol"].'" class="modal fade">
+                <div class="modal-dialog modal-content">
+              <div class="modal-header" style="border:1px solid #eee">
+                <button type="button" class="close" data-dismiss="modal">X</button>
+                <h3 class="modal-title">desea Eliminar '.$item["nombre_sol"].' Direccion '.$item["direccion_nueva_sol"].'</h3>
+              </div>
+              <div class="modal-body" style="border:1px solid #eee">
+                <form style="padding:0px 10px" method="post" enctype="multipart/form-data">
+                <input name="idSolicitud" type="hidden" value="'.$item["id_sol"].'">
+                <div class="form-group">
+                <label for="">Nombre asesor</label>
+                <select class="form-control" id="borrar" name="EliminarSol">
+                <option value="0">No</option>
+                <option value="1">Si</option>';
+                                    
+                            
+                            
+                          echo  '</select>
+                            </div>
+                
+           
+                                    
+                        <div class="form-group text-center">
+                        <input type="submit" id="eliminarSol" value="Continuar" class="btn btn-danger">
+                      </div>
+                </form>
+
+              </div>
+              <div class="modal-footer" style="border:1px solid #eee">          
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+              </div>
+                
+                </div>
+
+             </div>
 
               <div id="modificarSol'.$item["id_sol"].'" class="modal fade">
                 <div class="modal-dialog modal-content">
@@ -216,48 +251,14 @@ class solicitud
               <div class="modal-footer" style="border:1px solid #eee">          
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
               </div>
-                
-                </div>
-
-             </div>
-
-
-
-              <div id="eliminarSol'.$item["id_sol"].'" class="modal fade">
-                <div class="modal-dialog modal-content">
-              <div class="modal-header" style="border:1px solid #eee">
-                <button type="button" class="close" data-dismiss="modal">X</button>
-                <h3 class="modal-title">desea Eliminar '.$item["nombre_sol"].' Direccion '.$item["direccion_nueva_sol"].'</h3>
               </div>
-              <div class="modal-body" style="border:1px solid #eee">
-                <form style="padding:0px 10px" method="post" enctype="multipart/form-data">
-                <input name="idSolicitud" type="hidden" value="'.$item["id_sol"].'">
-                <div class="form-group">
-                <label for="">Nombre asesor</label>
-                <select class="form-control" id="borrar" name="EliminarSol">
-                <option value="0">No</option>
-                <option value="1">Si</option>';
-                                    
-                            
-                            
-                          echo  '</select>
-                            </div>
-                
-           
-                                    
-                        <div class="form-group text-center">
-                        <input type="submit" id="eliminarSol" value="Continuar" class="btn btn-danger">
-                      </div>
-                </form>
+             </div>'
 
-              </div>
-              <div class="modal-footer" style="border:1px solid #eee">          
-                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-              </div>
-                
-                </div>
 
-             </div>';
+             ;
+
+     
+             
 
 
         }
@@ -436,7 +437,7 @@ class solicitud
         $respuesta = SolicitudModel::vistaSolicitud("ap_solicitud");
         foreach ($respuesta as $row => $item){
 
-                  $item["id_sol"];
+                  $id_sol=$item["id_sol"];
                   $item["asignacion_sol"];
                   $item["tipo_asignacion"];
                   $item["asesor_sol"];

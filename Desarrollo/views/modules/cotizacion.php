@@ -14,6 +14,30 @@ include "views/modules/header.php";
 
                             $verSol = new solicitud();
                             $verSol -> vistacotizacionController();
+                             $respuesta = SolicitudModel::vistaSolicitud("ap_solicitud");
+        foreach ($respuesta as $row => $item){
+
+                  $id_sol=$item["id_sol"];
+                  $asignacion_sol=$item["asignacion_sol"];
+                  $item["tipo_asignacion"];
+                   $asesor_sol=$item["asesor_sol"];
+                  $item["nombre_tercero"];
+                  $item["nombre_sol"];
+                  $item["servicio_sol"];
+                  $item["nombre_estado_preventa"];
+                  $item["fecha_prevista_sol"];
+                  $item["fecha_visita_comerc_sol"];
+                  $item["barrio_sol"];
+                  $item["nombre_Sec"];
+                  $item["localidad_sol"];
+                  $item["nombre_loc"];
+                  $item["cedula_sol"];
+                  $item["direccion_nueva_sol"];
+                  $item["telefono1_sol"];
+                  $item["telefono2_sol"];
+                  $item["celular_sol"];
+                  $item["obs_estado_sol"];
+              }
 ?>
 
 <div class="row">
@@ -25,7 +49,7 @@ include "views/modules/header.php";
                 <div class="container">
                     <br>
                
-                 <input name="idSolicitud" type="text" value= <?php echo $item['id_sol'];?> >
+                 <input name="idSolicitud" type="text" value= "<?php echo $id_sol; ?>" >
 
 
                     <div class="form-group">
@@ -67,7 +91,7 @@ include "views/modules/header.php";
                             <div class="col-md-4">
                                 <label for="">Nombre asesor</label>
                                 <select class="form-control" id="asesor_sol" name="asesor_sol">
-                                    <option value=<?php $item["asesor_sol"]?> > <?php$item["nombre_tercero"]?> </option>
+                                    <option value=<?php $item["asesor_sol"]?> > <?php $item["nombre_tercero"]?> </option>
                                     <option value="0">Asesor</option>
                                     <?php
                             $seleccionarSector = new solicitud();

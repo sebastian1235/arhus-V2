@@ -64,10 +64,13 @@ include "views/modules/header.php";
                             <?php
 
                             $verSol = new solicitud();
+                            $verSol -> registroCotizacionController();
                             $verSol -> vistaSolicitudController();
                             $verSol -> programarModelController();
                             $verSol -> eliminarModelController();
                             $verSol ->modificarModelController();
+
+
 
                             ?>
 

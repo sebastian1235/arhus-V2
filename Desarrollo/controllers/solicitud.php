@@ -56,6 +56,41 @@ class solicitud
             }
         }
     }
+    public function registroCotizacionController()
+    {
+        if (isset($_POST["sol_cot"])) {
+            $datosController = array("sol_cot" => $_POST["sol_cot"],
+                "consecutivo_cot" => $_POST["consecutivo_cot"],
+                "estrato_cot" => $_POST["estrato_cot"],
+                "fecha_nac_cot" => $_POST["fecha_nac_cot"],
+                "forma_pago_cot" => $_POST["forma_pago_cot"],
+                "campana_cot" => $_POST["campaña_cot"],
+                "tipo_cliente_cot" => $_POST["tipo_cliente_cot"],
+                "fecha_cot" => $_POST["fecha_cot"]);
+
+            $respuesta = SolicitudModel::registroCotizacion($datosController, "ap_cotizacion");
+
+            if ($respuesta == "ok") {
+                echo '<script>
+
+                       swal({
+                            title: "!Ok",
+                            text: "¡El usuario ha sido creado correctamente!",
+                            type: "success",
+                            confirmButtonText: "Cerrar",
+                            closeOnConfirm: false
+                       },
+                       function(isConfirm) {
+                           if (isConfirm){
+                               window.location = "cotizacion";
+                           }
+                         
+                       }); 
+                </script>';
+
+            }
+        }
+    }
 
 
     public function vistaSolicitudController(){
@@ -65,7 +100,7 @@ class solicitud
                     <td><a href="#programarSol'.$item["id_sol"].'" data-toggle="modal"><span class="btn btn-warning fa fa-check"></span></a></td>
                     <td><a href="#modificarSol'.$item["id_sol"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></a></td>
                     <td><a href="#eliminarSol'.$item["id_sol"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></a></td>
-                    <td><a href="cotizacion?'.$item["id_sol"].' "><span class="btn btn-warnig fa fa-trash"></span></a></td>
+                   <td><a href="#formularioCotizacion'.$item["id_sol"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></a></td>
                     
                     <td>' .$item["id_sol"].'</td>
                     
@@ -82,9 +117,109 @@ class solicitud
                     <td>' .$item["direccion_nueva_sol"].'</td>
                     <td>' .$item["telefono1_sol"].'-'.$item["telefono2_sol"].'-'.$item["celular_sol"].'</td>
                     <td>' .$item["obs_estado_sol"].'</td>
-                  </tr>  
+                  </tr>';
+                  $tipo_clinete=$item["nombre_tipo_cliente"];
 
-                  <div id="programarSol'.$item["id_sol"].'" class="modal fade">
+            echo'<div id="formularioCotizacion'.$item["id_sol"].'" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+              <div class="modal-header" >
+                <button type="button" class="close" data-dismiss="modal">X</button>
+                <h3 class="modal-title">Cotizar '.$item["id_sol"].', TC.'.$item["nombre_tipo_cliente"].', Asesor '.$item["nombre_tercero"].', T.A '.$item["tipo_asignacion"].' </h3>
+                 <button href="#modificarSol'.$item["id_sol"].'" data-toggle="modal" class="btn btn-default" >Modificar Datos de contacto</button>
+              </div>
+   
+                      <form class="form-horizontal" method="POST" id="formularioSolicitud" autocomplete="off">
+                
+                          <div class="form-group">
+                               <div class="col-md-4">
+                                   <label>No. de solicitud</label>
+                                   <input type="text" class="form-control" name="sol_cot" required="" id="sol_cot" value="'.$item["id_sol"].'">
+                               </div>
+                               <div class="col-md-4">
+                                   <label>consecutivo_cot</label>
+                                   <input type="text" class="form-control" name="consecutivo_cot" required="" id="consecutivo_cot">
+                               </div>
+                               <div class="col-md-4">
+                                   <label>estrato_cot</label>
+                                   <input type="text" class="form-control" name="estrato_cot" required="" id="estrato_cot">
+                               </div>
+                               
+                          </div>
+
+                         
+                          <div class="form-group">
+                          <div class="col-md-4">
+                                  <label>Fecha_nac_cot</label>
+                                  <input type="DATE" class="form-control" name="fecha_nac_cot" required="" id="fecha_nac_cot">
+                              </div>
+                               
+                                <div class="col-md-4">
+                                      <label for="">Forma depago</label>
+                                      <select class="form-control" id="forma_pago_cot" name="forma_pago_cot">
+                                          <option value="0">Asesor</option>
+                                          <?php
+                                  $seleccionarSector = new solicitud();
+                                  $seleccionarSector -> selectAsesor();
+                                  ?>
+                                      </select>
+                                </div>
+                               
+                          </div>
+                          
+                      
+                          <div class="form-group">
+                          <div class="col-md-4">
+                                      <label for="">campaña_cot</label>
+                                      <select class="form-control" id="campaña_cot" name="campaña_cot">
+                                          <option value="0">Asesor</option>
+                                          <?php
+                                  $seleccionarSector = new solicitud();
+                                  $seleccionarSector -> selectAsesor();
+                                  ?>
+                                      </select>
+                                </div>
+                               <div class="col-md-4">
+                                      <label for="">tipo_cliente_cot</label>
+                                      <select class="form-control" id="tipo_cliente_cot" name="tipo_cliente_cot">
+                                          <option value="0">Asesor</option>
+                                          <?php
+                                  $seleccionarSector = new solicitud();
+                                  $seleccionarSector -> selectAsesor();
+                                  ?>
+                                      </select>
+                                </div>
+                              <div class=" col-md-4">
+                                  <label>fecha_cot </label>
+                                  <input type="DATE" class="form-control" name="fecha_cot" required=""  id="fecha_cot" value="'.$item["telefono1_sol"].'">
+                              </div>
+                                
+                          </div>
+                          <br>
+                          
+
+                      
+                            <div class="modal-footer" style="border:1px solid #eee">  
+                            <br>
+                           <div class=" col-md-12">
+                            <br>
+                            <div class="form-group text-center">
+                           
+
+                             <input type="submit" id="formularioCotizacion" value="Actualizar" class="btn btn-warning">
+                             <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+              </div>
+                           </div>
+                         </div>
+                        </form>
+             </div>
+          </div> 
+      </div>';
+
+
+#modal programar=======================================================================================================================
+
+                  echo'<div id="programarSol'.$item["id_sol"].'" class="modal fade">
                 <div class="modal-dialog modal-content">
               <div class="modal-header" style="border:1px solid #eee">
                 <button type="button" class="close" data-dismiss="modal">X</button>
@@ -146,8 +281,11 @@ class solicitud
                 
                 </div>
 
-             </div>
-             <div id="eliminarSol'.$item["id_sol"].'" class="modal fade">
+             </div>';
+
+ #modal eliminar=======================================================================================================================
+
+             echo'<div id="eliminarSol'.$item["id_sol"].'" class="modal fade">
                 <div class="modal-dialog modal-content">
               <div class="modal-header" style="border:1px solid #eee">
                 <button type="button" class="close" data-dismiss="modal">X</button>
@@ -181,9 +319,11 @@ class solicitud
                 
                 </div>
 
-             </div>
+             </div>';
 
-              <div id="modificarSol'.$item["id_sol"].'" class="modal fade">
+#modal modificar=======================================================================================================================
+
+              echo '<div id="modificarSol'.$item["id_sol"].'" class="modal fade">
                 <div class="modal-dialog modal-content">
               <div class="modal-header" style="border:1px solid #eee">
                 <button type="button" class="close" data-dismiss="modal">X</button>
@@ -213,7 +353,7 @@ class solicitud
                         <div class="col-md-6">
                             <label for="">Localidad:</label>
                             <select class="form-control" id="localidad_sol"  name="localidadSol">
-                            <option value="'.$item[""].'">'.$item["nombre_loc"].'</option>
+                            <option value="">'.$item["nombre_loc"].'</option>
                                 <option value="">seleccionar localidad</option>';
                                
                                 
@@ -235,6 +375,17 @@ class solicitud
                            echo'</select>
                         </div>
                         </div>
+                        <div class="form-group">
+                        <div class="col-md-6">
+                            <label>Telefono:</label>
+                            <input type="text" class="form-control" name="telefono1_sol" required="" id="telefono1_sol" value='.$item["telefono1_sol"].'>
+                            </div>
+                             <div class="col-md-6">
+                        <label>Celular:</label>
+                            <input type="text" class="form-control" name="celular_sol" required=""  id="celular_sol"  value='.$item["celular_sol"].'>
+                            </div>
+
+                    </div>
 
                     <div class="form-group"  >
                        
@@ -252,14 +403,7 @@ class solicitud
                 <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
               </div>
               </div>
-             </div>'
-
-
-             ;
-
-     
-             
-
+             </div>';
 
         }
     }
@@ -271,6 +415,8 @@ class solicitud
                                       "cedula_sol" => $_POST["cedula_sol"],
                                       "localidad_sol" => $_POST["localidadSol"], 
                                       "barrio_sol" => $_POST["barrio_sol"],
+                                      "telefono1_sol" => $_POST["telefono1_sol"],
+                                      "celular_sol" => $_POST["celular_sol"],
                                       "direccion_pol_sol" => $_POST["direccion_pol_sol"]);
 
             $respuesta = SolicitudModel::modificarSolicitud($datosController, "ap_solicitud");
@@ -283,6 +429,8 @@ class solicitud
                     $_SESSION["localidad_sol"] = $_POST["localidadSol"];
                     $_SESSION["barrio_sol"] = $_POST["barrio_sol"];
                     $_SESSION["direccion_pol_sol"] = $_POST["direccion_pol_sol"];
+                    $_SESSION["telefono1_sol"] = $_POST["telefono1_sol"];
+                    $_SESSION["celular_sol"] = $_POST["celular_sol"];
                
 
                 }
@@ -408,13 +556,15 @@ class solicitud
         }
     }
 
-     public function selectAsesor(){
+    public function selectAsesor(){
         $respuesta = SolicitudModel::vistaAsesor("ap_terceros");
         foreach ($respuesta as $row => $SelectsCiudad){
             echo '<option value="'.$SelectsCiudad["Id_tercero"].'">'.$SelectsCiudad["nombre_tercero"].'</option>';
         }
 
     }
+
+    
 
     public function selectAsigancion(){
         $respuesta = SolicitudModel::vistaAsigancion("ap_asignacion");

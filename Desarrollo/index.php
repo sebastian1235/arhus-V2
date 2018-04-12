@@ -18,6 +18,7 @@ require_once "controllers/campanas.php";
 require_once "controllers/items.php";
 require_once "controllers/ciudades.php";
 require_once "controllers/solicitud.php";
+require_once "controllers/cotizacion.php";
 
 require_once "models/enlaces.php";
 require_once "models/ingreso.php";
@@ -30,6 +31,7 @@ require_once "models/items.php";
 require_once "models/ciudades.php";
 require_once "models/solicitud.php";
 require_once "models/tipoInventario.php";
+require_once "models/cotizacion.php";
 
 
 

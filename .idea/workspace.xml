@@ -6,24 +6,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e71b5988-19e2-4ede-adcb-7a772a6c7e3a" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Desarrollo/views/modules/usuarioTercero.php" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/61e577d3-586e-45b8-aea1-f2b8f40f40d7.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/61e577d3-586e-45b8-aea1-f2b8f40f40d7.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Desarrollo/controllers/ingreso.php" afterPath="$PROJECT_DIR$/Desarrollo/controllers/ingreso.php" />
-      <change beforePath="$PROJECT_DIR$/Desarrollo/controllers/terceros.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Desarrollo/controllers/usuarioPerfil.php" afterPath="$PROJECT_DIR$/Desarrollo/controllers/usuarioTercero.php" />
-      <change beforePath="$PROJECT_DIR$/Desarrollo/index.php" afterPath="$PROJECT_DIR$/Desarrollo/index.php" />
-      <change beforePath="$PROJECT_DIR$/Desarrollo/models/enlaces.php" afterPath="$PROJECT_DIR$/Desarrollo/models/enlaces.php" />
-      <change beforePath="$PROJECT_DIR$/Desarrollo/models/ingreso.php" afterPath="$PROJECT_DIR$/Desarrollo/models/ingreso.php" />
-      <change beforePath="$PROJECT_DIR$/Desarrollo/models/terceros.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Desarrollo/models/usuarioPerfil.php" afterPath="$PROJECT_DIR$/Desarrollo/models/usuarioTercero.php" />
-      <change beforePath="$PROJECT_DIR$/Desarrollo/views/ajax/ajax.php" afterPath="$PROJECT_DIR$/Desarrollo/views/ajax/ajax.php" />
-      <change beforePath="$PROJECT_DIR$/Desarrollo/views/js/validarRegistros.js" afterPath="$PROJECT_DIR$/Desarrollo/views/js/validarRegistros.js" />
-      <change beforePath="$PROJECT_DIR$/Desarrollo/views/modules/Tterceros.php" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Desarrollo/views/modules/header.php" afterPath="$PROJECT_DIR$/Desarrollo/views/modules/header.php" />
-      <change beforePath="$PROJECT_DIR$/Desarrollo/views/modules/inicio.php" afterPath="$PROJECT_DIR$/Desarrollo/views/modules/inicio.php" />
-      <change beforePath="$PROJECT_DIR$/Desarrollo/views/modules/navegacion.php" afterPath="$PROJECT_DIR$/Desarrollo/views/modules/navegacion.php" />
-      <change beforePath="$PROJECT_DIR$/Desarrollo/views/modules/perfil.php" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desarrollo/controllers/usuarioTercero.php" beforeDir="false" afterPath="$PROJECT_DIR$/Desarrollo/controllers/usuarioTercero.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desarrollo/models/usuarioTercero.php" beforeDir="false" afterPath="$PROJECT_DIR$/Desarrollo/models/usuarioTercero.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desarrollo/views/modules/usuarioTercero.php" beforeDir="false" afterPath="$PROJECT_DIR$/Desarrollo/views/modules/usuarioTercero.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -48,68 +34,11 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="arhus@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="arhus@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="arhus@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="arhus: schema" type="c314c289:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="arhus@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="arhus: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="ap_terceros: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file leaf-file-name="usuarioTercero.php" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/usuarioTercero.php">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="191">
-                    <caret line="85" column="20" lean-forward="false" selection-start-line="85" selection-start-column="20" selection-end-line="87" selection-end-column="26" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="usuarioTercero.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Desarrollo/controllers/usuarioTercero.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="123" column="22" lean-forward="false" selection-start-line="123" selection-start-column="22" selection-end-line="123" selection-end-column="22" />
-              <folding>
-                <marker date="1523287174318" expanded="true" signature="2394:2996" ph="..." />
-                <marker date="1523287174318" expanded="true" signature="2425:2732" ph="{&quot;title&quot;: &quot;!Ok&quot;...}" />
-                <marker date="1523287174318" expanded="true" signature="2777:2968" ph="{...}" />
-                <marker date="1523287174318" expanded="true" signature="2820:2917" ph="{...}" />
-                <marker date="1523287174318" expanded="true" signature="4280:4402" ph="..." />
-                <marker date="1523287174318" expanded="true" signature="4280:4896" ph="..." />
-                <marker date="1523287174318" expanded="true" signature="4882:4891" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -189,7 +118,6 @@
         <option value="$PROJECT_DIR$/Desarrollo/controllers/usuarioPerfil.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/perfil.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/FregistroSol.php" />
-        <option value="$PROJECT_DIR$/Desarrollo/models/usuarioTercero.php" />
         <option value="$PROJECT_DIR$/Desarrollo/controllers/ingreso.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/header.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/inicio.php" />
@@ -198,9 +126,10 @@
         <option value="$PROJECT_DIR$/Desarrollo/views/ajax/ajax.php" />
         <option value="$PROJECT_DIR$/Desarrollo/index.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/navegacion.php" />
-        <option value="$PROJECT_DIR$/Desarrollo/views/modules/usuarioTercero.php" />
         <option value="$PROJECT_DIR$/Desarrollo/models/enlaces.php" />
+        <option value="$PROJECT_DIR$/Desarrollo/views/modules/usuarioTercero.php" />
         <option value="$PROJECT_DIR$/Desarrollo/controllers/usuarioTercero.php" />
+        <option value="$PROJECT_DIR$/Desarrollo/models/usuarioTercero.php" />
       </list>
     </option>
   </component>
@@ -210,10 +139,26 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/Desarrollo/views/bower_components/Flot/package.json" />
+      <path value="$PROJECT_DIR$/Desarrollo/views/bower_components/bootstrap-datepicker/package.json" />
+      <path value="$PROJECT_DIR$/Desarrollo/views/bower_components/bootstrap-daterangepicker/package.json" />
+      <path value="$PROJECT_DIR$/Desarrollo/views/bower_components/bootstrap/package.json" />
+      <path value="$PROJECT_DIR$/Desarrollo/views/bower_components/chart.js/package.json" />
+      <path value="$PROJECT_DIR$/Desarrollo/views/bower_components/ckeditor/package.json" />
+      <path value="$PROJECT_DIR$/Desarrollo/views/bower_components/eve-raphael/package.json" />
+      <path value="$PROJECT_DIR$/Desarrollo/views/bower_components/ion.rangeSlider/package.json" />
+      <path value="$PROJECT_DIR$/Desarrollo/views/bower_components/jquery-knob/package.json" />
+      <path value="$PROJECT_DIR$/Desarrollo/views/bower_components/jquery-slimscroll/package.json" />
+      <path value="$PROJECT_DIR$/Desarrollo/views/bower_components/jquery-ui/package.json" />
+      <path value="$PROJECT_DIR$/Desarrollo/views/bower_components/morris.js/package.json" />
+      <path value="$PROJECT_DIR$/Desarrollo/views/bower_components/select2/package.json" />
+    </packageJsonPaths>
+  </component>
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
@@ -224,22 +169,10 @@
     <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -252,49 +185,11 @@
               <item name="arhus-V2" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Desarrollo" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="arhus-V2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="arhus-V2" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Desarrollo" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="controllers" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="arhus-V2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="arhus-V2" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Desarrollo" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="models" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="arhus-V2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="arhus-V2" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Desarrollo" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="arhus-V2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="arhus-V2" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Desarrollo" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="ajax" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="arhus-V2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="arhus-V2" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Desarrollo" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="arhus-V2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="arhus-V2" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Desarrollo" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="modules" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -308,16 +203,16 @@
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="G:\Ampps\www\proyectos\misProyectos\arhus-V2\Desarrollo\views" />
-      <recent name="G:\Ampps\www\proyectos\misProyectos\arhus-V2\Desarrollo\views\modules\ajax" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="G:\Ampps\www\proyectos\misProyectos\arhus-V2\Desarrollo\views\favicon" />
       <recent name="G:\Ampps\www\proyectos\misProyectos\arhus-V2\Desarrollo\views\css" />
       <recent name="G:\Ampps\www\proyectos\misProyectos\arhus-V2\Desarrollo\views\js" />
       <recent name="G:\Ampps\www\proyectos\misProyectos\arhus-V2\Desarrollo\views\images" />
       <recent name="G:\Ampps\www\proyectos\misProyectos\arhus-V2\Desarrollo\models" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\Ampps\www\proyectos\misProyectos\arhus-V2\Desarrollo\views" />
+      <recent name="G:\Ampps\www\proyectos\misProyectos\arhus-V2\Desarrollo\views\modules\ajax" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -331,9 +226,6 @@
         </RuleState>
       </list>
     </option>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -406,36 +298,65 @@
       <workItem from="1523129819836" duration="1401000" />
       <workItem from="1523131725610" duration="6039000" />
       <workItem from="1523227753049" duration="1551000" />
-      <workItem from="1523285733819" duration="1520000" />
+      <workItem from="1523285733819" duration="1583000" />
+      <workItem from="1523295663482" duration="594000" />
+      <workItem from="1523302004749" duration="3995000" />
+      <workItem from="1523308612312" duration="674000" />
+      <workItem from="1523311894186" duration="199000" />
+      <workItem from="1523312107593" duration="4670000" />
+      <workItem from="1523373417426" duration="428000" />
+      <workItem from="1523374248779" duration="106000" />
+      <workItem from="1523504277208" duration="110000" />
+      <workItem from="1523504594967" duration="609000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="323576000" />
+    <option name="totallyTimeSpent" value="335024000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1762918" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17173253" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20136778" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.1793313" />
+      <window_info anchor="bottom" id="Database Changes" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32894737" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.18920973" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32894737" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.1793313" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -453,104 +374,56 @@
       </breakpoints>
       <option name="time" value="1" />
     </breakpoint-manager>
-    <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/phpmaker/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/phpmaker/footer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/phpmaker/ewupload13.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/phpmaker/mobile_detect.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/phpmaker/usuarioslist.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3120">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
+        <state relative-caret-position="-3120" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/phpmaker/uploadhandler.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/phpmaker/siax_estado_givview.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/phpmaker/siax_ciudaddelete.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/phpmaker/passwordhash.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2340">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
+        <state relative-caret-position="-2340" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/phpmaker/arhus/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/phpmaker/BDatos/arhus.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2072" selection-end-column="0" />
+          <caret line="8" selection-end-line="2072" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/phpmaker/arhus/{6A9AC718-A824-45A3-BED3-A95E91E6986D}.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/phpmaker/ap_grupo_nominaadd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/phpmaker/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
-          <caret line="1" column="35" lean-forward="false" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="35" />
+          <caret line="1" column="35" selection-start-line="1" selection-start-column="34" selection-end-line="1" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -571,23 +444,15 @@
     <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/subirArchivo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/selects.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/registro_tercero.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/registroCiudad.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -606,28 +471,28 @@
     <entry file="file://$PROJECT_DIR$/Desarrollo/models/ciudades.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
-          <caret line="66" column="0" lean-forward="false" selection-start-line="66" selection-start-column="0" selection-end-line="72" selection-end-column="5" />
+          <caret line="66" selection-start-line="66" selection-end-line="72" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/baseDatos/arhus (3).sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="12" column="25" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="1570" selection-end-column="0" />
+          <caret line="12" column="25" lean-forward="true" selection-end-line="1570" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Desarrollo/models/conexion.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
-          <caret line="10" column="1" lean-forward="false" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Desarrollo/controllers/solicitud.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
-          <caret line="178" column="0" lean-forward="true" selection-start-line="178" selection-start-column="0" selection-end-line="178" selection-end-column="0" />
+          <caret line="178" lean-forward="true" selection-start-line="178" selection-end-line="178" />
         </state>
       </provider>
     </entry>
@@ -635,16 +500,12 @@
     <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/TSolicitudes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1620">
-          <caret line="81" column="49" lean-forward="false" selection-start-line="81" selection-start-column="49" selection-end-line="81" selection-end-column="49" />
+          <caret line="81" column="49" selection-start-line="81" selection-start-column="49" selection-end-line="81" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Desarrollo/models/asignacion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/FregistroSol.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -656,28 +517,21 @@
     <entry file="file://$PROJECT_DIR$/Desarrollo/models/solicitud.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="560">
-          <caret line="105" column="75" lean-forward="false" selection-start-line="105" selection-start-column="75" selection-end-line="105" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Desarrollo/controllers/tipoTercero.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2040">
-          <caret line="140" column="0" lean-forward="false" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
+          <caret line="105" column="75" selection-start-line="105" selection-start-column="75" selection-end-line="105" selection-end-column="75" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Desarrollo/models/tipoTercero.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1260">
-          <caret line="68" column="1" lean-forward="false" selection-start-line="68" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
+          <caret line="68" column="1" selection-start-line="68" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/tipoTercero.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="385">
-          <caret line="25" column="107" lean-forward="false" selection-start-line="25" selection-start-column="92" selection-end-line="25" selection-end-column="107" />
+          <caret line="25" column="107" selection-start-line="25" selection-start-column="92" selection-end-line="25" selection-end-column="107" />
         </state>
       </provider>
     </entry>
@@ -691,31 +545,26 @@
     <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-14">
-          <caret line="70" column="72" lean-forward="false" selection-start-line="70" selection-start-column="72" selection-end-line="70" selection-end-column="72" />
+          <caret line="70" column="72" selection-start-line="70" selection-start-column="72" selection-end-line="70" selection-end-column="72" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/inicio.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
-          <caret line="17" column="81" lean-forward="false" selection-start-line="17" selection-start-column="81" selection-end-line="17" selection-end-column="81" />
+          <caret line="17" column="81" selection-start-line="17" selection-start-column="81" selection-end-line="17" selection-end-column="81" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Desarrollo/controllers/ingreso.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
+          <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/ingreso.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Desarrollo/models/ingreso.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -727,7 +576,7 @@
     <entry file="file://$PROJECT_DIR$/Desarrollo/views/ajax/ajax.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="29" column="44" lean-forward="false" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="44" />
+          <caret line="29" column="44" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="44" />
         </state>
       </provider>
     </entry>
@@ -741,8 +590,7 @@
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/block.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="194">
-          <caret line="240" column="16" lean-forward="false" selection-start-line="240" selection-start-column="16" selection-end-line="240" selection-end-column="16" />
-          <folding />
+          <caret line="240" column="16" selection-start-line="240" selection-start-column="16" selection-end-line="240" selection-end-column="16" />
         </state>
       </provider>
     </entry>
@@ -757,67 +605,88 @@
     <entry file="file://$PROJECT_DIR$/Desarrollo/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
-          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Desarrollo/views/template.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
-          <caret line="27" column="49" lean-forward="false" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
+          <caret line="27" column="49" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Desarrollo/controllers/enlaces.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="17" column="9" lean-forward="false" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-          <folding />
+          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Desarrollo/models/enlaces.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
-          <caret line="24" column="38" lean-forward="false" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
-          <folding />
+          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Desarrollo/models/usuarioTercero.php">
+    <entry file="file://$PROJECT_DIR$/Desarrollo/controllers/tipoTercero.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="44" column="46" lean-forward="false" selection-start-line="44" selection-start-column="20" selection-end-line="44" selection-end-column="46" />
+        <state relative-caret-position="806">
+          <caret line="140" selection-start-line="140" selection-end-line="140" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Desarrollo/controllers/modoPago.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
           <folding>
-            <marker date="1523034672889" expanded="true" signature="278:757" ph="INSERT INTO ${$tabla}... " />
-            <marker date="1523034672889" expanded="true" signature="2200:2215" ph="SELECT * FRO... ${$tabla}" />
-            <marker date="1523034672889" expanded="true" signature="2200:2222" ph="SELECT id, u... ${$tabla}" />
-            <marker date="1523034672889" expanded="true" signature="2463:2514" ph="SELECT usuar... ${$tabla}" />
+            <marker date="1522632755372" expanded="true" signature="515:1110" ph="..." />
+            <marker date="1522632755372" expanded="true" signature="546:851" ph="{&quot;title&quot;: &quot;!Ok&quot;...}" />
+            <marker date="1522632755372" expanded="true" signature="896:1082" ph="{...}" />
+            <marker date="1522632755372" expanded="true" signature="939:1031" ph="{...}" />
+            <marker date="1522632755372" expanded="true" signature="1531:1812" ph="..." />
+            <marker date="1522632755372" expanded="true" signature="1915:3398" ph="..." />
+            <marker date="1522632755372" expanded="true" signature="1969:3380" ph="..." />
+            <marker date="1522632755372" expanded="false" signature="2012:2033" ph="..." />
+            <marker date="1522632755372" expanded="true" signature="2034:2182" ph="..." />
+            <marker date="1522632755372" expanded="false" signature="2223:2244" ph="..." />
+            <marker date="1522632755372" expanded="true" signature="2245:3174" ph="..." />
+            <marker date="1522632755372" expanded="false" signature="2276:2292" ph="..." />
+            <marker date="1522632755372" expanded="true" signature="2337:3159" ph="..." />
+            <marker date="1522632755372" expanded="true" signature="2469:2640" ph="..." />
+            <marker date="1522632755372" expanded="true" signature="2679:2967" ph="..." />
+            <marker date="1522632755372" expanded="true" signature="2755:2945" ph="..." />
+            <marker date="1522632755372" expanded="true" signature="3021:3142" ph="..." />
+            <marker date="1522632755372" expanded="false" signature="3216:3237" ph="..." />
+            <marker date="1522632755372" expanded="true" signature="3238:3348" ph="..." />
+            <marker date="1522632755372" expanded="true" signature="4194:4784" ph="..." />
+            <marker date="1522632755372" expanded="true" signature="4225:4525" ph="{&quot;title&quot;: &quot;!Ok&quot;...}" />
+            <marker date="1522632755372" expanded="true" signature="4570:4756" ph="{...}" />
+            <marker date="1522632755372" expanded="true" signature="4613:4705" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/usuarioTercero.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="85" column="20" lean-forward="false" selection-start-line="85" selection-start-column="20" selection-end-line="87" selection-end-column="26" />
-          <folding />
+        <state relative-caret-position="3100">
+          <caret line="155" column="32" selection-start-line="155" selection-start-column="32" selection-end-line="155" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Desarrollo/models/usuarioTercero.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="13" column="525" selection-start-line="13" selection-start-column="525" selection-end-line="13" selection-end-column="525" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Desarrollo/controllers/usuarioTercero.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="123" column="22" lean-forward="false" selection-start-line="123" selection-start-column="22" selection-end-line="123" selection-end-column="22" />
-          <folding>
-            <marker date="1523287174318" expanded="true" signature="2394:2996" ph="..." />
-            <marker date="1523287174318" expanded="true" signature="2425:2732" ph="{&quot;title&quot;: &quot;!Ok&quot;...}" />
-            <marker date="1523287174318" expanded="true" signature="2777:2968" ph="{...}" />
-            <marker date="1523287174318" expanded="true" signature="2820:2917" ph="{...}" />
-            <marker date="1523287174318" expanded="true" signature="4280:4402" ph="..." />
-            <marker date="1523287174318" expanded="true" signature="4280:4896" ph="..." />
-            <marker date="1523287174318" expanded="true" signature="4882:4891" ph="..." />
-          </folding>
+        <state relative-caret-position="20">
+          <caret line="133" column="69" selection-start-line="133" selection-start-column="69" selection-end-line="133" selection-end-column="69" />
         </state>
       </provider>
     </entry>

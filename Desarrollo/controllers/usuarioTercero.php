@@ -128,42 +128,81 @@ class UsuarioTercero{
 								<button type="button" class="close" data-dismiss="modal">X</button>
 								<h3 class="modal-title">Editar datos Tercero</h3>
 							</div>
-
 							<div class="modal-body" style="border:1px solid #eee">	
 								<form style="padding:0px 10px" method="post" enctype="multipart/form-data">
-
-								      <input name="idPerfil" type="hidden" value="'.$item["id"].'">
-								    
-								     <div class="form-group">
-								       
-								      <input name="editarUsuario" type="text" class="form-control" value="'.$item["usuario"].'" required>
-
-								     </div>
-
-								      <div class="form-group">
-
-								          <input name="editarPassword" type="password" placeholder="Ingrese la Contraseña hasta 10 caracteres" maxlength="10" class="form-control" required>
-
-								      </div>
-
-								      <div class="form-group">
-
-								         <input name="editarEmail" type="email" value="'.$item["email"].'" class="form-control" required>
-
-								      </div>
-
-								      <div class="form-group">
-
-								        <select name="editarRol" class="form-control" required>
-
-								            <option value="">Seleccione el Rol</option>
-								            <option value="0">Administrador</option>
-								            <option value="1">Editor</option>
-
-								        </select>
-
-								      </div>
-
+								      <input name="idTercero" type="hidden" value="'.$item["Id_tercero"].'">
+                                    <div class="form-group col-md-6">
+                                        <label for="nombreTercero">Nombre</label>
+                                        <input type="text" class="form-control" value="'.$item["nombre_tercero"].'" id="nombreTercero" name="EditarNombreTercero" maxlength="25" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="nitTercero">Nit</label>
+                                        <input type="text" class="form-control" value="'.$item["nit_tercero"].'" id="nitTercero" name="EditarNitTercero" maxlength="12" required>
+                                    </div>
+                                     <div class="form-group col-md-6">
+                                        <label for="telUnoTercero">Telefono</label>
+                                        <input type="tel" class="form-control" id="telUnoTercero" name="EditarTelUnoTercero" value="'.$item["telefono1_tercero"].'"  maxlength="10" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="telDosTercero">Telefono 2</label>
+                                        <input type="tel" class="form-control" id="telDosTercero" name="EditarTelDosTercero" value="'.$item["telefono2_tercero"].'" maxlength="10">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="faxTercero">Fax</label>
+                                        <input type="tel" class="form-control" id="faxTercero" name="EditarFaxTercero" value="'.$item["fax_tercero"].'" maxlength="12">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="direccionTercero">Direccion</label>
+                                        <input type="text" class="form-control" id="direccionTercero" value="'.$item["direccion_tercero"].'" name="EditarDireccionTercero">
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label for="contriTercero">Gran contribuyente</label>
+                                        <select class="form-control" name="EditarContriTercero">
+                                            <option value="1">SI</option>
+                                            <option value="0">NO</option>
+                                        </select>
+                                    </div>
+                
+                                    <div class="form-group col-md-4">
+                                        <label for="retenedorTercero">Auto Retenedor</label>
+                                        <select class="form-control" name="EditarRetenedorTercero">
+                                            <option value="1">SI</option>
+                                            <option value="0">NO</option>
+                                        </select>
+                                    </div>
+                
+                                    <div class="form-group col-md-4">
+                                        <label for="regimenTercero">Regimen comun</label>
+                                        <select class="form-control" name="EditarRegimenTercero">
+                                            <option value="1">SI</option>
+                                            <option value="0">NO</option>
+                                        </select>
+                                    </div>                
+                                    <div class="box-header with-border col-md-12">
+                                        <h3 class="box-title">Registro de usuario Tercero</h3>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="usuarioTercero">Usuario<span></span></label>
+                                        <input type="text" class="form-control" id="usuarioTercero" name="EditarUsuarioTercero" value="'.$item["usuario"].'" required maxlength="15">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="emailTercero">Email</label>
+                                        <input type="email" class="form-control" id="emailTercero" name="EditarEmailTercero" value="'.$item["e_mail_tercero"].'" required>
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="passwordTercero">Contraseña</label>
+                                        <input type="password" class="form-control" id="passwordTercero" name="EditarPasswordTercero" value="'.$item["password"].'" required maxlength="15">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="grupoTercero">Grupo</label>
+                                        <select class="form-control" name="EditarGrupoTercero" required>
+                                            <option value="0">Seleccione Grupo</option>
+                                            <option value="1">Administrador</option>
+                                            <option value="2">Analista</option>
+                                            <option value="3">Asesor Comercial</option>
+                                            <option value="4">Tecnico</option>
+                                        </select>
+                                    </div>
 								       <div class="form-group text-center col-md-12">
 								       		<div style="display:block;">
 										     	<img src="'.$item["photo"].'" width="20%" class="img-circle">
@@ -272,6 +311,117 @@ class UsuarioTercero{
         }
 
     }
+    public function editarTerceroUsuarioController(){
+
+        $ruta = "";
+
+        if(isset($_POST["EditarNombreTercero"])){
+
+            if(isset($_FILES["editarImagen"]["tmp_name"])){
+
+                $imagen = $_FILES["editarImagen"]["tmp_name"];
+
+                $aleatorio = mt_rand(100, 999);
+
+                $ruta = "views/images/perfiles/perfil".$aleatorio.".jpg";
+
+                $origen = imagecreatefromjpeg($imagen);
+
+                $destino = imagecrop($origen, ["x"=>0, "y"=>0, "width"=>100, "height"=>100]);
+
+                imagejpeg($destino, $ruta);
+
+            }
+
+            if($ruta == ""){
+
+                $ruta = $_POST["editarPhoto"];
+            }
+
+            if($ruta != "" && $_POST["editarPhoto"] != "views/images/photo.jpg"){
+
+                unlink($_POST["editarPhoto"]);
+
+            }
+
+            if(preg_match('/^[a-zA-Z0-9]+$/', $_POST["EditarUsuarioTercero"])&&
+                preg_match('/^[a-zA-Z0-9]+$/', $_POST["EditarPasswordTercero"]) &&
+                preg_match('/^[^0-9][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[@][a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{2,4}$/', $_POST["EditarEmailTercero"])){
+
+                $encriptar = crypt($_POST["EditarPasswordTercero"], '$2a$07$asxx54ahjppf45sd87a5a4dDDGsystemdev$');
+
+                $datosController = array("id"=>$_POST["idTercero"],
+                    "nombre"=>$_POST["EditarNombreTercero"],
+                    "nit"=>$_POST["EditarNitTercero"],
+                    "telUsno"=>$_POST["EditarTelUnoTercero"],
+                    "telDos"=>$_POST["EditarTelDosTercero"],
+                    "fax"=>$_POST["EditarFaxTercero"],
+                    "direccion"=>$_POST["EditarDireccionTercero"],
+                    "email"=>$_POST["EditarEmailTercero"],
+                    "usuario"=>$_POST["EditarUsuarioTercero"],
+                    "password"=>$encriptar,
+                    "rol"=>$_POST["EditarGrupoTercero"],
+                    "contribuyente"=>$_POST["EditarContriTercero"],
+                    "retenedor"=>$_POST["EditarRetenedorTercero"],
+                    "regimen"=>$_POST["EditarRegimenTercero"],
+                    "photo"=>$ruta);
+
+                $respuesta = UsuarioTerceroModel::editarUsuarioTerceroModel($datosController, "ap_terceros");
+
+                if($respuesta == "ok"){
+
+                    if(isset($_POST["actualizarSesion"])){
+
+                        $_SESSION["id"] = $_POST["idTercero"];
+                        $_SESSION["nombre"] = $_POST["EditarNombreTercero"];
+                        $_SESSION["nit"] = $_POST["EditarNitTercero"];
+                        $_SESSION["telUsno"] = $_POST["EditarTelUnoTercero"];
+                        $_SESSION["telDos"] = $_POST["EditarTelDosTercero"];
+                        $_SESSION["fax"] = $_POST["EditarFaxTercero"];
+                        $_SESSION["direccion"] = $_POST["EditarDireccionTercero"];
+                        $_SESSION["email"] = $_POST["EditarEmailTercero"];
+                        $_SESSION["usuario"] = $_POST["EditarUsuarioTercero"];
+                        $_SESSION["password"] = $encriptar;
+                        $_SESSION["rol"] = $_POST["EditarGrupoTercero"];
+                        $_SESSION["contribuyente"] = $_POST["EditarContriTercero"];
+                        $_SESSION["retenedor"] = $_POST["EditarRetenedorTercero"];
+                        $_SESSION["regimen"] = $_POST["EditarRegimenTercero"];
+                        $_SESSION["photo"] = $ruta;
+
+                    }
+
+                    echo'<script>
+
+						swal({
+							  title: "¡OK!",
+							  text: "¡El usuario ha sido editado correctamente!",
+							  type: "success",
+							  confirmButtonText: "Cerrar",
+							  closeOnConfirm: false
+						},
+
+						function(isConfirm){
+								 if (isConfirm) {	   
+								    window.location = "usuarioTercero";
+								  } 
+						});
+
+
+					</script>';
+
+                }
+
+            }
+
+            else{
+
+                echo '<div class="alert alert-warning"><b>¡ERROR!</b> No ingrese caracteres especiales</div>';
+            }
+
+        }
+
+    }
+
     public function selectNombreTercero(){
         $respuesta = TercerosModel::vistaTercero("ap_terceros");
         foreach ($respuesta as $row => $SelectsCiudad){

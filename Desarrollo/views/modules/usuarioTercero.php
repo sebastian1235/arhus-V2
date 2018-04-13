@@ -153,6 +153,7 @@ include "views/modules/header.php";
                     <?php
                     $verTerceros = new UsuarioTercero();
                     $verTerceros -> verUsuarioTerceroController();
+                    $verTerceros -> editarTerceroUsuarioController();
                     ?>
                     </tbody>
                 </table>

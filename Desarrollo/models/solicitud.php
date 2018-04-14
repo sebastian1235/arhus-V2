@@ -88,17 +88,17 @@ class SolicitudModel
 
     public function registroCotizacion($datosModel, $tabla)
     {
-        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla (sol_cot, consecutivo_cot, estrato_cot, fecha_nac_cot, forma_pago_cot, campana_cot, tipo_cliente_cot, fecha_cot,estado_cot)
-    VALUES (:sol_cot, :consecutivo_cot, :estrato_cot, :fecha_nac_cot, :forma_pago_cot, :campana_cot, :tipo_cliente_cot, :fecha_cot,'54')  ");
+       $stmt = Conexion::conectar()->prepare("UPDATE $tabla  SET poliza_sol=:poliza_sol, consecutivo_cot=:consecutivo_cot, estrato_cot= :estrato_cot, fecha_nac_cot=:fecha_nac_cot, forma_pago_cot=:forma_pago_cot, campana_cot=:campana_cot, tipo_cliente_cot=:tipo_cliente_cot, fecha_cot=:fecha_cot where id_sol=:id_sol");
 
-        $stmt->bindParam(":sol_cot", $datosModel["sol_cot"], PDO::PARAM_STR);
+       $stmt->bindParam(":poliza_sol", $datosModel["poliza_sol"], PDO::PARAM_STR);
         $stmt->bindParam(":consecutivo_cot", $datosModel["consecutivo_cot"], PDO::PARAM_STR);
         $stmt->bindParam(":estrato_cot", $datosModel["estrato_cot"], PDO::PARAM_STR);
         $stmt->bindParam(":fecha_nac_cot", $datosModel["fecha_nac_cot"], PDO::PARAM_STR);
-        $stmt->bindParam(":forma_pago_cot", $datosModel["forma_pago_cot"], PDO::PARAM_STR);
-        $stmt->bindParam(":campana_cot", $datosModel["campana_cot"], PDO::PARAM_STR);
+         $stmt->bindParam(":forma_pago_cot", $datosModel["forma_pago_cot"], PDO::PARAM_STR);
+         $stmt->bindParam(":campana_cot", $datosModel["campana_cot"], PDO::PARAM_STR);
         $stmt->bindParam(":tipo_cliente_cot", $datosModel["tipo_cliente_cot"], PDO::PARAM_STR);
         $stmt->bindParam(":fecha_cot", $datosModel["fecha_cot"], PDO::PARAM_STR);
+        $stmt->bindParam(":id_sol", $datosModel["id_sol"], PDO::PARAM_STR);
         
 
         if ($stmt->execute()) {
@@ -214,6 +214,13 @@ public function modificarSolicitud($datosModel, $tabla)
      public function vistaEstado($tabla)
     {
     $stmt = Conexion::conectar()->prepare("SELECT id_estado_preventa, nombre_estado_preventa FROM $tabla WHERE id_estado_preventa='2'");
+        $stmt->execute();
+        return $stmt->fetchAll();
+        $stmt->close();
+    }
+    public function vistaFormaPago($tabla)
+    {
+        $stmt = Conexion::conectar()->prepare("SELECT Id_medio_pago, nombre_medio_pago FROM $tabla ");
         $stmt->execute();
         return $stmt->fetchAll();
         $stmt->close();

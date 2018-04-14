@@ -56,42 +56,7 @@ class solicitud
             }
         }
     }
-    public function registroCotizacionController()
-    {
-        if (isset($_POST["sol_cot"])) {
-            $datosController = array("sol_cot" => $_POST["sol_cot"],
-                "consecutivo_cot" => $_POST["consecutivo_cot"],
-                "estrato_cot" => $_POST["estrato_cot"],
-                "fecha_nac_cot" => $_POST["fecha_nac_cot"],
-                "forma_pago_cot" => $_POST["forma_pago_cot"],
-                "campana_cot" => $_POST["campaña_cot"],
-                "tipo_cliente_cot" => $_POST["tipo_cliente_cot"],
-                "fecha_cot" => $_POST["fecha_cot"]);
-
-            $respuesta = SolicitudModel::registroCotizacion($datosController, "ap_cotizacion");
-
-            if ($respuesta == "ok") {
-                echo '<script>
-
-                       swal({
-                            title: "!Ok",
-                            text: "¡El usuario ha sido creado correctamente!",
-                            type: "success",
-                            confirmButtonText: "Cerrar",
-                            closeOnConfirm: false
-                       },
-                       function(isConfirm) {
-                           if (isConfirm){
-                               window.location = "cotizacion";
-                           }
-                         
-                       }); 
-                </script>';
-
-            }
-        }
-    }
-
+  
 
     public function vistaSolicitudController(){
         $respuesta = SolicitudModel::vistaSolicitud("ap_solicitud");
@@ -128,13 +93,13 @@ class solicitud
                 <h3 class="modal-title">Cotizar '.$item["id_sol"].', TC.'.$item["nombre_tipo_cliente"].', Asesor '.$item["nombre_tercero"].', T.A '.$item["tipo_asignacion"].' </h3>
                  <button href="#modificarSol'.$item["id_sol"].'" data-toggle="modal" class="btn btn-default" >Modificar Datos de contacto</button>
               </div>
-   
                       <form class="form-horizontal" method="POST" id="formularioSolicitud" autocomplete="off">
+                      <input name="id_sol" type="hidden" value="'.$item["id_sol"].'">
                 
                           <div class="form-group">
                                <div class="col-md-4">
-                                   <label>No. de solicitud</label>
-                                   <input type="text" class="form-control" name="sol_cot" required="" id="sol_cot" value="'.$item["id_sol"].'">
+                                   <label>No. de Poliza</label>
+                                   <input type="text" class="form-control" name="poliza_sol" required="" id="poliza_sol" value="'.$item["poliza_sol"].'">
                                </div>
                                <div class="col-md-4">
                                    <label>consecutivo_cot</label>
@@ -155,14 +120,14 @@ class solicitud
                               </div>
                                
                                 <div class="col-md-4">
-                                      <label for="">Forma depago</label>
+                                      <label for="">Forma de pago</label>
                                       <select class="form-control" id="forma_pago_cot" name="forma_pago_cot">
-                                          <option value="0">Asesor</option>
-                                          <?php
+                                          <option value="0">Forma de pago </option>';
+                                          
                                   $seleccionarSector = new solicitud();
-                                  $seleccionarSector -> selectAsesor();
-                                  ?>
-                                      </select>
+                                  $seleccionarSector -> selectFormaPago();
+                                 
+                                      echo'</select>
                                 </div>
                                
                           </div>
@@ -170,24 +135,24 @@ class solicitud
                       
                           <div class="form-group">
                           <div class="col-md-4">
-                                      <label for="">campaña_cot</label>
+                                      <label for="">Campaña</label>
                                       <select class="form-control" id="campaña_cot" name="campaña_cot">
-                                          <option value="0">Asesor</option>
-                                          <?php
+                                          <option value="0">Asesor</option>';
+                                          
                                   $seleccionarSector = new solicitud();
                                   $seleccionarSector -> selectAsesor();
-                                  ?>
-                                      </select>
+                                 
+                                      echo'</select>
                                 </div>
                                <div class="col-md-4">
                                       <label for="">tipo_cliente_cot</label>
                                       <select class="form-control" id="tipo_cliente_cot" name="tipo_cliente_cot">
-                                          <option value="0">Asesor</option>
-                                          <?php
+                                          <option value="0">Asesor</option>';
+                                          
                                   $seleccionarSector = new solicitud();
                                   $seleccionarSector -> selectAsesor();
-                                  ?>
-                                      </select>
+                                 
+                                     echo' </select>
                                 </div>
                               <div class=" col-md-4">
                                   <label>fecha_cot </label>
@@ -407,6 +372,56 @@ class solicitud
 
         }
     }
+    public function ModificarCotizacionController(){
+
+         if (isset($_POST["poliza_sol"])) {
+            $datosController = array("id_sol"=> $_POST["id_sol"],
+                                       "poliza_sol" => $_POST["poliza_sol"],
+                                      "consecutivo_cot" => $_POST["consecutivo_cot"],
+                                      "estrato_cot" => $_POST["estrato_cot"],
+                                      "fecha_nac_cot" => $_POST["fecha_nac_cot"], 
+                                      "forma_pago_cot" => $_POST["forma_pago_cot"],
+                                      "campaña_cot" => $_POST["campaña_cot"],
+                                      "tipo_cliente_cot" => $_POST["tipo_cliente_cot"],
+                                      "fecha_cot" => $_POST["fecha_cot"]);
+
+            $respuesta = SolicitudModel::registroCotizacion($datosController, "ap_solicitud");
+
+            if ($respuesta == "ok") {
+                if(isset($_POST["actualizarSesion"])){
+                    $_SESSION["poliza_sol"] = $_POST["poliza_sol"];
+                    $_SESSION["consecutivo_cot"] = $_POST["consecutivo_cot"];
+                    $_SESSION["estrato_cot"] = $_POST["estrato_cot"];
+                    $_SESSION["fecha_nac_cot"] = $_POST["fecha_nac_cot"];
+                    $_SESSION["forma_pago_cot"] = $_POST["forma_pago_cot"];
+                    $_SESSION["campana_cot"] = $_POST["campana_cot"];
+                    $_SESSION["tipo_cliente_cot"] = $_POST["tipo_cliente_cot"];
+                    $_SESSION["fecha_cot"] = $_POST["fecha_cot"];
+                    $_SESSION["id_sol"] = $_POST["id_sol"];
+               
+
+                }
+
+                echo '<script>
+
+                       swal({
+                            title: "!Ok",
+                            text: "¡Programado correctamente!",
+                            type: "success",
+                            confirmButtonText: "Cerrar",
+                            closeOnConfirm: false
+                       },
+                       function(isConfirm) {
+                           if (isConfirm){
+                               window.location = "TSolicitudes";
+                           }
+                         
+                       }); 
+                </script>';
+
+            }
+        }
+    }
     public function modificarModelController(){
 
         if (isset($_POST["nombre_sol"])) {
@@ -455,6 +470,8 @@ class solicitud
             }
         }
     }
+
+
      public function programarModelController(){
 
         if (isset($_POST["EditarASesor"])) {
@@ -581,6 +598,14 @@ class solicitud
         }
 
     }
+     public function selectFormaPago(){
+        $respuesta = SolicitudModel::vistaFormaPago("siax_medio_pago");
+        foreach ($respuesta as $row => $SelectsCiudad){
+            echo '<option value="'.$SelectsCiudad["Id_medio_pago"].'">'.$SelectsCiudad["nombre_medio_pago"].'</option>';
+        }
+
+    }
+
 
 
     public function vistacotizacionController(){

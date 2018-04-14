@@ -64,7 +64,7 @@ include "views/modules/header.php";
                             <?php
 
                             $verSol = new solicitud();
-                            $verSol -> registroCotizacionController();
+                            $verSol -> ModificarCotizacionController();
                             $verSol -> vistaSolicitudController();
                             $verSol -> programarModelController();
                             $verSol -> eliminarModelController();

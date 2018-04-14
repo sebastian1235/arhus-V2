@@ -13,7 +13,7 @@ class Cotizacion
 
     #Vista Localidades
     public function vistaCotizacionController(){
-        $respuesta = CotizacionModel::vistaCotizacion("ap_cotizacion" ,"ap_solicitud");
+        $respuesta = CotizacionModel::vistaCotizacion("add_cot");
         foreach ($respuesta as $row => $item){
             echo' <tr>   
                     <td>' .$item["sol_cot"].'</td>

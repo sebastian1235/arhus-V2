@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-04-2018 a las 02:30:42
+-- Tiempo de generación: 14-04-2018 a las 20:06:53
 -- Versión del servidor: 10.1.22-MariaDB
 -- Versión de PHP: 7.1.4
 
@@ -21,6 +21,52 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `arhus`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura Stand-in para la vista `add_cot`
+-- (Véase abajo para la vista actual)
+--
+CREATE TABLE `add_cot` (
+`id_sol` int(11)
+,`nombre_loc` varchar(50)
+,`nombre_sec` varchar(50)
+,`nombre_tercero` varchar(80)
+,`tipo_asignacion` varchar(50)
+,`nombre_estado_preventa` varchar(50)
+,`poliza_sol` double
+,`demanda_sol` decimal(18,0)
+,`cedula_sol` double
+,`nombre_sol` varchar(255)
+,`direccion_pol_sol` varchar(255)
+,`direccion_nueva_sol` varchar(255)
+,`telefono1_sol` varchar(50)
+,`telefono2_sol` varchar(50)
+,`celular_sol` varchar(50)
+,`email_sol` varchar(80)
+,`servicio_sol` varchar(100)
+,`obs_sol` varchar(255)
+,`fecha_prevista_sol` datetime
+,`fecha_visita_comerc_sol` datetime
+,`id_cot` int(11)
+,`sol_cot` int(11)
+,`consecutivo_cot` varchar(20)
+,`estrato_cot` int(11)
+,`fecha_nac_cot` date
+,`forma_pago_cot` int(11)
+,`campana_cot` int(11)
+,`nombre_campana` varchar(50)
+,`tipo_cliente_cot` int(11)
+,`fecha_cot` date
+,`v_total_cot` decimal(19,0)
+,`v_contado_cot` decimal(19,0)
+,`estado_cot` int(11)
+,`obs_cot` varchar(250)
+,`pagare_cot` varchar(11)
+,`not_cliente_cot` tinyint(11)
+,`fecha_not_cot` date
+);
 
 -- --------------------------------------------------------
 
@@ -82,7 +128,7 @@ CREATE TABLE `ap_cotizacion` (
   `estrato_cot` int(11) NOT NULL,
   `fecha_nac_cot` date NOT NULL,
   `forma_pago_cot` int(11) NOT NULL,
-  `campaña_cot` int(11) NOT NULL,
+  `campana_cot` int(11) NOT NULL,
   `tipo_cliente_cot` int(11) NOT NULL,
   `fecha_cot` date NOT NULL,
   `v_total_cot` decimal(19,0) NOT NULL,
@@ -93,6 +139,17 @@ CREATE TABLE `ap_cotizacion` (
   `not_cliente_cot` tinyint(11) NOT NULL,
   `fecha_not_cot` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `ap_cotizacion`
+--
+
+INSERT INTO `ap_cotizacion` (`id_cot`, `sol_cot`, `consecutivo_cot`, `estrato_cot`, `fecha_nac_cot`, `forma_pago_cot`, `campana_cot`, `tipo_cliente_cot`, `fecha_cot`, `v_total_cot`, `v_contado_cot`, `estado_cot`, `obs_cot`, `pagare_cot`, `not_cliente_cot`, `fecha_not_cot`) VALUES
+(1, 65, '2', 2, '2018-04-07', 1, 6, 1, '2018-04-11', '0', '0', 2, '', '', 0, '0000-00-00'),
+(2, 64, '4', 1, '2018-04-28', 3, 6, 1, '2018-04-17', '0', '0', 30, '', '', 0, '0000-00-00'),
+(3, 68, '4', 1, '2018-04-07', 4, 6, 1, '2018-04-18', '0', '0', 37, '', '', 0, '0000-00-00'),
+(4, 66, '4', 3, '2018-04-17', 2, 6, 1, '2018-04-10', '0', '0', 30, '', '', 0, '0000-00-00'),
+(5, 0, '231', 1, '2018-04-12', 0, 0, 0, '2018-04-12', '0', '0', 54, '', '', 0, '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -128,42 +185,43 @@ CREATE TABLE `ap_estado_interno` (
   `obs_estado_interno` longtext,
   `envio_boffice_estado_interno` tinyint(1) DEFAULT '0',
   `empresa_estado_interno` int(11) DEFAULT NULL,
-  `id_estado_interno` int(11) NOT NULL
+  `id_estado_interno` int(11) NOT NULL,
+  `id_criterio` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `ap_estado_interno`
 --
 
-INSERT INTO `ap_estado_interno` (`nombre_estado_interno`, `para_factura_estado_interno`, `se_paga_comision_estado_interno`, `porcen_comision_estado_interno`, `se_paga_bono_estado_interno`, `porcen_bono_estado_interno`, `obs_estado_interno`, `envio_boffice_estado_interno`, `empresa_estado_interno`, `id_estado_interno`) VALUES
-(' CIERRE COBRATORIO', 0, 0, '0.00', 0, '0.00', NULL, 0, NULL, 1),
-('ASIGNADO', 0, 0, '0.00', 0, '0.00', NULL, 0, NULL, 2),
-('ATENCION A FIRMAS', 0, 1, '0.00', 0, '0.00', NULL, 0, NULL, 3),
-('AUSENTE', 0, 0, '0.00', 0, '0.00', NULL, 0, NULL, 4),
-('COMUNICADO', 0, 1, '0.00', 0, '0.00', NULL, 0, NULL, 5),
-('CONSTRUIDO', 0, 1, '1.00', 0, '1.00', 'asesores', 0, NULL, 7),
-('COTIZADO', 0, 0, '0.00', 0, '0.00', NULL, 0, NULL, 9),
-('DESISTIDO', 0, 0, '0.00', 0, '0.00', NULL, 0, NULL, 10),
-('DEVUELTO BACK OFFICE', 0, 1, '0.00', 0, '0.00', NULL, 1, NULL, 11),
-('Enviado Back Office', 0, 0, '0.00', 0, '0.00', NULL, 1, NULL, 13),
-('ESTADO CM', 0, 1, '0.00', 0, '0.00', NULL, 0, NULL, 14),
-('ILOCALIZADO', 0, 0, '0.00', 0, '0.00', NULL, 0, NULL, 18),
-('IMPOSIBILIDAD CONSTRUCCION', 0, 0, '0.00', 0, '0.00', NULL, 0, NULL, 19),
-('IMPOSIBILIDAD TECNICA CON COBERTURA', 0, 0, '0.00', 0, '0.50', 'tecnicos', 0, NULL, 21),
-('IMPOSIBILIDAD TECNICA SIN COBERTURA', 0, 0, '0.00', 0, '1.00', NULL, 0, NULL, 22),
-('INNECESARIA', 0, 0, '0.00', 0, '0.00', NULL, 0, NULL, 23),
-('MO PAGO A TECNICO', 1, 0, '0.00', 0, '0.00', 'SE GENERA DEVOLUCION DE PAPELERIA AL TECNICO', 0, NULL, 26),
-('NEGOCIO ANULADO', 0, 0, '0.00', 0, '0.50', 'asesores', 0, NULL, 27),
-('NO EFECTIVO', 0, 0, '0.00', 0, '0.00', NULL, 0, NULL, 28),
-('PENDIENTE COMUNICAR', 0, 0, '0.00', 0, '0.00', NULL, 0, NULL, 30),
-('PENDIENTE POR PAPELERIA OFICINA', 0, 0, '0.00', 0, '0.00', NULL, 0, NULL, 32),
-('PENDIENTE PROGRAMAR', 0, 0, '0.00', 0, '0.00', NULL, 0, NULL, 33),
-('PROGRAMADO', 0, 0, '0.00', 0, '0.00', NULL, 0, NULL, 35),
-('QUIERE MAS ADELANTE', 0, 0, '0.00', 0, '0.00', NULL, 0, NULL, 36),
-('RADICADO EN BACK OFFICE', 0, 1, '0.00', 0, '1.00', 'tecnicos', 0, NULL, 37),
-('RADICADO GIV', 0, 1, '0.00', 0, '0.00', NULL, 0, NULL, 38),
-('RADICADO SERVICONFORT', 0, 1, '0.00', 0, '0.00', NULL, 0, NULL, 39),
-('USUARIO NO DEJA INGRESAR', 0, 0, '0.00', 0, '0.00', NULL, 0, NULL, 40);
+INSERT INTO `ap_estado_interno` (`nombre_estado_interno`, `para_factura_estado_interno`, `se_paga_comision_estado_interno`, `porcen_comision_estado_interno`, `se_paga_bono_estado_interno`, `porcen_bono_estado_interno`, `obs_estado_interno`, `envio_boffice_estado_interno`, `empresa_estado_interno`, `id_estado_interno`, `id_criterio`) VALUES
+(' CIERRE COBRATORIO', 0, 0, '0.00', 0, '0.00', NULL, 0, NULL, 1, 0),
+('ASIGNADO', 0, 0, '0.00', 0, '0.00', NULL, 0, NULL, 2, 0),
+('ATENCION A FIRMAS', 0, 1, '0.00', 0, '0.00', NULL, 0, NULL, 3, 0),
+('AUSENTE', 0, 0, '0.00', 0, '0.00', NULL, 0, NULL, 4, 0),
+('COMUNICADO', 0, 1, '0.00', 0, '0.00', NULL, 0, NULL, 5, 0),
+('CONSTRUIDO', 0, 1, '1.00', 0, '1.00', 'asesores', 0, NULL, 7, 0),
+('COTIZADO', 0, 0, '0.00', 0, '0.00', NULL, 0, NULL, 9, 0),
+('DESISTIDO', 0, 0, '0.00', 0, '0.00', NULL, 0, NULL, 10, 0),
+('DEVUELTO BACK OFFICE', 0, 1, '0.00', 0, '0.00', NULL, 1, NULL, 11, 0),
+('Enviado Back Office', 0, 0, '0.00', 0, '0.00', NULL, 1, NULL, 13, 0),
+('ESTADO CM', 0, 1, '0.00', 0, '0.00', NULL, 0, NULL, 14, 0),
+('ILOCALIZADO', 0, 0, '0.00', 0, '0.00', NULL, 0, NULL, 18, 0),
+('IMPOSIBILIDAD CONSTRUCCION', 0, 0, '0.00', 0, '0.00', NULL, 0, NULL, 19, 0),
+('IMPOSIBILIDAD TECNICA CON COBERTURA', 0, 0, '0.00', 0, '0.50', 'tecnicos', 0, NULL, 21, 0),
+('IMPOSIBILIDAD TECNICA SIN COBERTURA', 0, 0, '0.00', 0, '1.00', NULL, 0, NULL, 22, 0),
+('INNECESARIA', 0, 0, '0.00', 0, '0.00', NULL, 0, NULL, 23, 0),
+('MO PAGO A TECNICO', 1, 0, '0.00', 0, '0.00', 'SE GENERA DEVOLUCION DE PAPELERIA AL TECNICO', 0, NULL, 26, 0),
+('NEGOCIO ANULADO', 0, 0, '0.00', 0, '0.50', 'asesores', 0, NULL, 27, 0),
+('NO EFECTIVO', 0, 0, '0.00', 0, '0.00', NULL, 0, NULL, 28, 0),
+('PENDIENTE COMUNICAR', 0, 0, '0.00', 0, '0.00', NULL, 0, NULL, 30, 0),
+('PENDIENTE POR PAPELERIA OFICINA', 0, 0, '0.00', 0, '0.00', NULL, 0, NULL, 32, 0),
+('PENDIENTE PROGRAMAR', 0, 0, '0.00', 0, '0.00', NULL, 0, NULL, 33, 0),
+('PROGRAMADO', 0, 0, '0.00', 0, '0.00', NULL, 0, NULL, 35, 0),
+('QUIERE MAS ADELANTE', 0, 0, '0.00', 0, '0.00', NULL, 0, NULL, 36, 0),
+('RADICADO EN BACK OFFICE', 0, 1, '0.00', 0, '1.00', 'tecnicos', 0, NULL, 37, 0),
+('RADICADO GIV', 0, 1, '0.00', 0, '0.00', NULL, 0, NULL, 38, 0),
+('RADICADO SERVICONFORT', 0, 1, '0.00', 0, '0.00', NULL, 0, NULL, 39, 0),
+('USUARIO NO DEJA INGRESAR', 0, 0, '0.00', 0, '0.00', NULL, 0, NULL, 40, 0);
 
 -- --------------------------------------------------------
 
@@ -176,44 +234,45 @@ CREATE TABLE `ap_estado_preventa` (
   `nombre_estado_preventa` varchar(50) DEFAULT NULL,
   `activo_estado_preventa` tinyint(1) DEFAULT '0',
   `detalle_estado_preventa` varchar(255) DEFAULT NULL,
-  `empresa_estado_preventa` int(11) DEFAULT NULL
+  `empresa_estado_preventa` int(11) DEFAULT NULL,
+  `id_cri` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `ap_estado_preventa`
 --
 
-INSERT INTO `ap_estado_preventa` (`id_estado_preventa`, `nombre_estado_preventa`, `activo_estado_preventa`, `detalle_estado_preventa`, `empresa_estado_preventa`) VALUES
-(29, 'SERVICIO CONFIRMADO', 0, NULL, NULL),
-(30, 'REPROGRAMAR', 0, NULL, NULL),
-(31, 'SERVICIO CAIDO', 0, NULL, NULL),
-(32, 'IMPOSIBLE CONTACTAR CLIENTE', 0, NULL, NULL),
-(34, 'INNECESARIA', 0, NULL, NULL),
-(35, 'AUSENTE', 0, NULL, NULL),
-(36, 'IMPOSIBILIDAD TECNICA', 0, NULL, NULL),
-(37, 'CLIENTE NO INTERESADO', 0, NULL, NULL),
-(40, 'Material', 0, NULL, NULL),
-(41, 'Ahorro Fondo', 0, NULL, NULL),
-(42, 'Seguros terceros', 0, NULL, NULL),
-(43, 'Nota Debito', 0, NULL, NULL),
-(44, 'Nota Credito', 0, NULL, NULL),
-(45, 'ARL', 0, NULL, NULL),
-(46, 'AFP', 0, NULL, NULL),
-(47, 'Salud', 0, NULL, NULL),
-(48, 'Anticipo', 0, NULL, NULL),
-(49, 'Otro', 0, NULL, NULL),
-(52, 'CLIENTE POR CONFIRMAR', 0, NULL, NULL),
-(54, 'SE DEJA COTIZACION', 0, NULL, NULL),
-(55, 'SIN COBERTURA', 0, NULL, NULL),
-(56, 'ANULADA', 0, NULL, NULL),
-(57, 'TECNICO NO ASISTE', 0, NULL, NULL),
-(66, 'SERVICIO REALIZADO', 0, NULL, NULL),
-(69, 'SERVICIO CAIDO EN CONFIRMACION', 0, NULL, NULL),
-(74, 'Reparaciones', 0, NULL, NULL),
-(75, 'Mantenimientos', 0, NULL, NULL),
-(76, 'Incremento', 0, NULL, NULL),
-(1, 'registrado', 0, NULL, NULL),
-(2, 'PROGRAMADO', 0, NULL, NULL);
+INSERT INTO `ap_estado_preventa` (`id_estado_preventa`, `nombre_estado_preventa`, `activo_estado_preventa`, `detalle_estado_preventa`, `empresa_estado_preventa`, `id_cri`) VALUES
+(29, 'SERVICIO CONFIRMADO', 0, NULL, NULL, 0),
+(30, 'REPROGRAMAR', 0, NULL, NULL, 0),
+(31, 'SERVICIO CAIDO', 0, NULL, NULL, 0),
+(32, 'IMPOSIBLE CONTACTAR CLIENTE', 0, NULL, NULL, 0),
+(34, 'INNECESARIA', 0, NULL, NULL, 0),
+(35, 'AUSENTE', 0, NULL, NULL, 0),
+(36, 'IMPOSIBILIDAD TECNICA', 0, NULL, NULL, 0),
+(37, 'CLIENTE NO INTERESADO', 0, NULL, NULL, 0),
+(40, 'Material', 0, NULL, NULL, 0),
+(41, 'Ahorro Fondo', 0, NULL, NULL, 0),
+(42, 'Seguros terceros', 0, NULL, NULL, 0),
+(43, 'Nota Debito', 0, NULL, NULL, 0),
+(44, 'Nota Credito', 0, NULL, NULL, 0),
+(45, 'ARL', 0, NULL, NULL, 0),
+(46, 'AFP', 0, NULL, NULL, 0),
+(47, 'Salud', 0, NULL, NULL, 0),
+(48, 'Anticipo', 0, NULL, NULL, 0),
+(49, 'Otro', 0, NULL, NULL, 0),
+(52, 'CLIENTE POR CONFIRMAR', 0, NULL, NULL, 0),
+(54, 'SE DEJA COTIZACION', 0, NULL, NULL, 0),
+(55, 'SIN COBERTURA', 0, NULL, NULL, 0),
+(56, 'ANULADA', 0, NULL, NULL, 0),
+(57, 'TECNICO NO ASISTE', 0, NULL, NULL, 0),
+(66, 'SERVICIO REALIZADO', 0, NULL, NULL, 0),
+(69, 'SERVICIO CAIDO EN CONFIRMACION', 0, NULL, NULL, 0),
+(74, 'Reparaciones', 0, NULL, NULL, 0),
+(75, 'Mantenimientos', 0, NULL, NULL, 0),
+(76, 'Incremento', 0, NULL, NULL, 0),
+(1, 'registrado', 0, NULL, NULL, 0),
+(2, 'PROGRAMADO', 0, NULL, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -847,36 +906,45 @@ CREATE TABLE `ap_solicitud` (
   `email_sol` varchar(80) DEFAULT NULL,
   `servicio_sol` varchar(100) NOT NULL,
   `texto_sol` varchar(80) DEFAULT 'Inscripcion CI',
-  `registra_sol` varchar(80) DEFAULT NULL,
-  `unidad_sol` int(11) DEFAULT NULL,
   `fecha_reg_sol` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `obs_sol` varchar(255) DEFAULT NULL,
-  `empresa_sol` int(11) DEFAULT NULL,
   `estado_sol` int(11) DEFAULT NULL,
   `fecha_prevista_sol` datetime DEFAULT NULL,
   `user_preventa_sol` varchar(50) DEFAULT NULL,
-  `quincena_obra_sol` varchar(255) DEFAULT NULL,
-  `fecha_obra_sol` datetime DEFAULT NULL,
-  `nombre_tecnico_sol` varchar(255) DEFAULT NULL,
-  `cod_tecnico_sol` int(11) DEFAULT NULL,
-  `lider_obra_sol` varchar(255) DEFAULT NULL,
   `fecha_visita_comerc_sol` datetime DEFAULT NULL,
   `obs_estado_sol` varchar(255) DEFAULT NULL,
   `tipo_clientegn_sol` int(11) DEFAULT NULL,
   `forma_pagogn_sol` int(11) DEFAULT NULL,
   `localidad_sol` int(11) NOT NULL,
-  `eliminar` int(11) NOT NULL
+  `eliminar` int(11) NOT NULL,
+  `consecutivo_cot` varchar(20) NOT NULL,
+  `estrato_cot` int(11) NOT NULL,
+  `fecha_nac_cot` date NOT NULL,
+  `forma_pago_cot` int(11) NOT NULL,
+  `campana_cot` int(11) NOT NULL,
+  `tipo_cliente_cot` int(11) NOT NULL,
+  `fecha_cot` date NOT NULL,
+  `v_total_cot` decimal(10,0) NOT NULL,
+  `v_contado_cot` decimal(10,0) NOT NULL,
+  `estado_cot` int(11) NOT NULL,
+  `obs_cot` varchar(250) NOT NULL,
+  `pagare_cot` varchar(20) NOT NULL,
+  `not_cliente_cot` tinyint(4) NOT NULL,
+  `fecha_not_cot` date NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Volcado de datos para la tabla `ap_solicitud`
 --
 
-INSERT INTO `ap_solicitud` (`id_sol`, `poliza_sol`, `demanda_sol`, `asesor_sol`, `archivos_sol`, `asignacion_sol`, `comis_gas_sol`, `comis_obra_sol`, `comis_fija_sol`, `cedula_sol`, `nombre_sol`, `direccion_pol_sol`, `direccion_nueva_sol`, `barrio_sol`, `telefono1_sol`, `telefono2_sol`, `celular_sol`, `email_sol`, `servicio_sol`, `texto_sol`, `registra_sol`, `unidad_sol`, `fecha_reg_sol`, `obs_sol`, `empresa_sol`, `estado_sol`, `fecha_prevista_sol`, `user_preventa_sol`, `quincena_obra_sol`, `fecha_obra_sol`, `nombre_tecnico_sol`, `cod_tecnico_sol`, `lider_obra_sol`, `fecha_visita_comerc_sol`, `obs_estado_sol`, `tipo_clientegn_sol`, `forma_pagogn_sol`, `localidad_sol`, `eliminar`) VALUES
-(67, NULL, NULL, 5, NULL, 1, '0.000000', '0.000000', NULL, 12314421, 'JUAN', 'CAsa blanca', 'bosa la nuevaaaaa1212', 127, '12344', '12344', '', 'juan@a', 'instalacion de calentador', 'Inscripcion CI', NULL, NULL, '2018-03-29 00:10:10', '', NULL, 2, '2018-03-28 23:12:00', NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-30 12:00:00', NULL, NULL, NULL, 4, 0),
-(66, NULL, NULL, 5, NULL, 1, '0.000000', '0.000000', NULL, 12, 'PRUEBA4', '2131', 'calle local', 1, '1', '1', '', '1@12', '123CASADAADS', 'Inscripcion CI', NULL, NULL, '2018-03-28 23:12:58', '', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-03-28 01:12:00', NULL, NULL, NULL, 1, 0),
-(65, NULL, NULL, 6, NULL, 2, '0.000000', '0.000000', NULL, 2, 'PRUEBA3', '21', 'calle l', 1, '12', '12', '21', '12@12', '12', 'Inscripcion CI', NULL, NULL, '2018-03-28 23:12:09', '', NULL, 2, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2018-03-28 22:12:00', NULL, NULL, NULL, 1, 0),
-(64, 1, '1', 5, NULL, 3, '0.000000', '0.000000', NULL, 79524654, 'carlos lozano', 'calle 6a #89-47', 'casa tintala', 1, '4493762', '4493762', '3007584458', 'carlos.lozano@gmail.com', 'casa', 'Inscripcion CI', NULL, NULL, '2018-03-28 22:40:35', '', NULL, NULL, '2018-03-29 00:00:00', NULL, NULL, NULL, NULL, NULL, NULL, '2019-03-29 00:00:00', NULL, NULL, NULL, 1, 0);
+INSERT INTO `ap_solicitud` (`id_sol`, `poliza_sol`, `demanda_sol`, `asesor_sol`, `archivos_sol`, `asignacion_sol`, `comis_gas_sol`, `comis_obra_sol`, `comis_fija_sol`, `cedula_sol`, `nombre_sol`, `direccion_pol_sol`, `direccion_nueva_sol`, `barrio_sol`, `telefono1_sol`, `telefono2_sol`, `celular_sol`, `email_sol`, `servicio_sol`, `texto_sol`, `fecha_reg_sol`, `obs_sol`, `estado_sol`, `fecha_prevista_sol`, `user_preventa_sol`, `fecha_visita_comerc_sol`, `obs_estado_sol`, `tipo_clientegn_sol`, `forma_pagogn_sol`, `localidad_sol`, `eliminar`, `consecutivo_cot`, `estrato_cot`, `fecha_nac_cot`, `forma_pago_cot`, `campana_cot`, `tipo_cliente_cot`, `fecha_cot`, `v_total_cot`, `v_contado_cot`, `estado_cot`, `obs_cot`, `pagare_cot`, `not_cliente_cot`, `fecha_not_cot`) VALUES
+(67, NULL, NULL, 7, NULL, 1, '0.000000', '0.000000', NULL, 12314421, 'JUAN', 'CAsa blanca', 'bosa la nuevaaaaa1212', 127, '12344', '12344', '', 'juan@a', 'instalacion de calentador', 'Inscripcion CI', '2018-03-29 00:10:10', '', 2, '2018-03-28 23:12:00', NULL, '2019-03-30 12:00:00', NULL, 10, NULL, 4, 0, '', 0, '0000-00-00', 0, 0, 0, '0000-00-00', '0', '0', 0, '', '', 0, '0000-00-00'),
+(66, NULL, NULL, 11, NULL, 1, '0.000000', '0.000000', NULL, 12, 'carlos', 'calle', 'calle local', 1, '44493762', '1', '3007584458', '1@12', '123CASADAADS', 'Inscripcion CI', '2018-03-28 23:12:58', '', 2, NULL, NULL, '2018-03-28 01:12:00', NULL, 1, NULL, 5, 0, '', 0, '0000-00-00', 0, 0, 0, '0000-00-00', '0', '0', 0, '', '', 0, '0000-00-00'),
+(65, 12, NULL, 8, NULL, 2, '0.000000', '0.000000', NULL, 2, 'PRUEBA3', '21', 'calle l', 1, '12', '12', '21', '12@12', '12', 'Inscripcion CI', '2018-03-28 23:12:09', '', 2, NULL, NULL, '2018-03-28 22:12:00', NULL, NULL, NULL, 1, 0, '12', 31, '2018-04-12', 0, 0, 0, '2018-04-14', '0', '0', 0, '', '', 0, '0000-00-00'),
+(64, 1, '1', 9, NULL, 3, '0.000000', '0.000000', NULL, 79524654, 'carlos lozano', 'calle 6a #89-47', 'casa tintala', 1, '4493762', '4493762', '3007584458', 'carlos.lozano@gmail.com', 'casa', 'Inscripcion CI', '2018-03-28 22:40:35', '', NULL, '2018-03-29 00:00:00', NULL, '2019-03-29 00:00:00', NULL, NULL, NULL, 1, 0, '', 0, '0000-00-00', 0, 0, 0, '0000-00-00', '0', '0', 0, '', '', 0, '0000-00-00'),
+(68, 321, NULL, 10, NULL, 11, '0.000000', '0.000000', NULL, 4324234, 'testingss234234', 'calle 20', 'calle 20', 1, '3424234', '3424234', '423423', 'govar@gmail.com', 'gaz', 'Inscripcion CI', '2018-04-06 01:15:24', 'GG', 2, '2018-04-09 14:11:00', NULL, '2018-04-09 14:11:00', NULL, NULL, NULL, 5, 0, '12', 32, '2018-04-14', 0, 0, 0, '2018-04-13', '0', '0', 0, '', '', 0, '0000-00-00'),
+(69, NULL, '0', NULL, NULL, NULL, '0.000000', '0.000000', NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', 'Inscripcion CI', '2018-04-13 22:21:58', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, '12', 1, '2018-04-27', 0, 0, 0, '2018-04-19', '0', '0', 54, '', '', 0, '0000-00-00'),
+(70, NULL, '0', NULL, NULL, NULL, '0.000000', '0.000000', NULL, NULL, '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', 'Inscripcion CI', '2018-04-13 22:22:31', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, 1, '3', 3, '2018-04-13', 0, 0, 0, '2018-04-13', '0', '0', 54, '', '', 0, '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -887,19 +955,23 @@ INSERT INTO `ap_solicitud` (`id_sol`, `poliza_sol`, `demanda_sol`, `asesor_sol`,
 CREATE TABLE `ap_terceros` (
   `Id_tercero` int(11) NOT NULL,
   `nombre_tercero` varchar(80) DEFAULT NULL,
-  `direccion_tercero` varchar(255) DEFAULT NULL,
+  `nit_tercero` varchar(80) DEFAULT NULL,
   `telefono1_tercero` varchar(50) DEFAULT NULL,
   `telefono2_tercero` varchar(80) DEFAULT NULL,
   `fax_tercero` varchar(50) DEFAULT NULL,
-  `nit_tercero` varchar(80) DEFAULT NULL,
-  `tipo_tercero` int(11) DEFAULT '0',
-  `e_mail_tercero` varchar(255) DEFAULT NULL,
+  `direccion_tercero` varchar(255) DEFAULT NULL,
+  `e_mail_tercero` text,
+  `usuario` varchar(20) DEFAULT NULL,
+  `password` text,
+  `tipo_tercero` int(11) DEFAULT NULL,
+  `gran_contrib_tercero` int(11) DEFAULT NULL,
+  `autoretenedor_tercero` int(11) DEFAULT NULL,
+  `reg_comun_tercero` int(11) DEFAULT '0',
+  `photo` text,
+  `intentos` int(11) DEFAULT NULL,
   `Contacto_tercero` varchar(80) DEFAULT NULL,
-  `gran_contrib_tercero` tinyint(1) DEFAULT NULL,
-  `autoretenedor_tercero` tinyint(1) DEFAULT NULL,
   `activo_tercero` tinyint(1) DEFAULT NULL,
   `tercero_ registrado_por` varchar(50) DEFAULT NULL,
-  `reg_comun_tercero` tinyint(1) DEFAULT '0',
   `responsable_materiales_tercero` tinyint(1) DEFAULT '0',
   `grupo_nomina_tercero` int(11) DEFAULT NULL,
   `tercero_ lider_Obra` int(11) DEFAULT NULL,
@@ -911,13 +983,15 @@ CREATE TABLE `ap_terceros` (
 -- Volcado de datos para la tabla `ap_terceros`
 --
 
-INSERT INTO `ap_terceros` (`Id_tercero`, `nombre_tercero`, `direccion_tercero`, `telefono1_tercero`, `telefono2_tercero`, `fax_tercero`, `nit_tercero`, `tipo_tercero`, `e_mail_tercero`, `Contacto_tercero`, `gran_contrib_tercero`, `autoretenedor_tercero`, `activo_tercero`, `tercero_ registrado_por`, `reg_comun_tercero`, `responsable_materiales_tercero`, `grupo_nomina_tercero`, `tercero_ lider_Obra`, `tercero_nombre_lider`, `empresa_tercero`) VALUES
-(1, 'juan', 'calle 6a#89-47', '123', '123', '123', '123', 0, 'juseloco@gmail.com', 'juseloco@gmail.com', 1, 1, NULL, NULL, 1, 1, 1, NULL, NULL, NULL),
-(2, 'gio', 'calla21213', '1231', '', '', '12456', 0, 'gio@gio', 'sebastian', 0, 0, NULL, NULL, 0, 0, 1, NULL, NULL, NULL),
-(3, 'juan', 'caa', '12', '12', '12', '13', 2, '', 'sad', 1, 1, NULL, NULL, 1, 1, NULL, NULL, NULL, NULL),
-(4, 'carlos', 'calel', '123', '12', '13', '123', 1, 'jacal', 'as', 1, 1, 1, NULL, 1, 1, NULL, NULL, NULL, NULL),
-(5, 'sebastian', '123', '', '', '', '1234', 4, '123', 'juan', 1, 1, 1, NULL, 1, 1, NULL, NULL, NULL, NULL),
-(6, 'carlos', 'calle1', '121', '123', '12', '12321', 4, 'yenny@gmail', 'carlos', 1, 1, 1, NULL, 1, 1, NULL, NULL, NULL, NULL);
+INSERT INTO `ap_terceros` (`Id_tercero`, `nombre_tercero`, `nit_tercero`, `telefono1_tercero`, `telefono2_tercero`, `fax_tercero`, `direccion_tercero`, `e_mail_tercero`, `usuario`, `password`, `tipo_tercero`, `gran_contrib_tercero`, `autoretenedor_tercero`, `reg_comun_tercero`, `photo`, `intentos`, `Contacto_tercero`, `activo_tercero`, `tercero_ registrado_por`, `responsable_materiales_tercero`, `grupo_nomina_tercero`, `tercero_ lider_Obra`, `tercero_nombre_lider`, `empresa_tercero`) VALUES
+(7, 'testing', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL),
+(8, 'Gio Admin', '1016094120', '3203424581', '3133615158', '011111111111', 'calle 02 a', 'govaw22@gmail.com', 'gio', '$2a$07$asxx54ahjppf45sd87a5auhqpCc/iROa9LyLsEYdiDfgjoMxMuEkG', 1, 1, 1, 1, 'views/images/photo.jpg', 0, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL),
+(9, 'gioAsesor', '1016094120', '3203424581', '3133615158', '012154545478', 'calle 20 a # 96 c 52', 'govaw22@gmail.com', 'gioAsesor', '$2a$07$asxx54ahjppf45sd87a5auhqpCc/iROa9LyLsEYdiDfgjoMxMuEkG', 3, 1, 1, 1, 'views/images/photo.jpg', 2, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL),
+(10, 'gioAnalista', '1016094120', '3203424581', '3133615158', '011111111111', 'calle 20 a # 96 c 52', 'govaw22@gmail.com', 'gioAnalista', '$2a$07$asxx54ahjppf45sd87a5auhqpCc/iROa9LyLsEYdiDfgjoMxMuEkG', 2, 1, 1, 1, 'views/images/photo.jpg', NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL),
+(11, 'gioTecnico', '1016094120', '3203424581', '3133615158', '011111111111', 'calle 20 a # 96 c 52', 'govaw22@gmail.com', 'gioTecnico', '$2a$07$asxx54ahjppf45sd87a5auhqpCc/iROa9LyLsEYdiDfgjoMxMuEkG', 4, 1, 1, 1, 'views/images/photo.jpg', NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL),
+(12, 'TestV2', '1016094120', '3203424581', '3133615158', '012154545478', 'calle 20 a # 96 c 52', 'govaw22@gmail.com', 'testv2', '$2a$07$asxx54ahjppf45sd87a5auGgNvJdy01E9BfRy2V0JuYAVOuP.p3p.', 4, 1, 1, 1, 'views/images/photo.jpg', 2, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL),
+(13, 'TestV3', '1016094120', '3203424581', '3133615158', '012154545478', 'calle 20 a # 96 c 52', 'govaw22@gmail.com', 'Testv3', '$2a$07$asxx54ahjppf45sd87a5audjuNLZpiad8K/u8JtTcWtPBNJt2m/DS', 4, 1, 1, 1, 'views/images/photo.jpg', NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL),
+(14, 'TestV4', '1016094120', '3203424581', '3133615158', '012154545478', 'calle 20 a # 96 c 52', 'govaw22@gmail.com', 'giotest1', '$2a$07$asxx54ahjppf45sd87a5auhqpCc/iROa9LyLsEYdiDfgjoMxMuEkG', 4, 1, 1, 1, 'views/images/photo.jpg', 0, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1010,6 +1084,33 @@ INSERT INTO `ap_tipo_tercero` (`id_tipo_tercero`, `nombre_tipo_ter`, `descripcio
 -- --------------------------------------------------------
 
 --
+-- Estructura Stand-in para la vista `cotizacion`
+-- (Véase abajo para la vista actual)
+--
+CREATE TABLE `cotizacion` (
+`sol_cot` int(11)
+,`consecutivo_cot` varchar(20)
+,`estrato_cot` int(11)
+,`asignacion_sol` int(11)
+,`asesor_sol` int(11)
+,`nombre_sol` varchar(255)
+,`servicio_sol` varchar(100)
+);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `criterios`
+--
+
+CREATE TABLE `criterios` (
+  `Id_cri` int(11) NOT NULL,
+  `criterio` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `demanda`
 --
 
@@ -1069,6 +1170,47 @@ INSERT INTO `demanda` (`origen_dem`, `tipo_cliente_dem`, `fecha_llamada`, `cod_d
 ('CONTACT CENTER', 'NUEVO', '0000-00-00', 763410, 0, 'ML_JBAENA', '346CLIENTE NUEVO INTERNA', '', 'POTENCIAL', '', 'DESCONOCIDO', '', 'MARIA ROJAS ', '518711963', 'KR 62 74A 14 1 1', 'BOGOTA', '8127045/3209775822', 3332775, '0000-00-00', 2, 'B4', '0000-00-00', 'ML_JBAENA', '0000-00-00', 'B3', '0000-00-00', 'I00607', 'WILSON TOLEDO SAGANOME', 2, 142, 942, 'EN GESTION CONTACTADA', 3, 'CONSTRUIR INTERNA'),
 ('CONTACT CENTER', 'NUEVO', '0000-00-00', 763418, 0, 'ML_JBAENA', '346CLIENTE NUEVO INTERNA', '', 'POTENCIAL', '', 'DESCONOCIDO', '', 'JENY ARDILA ', '52958582', 'CL 51 13 44 LOC 1 1', 'BOGOTA', '3046570153', 3332909, '0000-00-00', 2, 'B4', '0000-00-00', 'ML_JBAENA', '0000-00-00', 'B3', '0000-00-00', 'I00607', 'WILSON TOLEDO SAGANOME', 2, 155, 955, 'EN GESTION CONTACTADA', 2, 'CONSTRUIR INTERNA'),
 ('CONTACT CENTER', 'NUEVO', '0000-00-00', 763452, 0, 'CT_GVALENZUELA', '346CLIENTE NUEVO INTERNA', '', 'POTENCIAL', '', 'DESCONOCIDO', '', 'CLAUDIA RANGEL PERILLA', '63325356', 'KR 74B 64F 96', 'BOGOTA', '3132637242', 3333011, '0000-00-00', 2, 'B4', '0000-00-00', 'CT_GVALENZUELA', '0000-00-00', 'B3', '0000-00-00', 'I00607', 'WILSON TOLEDO SAGANOME', 5, 138, 938, 'EN GESTION CONTACTADA', 3, 'CONSTRUIR INTERNA');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura Stand-in para la vista `demanda_sin_sol`
+-- (Véase abajo para la vista actual)
+--
+CREATE TABLE `demanda_sin_sol` (
+`origen_dem` varchar(30)
+,`observacion` varchar(101)
+,`fecha_llamada` date
+,`cod_dem` int(11)
+,`poliza_dem` int(11)
+,`usuario_captura` varchar(30)
+,`campana_demanda` varchar(40)
+,`chip_natural` varchar(20)
+,`estado_predio` varchar(20)
+,`tipo_predio` varchar(20)
+,`mecado` varchar(30)
+,`nombre_cliente` varchar(40)
+,`num_doc` varchar(20)
+,`direccion` varchar(30)
+,`municipio` varchar(30)
+,`telefono` varchar(20)
+,`cod_trabajo_original` int(11)
+,`cod_ult_visit` int(11)
+,`res_ult_vis` varchar(10)
+,`fecha_ult_visita` date
+,`usu_asig_primer_trab` varchar(30)
+,`fecha_prim_visit` date
+,`respuesta_pv` varchar(30)
+,`fecha_cap_primera_visita` date
+,`cod_contratista` varchar(20)
+,`nom_cont` varchar(30)
+,`distrito` int(11)
+,`malla` int(11)
+,`sector` int(11)
+,`descr_estado_dem` varchar(30)
+,`estrato` int(11)
+,`clase_dem` varchar(30)
+);
 
 -- --------------------------------------------------------
 
@@ -1266,30 +1408,102 @@ INSERT INTO `siax_sectores` (`cod_sec`, `nombre_sec`, `localidad`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `usuarios`
+-- Estructura Stand-in para la vista `vista_cotizacion`
+-- (Véase abajo para la vista actual)
 --
+CREATE TABLE `vista_cotizacion` (
+`id_cot` int(11)
+,`sol_cot` int(11)
+,`consecutivo_cot` varchar(20)
+,`estrato_cot` int(11)
+,`fecha_nac_cot` date
+,`forma_pago_cot` int(11)
+,`campana_cot` int(11)
+,`nombre_campana` varchar(50)
+,`tipo_cliente_cot` int(11)
+,`fecha_cot` date
+,`v_total_cot` decimal(19,0)
+,`v_contado_cot` decimal(19,0)
+,`estado_cot` int(11)
+,`obs_cot` varchar(250)
+,`pagare_cot` varchar(11)
+,`not_cliente_cot` tinyint(11)
+,`fecha_not_cot` date
+);
 
-CREATE TABLE `usuarios` (
-  `id` int(11) NOT NULL,
-  `usuario` varchar(10) NOT NULL,
-  `password` text NOT NULL,
-  `email` text NOT NULL,
-  `photo` text NOT NULL,
-  `rol` int(11) NOT NULL,
-  `intentos` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-- --------------------------------------------------------
 
 --
--- Volcado de datos para la tabla `usuarios`
+-- Estructura Stand-in para la vista `vista_solicitud`
+-- (Véase abajo para la vista actual)
 --
+CREATE TABLE `vista_solicitud` (
+`id_sol` int(11)
+,`nombre_loc` varchar(50)
+,`nombre_sec` varchar(50)
+,`nombre_tercero` varchar(80)
+,`tipo_asignacion` varchar(50)
+,`nombre_estado_preventa` varchar(50)
+,`poliza_sol` double
+,`demanda_sol` decimal(18,0)
+,`cedula_sol` double
+,`nombre_sol` varchar(255)
+,`direccion_pol_sol` varchar(255)
+,`direccion_nueva_sol` varchar(255)
+,`telefono1_sol` varchar(50)
+,`telefono2_sol` varchar(50)
+,`celular_sol` varchar(50)
+,`email_sol` varchar(80)
+,`servicio_sol` varchar(100)
+,`obs_sol` varchar(255)
+,`fecha_prevista_sol` datetime
+,`fecha_visita_comerc_sol` datetime
+);
 
-INSERT INTO `usuarios` (`id`, `usuario`, `password`, `email`, `photo`, `rol`, `intentos`) VALUES
-(1, 'admin', '$2a$07$asxx54ahjppf45sd87a5aunxs9bkpyGmGE/.vekdjFg83yRec789S', 'admin@admin.com', '', 0, 0),
-(8, 'GioTest', '$2a$07$asxx54ahjppf45sd87a5auhqpCc/iROa9LyLsEYdiDfgjoMxMuEkG', 'govaw22@gmail.com', 'views/images/photo.jpg', 0, 0),
-(9, 'GioTest1', '$2a$07$asxx54ahjppf45sd87a5auhqpCc/iROa9LyLsEYdiDfgjoMxMuEkG', 'govaw22@gmail.com', 'views/images/photo.jpg', 1, 0),
-(10, 'giotest', '$2a$07$asxx54ahjppf45sd87a5auGZEtGHuyZwm.Ur.FJvWLCql3nmsMbXy', 'govaw22@gmail.com', 'views/images/photo.jpg', 0, 0),
-(11, 'giotest1', '$2a$07$asxx54ahjppf45sd87a5auJRR6foEJ7ynpjisKtbiKJbvJsoQ8VPS', 'govaw22@gmail.com', 'views/images/photo.jpg', 0, 0),
-(14, 'sebastian', '$2a$07$asxx54ahjppf45sd87a5auRZBUN2EOSSPEN3SudKypEE0.eTmM3Qu', 'juseloco@gmail.com', 'views/images/photo.jpg', 0, 0);
+-- --------------------------------------------------------
+
+--
+-- Estructura para la vista `add_cot`
+--
+DROP TABLE IF EXISTS `add_cot`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `add_cot`  AS  select `vista_solicitud`.`id_sol` AS `id_sol`,`vista_solicitud`.`nombre_loc` AS `nombre_loc`,`vista_solicitud`.`nombre_sec` AS `nombre_sec`,`vista_solicitud`.`nombre_tercero` AS `nombre_tercero`,`vista_solicitud`.`tipo_asignacion` AS `tipo_asignacion`,`vista_solicitud`.`nombre_estado_preventa` AS `nombre_estado_preventa`,`vista_solicitud`.`poliza_sol` AS `poliza_sol`,`vista_solicitud`.`demanda_sol` AS `demanda_sol`,`vista_solicitud`.`cedula_sol` AS `cedula_sol`,`vista_solicitud`.`nombre_sol` AS `nombre_sol`,`vista_solicitud`.`direccion_pol_sol` AS `direccion_pol_sol`,`vista_solicitud`.`direccion_nueva_sol` AS `direccion_nueva_sol`,`vista_solicitud`.`telefono1_sol` AS `telefono1_sol`,`vista_solicitud`.`telefono2_sol` AS `telefono2_sol`,`vista_solicitud`.`celular_sol` AS `celular_sol`,`vista_solicitud`.`email_sol` AS `email_sol`,`vista_solicitud`.`servicio_sol` AS `servicio_sol`,`vista_solicitud`.`obs_sol` AS `obs_sol`,`vista_solicitud`.`fecha_prevista_sol` AS `fecha_prevista_sol`,`vista_solicitud`.`fecha_visita_comerc_sol` AS `fecha_visita_comerc_sol`,`vista_cotizacion`.`id_cot` AS `id_cot`,`vista_cotizacion`.`sol_cot` AS `sol_cot`,`vista_cotizacion`.`consecutivo_cot` AS `consecutivo_cot`,`vista_cotizacion`.`estrato_cot` AS `estrato_cot`,`vista_cotizacion`.`fecha_nac_cot` AS `fecha_nac_cot`,`vista_cotizacion`.`forma_pago_cot` AS `forma_pago_cot`,`vista_cotizacion`.`campana_cot` AS `campana_cot`,`vista_cotizacion`.`nombre_campana` AS `nombre_campana`,`vista_cotizacion`.`tipo_cliente_cot` AS `tipo_cliente_cot`,`vista_cotizacion`.`fecha_cot` AS `fecha_cot`,`vista_cotizacion`.`v_total_cot` AS `v_total_cot`,`vista_cotizacion`.`v_contado_cot` AS `v_contado_cot`,`vista_cotizacion`.`estado_cot` AS `estado_cot`,`vista_cotizacion`.`obs_cot` AS `obs_cot`,`vista_cotizacion`.`pagare_cot` AS `pagare_cot`,`vista_cotizacion`.`not_cliente_cot` AS `not_cliente_cot`,`vista_cotizacion`.`fecha_not_cot` AS `fecha_not_cot` from (`vista_solicitud` left join `vista_cotizacion` on((`vista_solicitud`.`id_sol` = `vista_cotizacion`.`sol_cot`))) ;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura para la vista `cotizacion`
+--
+DROP TABLE IF EXISTS `cotizacion`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `cotizacion`  AS  select `ap_cotizacion`.`sol_cot` AS `sol_cot`,`ap_cotizacion`.`consecutivo_cot` AS `consecutivo_cot`,`ap_cotizacion`.`estrato_cot` AS `estrato_cot`,`ap_solicitud`.`asignacion_sol` AS `asignacion_sol`,`ap_solicitud`.`asesor_sol` AS `asesor_sol`,`ap_solicitud`.`nombre_sol` AS `nombre_sol`,`ap_solicitud`.`servicio_sol` AS `servicio_sol` from (`ap_cotizacion` join `ap_solicitud`) ;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura para la vista `demanda_sin_sol`
+--
+DROP TABLE IF EXISTS `demanda_sin_sol`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `demanda_sin_sol`  AS  select `demanda`.`origen_dem` AS `origen_dem`,concat('TC ',`demanda`.`tipo_cliente_dem`,'- Uso ',`demanda`.`uso`,'-',`demanda`.`fecha_trab_dem`,'- Estrato ',`demanda`.`estrato`) AS `observacion`,`demanda`.`fecha_llamada` AS `fecha_llamada`,`demanda`.`cod_dem` AS `cod_dem`,`demanda`.`poliza_dem` AS `poliza_dem`,`demanda`.`usuario_captura` AS `usuario_captura`,`demanda`.`campana_demanda` AS `campana_demanda`,`demanda`.`chip_natural` AS `chip_natural`,`demanda`.`estado_predio` AS `estado_predio`,`demanda`.`tipo_predio` AS `tipo_predio`,`demanda`.`mecado` AS `mecado`,`demanda`.`nombre_cliente` AS `nombre_cliente`,`demanda`.`num_doc` AS `num_doc`,`demanda`.`direccion` AS `direccion`,`demanda`.`municipio` AS `municipio`,`demanda`.`telefono` AS `telefono`,`demanda`.`cod_trabajo_original` AS `cod_trabajo_original`,`demanda`.`cod_ult_visit` AS `cod_ult_visit`,`demanda`.`res_ult_vis` AS `res_ult_vis`,`demanda`.`fecha_ult_visita` AS `fecha_ult_visita`,`demanda`.`usu_asig_primer_trab` AS `usu_asig_primer_trab`,`demanda`.`fecha_prim_visit` AS `fecha_prim_visit`,`demanda`.`respuesta_pv` AS `respuesta_pv`,`demanda`.`fecha_cap_primera_visita` AS `fecha_cap_primera_visita`,`demanda`.`cod_contratista` AS `cod_contratista`,`demanda`.`nom_cont` AS `nom_cont`,`demanda`.`distrito` AS `distrito`,`demanda`.`malla` AS `malla`,`demanda`.`sector` AS `sector`,`demanda`.`descr_estado_dem` AS `descr_estado_dem`,`demanda`.`estrato` AS `estrato`,`demanda`.`clase_dem` AS `clase_dem` from (`demanda` left join `ap_solicitud` on((`demanda`.`cod_dem` = `ap_solicitud`.`demanda_sol`))) where isnull(`ap_solicitud`.`demanda_sol`) ;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura para la vista `vista_cotizacion`
+--
+DROP TABLE IF EXISTS `vista_cotizacion`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vista_cotizacion`  AS  select `ap_cotizacion`.`id_cot` AS `id_cot`,`ap_cotizacion`.`sol_cot` AS `sol_cot`,`ap_cotizacion`.`consecutivo_cot` AS `consecutivo_cot`,`ap_cotizacion`.`estrato_cot` AS `estrato_cot`,`ap_cotizacion`.`fecha_nac_cot` AS `fecha_nac_cot`,`ap_cotizacion`.`forma_pago_cot` AS `forma_pago_cot`,`ap_cotizacion`.`campana_cot` AS `campana_cot`,`siax_campana`.`nombre_campana` AS `nombre_campana`,`ap_cotizacion`.`tipo_cliente_cot` AS `tipo_cliente_cot`,`ap_cotizacion`.`fecha_cot` AS `fecha_cot`,`ap_cotizacion`.`v_total_cot` AS `v_total_cot`,`ap_cotizacion`.`v_contado_cot` AS `v_contado_cot`,`ap_cotizacion`.`estado_cot` AS `estado_cot`,`ap_cotizacion`.`obs_cot` AS `obs_cot`,`ap_cotizacion`.`pagare_cot` AS `pagare_cot`,`ap_cotizacion`.`not_cliente_cot` AS `not_cliente_cot`,`ap_cotizacion`.`fecha_not_cot` AS `fecha_not_cot` from (`ap_estado_interno` join (`siax_campana` join (`ap_tipo_cliente` join (`ap_forma_pago` join `ap_cotizacion` on((`ap_forma_pago`.`Id_forma_ap` = `ap_cotizacion`.`forma_pago_cot`))) on((`ap_tipo_cliente`.`id_tipo_cliente` = `ap_cotizacion`.`tipo_cliente_cot`))) on((`siax_campana`.`id_campana` = `ap_cotizacion`.`campana_cot`))) on((`ap_estado_interno`.`id_estado_interno` = `ap_cotizacion`.`estado_cot`))) ;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura para la vista `vista_solicitud`
+--
+DROP TABLE IF EXISTS `vista_solicitud`;
+
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `vista_solicitud`  AS  select `ap_solicitud`.`id_sol` AS `id_sol`,`siax_localidad`.`nombre_loc` AS `nombre_loc`,`siax_sectores`.`nombre_sec` AS `nombre_sec`,`ap_terceros`.`nombre_tercero` AS `nombre_tercero`,`ap_asignacion`.`tipo_asignacion` AS `tipo_asignacion`,`ap_estado_preventa`.`nombre_estado_preventa` AS `nombre_estado_preventa`,`ap_solicitud`.`poliza_sol` AS `poliza_sol`,`ap_solicitud`.`demanda_sol` AS `demanda_sol`,`ap_solicitud`.`cedula_sol` AS `cedula_sol`,`ap_solicitud`.`nombre_sol` AS `nombre_sol`,`ap_solicitud`.`direccion_pol_sol` AS `direccion_pol_sol`,`ap_solicitud`.`direccion_nueva_sol` AS `direccion_nueva_sol`,`ap_solicitud`.`telefono1_sol` AS `telefono1_sol`,`ap_solicitud`.`telefono2_sol` AS `telefono2_sol`,`ap_solicitud`.`celular_sol` AS `celular_sol`,`ap_solicitud`.`email_sol` AS `email_sol`,`ap_solicitud`.`servicio_sol` AS `servicio_sol`,`ap_solicitud`.`obs_sol` AS `obs_sol`,`ap_solicitud`.`fecha_prevista_sol` AS `fecha_prevista_sol`,`ap_solicitud`.`fecha_visita_comerc_sol` AS `fecha_visita_comerc_sol` from (`siax_localidad` join (`siax_sectores` join (`ap_terceros` join (`ap_asignacion` join (`ap_estado_preventa` join `ap_solicitud` on((`ap_estado_preventa`.`id_estado_preventa` = `ap_solicitud`.`estado_sol`))) on((`ap_asignacion`.`id_asignacion` = `ap_solicitud`.`asignacion_sol`))) on((`ap_terceros`.`Id_tercero` = `ap_solicitud`.`asesor_sol`))) on((`siax_sectores`.`cod_sec` = `ap_solicitud`.`barrio_sol`))) on((`siax_localidad`.`id_loc` = `ap_solicitud`.`localidad_sol`))) ;
 
 --
 -- Índices para tablas volcadas
@@ -1412,6 +1626,12 @@ ALTER TABLE `ap_tipo_tercero`
   ADD KEY `id_tipo_tercero` (`id_tipo_tercero`);
 
 --
+-- Indices de la tabla `criterios`
+--
+ALTER TABLE `criterios`
+  ADD PRIMARY KEY (`Id_cri`);
+
+--
 -- Indices de la tabla `siax_campana`
 --
 ALTER TABLE `siax_campana`
@@ -1454,12 +1674,6 @@ ALTER TABLE `siax_sectores`
   ADD KEY `localidad` (`localidad`);
 
 --
--- Indices de la tabla `usuarios`
---
-ALTER TABLE `usuarios`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -1472,7 +1686,7 @@ ALTER TABLE `ap_asignacion`
 -- AUTO_INCREMENT de la tabla `ap_cotizacion`
 --
 ALTER TABLE `ap_cotizacion`
-  MODIFY `id_cot` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_cot` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT de la tabla `ap_detalle_venta`
 --
@@ -1502,17 +1716,22 @@ ALTER TABLE `ap_roles_usuarios`
 -- AUTO_INCREMENT de la tabla `ap_solicitud`
 --
 ALTER TABLE `ap_solicitud`
-  MODIFY `id_sol` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+  MODIFY `id_sol` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=71;
 --
 -- AUTO_INCREMENT de la tabla `ap_terceros`
 --
 ALTER TABLE `ap_terceros`
-  MODIFY `Id_tercero` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `Id_tercero` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT de la tabla `ap_tipo_tercero`
 --
 ALTER TABLE `ap_tipo_tercero`
   MODIFY `id_tipo_tercero` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT de la tabla `criterios`
+--
+ALTER TABLE `criterios`
+  MODIFY `Id_cri` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT de la tabla `siax_campana`
 --
@@ -1543,11 +1762,6 @@ ALTER TABLE `siax_medio_pago`
 --
 ALTER TABLE `siax_sectores`
   MODIFY `cod_sec` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=128;
---
--- AUTO_INCREMENT de la tabla `usuarios`
---
-ALTER TABLE `usuarios`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- Restricciones para tablas volcadas
 --

@@ -11,7 +11,7 @@ require_once "conexion.php";
 class UsuarioTerceroModel{
     //Guadar Perfil
     public function guardarTercerosModel($datosModel, $tabla){
-        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla (nombre_tercero, nit_tercero, telefono1_tercero, telefono2_tercero, fax_tercero, direccion_tercero, e_mail_tercero, usuario, password, tipo_tercero, gran_contrib_tercero, autoretenedor_tercero, reg_comun_tercero, photo) VALUES (:nombre_tercero, :nit_tercero, :telefono1_tercero, :telefono2_tercero, :fax_tercero, :direccion_tercero, :e_mail_tercero, :usuario, :password, :tipo_tercero, :gran_contrib_tercero, :autoretenedor_tercero, :reg_comun_tercero, photo :photo)");
+        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla (nombre_tercero, nit_tercero, telefono1_tercero, telefono2_tercero, fax_tercero, direccion_tercero, e_mail_tercero, usuario, password, tipo_tercero, photo) VALUES (:nombre_tercero, :nit_tercero, :telefono1_tercero, :telefono2_tercero, :fax_tercero, :direccion_tercero, :e_mail_tercero, :usuario, :password, :tipo_tercero, :photo)");
         $stmt -> bindParam(":nombre_tercero",$datosModel["nombre"],PDO::PARAM_STR);
         $stmt -> bindParam(":nit_tercero",$datosModel["nit"],PDO::PARAM_STR);
         $stmt -> bindParam(":telefono1_tercero",$datosModel["telUsno"],PDO::PARAM_STR);
@@ -22,9 +22,6 @@ class UsuarioTerceroModel{
         $stmt -> bindParam(":usuario",$datosModel["usuario"],PDO::PARAM_STR);
         $stmt -> bindParam(":password",$datosModel["password"],PDO::PARAM_STR);
         $stmt -> bindParam(":tipo_tercero",$datosModel["rol"],PDO::PARAM_INT);
-        $stmt -> bindParam(":gran_contrib_tercero",$datosModel["contribuyente"],PDO::PARAM_INT);
-        $stmt -> bindParam(":autoretenedor_tercero",$datosModel["retenedor"],PDO::PARAM_INT);
-        $stmt -> bindParam(":reg_comun_tercero",$datosModel["regimen"],PDO::PARAM_INT);
         $stmt -> bindParam(":photo",$datosModel["photo"],PDO::PARAM_STR);
         if ($stmt->execute()){
             return "ok";
@@ -51,7 +48,7 @@ class UsuarioTerceroModel{
     }
      //Actualizar usuarios terceros
     public function editarUsuarioTerceroModel($datosModel, $tabla){
-        $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET nombre_tercero = :nombre_tercero, nit_tercero = :nit_tercero, telefono1_tercero = :telefono1_tercero, telefono2_tercero = :telefono2_tercero, fax_tercero = :fax_tercero, direccion_tercero = :direccion_tercero, e_mail_tercero = :e_mail_tercero, usuario = :usuario, password = :password, tipo_tercero = :tipo_tercero, gran_contrib_tercero = :gran_contrib_tercero, autoretenedor_tercero = :autoretenedor_tercero, reg_comun_tercero = :reg_comun_tercero, photo = :photo WHERE Id_tercero = :Id_tercero");
+        $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET nombre_tercero = :nombre_tercero, nit_tercero = :nit_tercero, telefono1_tercero = :telefono1_tercero, telefono2_tercero = :telefono2_tercero, fax_tercero = :fax_tercero, direccion_tercero = :direccion_tercero, e_mail_tercero = :e_mail_tercero, usuario = :usuario, password = :password, tipo_tercero = :tipo_tercero WHERE Id_tercero = :Id_tercero");
         $stmt -> bindParam(":nombre_tercero", $datosModel["nombre"], PDO::PARAM_STR);
         $stmt -> bindParam(":nit_tercero", $datosModel["nit"], PDO::PARAM_STR);
         $stmt -> bindParam(":telefono1_tercero", $datosModel["telUsno"], PDO::PARAM_STR);
@@ -62,10 +59,6 @@ class UsuarioTerceroModel{
         $stmt -> bindParam(":usuario", $datosModel["usuario"], PDO::PARAM_STR);
         $stmt -> bindParam(":password", $datosModel["password"], PDO::PARAM_STR);
         $stmt -> bindParam(":tipo_tercero", $datosModel["rol"], PDO::PARAM_INT);
-        $stmt -> bindParam(":gran_contrib_tercero", $datosModel["retenedor"], PDO::PARAM_INT);
-        $stmt -> bindParam(":autoretenedor_tercero", $datosModel["retenedor"], PDO::PARAM_INT);
-        $stmt -> bindParam(":reg_comun_tercero", $datosModel["regimen"], PDO::PARAM_INT);
-        $stmt -> bindParam(":photo", $datosModel["photo"], PDO::PARAM_STR);
         $stmt -> bindParam(":Id_tercero", $datosModel["id"], PDO::PARAM_INT);
 
         if($stmt->execute()){

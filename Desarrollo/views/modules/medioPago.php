@@ -65,6 +65,7 @@ include "views/modules/header.php";
                             <th>Medio pago</th>
                             <th>Activo medio pago</th>
                             <th></th>
+                            <th></th>
                         </tr>
                         </thead>
                         <tbody>

@@ -38,9 +38,6 @@ class UsuarioTercero{
                                         "usuario"=>$_POST["usuarioTercero"],
                                         "password"=>$encriptar,
                                         "rol"=>$_POST["grupoTercero"],
-                                        "contribuyente"=>$_POST["contriTercero"],
-                                        "retenedor"=>$_POST["retenedorTercero"],
-                                        "regimen"=>$_POST["regimenTercero"],
                                         "photo"=>$ruta);
                 $respuesta = UsuarioTerceroModel::guardarTercerosModel($datosController, "ap_terceros");
 
@@ -75,24 +72,6 @@ class UsuarioTercero{
         $respuesta = UsuarioTerceroModel::verTerceroModel("ap_terceros");
         $rol = "";
 
-        $contribuyente = "";
-        if ($item["gran_contrib_tercero"] == 0){
-            $contribuyente = "SI";
-        }else{
-            $contribuyente= "NO";
-        }
-        $autoretenedor = "";
-        if ($item["autoretenedor_tercero"] == 0){
-            $autoretenedor = "SI";
-        }else{
-            $autoretenedor= "NO";
-        }
-        $regimen = "";
-        if ($item["reg_comun_tercero"] == 0){
-            $regimen = "SI";
-        }else{
-            $regimen= "NO";
-        }
 
         foreach ($respuesta as $row => $item) {
             if ($item["tipo_tercero"] == 1) {
@@ -154,30 +133,7 @@ class UsuarioTercero{
                                     <div class="form-group col-md-6">
                                         <label for="direccionTercero">Direccion</label>
                                         <input type="text" class="form-control" id="direccionTercero" value="'.$item["direccion_tercero"].'" name="EditarDireccionTercero">
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="contriTercero">Gran contribuyente</label>
-                                        <select class="form-control" name="EditarContriTercero">
-                                            <option value="1">SI</option>
-                                            <option value="0">NO</option>
-                                        </select>
-                                    </div>
-                
-                                    <div class="form-group col-md-4">
-                                        <label for="retenedorTercero">Auto Retenedor</label>
-                                        <select class="form-control" name="EditarRetenedorTercero">
-                                            <option value="1">SI</option>
-                                            <option value="0">NO</option>
-                                        </select>
-                                    </div>
-                
-                                    <div class="form-group col-md-4">
-                                        <label for="regimenTercero">Regimen comun</label>
-                                        <select class="form-control" name="EditarRegimenTercero">
-                                            <option value="1">SI</option>
-                                            <option value="0">NO</option>
-                                        </select>
-                                    </div>                
+                                    </div>               
                                     <div class="box-header with-border col-md-12">
                                         <h3 class="box-title">Registro de usuario Tercero</h3>
                                     </div>
@@ -203,14 +159,6 @@ class UsuarioTercero{
                                             <option value="4">Tecnico</option>
                                         </select>
                                     </div>
-								       <div class="form-group text-center col-md-12">
-								       		<div style="display:block;">
-										     	<img src="'.$item["photo"].'" width="20%" class="img-circle">
-		       								 	<input type="hidden" value="'.$item["photo"].'" name="editarPhoto">
-									   		</div>	    
-							    		<input type="file" class="btn btn-default" name="editarImagen" style="display:inline-block; margin:10px 0">
-								          <p class="text-center" style="font-size:12px">Tamaño recomendado de la imagen: 100px * 100px, peso máximo 2MB</p>
-								       </div>
 								        <div class="form-group text-center">
 								    		<input type="submit" id="guardarPerfil" value="Actualizar Perfil" class="btn btn-primary">
 								    	</div>
@@ -278,23 +226,9 @@ class UsuarioTercero{
                                     <input type="text" class="form-control" value="'.$rol.'" disabled>
                                 </div>
                                 <div class="form-group col-md-6">
-                                    <label>Gran Contribuyente</label>
-                                    <input type="text" class="form-control" value="'.$contribuyente.'" disabled>
+                                    <label>Contraseña</label>
+                                    <input type="password" class="form-control" value="'.$item["password"].'" disabled>
                                 </div>
-                                <div class="form-group col-md-6">
-                                    <label>Autoretenedor</label>
-                                    <input type="text" class="form-control" value="'.$autoretenedor.'" disabled>
-                                </div>
-                                <div class="form-group col-md-6">
-                                    <label>Regimen Comun</label>
-                                    <input type="text" class="form-control" value="'.$regimen.'" disabled>
-                                </div>
-                                
-                                <div class="form-group col-md-12 text-center">
-                                    <img src="'.$item["photo"].'" width="20%" class="img-circle">
-		       						<input type="hidden" value="'.$item["photo"].'" name="editarPhoto">
-                                </div>
-                                
 								</form>
 
 							<div class="modal-footer" style="border:1px solid #eee">
@@ -361,9 +295,6 @@ class UsuarioTercero{
                     "usuario"=>$_POST["EditarUsuarioTercero"],
                     "password"=>$encriptar,
                     "rol"=>$_POST["EditarGrupoTercero"],
-                    "contribuyente"=>$_POST["EditarContriTercero"],
-                    "retenedor"=>$_POST["EditarRetenedorTercero"],
-                    "regimen"=>$_POST["EditarRegimenTercero"],
                     "photo"=>$ruta);
 
                 $respuesta = UsuarioTerceroModel::editarUsuarioTerceroModel($datosController, "ap_terceros");
@@ -383,9 +314,6 @@ class UsuarioTercero{
                         $_SESSION["usuario"] = $_POST["EditarUsuarioTercero"];
                         $_SESSION["password"] = $encriptar;
                         $_SESSION["rol"] = $_POST["EditarGrupoTercero"];
-                        $_SESSION["contribuyente"] = $_POST["EditarContriTercero"];
-                        $_SESSION["retenedor"] = $_POST["EditarRetenedorTercero"];
-                        $_SESSION["regimen"] = $_POST["EditarRegimenTercero"];
                         $_SESSION["photo"] = $ruta;
 
                     }

@@ -58,31 +58,6 @@ include "views/modules/header.php";
                         <label for="direccionTercero">Direccion</label>
                         <input type="text" class="form-control" id="direccionTercero" name="direccionTercero" placeholder="Ingrese dirección hasta 20 caracteres">
                     </div>
-
-                    <div class="form-group col-md-4">
-                        <label for="contriTercero">Gran contribuyente</label>
-                        <select class="form-control" name="contriTercero">
-                            <option value="1">SI</option>
-                            <option value="0">NO</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group col-md-4">
-                        <label for="retenedorTercero">Auto Retenedor</label>
-                        <select class="form-control" name="retenedorTercero">
-                            <option value="1">SI</option>
-                            <option value="0">NO</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group col-md-4">
-                        <label for="regimenTercero">Regimen comun</label>
-                        <select class="form-control" name="regimenTercero">
-                            <option value="1">SI</option>
-                            <option value="0">NO</option>
-                        </select>
-                    </div>
-
                     <div class="box-header with-border col-md-12">
                         <h3 class="box-title">Registro de usuario Tercero</h3>
                     </div>
@@ -111,12 +86,6 @@ include "views/modules/header.php";
                             <option value="3">Asesor Comercial</option>
                             <option value="4">Tecnico</option>
                         </select>
-                    </div>
-
-
-                    <div class="form-group text-center col-md-12">
-                        <input type="file" id="subirFotoUsuario" style="display:inline-block; margin:10px 0">
-                        <p class="help-block">Tamaño recomendado de la imagen: 100px * 100px, peso máximo 2MB</p>
                     </div>
                 </div>
 

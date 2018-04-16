@@ -61,25 +61,25 @@ class TipoTercero
 
 								<button type="button" class="close" data-dismiss="modal">X</button>
 
-								<h3 class="modal-title">Editar Medio pago</h3>
+								<h3 class="modal-title">Editar Tipo Tercero</h3>
 
 							</div>
 
 							<div class="modal-body" style="border:1px solid #eee">
 							
 								<form style="padding:0px 10px" method="post" enctype="multipart/form-data">
-
-								      <input name="idMedioPago" type="hidden" value="'.$item["id_tipo_tercero"].'">
-								    
-								     <div class="form-group">  
-								      <input name="editarModoPago" type="text" class="form-control" value="'.$item["nombre_tipo_ter"].'" required>
-                                     </div>
+								      <input name="idTipoTercero" type="hidden" value="'.$item["id_tipo_tercero"].'">					    
+                                         <div class="form-group">  
+                                            <input name="editarTipoTercero" type="text" class="form-control" value="'.$item["nombre_tipo_ter"].'" required>
+                                         </div>
+                                         <div class="form-group">  
+                                            <input name="editarDescripcion" type="text" class="form-control" value="'.$item["descripcion_tipo_ter"].'" required>
+                                         </div>
 								      <div class="form-group">
-
 								        <select name="editarActivo" class="form-control" required>
-								            <option value="">Activo medio pago</option>
-								            <option value="0">SI</option>
-								            <option value="1">NO</option>
+								            <option value="">Grupo Tipo tercero</option>
+								            <option value="EMPRESA">EMPRESA</option>
+								            <option value="PERSONA">PERSONA</option>
 								        </select>
 
 								      </div>

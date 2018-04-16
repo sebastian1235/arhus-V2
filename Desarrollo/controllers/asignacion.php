@@ -19,7 +19,7 @@ class asignacion
 
                        swal({
                             title: "!Ok",
-                            text: "¡El usuario ha sido creado correctamente!",
+                            text: "¡creado correctamente!",
                             type: "success",
                             confirmButtonText: "Cerrar",
                             closeOnConfirm: false
@@ -45,7 +45,8 @@ class asignacion
                     <td>' .$item["comision_obra_asignacion"].'</td>
                     <td>' .$item["comision_gasod_asignacion"].'</td>
                     <td>' .$item["comision_fija_asignacion"].'</td>
-                    <td><a href="#registroAsignacion'.$item["id_asignacion"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></a></td>
+                    <td><a href="#registroAsignacion'.$item["id_asignacion"].'" data-toggle="modal"><span class="btn btn-warning glyphicon glyphicon-pencil"></span></a></td>
+                    <td><a href="#eliminarAsignacion'.$item["id_asignacion"].'" data-toggle="modal"><span class="btn btn-danger glyphicon glyphicon glyphicon-remove"></span></a></td>
                   </tr>  
                   <div id="registroAsignacion'.$item["id_asignacion"].'" class="modal fade">
                 <div class="modal-dialog modal-content">
@@ -80,7 +81,38 @@ class asignacion
                 
                 </div>
 
-             </div>';
+             </div>
+                    <div id="eliminarAsignacion'.$item["id_asignacion"].'" class="modal fade">
+			        <div class="modal-dialog modal-content">
+						<div class="modal-header" style="border:1px solid #eee">
+							<button type="button" class="close" data-dismiss="modal">X</button>
+							<h3 class="modal-title">¿Desea eliminar  '.$item["tipo_asignacion"].'?</h3>
+						</div>
+							<div class="modal-body" style="border:1px solid #eee">							
+								<form style="padding:0px 10px" method="post" enctype="multipart/form-data">
+								      <input name="idMedioPago" type="hidden" value="'.$item["Id_medio_pago"].'">    
+								      <div class="form-group">
+								        <select name="eliminarMedioPago" class="form-control" required>
+								            <option value="0">NO</option>
+								            <option value="1">Si</option>
+								        </select>
+								      </div>
+								        <div class="form-group text-center">
+								    		<input type="submit" id="eliminarAsignacion" value="Eliminar" class="btn btn-danger">
+								    	</div>
+								</form>
+							</div>
+							<div class="modal-footer" style="border:1px solid #eee">					
+								<button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+							</div>
+				        
+				       	</div>
+
+			       </div>
+             
+             
+             
+             ';
 
         }
     }
@@ -108,14 +140,14 @@ class asignacion
 
                        swal({
                             title: "!Ok",
-                            text: "¡El usuario ha sido editado correctamente!",
+                            text: "¡editado correctamente!",
                             type: "success",
                             confirmButtonText: "Cerrar",
                             closeOnConfirm: false
                        },
                        function(isConfirm) {
                            if (isConfirm){
-                               window.location = "Tasignacion";
+                               window.location = "tipoAsignacion";
                            }
                          
                        }); 

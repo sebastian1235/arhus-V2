@@ -39,7 +39,6 @@
                         <li ><a href = "registroCiudad" ><i class="glyphicon glyphicon-tag" ></i > Ciudad</a ></li >
                         <li ><a href = "Tcampanas" ><i class="glyphicon glyphicon-tag" ></i > Campañas</a ></li >
                         <li ><a href = "Titems" ><i class="glyphicon glyphicon-tag" ></i > Items</a ></li >
-                        <li ><a href = "tipoInventario" ><i class="glyphicon glyphicon-tag" ></i > Tipo inventario </a ></li >
                         <li ><a href = "tipoTercero" ><i class="glyphicon glyphicon-tag" ></i > Tipo tercero </a ></li >
                         <li ><a href = "medioPago" ><i class="glyphicon glyphicon-tag" ></i > Medio pago </a ></li >
                     </ul >

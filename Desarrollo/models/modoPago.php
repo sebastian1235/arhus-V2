@@ -16,9 +16,8 @@ class MedioPagoModel
     #registro de medio de pago.
     public function registroMedioPago($datosModel, $tabla)
     {
-        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla (nombre_medio_pago, activo_medio_pago) VALUES (:nombre_medio_pago, :activo_medio_pago)");
+        $stmt = Conexion::conectar()->prepare("INSERT INTO $tabla (nombre_medio_pago) VALUES (:nombre_medio_pago)");
         $stmt->bindParam(":nombre_medio_pago", $datosModel["modoPago"], PDO::PARAM_STR);
-        $stmt->bindParam(":activo_medio_pago", $datosModel["activo"], PDO::PARAM_STR);
         if ($stmt->execute()) {
             return "ok";
         } else {
@@ -32,7 +31,7 @@ class MedioPagoModel
     #Vista de medio de pagos
     public function vistaMedioPago($tabla)
     {
-        $stmt = Conexion::conectar()->prepare("SELECT Id_medio_pago, nombre_medio_pago, activo_medio_pago FROM $tabla");
+        $stmt = Conexion::conectar()->prepare("SELECT Id_medio_pago, nombre_medio_pago FROM $tabla");
         $stmt->execute();
         return $stmt->fetchAll();
         $stmt->close();
@@ -40,9 +39,8 @@ class MedioPagoModel
 
     public function actualizarMedioPago($datosModel, $tabla)
     {
-        $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET nombre_medio_pago = :nombre_medio_pago, activo_medio_pago = :activo_medio_pago WHERE Id_medio_pago = :Id_medio_pago");
+        $stmt = Conexion::conectar()->prepare("UPDATE $tabla SET nombre_medio_pago = :nombre_medio_pago WHERE Id_medio_pago = :Id_medio_pago");
         $stmt->bindParam(":nombre_medio_pago", $datosModel["modoPago"], PDO::PARAM_STR);
-        $stmt->bindParam(":activo_medio_pago", $datosModel["activo"], PDO::PARAM_STR);
         $stmt->bindParam(":Id_medio_pago", $datosModel["Id_medio_pago"], PDO::PARAM_STR);
 
         if($stmt->execute()){
@@ -66,6 +64,27 @@ class MedioPagoModel
         $stmt->execute();
         return $stmt->fetch();
         $stmt->close();
+    }
+    //Eliminar medo de pago
+    public function eliminarModoPago($datosModel, $tabla)
+    {
+        $stmt = Conexion::conectar()->prepare("UPDATE $tabla  SET activo = :activo where Id_medio_pago = :Id_medio_pago");
+        $stmt->bindParam(":eliminar", $datosModel["activo"], PDO::PARAM_INT);
+        $stmt->bindParam(":id_sol", $datosModel["id_sol"], PDO::PARAM_STR);
+
+        if($stmt->execute()){
+
+            return "ok";
+        }
+
+        else{
+
+            return "error";
+        }
+
+        $stmt->close();
+
+
     }
 
 

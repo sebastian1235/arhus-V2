@@ -32,6 +32,7 @@ include "views/modules/header.php";
                               <th>Comisión gasodomestico</th>
                               <th>Comisión fija</th>
                               <th></th>
+                              <th></th>
                           </tr>
                           </thead>
                           <tbody>

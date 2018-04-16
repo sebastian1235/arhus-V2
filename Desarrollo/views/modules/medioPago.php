@@ -25,19 +25,10 @@ include "views/modules/header.php";
                             <div class="box-header with-border">
                                 <h3 class="box-title">Modo de pago</h3>
                             </div>
-
                             <div class="box-body">
                                 <div class="form-group">
                                     <label for="medioPagoRegistro">Medio Pago<span></span></label>
                                     <input type="text" class="form-control" id="modoPago" name="modoPago" placeholder="Ingrese Modo de pago" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <select class="form-control" name="activo" required>
-                                        <option value="">Activo medio de pago</option>
-                                        <option value="0">SI</option>
-                                        <option value="1">No</option>
-                                    </select>
                                 </div>
                             </div>
 
@@ -63,7 +54,6 @@ include "views/modules/header.php";
                         <thead>
                         <tr>
                             <th>Medio pago</th>
-                            <th>Activo medio pago</th>
                             <th></th>
                             <th></th>
                         </tr>
@@ -73,6 +63,7 @@ include "views/modules/header.php";
                         $verMedioPago = new medioPago();
                         $verMedioPago -> vistaMedioPagoController();
                         $verMedioPago -> editarModelController();
+                        $verMedioPago -> EliminarModelController();
                         ?>
 
                         </tbody>

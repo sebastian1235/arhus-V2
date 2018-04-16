@@ -2,16 +2,19 @@
 <project version="4">
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/Desarrollo/views/css/style.css" line="0" />
-    <bookmark url="file://$PROJECT_DIR$/Desarrollo/controllers/modoPago.php" line="94" />
+    <bookmark url="file://$PROJECT_DIR$/Desarrollo/controllers/modoPago.php" line="77" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e71b5988-19e2-4ede-adcb-7a772a6c7e3a" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/61e577d3-586e-45b8-aea1-f2b8f40f40d7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/61e577d3-586e-45b8-aea1-f2b8f40f40d7.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desarrollo/controllers/asignacion.php" beforeDir="false" afterPath="$PROJECT_DIR$/Desarrollo/controllers/asignacion.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Desarrollo/controllers/modoPago.php" beforeDir="false" afterPath="$PROJECT_DIR$/Desarrollo/controllers/modoPago.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desarrollo/controllers/usuarioTercero.php" beforeDir="false" afterPath="$PROJECT_DIR$/Desarrollo/controllers/usuarioTercero.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desarrollo/models/usuarioTercero.php" beforeDir="false" afterPath="$PROJECT_DIR$/Desarrollo/models/usuarioTercero.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desarrollo/controllers/tipoTercero.php" beforeDir="false" afterPath="$PROJECT_DIR$/Desarrollo/controllers/tipoTercero.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desarrollo/models/modoPago.php" beforeDir="false" afterPath="$PROJECT_DIR$/Desarrollo/models/modoPago.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Desarrollo/views/modules/medioPago.php" beforeDir="false" afterPath="$PROJECT_DIR$/Desarrollo/views/modules/medioPago.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Desarrollo/views/modules/usuarioTercero.php" beforeDir="false" afterPath="$PROJECT_DIR$/Desarrollo/views/modules/usuarioTercero.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desarrollo/views/modules/navegacion.php" beforeDir="false" afterPath="$PROJECT_DIR$/Desarrollo/views/modules/navegacion.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Desarrollo/views/modules/tipoAsignacion.php" beforeDir="false" afterPath="$PROJECT_DIR$/Desarrollo/views/modules/tipoAsignacion.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -36,67 +39,11 @@
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
         <item name="arhus@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="arhus@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="arhus@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="arhus: schema" type="c314c289:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="arhus@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="arhus: schema" type="c314c289:MysqlImplModel$Schema" />
-        <item name="ap_terceros: table" type="98d5ac3d:MysqlImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="usuarioTercero.php" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/usuarioTercero.php">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="360">
-                    <caret line="88" column="26" selection-start-line="88" selection-start-column="26" selection-end-line="88" selection-end-column="26" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="usuarioTercero.php" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/Desarrollo/models/usuarioTercero.php">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="180">
-                    <caret line="50" column="380" selection-start-line="50" selection-start-column="380" selection-end-line="50" selection-end-column="380" />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="usuarioTercero.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Desarrollo/controllers/usuarioTercero.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-696">
-              <caret line="315" column="72" selection-start-line="315" selection-start-column="72" selection-end-line="315" selection-end-column="72" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -152,8 +99,6 @@
         <option value="$PROJECT_DIR$/Desarrollo/models/selects.php" />
         <option value="$PROJECT_DIR$/Desarrollo/models/asignacion.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/Tasignacion.php" />
-        <option value="$PROJECT_DIR$/Desarrollo/views/modules/tipoAsignacion.php" />
-        <option value="$PROJECT_DIR$/Desarrollo/controllers/asignacion.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/registro_asignacion.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/subirArchivo.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/procesar.php" />
@@ -161,11 +106,9 @@
         <option value="$PROJECT_DIR$/Desarrollo/controllers/ciudades.php" />
         <option value="$PROJECT_DIR$/Desarrollo/models/ciudades.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/template.php" />
-        <option value="$PROJECT_DIR$/Desarrollo/models/modoPago.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/ajax.php" />
         <option value="$PROJECT_DIR$/Desarrollo/models/solicitud.php" />
         <option value="$PROJECT_DIR$/Desarrollo/controllers/solicitud.php" />
-        <option value="$PROJECT_DIR$/Desarrollo/controllers/tipoTercero.php" />
         <option value="$PROJECT_DIR$/Desarrollo/models/tipoTercero.php" />
         <option value="$PROJECT_DIR$/phpmaker/ewcfg13.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/registroCiudad.php" />
@@ -183,12 +126,16 @@
         <option value="$PROJECT_DIR$/Desarrollo/views/ajax/ajax.php" />
         <option value="$PROJECT_DIR$/Desarrollo/index.php" />
         <option value="$PROJECT_DIR$/Desarrollo/models/enlaces.php" />
-        <option value="$PROJECT_DIR$/Desarrollo/views/modules/navegacion.php" />
-        <option value="$PROJECT_DIR$/Desarrollo/views/modules/medioPago.php" />
-        <option value="$PROJECT_DIR$/Desarrollo/controllers/modoPago.php" />
         <option value="$PROJECT_DIR$/Desarrollo/views/modules/usuarioTercero.php" />
         <option value="$PROJECT_DIR$/Desarrollo/models/usuarioTercero.php" />
         <option value="$PROJECT_DIR$/Desarrollo/controllers/usuarioTercero.php" />
+        <option value="$PROJECT_DIR$/Desarrollo/views/modules/medioPago.php" />
+        <option value="$PROJECT_DIR$/Desarrollo/controllers/modoPago.php" />
+        <option value="$PROJECT_DIR$/Desarrollo/models/modoPago.php" />
+        <option value="$PROJECT_DIR$/Desarrollo/controllers/tipoTercero.php" />
+        <option value="$PROJECT_DIR$/Desarrollo/views/modules/navegacion.php" />
+        <option value="$PROJECT_DIR$/Desarrollo/views/modules/tipoAsignacion.php" />
+        <option value="$PROJECT_DIR$/Desarrollo/controllers/asignacion.php" />
       </list>
     </option>
   </component>
@@ -232,7 +179,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -281,6 +227,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -402,21 +349,27 @@
       <workItem from="1523722663052" duration="2919000" />
       <workItem from="1523749658279" duration="1306000" />
       <workItem from="1523751099262" duration="2730000" />
+      <workItem from="1523822217047" duration="598000" />
+      <workItem from="1523832383084" duration="1206000" />
+      <workItem from="1523880144163" duration="898000" />
+      <workItem from="1523881056992" duration="1748000" />
+      <workItem from="1523882957109" duration="430000" />
+      <workItem from="1523883955841" duration="30000" />
+      <workItem from="1523908241508" duration="1148000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="341979000" />
+    <option name="totallyTimeSpent" value="348037000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21048632" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2325228" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.1793313" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.1793313" />
       <window_info anchor="bottom" id="Database Changes" order="11" weight="0.32838285" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -436,18 +389,18 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.18920973" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32894737" />
       <window_info anchor="right" id="Database" order="3" visible="true" weight="0.1793313" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -471,6 +424,20 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Desarrollo/controllers/usuarioTercero.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6200">
+          <caret line="315" column="72" selection-start-line="315" selection-start-column="72" selection-end-line="315" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Desarrollo/controllers/usuarioTercero.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6300">
+          <caret line="315" column="72" selection-start-line="315" selection-start-column="72" selection-end-line="315" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/usuarioTercero.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3100">
@@ -504,16 +471,16 @@
         <state relative-caret-position="3680">
           <caret line="184" column="28" selection-start-line="184" selection-start-column="28" selection-end-line="184" selection-end-column="28" />
           <folding>
-            <marker date="1523725326628" expanded="true" signature="515:1110" ph="..." />
-            <marker date="1523725326628" expanded="true" signature="546:851" ph="{&quot;title&quot;: &quot;!Ok&quot;...}" />
-            <marker date="1523725326628" expanded="true" signature="896:1082" ph="{...}" />
-            <marker date="1523725326628" expanded="true" signature="939:1031" ph="{...}" />
-            <marker date="1523725326628" expanded="true" signature="1531:2009" ph="..." />
-            <marker date="1523725326628" expanded="false" signature="2112:3595" ph="..." />
-            <marker date="1523725326628" expanded="true" signature="5711:6301" ph="..." />
-            <marker date="1523725326628" expanded="true" signature="5742:6042" ph="{&quot;title&quot;: &quot;!Ok&quot;...}" />
-            <marker date="1523725326628" expanded="true" signature="6087:6273" ph="{...}" />
-            <marker date="1523725326628" expanded="true" signature="6130:6222" ph="{...}" />
+            <marker date="1523881571366" expanded="true" signature="486:1081" ph="..." />
+            <marker date="1523881571366" expanded="true" signature="517:822" ph="{&quot;title&quot;: &quot;!Ok&quot;...}" />
+            <marker date="1523881571366" expanded="true" signature="867:1053" ph="{...}" />
+            <marker date="1523881571366" expanded="true" signature="910:1002" ph="{...}" />
+            <marker date="1523881571366" expanded="true" signature="1355:1790" ph="..." />
+            <marker date="1523881571366" expanded="true" signature="1893:3057" ph="..." />
+            <marker date="1523881571366" expanded="true" signature="5034:5624" ph="..." />
+            <marker date="1523881571366" expanded="true" signature="5065:5365" ph="{&quot;title&quot;: &quot;!Ok&quot;...}" />
+            <marker date="1523881571366" expanded="true" signature="5410:5596" ph="{...}" />
+            <marker date="1523881571366" expanded="true" signature="5453:5545" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -597,20 +564,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
           <caret line="121" column="69" lean-forward="true" selection-start-line="121" selection-start-column="69" selection-end-line="121" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Desarrollo/models/tipoTercero.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="68" column="1" selection-start-line="68" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/tipoTercero.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="25" column="107" selection-start-line="25" selection-start-column="92" selection-end-line="25" selection-end-column="107" />
         </state>
       </provider>
     </entry>
@@ -699,20 +652,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Desarrollo/controllers/tipoTercero.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="806">
-          <caret line="140" selection-start-line="140" selection-end-line="140" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/navegacion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="54" column="49" lean-forward="true" selection-start-line="54" selection-start-column="49" selection-end-line="54" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/tipoInventario.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1336" />
@@ -725,39 +664,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Desarrollo/controllers/modoPago.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="184" column="28" selection-start-line="184" selection-start-column="28" selection-end-line="184" selection-end-column="28" />
-          <folding>
-            <marker date="1523725326628" expanded="true" signature="515:1110" ph="..." />
-            <marker date="1523725326628" expanded="true" signature="546:851" ph="{&quot;title&quot;: &quot;!Ok&quot;...}" />
-            <marker date="1523725326628" expanded="true" signature="896:1082" ph="{...}" />
-            <marker date="1523725326628" expanded="true" signature="939:1031" ph="{...}" />
-            <marker date="1523725326628" expanded="true" signature="1531:2009" ph="..." />
-            <marker date="1523725326628" expanded="false" signature="2112:3595" ph="..." />
-            <marker date="1523725326628" expanded="true" signature="5711:6301" ph="..." />
-            <marker date="1523725326628" expanded="true" signature="5742:6042" ph="{&quot;title&quot;: &quot;!Ok&quot;...}" />
-            <marker date="1523725326628" expanded="true" signature="6087:6273" ph="{...}" />
-            <marker date="1523725326628" expanded="true" signature="6130:6222" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Desarrollo/controllers/solicitud.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="256" column="55" selection-start-line="256" selection-start-column="55" selection-end-line="256" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/medioPago.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="68" column="29" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/TSolicitudes.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="20">
@@ -765,17 +671,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Desarrollo/models/solicitud.php">
+    <entry file="file://$PROJECT_DIR$/Desarrollo/controllers/usuarioTercero.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="105" column="16" selection-start-line="105" selection-start-column="16" selection-end-line="105" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/usuarioTercero.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="88" column="26" selection-start-line="88" selection-start-column="26" selection-end-line="88" selection-end-column="26" />
+        <state relative-caret-position="518">
+          <caret line="274" column="74" selection-start-line="274" selection-start-column="74" selection-end-line="274" selection-end-column="74" />
         </state>
       </provider>
     </entry>
@@ -786,10 +685,99 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Desarrollo/controllers/usuarioTercero.php">
+    <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/usuarioTercero.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-696">
-          <caret line="315" column="72" selection-start-line="315" selection-start-column="72" selection-end-line="315" selection-end-column="72" />
+        <state relative-caret-position="563">
+          <caret line="88" column="26" selection-start-line="88" selection-start-column="26" selection-end-line="88" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Desarrollo/models/solicitud.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3720">
+          <caret line="191" column="9" lean-forward="true" selection-start-line="191" selection-start-column="9" selection-end-line="191" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/medioPago.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="65" column="64" selection-start-line="65" selection-start-column="64" selection-end-line="65" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Desarrollo/models/modoPago.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="71" column="75" selection-start-line="71" selection-start-column="75" selection-end-line="71" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Desarrollo/controllers/solicitud.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5180">
+          <caret line="259" column="83" selection-start-line="259" selection-start-column="83" selection-end-line="259" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/tipoTercero.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="25" column="107" selection-start-line="25" selection-start-column="92" selection-end-line="25" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/navegacion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="40" column="107" selection-start-line="40" selection-start-column="107" selection-end-line="40" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Desarrollo/controllers/tipoTercero.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="75" column="44" selection-start-line="75" selection-start-column="44" selection-end-line="75" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Desarrollo/models/tipoTercero.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="68" column="1" selection-start-line="68" selection-start-column="1" selection-end-line="68" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Desarrollo/views/modules/tipoAsignacion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="46" column="20" lean-forward="true" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Desarrollo/controllers/asignacion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="47" column="155" selection-start-line="47" selection-start-column="155" selection-end-line="47" selection-end-column="155" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Desarrollo/controllers/modoPago.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="518">
+          <caret line="53" selection-start-line="53" selection-end-line="53" />
+          <folding>
+            <marker date="1523881571366" expanded="true" signature="486:1081" ph="..." />
+            <marker date="1523881571366" expanded="true" signature="517:822" ph="{&quot;title&quot;: &quot;!Ok&quot;...}" />
+            <marker date="1523881571366" expanded="true" signature="867:1053" ph="{...}" />
+            <marker date="1523881571366" expanded="true" signature="910:1002" ph="{...}" />
+            <marker date="1523881571366" expanded="true" signature="1355:1790" ph="..." />
+            <marker date="1523881571366" expanded="true" signature="1893:3057" ph="..." />
+            <marker date="1523881571366" expanded="true" signature="5034:5624" ph="..." />
+            <marker date="1523881571366" expanded="true" signature="5065:5365" ph="{&quot;title&quot;: &quot;!Ok&quot;...}" />
+            <marker date="1523881571366" expanded="true" signature="5410:5596" ph="{...}" />
+            <marker date="1523881571366" expanded="true" signature="5453:5545" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>

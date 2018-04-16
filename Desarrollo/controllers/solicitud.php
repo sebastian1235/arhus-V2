@@ -137,20 +137,20 @@ class solicitud
                           <div class="col-md-4">
                                       <label for="">Campaña</label>
                                       <select class="form-control" id="campaña_cot" name="campaña_cot">
-                                          <option value="0">Asesor</option>';
+                                          <option value="0">Campaña</option>';
                                           
                                   $seleccionarSector = new solicitud();
-                                  $seleccionarSector -> selectAsesor();
+                                  $seleccionarSector -> selectCampana();
                                  
                                       echo'</select>
                                 </div>
                                <div class="col-md-4">
-                                      <label for="">tipo_cliente_cot</label>
+                                      <label for="">Tipo cliente</label>
                                       <select class="form-control" id="tipo_cliente_cot" name="tipo_cliente_cot">
-                                          <option value="0">Asesor</option>';
+                                          <option value="0">Tipo cliente</option>';
                                           
                                   $seleccionarSector = new solicitud();
-                                  $seleccionarSector -> selectAsesor();
+                                  $seleccionarSector -> selectTipoCliente();
                                  
                                      echo' </select>
                                 </div>
@@ -372,6 +372,28 @@ class solicitud
 
         }
     }
+
+
+
+    #termina modal=====================================================================================================================
+
+     
+
+    #Vista de Medio de Pago
+    public function vistaCiudadController(){
+        $respuesta = CiudadModel::vistaCiudad("siax_ciudad");
+        foreach ($respuesta as $row => $item){
+            echo' <tr>   
+                    <td>' .$item["nombre_ciu"].'</td>
+                    <td><a href="#registroCiudad'.$item["id_ciu"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></a></td>
+                  </tr> '
+            ;
+
+        }
+    }
+
+
+
     public function ModificarCotizacionController(){
 
          if (isset($_POST["poliza_sol"])) {
@@ -413,7 +435,7 @@ class solicitud
                        },
                        function(isConfirm) {
                            if (isConfirm){
-                               window.location = "TSolicitudes";
+                               window.location = "cotizacion";
                            }
                          
                        }); 
@@ -602,6 +624,21 @@ class solicitud
         $respuesta = SolicitudModel::vistaFormaPago("siax_medio_pago");
         foreach ($respuesta as $row => $SelectsCiudad){
             echo '<option value="'.$SelectsCiudad["Id_medio_pago"].'">'.$SelectsCiudad["nombre_medio_pago"].'</option>';
+        }
+
+    }
+     public function selectCampana(){
+        $respuesta = SolicitudModel::vistaCampana("siax_campana");
+        foreach ($respuesta as $row => $SelectsCiudad){
+            echo '<option value="'.$SelectsCiudad["id_campana"].'">'.$SelectsCiudad["nombre_campana"].'</option>';
+        }
+
+    }
+
+    public function selectTipoCliente(){
+        $respuesta = SolicitudModel::vistaTipoCliente("ap_tipo_cliente");
+        foreach ($respuesta as $row => $SelectsCiudad){
+            echo '<option value="'.$SelectsCiudad["id_tipo_cliente"].'">'.$SelectsCiudad["nombre_tipo_cliente"].'</option>';
         }
 
     }

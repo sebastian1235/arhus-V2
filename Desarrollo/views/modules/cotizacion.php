@@ -37,14 +37,25 @@ include "views/modules/header.php";
                         <table id="tablas" class="table table-striped">
                             <thead>
                             <tr>
-                              <th>solicitud</th>
-                              <th>Consecutivo</th>
-                                <th>Estrato</th>
+                              <th>Programar</th>
+                              <th>Modificar</th>
+                                <th>Eliminar</th>
+                                <th>cotizar</th>
+                                <th>Id</th>
                                 <th>Asignacion</th>
-                                <th>Asesor</th>
-                                <th>Nombre</th>
+                                <th>asesor</th>
+                                <th>Nombre de solicitud</th>
                                 <th>Servicio</th>
-           
+                                <th>Estado</th>
+                                <th>Fecha prevista</th>
+                                <th>Fecha visita</th>
+                                <th>Barrio</th>
+                                <th>Localidad</th>
+                                <th>cedula</th>
+                                <th>Direccion</th>
+                                <th>Telefonos</th>
+                                <th>Observacion</th>
+
                                 
 
                             </tr>
@@ -52,9 +63,12 @@ include "views/modules/header.php";
                             <tbody>
                             <?php
 
-                            $verSol = new Cotizacion();
+                            $verSol = new solicitud();
+                            $verSol -> ModificarCotizacionController();
                             $verSol -> vistaCotizacionController();
-                       
+                            $verSol -> programarModelController();
+                            $verSol -> eliminarModelController();
+                            $verSol ->modificarModelController();
 
 
 

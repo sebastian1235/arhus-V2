@@ -225,4 +225,18 @@ public function modificarSolicitud($datosModel, $tabla)
         return $stmt->fetchAll();
         $stmt->close();
     }
+    public function vistaCampana($tabla)
+    {
+        $stmt = Conexion::conectar()->prepare("SELECT id_campana, nombre_campana FROM $tabla ");
+        $stmt->execute();
+        return $stmt->fetchAll();
+        $stmt->close();
+    }
+     public function vistaTipoCliente($tabla)
+    {
+        $stmt = Conexion::conectar()->prepare("SELECT id_tipo_cliente, nombre_tipo_cliente FROM $tabla ");
+        $stmt->execute();
+        return $stmt->fetchAll();
+        $stmt->close();
+    }
 }

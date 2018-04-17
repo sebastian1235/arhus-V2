@@ -20,42 +20,31 @@ include "views/modules/header.php";
     <div class="row">
 
 
-        <div class="form-group">
-            <div class="col-md-2">
-                <a href="FregistroSol" class="btn btn-warning">Nuevo Registro</a>
-            </div>
-            <div class="col-md-2">
-                <a href="subirArchivo" class="btn btn-warning">Subir demanda</a>
-            </div>
-        </div>
-        <br>
-        <br>
-        <div class="row">
+        
+             <div class="col-md-12">
+              <h1 class="text-yellow">Cotizaciones</h1>
+          </div>
+
             <div class="col-md-12">
                 <div class="box">
+
                     <div class="box-body table-responsive">
                         <table id="tablas" class="table table-striped">
                             <thead>
                             <tr>
-                              <th>Programar</th>
-                              <th>Modificar</th>
-                                <th>Eliminar</th>
-                                <th>cotizar</th>
-                                <th>Id</th>
-                                <th>Asignacion</th>
-                                <th>asesor</th>
-                                <th>Nombre de solicitud</th>
-                                <th>Servicio</th>
+                            
+                           
+                                <th>Id solicitud</th>
+                                <th>Poliza</th>
+                                 <th>Nombre</th>
+                                <th>Consecutivo</th>
+                                <th>Forma de pago</th>
                                 <th>Estado</th>
-                                <th>Fecha prevista</th>
-                                <th>Fecha visita</th>
-                                <th>Barrio</th>
-                                <th>Localidad</th>
-                                <th>cedula</th>
-                                <th>Direccion</th>
-                                <th>Telefonos</th>
-                                <th>Observacion</th>
-
+                                <th>Campaña</th>
+                                <th>Detalle</th>
+                                <th>valor contado</th>
+                                <th>valor Total</th>
+                            
                                 
 
                             </tr>
@@ -64,11 +53,8 @@ include "views/modules/header.php";
                             <?php
 
                             $verSol = new solicitud();
-                            $verSol -> ModificarCotizacionController();
                             $verSol -> vistaCotizacionController();
-                            $verSol -> programarModelController();
-                            $verSol -> eliminarModelController();
-                            $verSol ->modificarModelController();
+                      
 
 
 

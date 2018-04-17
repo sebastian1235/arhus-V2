@@ -61,13 +61,18 @@ class solicitud
     public function vistaSolicitudController(){
         $respuesta = SolicitudModel::vistaSolicitud("ap_solicitud");
         foreach ($respuesta as $row => $item){
+         $estado_cot=$item["estado_cot"];
             echo' <tr>   
-                    <td><a href="#programarSol'.$item["id_sol"].'" data-toggle="modal"><span class="btn btn-warning fa fa-check"></span></a></td>
-                    <td><a href="#modificarSol'.$item["id_sol"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></a></td>
-                    <td><a href="#eliminarSol'.$item["id_sol"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></a></td>
-                   <td><a href="#formularioCotizacion'.$item["id_sol"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></a></td>
+                    <td width="100"><a href="#programarSol'.$item["id_sol"].'" data-toggle="modal"><span class="btn btn-warning fa fa-check"></span></a></td>
+                    <td width="100"><a href="#modificarSol'.$item["id_sol"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></a></td>
+                    <td width="100"><a href="#eliminarSol'.$item["id_sol"].'" data-toggle="modal"><span class="btn btn-danger fa fa-times"></span></a></td>';
+                    if ($estado_cot==9){
+
+                     echo'<td></td>';} 
+                else{
+                   echo'<td  width="100"><a href="#formularioCotizacion'.$item["id_sol"].'" data-toggle="modal" ><span class="btn btn-warning fa fa-pencil"></span></a></td>';}
                     
-                    <td>' .$item["id_sol"].'</td>
+                   echo' <td>' .$item["id_sol"].'</td>
                     
                     <td>' .$item["asignacion_sol"].'.' .$item["tipo_asignacion"].'</td>
                     <td>' .$item["asesor_sol"].'.'.$item["nombre_tercero"].'</td>
@@ -84,6 +89,7 @@ class solicitud
                     <td>' .$item["obs_estado_sol"].'</td>
                   </tr>';
                   $tipo_clinete=$item["nombre_tipo_cliente"];
+                 
 
             echo'<div id="formularioCotizacion'.$item["id_sol"].'" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
@@ -93,7 +99,7 @@ class solicitud
                 <h3 class="modal-title">Cotizar '.$item["id_sol"].', TC.'.$item["nombre_tipo_cliente"].', Asesor '.$item["nombre_tercero"].', T.A '.$item["tipo_asignacion"].' </h3>
                  <button href="#modificarSol'.$item["id_sol"].'" data-toggle="modal" class="btn btn-default" >Modificar Datos de contacto</button>
               </div>
-                      <form class="form-horizontal" method="POST" id="formularioSolicitud" autocomplete="off">
+                      <form class="form-horizontal" method="POST" id="formularioSolicitud" >
                       <input name="id_sol" type="hidden" value="'.$item["id_sol"].'">
                 
                           <div class="form-group">
@@ -136,7 +142,7 @@ class solicitud
                           <div class="form-group">
                           <div class="col-md-4">
                                       <label for="">Campaña</label>
-                                      <select class="form-control" id="campaña_cot" name="campaña_cot">
+                                      <select class="form-control" id="campana_cot" name="campana_cot">
                                           <option value="0">Campaña</option>';
                                           
                                   $seleccionarSector = new solicitud();
@@ -155,8 +161,24 @@ class solicitud
                                      echo' </select>
                                 </div>
                               <div class=" col-md-4">
-                                  <label>fecha_cot </label>
-                                  <input type="DATE" class="form-control" name="fecha_cot" required=""  id="fecha_cot" value="'.$item["telefono1_sol"].'">
+                                  <label>Fecha cotizacion </label>
+                                  <input type="DATE" class="form-control" name="fecha_cot" required=""  id="fecha_cot" value="">
+                              </div>
+                              </div>
+                              <br>
+                               <div class="form-group">
+
+                              <div class=" col-md-12">
+                                  <label>Detalle </label>
+                                 <input type="text" class="form-control" name="detalle_cot" required=""  id="detalle_cot" value="">
+                              </div>
+                              <div class=" col-md-4">
+                                  <label>Valor total </label>
+                                 <input type="decimal" class="form-control" name="v_total_cot" required=""  id="v_total_cot" value="">
+                              </div>
+                              <div class=" col-md-4">
+                                  <label>Valor contado </label>
+                                 <input type="decimal" class="form-control" name="v_contado_cot" required=""  id="v_contado_cot" value="">
                               </div>
                                 
                           </div>
@@ -378,16 +400,25 @@ class solicitud
     #termina modal=====================================================================================================================
 
      
+     
 
     #Vista de Medio de Pago
-    public function vistaCiudadController(){
-        $respuesta = CiudadModel::vistaCiudad("siax_ciudad");
+    public function vistaCotizacionController(){
+        $respuesta = SolicitudModel::vistaCotizacion("ap_solicitud");
         foreach ($respuesta as $row => $item){
             echo' <tr>   
-                    <td>' .$item["nombre_ciu"].'</td>
-                    <td><a href="#registroCiudad'.$item["id_ciu"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></a></td>
-                  </tr> '
-            ;
+                    <td>' .$item["id_sol"].'</td>
+                    <td>' .$item["poliza_sol"].'</td>
+                    <td>' .$item["nombre_sol"].'</td>
+                    <td>' .$item["consecutivo_cot"].'</td>
+                    <td>' .$item["nombre_forma_ap"].'</td>
+                    <td>' .$item["nombre_estado_interno"].'</td>
+                    <td>' .$item["nombre_campana"].'</td>
+                    <td>' .$item["detalle_cot"].'</td>
+                    <td>' .$item["v_contado_cot"].'</td>
+                    <td>' .$item["v_total_cot"].'</td>
+                    
+                  </tr> ';
 
         }
     }
@@ -403,9 +434,12 @@ class solicitud
                                       "estrato_cot" => $_POST["estrato_cot"],
                                       "fecha_nac_cot" => $_POST["fecha_nac_cot"], 
                                       "forma_pago_cot" => $_POST["forma_pago_cot"],
-                                      "campaña_cot" => $_POST["campaña_cot"],
+                                      "campana_cot" => $_POST["campana_cot"],
                                       "tipo_cliente_cot" => $_POST["tipo_cliente_cot"],
-                                      "fecha_cot" => $_POST["fecha_cot"]);
+                                      "fecha_cot" => $_POST["fecha_cot"],
+                                     "detalle_cot" => $_POST["detalle_cot"],
+                                     "v_total_cot" => $_POST["v_total_cot"],
+                                    "v_contado_cot" => $_POST["v_contado_cot"]);
 
             $respuesta = SolicitudModel::registroCotizacion($datosController, "ap_solicitud");
 
@@ -420,6 +454,9 @@ class solicitud
                     $_SESSION["tipo_cliente_cot"] = $_POST["tipo_cliente_cot"];
                     $_SESSION["fecha_cot"] = $_POST["fecha_cot"];
                     $_SESSION["id_sol"] = $_POST["id_sol"];
+                     $_SESSION["detalle_cot"] = $_POST["detalle_cot"];
+                    $_SESSION["v_total_cot"] = $_POST["v_total_cot"];
+                    $_SESSION["v_contado_cot"] = $_POST["v_contado_cot"];
                
 
                 }
@@ -645,33 +682,7 @@ class solicitud
 
 
 
-    public function vistacotizacionController(){
-        $respuesta = SolicitudModel::vistaSolicitud("ap_solicitud");
-        foreach ($respuesta as $row => $item){
 
-                  $id_sol=$item["id_sol"];
-                  $item["asignacion_sol"];
-                  $item["tipo_asignacion"];
-                  $item["asesor_sol"];
-                  $item["nombre_tercero"];
-                  $item["nombre_sol"];
-                  $item["servicio_sol"];
-                  $item["nombre_estado_preventa"];
-                  $item["fecha_prevista_sol"];
-                  $item["fecha_visita_comerc_sol"];
-                  $item["barrio_sol"];
-                  $item["nombre_Sec"];
-                  $item["localidad_sol"];
-                  $item["nombre_loc"];
-                  $item["cedula_sol"];
-                  $item["direccion_nueva_sol"];
-                  $item["telefono1_sol"];
-                  $item["telefono2_sol"];
-                  $item["celular_sol"];
-                  $item["obs_estado_sol"];
-                  
-                }
-              }
 
 }
 

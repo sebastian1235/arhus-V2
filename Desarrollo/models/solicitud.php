@@ -88,7 +88,7 @@ class SolicitudModel
 
     public function registroCotizacion($datosModel, $tabla)
     {
-       $stmt = Conexion::conectar()->prepare("UPDATE $tabla  SET poliza_sol=:poliza_sol, consecutivo_cot=:consecutivo_cot, estrato_cot= :estrato_cot, fecha_nac_cot=:fecha_nac_cot, forma_pago_cot=:forma_pago_cot, campana_cot=:campana_cot, tipo_cliente_cot=:tipo_cliente_cot, fecha_cot=:fecha_cot where id_sol=:id_sol");
+       $stmt = Conexion::conectar()->prepare("UPDATE $tabla  SET poliza_sol=:poliza_sol, consecutivo_cot=:consecutivo_cot, estrato_cot= :estrato_cot, fecha_nac_cot=:fecha_nac_cot, forma_pago_cot=:forma_pago_cot, campana_cot=:campana_cot, tipo_cliente_cot=:tipo_cliente_cot, fecha_cot=:fecha_cot, estado_cot='9', detalle_cot=:detalle_cot, v_total_cot=:v_total_cot, v_contado_cot=:v_contado_cot  where id_sol=:id_sol");
 
        $stmt->bindParam(":poliza_sol", $datosModel["poliza_sol"], PDO::PARAM_STR);
         $stmt->bindParam(":consecutivo_cot", $datosModel["consecutivo_cot"], PDO::PARAM_STR);
@@ -98,6 +98,9 @@ class SolicitudModel
          $stmt->bindParam(":campana_cot", $datosModel["campana_cot"], PDO::PARAM_STR);
         $stmt->bindParam(":tipo_cliente_cot", $datosModel["tipo_cliente_cot"], PDO::PARAM_STR);
         $stmt->bindParam(":fecha_cot", $datosModel["fecha_cot"], PDO::PARAM_STR);
+        $stmt->bindParam(":detalle_cot", $datosModel["detalle_cot"], PDO::PARAM_STR);
+        $stmt->bindParam(":v_total_cot", $datosModel["v_total_cot"], PDO::PARAM_STR);
+        $stmt->bindParam(":v_contado_cot", $datosModel["v_contado_cot"], PDO::PARAM_STR);
         $stmt->bindParam(":id_sol", $datosModel["id_sol"], PDO::PARAM_STR);
         
 
@@ -115,7 +118,15 @@ class SolicitudModel
 #Vista Asigancion
     public function vistaSolicitud($tabla)
     {
-        $stmt = Conexion::conectar()->prepare("SELECT id_sol, poliza_sol,asesor_sol, nombre_tercero, asignacion_sol, tipo_asignacion, nombre_sol, servicio_sol, nombre_estado_preventa, fecha_prevista_sol, fecha_visita_comerc_sol, barrio_sol, nombre_Sec, localidad_sol,nombre_loc, cedula_sol , telefono1_sol, telefono2_sol, celular_sol , direccion_nueva_sol, obs_estado_sol, nombre_tipo_cliente FROM $tabla left join ap_tipo_cliente on ap_solicitud.tipo_clientegn_sol=ap_tipo_cliente.id_tipo_cliente left join ap_terceros on ap_solicitud.asesor_sol=ap_terceros.Id_tercero left JOIN ap_asignacion on ap_solicitud.asignacion_sol=ap_asignacion.id_asignacion LEFT join ap_estado_preventa on ap_solicitud.estado_sol=ap_estado_preventa.id_estado_preventa left join siax_sectores on ap_solicitud.barrio_sol=siax_sectores.cod_sec left join siax_localidad on ap_solicitud.localidad_sol=siax_localidad.id_loc where eliminar='0'");
+        $stmt = Conexion::conectar()->prepare("SELECT id_sol, poliza_sol,asesor_sol, nombre_tercero, asignacion_sol, tipo_asignacion, nombre_sol, servicio_sol, nombre_estado_preventa, fecha_prevista_sol, fecha_visita_comerc_sol, barrio_sol, nombre_Sec, localidad_sol,nombre_loc, cedula_sol , telefono1_sol, telefono2_sol, celular_sol , direccion_nueva_sol, obs_estado_sol, nombre_tipo_cliente,estado_cot FROM $tabla left join ap_tipo_cliente on ap_solicitud.tipo_clientegn_sol=ap_tipo_cliente.id_tipo_cliente left join ap_terceros on ap_solicitud.asesor_sol=ap_terceros.Id_tercero left JOIN ap_asignacion on ap_solicitud.asignacion_sol=ap_asignacion.id_asignacion LEFT join ap_estado_preventa on ap_solicitud.estado_sol=ap_estado_preventa.id_estado_preventa left join siax_sectores on ap_solicitud.barrio_sol=siax_sectores.cod_sec left join siax_localidad on ap_solicitud.localidad_sol=siax_localidad.id_loc WHERE ap_solicitud.eliminar='0'");
+        $stmt->execute();
+        return $stmt->fetchAll();
+        $stmt->close();
+    }
+
+     public function vistaCotizacion($tabla)
+    {
+        $stmt = Conexion::conectar()->prepare("SELECT id_sol, poliza_sol, consecutivo_cot, nombre_forma_ap, nombre_campana, nombre_sol, detalle_cot,v_contado_cot, v_total_cot,nombre_estado_interno FROM $tabla left join ap_estado_interno on ap_solicitud.estado_cot= ap_estado_interno.id_estado_interno left join ap_forma_pago on ap_solicitud.forma_pago_cot= ap_forma_pago.Id_forma_ap LEFT JOIN siax_campana on ap_solicitud.campana_cot=siax_campana.id_campana where estado_cot='9'");
         $stmt->execute();
         return $stmt->fetchAll();
         $stmt->close();

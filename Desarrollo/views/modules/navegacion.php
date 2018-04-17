@@ -25,6 +25,18 @@
                         
                     </ul>
                 </li>
+                <li class="treeview">
+                    <a href="FregistroSol"><i class="glyphicon glyphicon-chevron-right"></i> <span>Cotizaciones</span>
+                        <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="cotizacion"><i class="glyphicon glyphicon-tag"></i>Todos los registros</a></li>
+                        
+                        
+                    </ul>
+                </li>
 
 
                 <?php

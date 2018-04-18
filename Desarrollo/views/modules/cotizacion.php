@@ -54,6 +54,7 @@ include "views/modules/header.php";
 
                             $verSol = new solicitud();
                             $verSol -> vistaCotizacionController();
+                            $verSol -> ModificarCotizacionController();
                       
 
 

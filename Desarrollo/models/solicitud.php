@@ -23,6 +23,7 @@ class SolicitudModel
             asignacion_sol,
             cedula_sol,
             nombre_sol,
+            localidad_sol,
             direccion_pol_sol,
             direccion_nueva_sol,
             barrio_sol,
@@ -33,7 +34,6 @@ class SolicitudModel
             servicio_sol,
             obs_sol,
             estado_sol,
-            localidad_sol,
             fecha_prevista_sol,
             fecha_visita_comerc_sol,
             forma_pagogn_sol)
@@ -43,6 +43,7 @@ class SolicitudModel
             :asignacion_sol,
             :cedula_sol,
             :nombre_sol,
+            :localidad_sol,
             :direccion_pol_sol,
             :direccion_pol_sol,
             :barrio_sol,
@@ -53,13 +54,12 @@ class SolicitudModel
             :servicio_sol,
             :obs_sol,
             '2',
-            :localidad_sol,
             :fecha_visita_comerc_sol,
             :fecha_visita_comerc_sol,
             :forma_pagogn_sol)");
         $stmt->bindParam(":nombre_sol", $datosModel["nombre_sol"], PDO::PARAM_STR);
         $stmt->bindParam(":cedula_sol", $datosModel["cedula_sol"], PDO::PARAM_STR);
-        $stmt->bindParam(":localidad_sol", $datosModel["localidad_sol"], PDO::PARAM_STRS);
+        $stmt->bindParam(":localidad_sol", $datosModel["localidad_sol"], PDO::PARAM_STR);
         $stmt->bindParam(":barrio_sol", $datosModel["barrio_sol"], PDO::PARAM_STR);
         $stmt->bindParam(":direccion_pol_sol", $datosModel["direccion_pol_sol"], PDO::PARAM_STR);
         $stmt->bindParam(":direccion_pol_sol", $datosModel["direccion_nueva_sol"], PDO::PARAM_STR);
@@ -126,7 +126,7 @@ class SolicitudModel
 
      public function vistaCotizacion($tabla)
     {
-        $stmt = Conexion::conectar()->prepare("SELECT id_sol, poliza_sol, consecutivo_cot, nombre_forma_ap, nombre_campana, nombre_sol, detalle_cot,v_contado_cot, v_total_cot,nombre_estado_interno FROM $tabla left join ap_estado_interno on ap_solicitud.estado_cot= ap_estado_interno.id_estado_interno left join ap_forma_pago on ap_solicitud.forma_pago_cot= ap_forma_pago.Id_forma_ap LEFT JOIN siax_campana on ap_solicitud.campana_cot=siax_campana.id_campana where estado_cot='9'");
+        $stmt = Conexion::conectar()->prepare("SELECT id_sol, poliza_sol, consecutivo_cot, forma_pago_cot, nombre_forma_ap, campana_cot, nombre_campana, nombre_sol, detalle_cot,v_contado_cot, v_total_cot,nombre_estado_interno,estrato_cot,fecha_nac_cot, fecha_cot, tipo_cliente_cot, nombre_tipo_cliente FROM $tabla left join ap_estado_interno on ap_solicitud.estado_cot= ap_estado_interno.id_estado_interno left join ap_tipo_cliente on ap_solicitud.tipo_cliente_cot= ap_tipo_cliente.id_tipo_cliente left join ap_forma_pago on ap_solicitud.forma_pago_cot= ap_forma_pago.Id_forma_ap LEFT JOIN siax_campana on ap_solicitud.campana_cot=siax_campana.id_campana where estado_cot='9'");
         $stmt->execute();
         return $stmt->fetchAll();
         $stmt->close();

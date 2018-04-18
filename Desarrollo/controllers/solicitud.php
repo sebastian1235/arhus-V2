@@ -9,7 +9,7 @@
 class solicitud
 {
 
-    public function registroSolicitudController()
+   public function registroSolicitudController()
     {
         if (isset($_POST["nombre_sol"])) {
             $datosController = array("nombre_sol" => $_POST["nombre_sol"],
@@ -282,7 +282,7 @@ class solicitud
                 <form style="padding:0px 10px" method="post" enctype="multipart/form-data">
                 <input name="idSolicitud" type="hidden" value="'.$item["id_sol"].'">
                 <div class="form-group">
-                <label for="">Nombre asesor</label>
+                <label for="">Eliminar</label>
                 <select class="form-control" id="borrar" name="EliminarSol">
                 <option value="0">No</option>
                 <option value="1">Si</option>';
@@ -314,7 +314,7 @@ class solicitud
                 <div class="modal-dialog modal-content">
               <div class="modal-header" style="border:1px solid #eee">
                 <button type="button" class="close" data-dismiss="modal">X</button>
-                <h3 class="modal-title">Programar '.$item["nombre_sol"].' Direccion '.$item["direccion_nueva_sol"].'</h3>
+                <h3 class="modal-title">Modificar '.$item["nombre_sol"].'</h3>
               </div>
               <div class="modal-body" style="border:1px solid #eee">
                 <form style="padding:0px 10px" method="post" enctype="multipart/form-data">
@@ -406,19 +406,138 @@ class solicitud
     public function vistaCotizacionController(){
         $respuesta = SolicitudModel::vistaCotizacion("ap_solicitud");
         foreach ($respuesta as $row => $item){
+         $estrato=$item["estrato_cot"];
+         $FechaNacimiento=$item["fecha_nac_cot"];
+         $FechaCotizacion=$item["fecha_cot"];
+         $tipoCliente=$item["tipo_cliente_cot"];
+         $tipoClientenombre=$item["nombre_tipo_cliente"];
+        
             echo' <tr>   
                     <td>' .$item["id_sol"].'</td>
                     <td>' .$item["poliza_sol"].'</td>
                     <td>' .$item["nombre_sol"].'</td>
                     <td>' .$item["consecutivo_cot"].'</td>
-                    <td>' .$item["nombre_forma_ap"].'</td>
+                    <td>' .$item["forma_pago_cot"].'.' .$item["nombre_forma_ap"].'</td>
                     <td>' .$item["nombre_estado_interno"].'</td>
-                    <td>' .$item["nombre_campana"].'</td>
+                    <td>' .$item["campana_cot"].'.' .$item["nombre_campana"].'</td>
                     <td>' .$item["detalle_cot"].'</td>
                     <td>' .$item["v_contado_cot"].'</td>
                     <td>' .$item["v_total_cot"].'</td>
-                    
+                     <td width="100"><a href="#ModificarCotizacion'.$item["id_sol"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></span></a></td>
                   </tr> ';
+                  echo'<div id="ModificarCotizacion'.$item["id_sol"].'" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+              <div class="modal-header" >
+                <button type="button" class="close" data-dismiss="modal">X</button>
+                         <h3 class="modal-title">Modificar cotizacion '.$item["nombre_sol"].'</h3>      
+              </div>
+                      <form class="form-horizontal" method="POST" id="formularioSolicitud" >
+                      <input name="id_sol" type="hidden" value="'.$item["id_sol"].'">
+                
+                          <div class="form-group">
+                               <div class="col-md-4">
+                                   <label>No. de Poliza</label>
+                                   <input type="text" class="form-control" name="poliza_sol" required="" id="poliza_sol" value="'.$item["poliza_sol"].'">
+                               </div>
+                               <div class="col-md-4">
+                                   <label>Consecutivo</label>
+                                   <input type="text" class="form-control" name="consecutivo_cot" required="" id="consecutivo_cot" value="'.$item["consecutivo_cot"].'">
+                               </div>
+                               <div class="col-md-4">
+                                   <label>Estrato</label>
+                                   <input type="text" class="form-control" name="estrato_cot" required="" id="estrato_cot" value="'.$estrato.'" >
+                               </div>
+                               
+                          </div>
+
+                         
+                          <div class="form-group">
+                          <div class="col-md-4">
+                                  <label>Fecha de nacimiento</label>
+                                  <input type="text" class="form-control" name="fecha_nac_cot" required="" id="fecha_nac_cot" value="'.$FechaNacimiento.'" >
+                              </div>
+                               
+                                <div class="col-md-4">
+                                      <label for="">Forma de pago</label>
+                                      <select class="form-control" id="forma_pago_cot" name="forma_pago_cot">
+                                       <option value="'.$item["forma_pago_cot"].'">'.$item["nombre_forma_ap"].'</option>
+                                          <option value="0">Forma de pago </option>';
+                                          
+                                  $seleccionarSector = new solicitud();
+                                  $seleccionarSector -> selectFormaPago();
+                                 
+                                      echo'</select>
+                                </div>
+                               
+                          </div>
+                          
+                      
+                          <div class="form-group">
+                          <div class="col-md-4">
+                                      <label for="">Campaña</label>
+                                      <select class="form-control" id="campana_cot" name="campana_cot">
+                                      <option value="'.$item["campana_cot"].'">'.$item["nombre_campana"].'</option>
+                                          <option value="0">Campaña</option>';
+                                          
+                                  $seleccionarSector = new solicitud();
+                                  $seleccionarSector -> selectCampana();
+                                 
+                                      echo'</select>
+                                </div>
+                               <div class="col-md-4">
+                                      <label for="">Tipo cliente</label>
+                                      <select class="form-control" id="tipo_cliente_cot" name="tipo_cliente_cot">
+                                      <option value="'.$tipoCliente.'">'.$tipoClientenombre.'</option>
+                                          <option value="0">Tipo cliente</option>';
+                                          
+                                  $seleccionarSector = new solicitud();
+                                  $seleccionarSector -> selectTipoCliente();
+                                 
+                                     echo' </select>
+                                </div>
+                              <div class=" col-md-4">
+                                  <label>Fecha cotizacion </label>
+                                  <input type="text" class="form-control" name="fecha_cot" required=""  id="fecha_cot" value="'.$FechaCotizacion.'">
+                              </div>
+                              </div>
+                              <br>
+                               <div class="form-group">
+
+                              <div class=" col-md-12">
+                                  <label>Detalle </label>
+                                 <input type="text" class="form-control" name="detalle_cot" required=""  id="detalle_cot" value="'.$item["detalle_cot"].'">
+                              </div>
+                              <div class=" col-md-4">
+                                  <label>Valor total </label>
+                                 <input type="decimal" class="form-control" name="v_total_cot" required=""  id="v_total_cot" value="'.$item["v_total_cot"].'">
+                              </div>
+                              <div class=" col-md-4">
+                                  <label>Valor contado </label>
+                                 <input type="decimal" class="form-control" name="v_contado_cot" required=""  id="v_contado_cot" value="'.$item["v_contado_cot"].'">
+                              </div>
+                                
+                          </div>
+                          <br>
+                          
+
+                      
+                            <div class="modal-footer" style="border:1px solid #eee">  
+                            <br>
+                           <div class=" col-md-12">
+                            <br>
+                            <div class="form-group text-center">
+                           
+
+                             <input type="submit" id="formularioCotizacion" value="Actualizar" class="btn btn-warning">
+                             <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+              </div>
+                           </div>
+                         </div>
+                        </form>
+             </div>
+          </div> 
+      </div>';
 
         }
     }

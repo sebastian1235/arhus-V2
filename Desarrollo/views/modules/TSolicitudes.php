@@ -17,7 +17,7 @@ include "views/modules/header.php";
 
 <section class="content container-fluid">
 
-    <div class="row">
+   <!-- <div class="row">
 <form class=" col-sm-5" method="POST" action="TSolicitudes"  align="center" ">
  
     <input class=" col-sm-5" type="text" align="center" class="form-control" id="asesor" name="asesor">
@@ -31,6 +31,7 @@ include "views/modules/header.php";
         = $_POST["asesor"];
 
       ?>
+  -->
 
         <div class="form-group">
             <div class="col-md-2">

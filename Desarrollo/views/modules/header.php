@@ -46,7 +46,7 @@
                                 </ul>
                                 <!-- /.menu -->
                             </li>
-                            <li class="footer"><a href="#">See All Messages</a></li>
+                            <li class="footer"></li>
                         </ul>
                     </li>
                     <!-- /.messages-menu -->
@@ -54,6 +54,7 @@
                     <!-- Notifications Menu -->
                     <!-- Tasks Menu -->
                     <!-- User Account Menu -->
+
                     <li class="dropdown user user-menu">
                         <!-- Menu Toggle Button -->
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">

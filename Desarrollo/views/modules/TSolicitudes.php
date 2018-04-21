@@ -18,7 +18,19 @@ include "views/modules/header.php";
 <section class="content container-fluid">
 
     <div class="row">
+<form class=" col-sm-5" method="POST" action="TSolicitudes"  align="center" ">
+ 
+    <input class=" col-sm-5" type="text" align="center" class="form-control" id="asesor" name="asesor">
+  
+    <input class=" col-sm-2" class="btn btn-info" type="submit" align="center" value="Buscar" name="buscar">
+ 
+</form>
+<?php 
+       //obtenemos la información introducida anteriormente desde nuestro buscador PHP
+       $asesor
+        = $_POST["asesor"];
 
+      ?>
 
         <div class="form-group">
             <div class="col-md-2">
@@ -34,7 +46,9 @@ include "views/modules/header.php";
             <div class="col-md-12">
                 <div class="box">
                     <div class="box-body table-responsive">
+                        
                         <table id="tablas" class="table table-striped">
+                          
                             <thead>
                             <tr>
                               <th>Programar</th>
@@ -69,6 +83,7 @@ include "views/modules/header.php";
                             $verSol -> programarModelController();
                             $verSol -> eliminarModelController();
                             $verSol ->modificarModelController();
+                           
 
 
 

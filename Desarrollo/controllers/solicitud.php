@@ -9,6 +9,7 @@
 class solicitud
 {
 
+
    public function registroSolicitudController()
     {
         if (isset($_POST["nombre_sol"])) {

@@ -34,6 +34,7 @@ class EnlacesModels{
             $enlaces == "selects" ||
             $enlaces == "cotizacion" ||
             $enlaces == "detalles_cot" ||
+             $enlaces == "notificacion" ||
             $enlaces == "Tcampanas"){
 
             $module = "views/modules/".$enlaces.".php";

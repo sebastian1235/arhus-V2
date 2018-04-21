@@ -22,11 +22,29 @@ include "views/modules/header.php";
         <div class="col-md-12">
             <p>Bienvenido al panel de control de negocios para contratista de Gas Naturas -  ARHUS.</p>
         </div>
+        
+    <div>
+        
+        <hr>
     </div>
+     <?php                             
+
+                            $mostrarNotificacion = new notificacion();
+                            $mostrarNotificacion  -> NotificacionController();
+                            $mostrarNotificacion  -> programarModelController();
+               
+ ?>
+
+                            
     </div>
+
+    
 
 <?php
 
+
+                           
+                         
 include "views/modules/footer.php";
 
 ?>

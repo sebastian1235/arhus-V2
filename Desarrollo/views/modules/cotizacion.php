@@ -44,6 +44,8 @@ include "views/modules/header.php";
                                 <th>Detalle</th>
                                 <th>valor contado</th>
                                 <th>valor Total</th>
+                                <th>modificar</th>
+                                <th>detalle</th>
                             
                                 
 
@@ -55,6 +57,7 @@ include "views/modules/header.php";
                             $verSol = new solicitud();
                             $verSol -> vistaCotizacionController();
                             $verSol -> ModificarCotizacionController();
+                            $verSol -> enviarMensaje();
                       
 
 

@@ -412,6 +412,8 @@ class solicitud
          $FechaCotizacion=$item["fecha_cot"];
          $tipoCliente=$item["tipo_cliente_cot"];
          $tipoClientenombre=$item["nombre_tipo_cliente"];
+         $email=$item["email_sol"];
+
         
             echo' <tr>   
                     <td>' .$item["id_sol"].'</td>
@@ -425,7 +427,11 @@ class solicitud
                     <td>' .$item["v_contado_cot"].'</td>
                     <td>' .$item["v_total_cot"].'</td>
                      <td width="100"><a href="#ModificarCotizacion'.$item["id_sol"].'" data-toggle="modal"><span class="btn btn-warning fa fa-pencil"></span></span></a></td>
-                  </tr> ';
+                
+
+                  <td width="100"><a href="#detallesCotizacion'.$item["id_sol"].'" data-toggle="modal">Detalle</a></td>
+                  </tr> '
+                  ;
                   echo'<div id="ModificarCotizacion'.$item["id_sol"].'" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -539,9 +545,119 @@ class solicitud
              </div>
           </div> 
       </div>';
+##vista enviar correo=================================================================================================================
+      echo'<div id="detallesCotizacion'.$item["id_sol"].'" class="modal fade">
+                <div class="modal-dialog modal-content">
+              <div class="modal-header" style="border:1px solid #eee">
+                <button type="button" class="close" data-dismiss="modal">X</button>
+               
+              </div>
+              <div class="modal-body" style="border:1px solid #eee">
+                      <form class="form-horizontal" method="POST" 
+                      id="formularioSolicitud" >
+                      <input name="id_sol" type="hidden" value="'.$item["id_sol"].'">
+                  <label>Para:</label> 
+                 <input type="longtext" class="form-control"  name="nombre" value="'.$item["nombre_sol"].'"> 
+                 <label>Email:</label> 
+                 <input type="text" class="form-control"  name="email" value="'.$email.'"> 
+                 <label>Detalle:</label> 
+                 <input type="text" class="form-control"  name="detalle" value="'.$item["detalle_cot"].'"> 
+                    <div class="form-group">
+
+                              <div class=" col-md-4">
+                                  <label>Valor contado: </label>
+                                 <input type="text" class="form-control" name="contado" required=""  id="contado" value="'.$item["v_contado_cot"].'">
+                              </div>
+                              <div class=" col-md-4">
+                                  <label>Valor total </label>
+                                 <input type="decimal" class="form-control" name="total" required=""  id="total" value="'.$item["v_total_cot"].'">
+                              </div>
+                              </div>
+
+                      
+                            <div class="modal-footer" style="border:1px solid #eee">  
+                            <br>
+                           <div class=" col-md-12">
+                            <br>
+                            <div class="form-group text-center">
+                           
+
+                             <input type="submit" id="formularioCotizacion" value="Actualizar" class="btn btn-warning">
+                             <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+              </div>
+                           </div>
+                         </div>
+                        </form>
+             </div>
+          </div> 
+      </div>';
 
         }
     }
+
+public function enviarMensaje(){
+
+if(isset($_POST['nombre'])){
+
+  $nombre= $_POST ['nombre'];
+  $email= $_POST ['email'];
+  $nombre= $_POST ['nombre'];
+  $detalle= $_POST ['detalle'];
+  $contado= $_POST ['contado'];
+  $total= $_POST ['total'];
+
+  $para= "juseloco@gmail.com";
+  $titulo= 'Cotizacion';
+  $mensaje= '
+
+        <html>
+          <head>
+          <title>Cotizacion</title>
+          </head>
+          <body>
+          <h1>Cordial saludo '.$nombre.' </h1>
+          <p>'.$detalle.'</p>
+
+
+
+          </body>
+        </html>';
+
+        $cabeceras  = 'MIME-Version: 1.0' . "\r\n";
+        $cabeceras .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
+         $cabeceras .='from: <juseloco@gmail.com>';
+
+         $envio = mail($para, $titulo, $mensaje, $cabeceras);
+
+         if($envio){
+          echo'<script>
+
+                       swal({
+                            title: "!Ok",
+                            text: "¡Enviado correctamente !",
+                            type: "success",
+                            confirmButtonText: "Cerrar",
+                            closeOnConfirm: false
+                       },
+                       function(isConfirm) {
+                           if (isConfirm){
+                               window.location = "cotizacion";
+                           }
+                         
+                       });
+                </script>';
+
+
+         }}
+
+
+
+      }
+
+
+
+
+
 
 
 

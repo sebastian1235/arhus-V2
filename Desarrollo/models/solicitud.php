@@ -132,7 +132,7 @@ class SolicitudModel
 
      public function vistaCotizacion($tabla)
     {
-        $stmt = Conexion::conectar()->prepare("SELECT id_sol, poliza_sol, consecutivo_cot, forma_pago_cot, nombre_forma_ap, campana_cot, nombre_campana, nombre_sol, detalle_cot,v_contado_cot, v_total_cot,nombre_estado_interno,estrato_cot,fecha_nac_cot, fecha_cot, tipo_cliente_cot, nombre_tipo_cliente FROM $tabla left join ap_estado_interno on ap_solicitud.estado_cot= ap_estado_interno.id_estado_interno left join ap_tipo_cliente on ap_solicitud.tipo_cliente_cot= ap_tipo_cliente.id_tipo_cliente left join ap_forma_pago on ap_solicitud.forma_pago_cot= ap_forma_pago.Id_forma_ap LEFT JOIN siax_campana on ap_solicitud.campana_cot=siax_campana.id_campana where estado_cot='9'");
+        $stmt = Conexion::conectar()->prepare("SELECT id_sol, poliza_sol, consecutivo_cot, forma_pago_cot, nombre_forma_ap, campana_cot, nombre_campana, nombre_sol, detalle_cot,v_contado_cot, v_total_cot,nombre_estado_interno,estrato_cot,fecha_nac_cot, fecha_cot, tipo_cliente_cot, nombre_tipo_cliente,email_sol FROM $tabla left join ap_estado_interno on ap_solicitud.estado_cot= ap_estado_interno.id_estado_interno left join ap_tipo_cliente on ap_solicitud.tipo_cliente_cot= ap_tipo_cliente.id_tipo_cliente left join ap_forma_pago on ap_solicitud.forma_pago_cot= ap_forma_pago.Id_forma_ap LEFT JOIN siax_campana on ap_solicitud.campana_cot=siax_campana.id_campana where estado_cot='9'");
         $stmt->execute();
         return $stmt->fetchAll();
         $stmt->close();
